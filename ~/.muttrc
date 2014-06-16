@@ -1,0 +1,41 @@
+set editor=vim
+set mbox_type=Maildir
+set folder=$HOME/mail
+set spoolfile=+/
+set header_cache=~/.cache/mutt
+
+
+set realname='Moez Bouhlel'
+
+set sendmail="/usr/bin/msmtp"
+
+set edit_headers=yes
+set folder=~/mail
+set mbox=+mbox
+#set spoolfile=+inbox
+set record=+sent
+set postponed=+drafts
+set mbox_type=Maildir
+
+mailboxes +inbox +lovey-dovey +happy-kangaroos
+## General options
+#set imap_check_subscribed
+#set imap_keepalive = 300
+#unset imap_passive
+#set mail_check = 20
+#set check_new
+# move read mails automatically to $mbox
+#set move=yes
+# Don't ask to delete
+set delete = yes
+set beep_new
+set mailcap_path    = ~/.mutt/mailcap
+auto_view text/html
+bind index "^" imap-fetch-mail
+
+#-------------------------------------------
+# COLORS
+#-------------------------------------------
+
+color hdrdefault cyan default
+color status white color24 # status lines in the folder index sed for the mini-help line

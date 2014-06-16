@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/ls ~/.getmail/config/ | sed 's/^/--rcfile config\//' | tr '\n' ' ' |xargs /usr/bin/getmail || true
