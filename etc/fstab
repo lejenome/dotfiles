@@ -1,0 +1,9 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system> <dir>       <type> <options>	      <dump> <pass>
+LABEL=Arch      /           btrfs  rw,space_cache          0 0
+LABEL=Swap      none        swap   defaults                0 0
+none            /tmp        tmpfs  defaults,size=8G        0 0
+LABEL=Others    /mnt/Others ext4   defaults,noatime        0 0
+LABEL=EFI       /boot/efi   vfat   defaults                0 0

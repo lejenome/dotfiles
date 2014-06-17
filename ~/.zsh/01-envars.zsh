@@ -2,7 +2,7 @@ export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin"
 
 export HISTSIZE=1000
 export SAVEHIST=1000
-export HISTFILE=$HOME/.zsh/history
+export HISTFILE=$HOME/.zsh_history
 export DISPLAY=:0
 
 export SHELL='/bin/zsh'
