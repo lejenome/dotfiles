@@ -123,8 +123,6 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
-#[include]
-#  path = .gitconfig.user
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -268,3 +266,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[include]
+  path = .gitconfig.user
