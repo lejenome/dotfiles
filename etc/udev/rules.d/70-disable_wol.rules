@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="enp9s*", RUN+="/usr/bin/ethtool -s %k wol d"

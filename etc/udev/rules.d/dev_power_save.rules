@@ -1,0 +1,5 @@
+# Various subsystems runtime power management (by bus or class)
+ACTION=="add", SUBSYSTEMS=="*", TEST=="power/control", ATTR{power/control}="auto"
+
+# Various subsystems power saving (by module)
+ACTION=="add", SUBSYSTEMS=="*", TEST=="parameters/power_save", ATTR{parameters/power_save}="1" 
