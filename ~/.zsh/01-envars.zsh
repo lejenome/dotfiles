@@ -6,8 +6,8 @@ export HISTFILE=$HOME/.zsh_history
 export DISPLAY=:0
 
 export SHELL='/bin/zsh'
-export EDITOR='vim'
-export MANPAGER='vimpager'
+export EDITOR='/usr/bin/vim'
+export MANPAGER='/usr/bin/vimpager'
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
 export CFLAGS="-march=native -O2 -pipe -fstack-protector --param=ssp-buffer-size=4"
@@ -21,3 +21,5 @@ export DEBUG_CXXFLAGS="-g -fvar-tracking-assignments"
 
 # mutt background fix
 export COLORFGBG="default;default"
+# use RAM for HOME caching for perfermance improvement
+export XDG_CACHE_HOME="/dev/shm/.cache"
