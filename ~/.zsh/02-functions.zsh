@@ -17,23 +17,23 @@ sync_all_branch () {
 # }}}
 
 # {{{ Title stuffs
-#precmd() {
-#
-#	vcs_info
-#	setprompt
-#
-#	case $TERM in
-#		rxvt-256color | screen-256color )
-#			print -Pn "\e]0;%n@%m: %~\a" ;;
-#	esac
-#}
+precmd() {
 
-#preexec() {
-#	case $TERM in
-#		rxvt-256color | screen-256color )
-#			print -Pn "\e]0;$1\a" ;;
-#	esac
-#} # }}}
+	vcs_info
+	setprompt
+
+	case $TERM in
+		rxvt-256color | screen-256color )
+			print -Pn "\e]0;%n@%m: %~\a" ;;
+	esac
+}
+
+preexec() {
+	case $TERM in
+		rxvt-256color | screen-256color )
+			print -Pn "\e]0;$1\a" ;;
+	esac
+} # }}}
 
 # {{{ Oneliners
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
