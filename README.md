@@ -19,9 +19,8 @@ system configurations
 * Copy dotfiles you want from etc files to /etc (DON'T CREATE LINKS)
 * Some dotfiles are missing as they contain some personal informations or some
   secure data, create your own dotfiles
-* Some dotfiles needs some extra files from bin/, systemd/ and urxvt/ folders,
-  copy/link them as follow (bin/\* -> /usr/bin/, systemd/\* ->
-  /etc/systemd/system/, urxvt/\* -> /usr/lib/urxvt/perl/, ...)
+* Some dotfiles needs some extra files from bin/ and urxvt/ folders,
+  copy/link them as follow (bin/\* -> /usr/bin/, urxvt/\* -> /usr/lib/urxvt/perl/, ...)
 
 LICENCE and CREDITS
 =========

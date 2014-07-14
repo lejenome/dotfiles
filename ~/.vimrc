@@ -162,9 +162,3 @@ set ruler
 
 " show incomplete commands
 set showcmd
-
-
-map <F7> :w !xsel<CR><CR>
-vmap <F7> "*y
-map <S-F7> :r!xsel -o<CR>
-

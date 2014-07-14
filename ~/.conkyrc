@@ -8,9 +8,6 @@ override_utf8_locale yes
 TEXT
 
 [\
-# MPD
-#{ "full_text" : ${if_mpd_playing} "now_playing ", "color" : "\#545454", "separator" : false, "separator_block_width" : 3 },\
-#{ "full_text" : "${mpd_artist 20} - ${mpd_title 30}"${else}""${endif}, "color" : "\#909737", "min_width" : 300, "separator" : false, "separator_block_width" : 3 },\
 # CPU temperature:
 {"full_text":"CPU","color":"\#545454","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${acpitemp}<45}${acpitemp}°C","color":"\#909737","separator":false,"separator_block_width":6},\
@@ -51,12 +48,30 @@ ${endif}\
 ${endif}\
 # Upload:
 {"full_text":"UP","color":"\#545454","separator":false,"separator_block_width":6},\
-{"full_text":"${if_match ${upspeedf ppp0}<300}${upspeed ppp0}","color":"\#909737","separator":false,"separator_block_width":6},\
+${if_match ${upspeedf enp9s0}>0} \
+{"full_text":"${if_match ${upspeedf enp9s0}<1000}${upspeed enp9s0}","color":"\#909737","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${upspeedf ppp0}<800}${upspeed ppp0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${upspeedf enp9s0}<3000}${upspeed enp9s0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${upspeedf ppp0}>=800}${upspeed ppp0}","color":"\#802828","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${upspeedf enp9s0}>=3000}${upspeed enp9s0}","color":"\#802828","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
+${else}\
+${if_match ${upspeedf wlp8s0}>0} \
+{"full_text":"${if_match ${upspeedf wlp8s0}<1000}${upspeed wlp8s0}","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${upspeedf wlp8s0}<3000}${upspeed wlp8s0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${upspeedf wlp8s0}>=3000}${upspeed wlp8s0}","color":"\#802828","separator":false,"separator_block_width":6},\
+{"full_text":"${endif}${endif}${endif}"},\
+${else}\
+{"full_text":"${if_match ${upspeedf ppp0}<1000}${upspeed ppp0}","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${upspeedf ppp0}<3000}${upspeed ppp0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${upspeedf ppp0}>=3000}${upspeed ppp0}","color":"\#802828","separator":false,"separator_block_width":6},\
+{"full_text":"${endif}${endif}${endif}"},\
+${endif}\
+${endif}\
 # Memory:
 {"full_text":"MEM","color":"\#545454","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${memperc}<30}≣ ${memeasyfree}","color":"\#909737","separator":false,"separator_block_width":6},\
@@ -74,8 +89,8 @@ ${endif}\
 {"full_text":"${if_match ${cpu cpu0}<=100}${cpu cpu0}%","color":"\#802828","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
 # Weather:
-#{"full_text":"☂","color":"\#545454","separator":false,"separator_block_width":6},\
-#{"full_text":"${execi 300 ~/bin/weather_simple "EUR|UK|UK241|LONDON"}","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+{"full_text":"T","color":"\#545454","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 3600 ~/.conky/weather.sh}°","color":"\#909737","separator":false,"separator_block_width":6},\
 # Mail:
 {"full_text":"MAIL","color":"\#545454","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${execpi 60 ls ~/mail/new |wc -l}<=0}${execpi 60 ls ~/mail/new |wc -l}","color":"\#909737","separator":false,"separator_block_width":6},\

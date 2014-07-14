@@ -17,23 +17,23 @@ sync_all_branch () {
 # }}}
 
 # {{{ Title stuffs
-precmd() {
+#precmd() {
+#
+#	vcs_info
+#	setprompt
+#
+#	case $TERM in
+#		rxvt-256color | screen-256color )
+#			print -Pn "\e]0;%n@%m: %~\a" ;;
+#	esac
+#}
 
-	vcs_info
-	setprompt
-
-	case $TERM in
-		rxvt-256color | screen-256color )
-			print -Pn "\e]0;%n@%m: %~\a" ;;
-	esac
-}
-
-preexec() {
-	case $TERM in
-		rxvt-256color | screen-256color )
-			print -Pn "\e]0;$1\a" ;;
-	esac
-} # }}}
+#preexec() {
+#	case $TERM in
+#		rxvt-256color | screen-256color )
+#			print -Pn "\e]0;$1\a" ;;
+#	esac
+#} # }}}
 
 # {{{ Oneliners
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
@@ -265,9 +265,3 @@ ark() {
 #			prt-get $@ ;;
 #	esac
 #}
-
-rc.d() {
-	sudo /etc/rc.d/$@
-}
-
-archlinux() { sudo mount /dev/arch-vg/root /mnt/; cd /mnt/; sudo mount -t proc proc proc; sudo mount --rbind /dev dev/; sudo mount --rbind /sys sys/; sudo cp /etc/resolv.conf etc/; sudo chroot . /bin/zsh; }
