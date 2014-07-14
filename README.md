@@ -30,8 +30,12 @@ Some of these dotfiles are a copy of other people dotfiles with a litle tweaks
 and Some are completly mine, I don't remember all original authors.
 
 weechat based on: weechat\_dex2 (http://dotshare.it/dots/238/) by d3x0r
+
 i3 based on: i3~Arch (http://dotshare.it/dots/754/) by okubax
+
 zsh based on: ZSH-alicious (http://dotshare.it/dots/100/) by crshd
 
+
 All my own dotfiles are under GPL-3
+
 All my tweaks to other authors dotfiles are under the same licence
