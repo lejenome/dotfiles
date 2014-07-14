@@ -7,6 +7,8 @@
 " DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
 " ============================================
 
+" use Vim settings instead of Vi settings
+set nocompatible
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -88,10 +90,12 @@ color wombat256mod
 
 
 " Enable syntax highlighting
-" You need to reload this file for the change to apply
 filetype off
 filetype plugin indent on
 syntax on
+
+" Automaticlly indent when adding a curly barket, ...
+set smartindent
 
 
 " Showing line numbers and length
@@ -119,6 +123,7 @@ set undolevels=700
 "set shiftwidth=4
 "set shiftround
 "set expandtab
+"set smarttab
 
 
 " Make search case insensitive
@@ -149,7 +154,14 @@ set noswapfile
 let g:Powerline_symbols = 'unicode'
 set laststatus=2
 
-set encoding=utf8
+" use UTF-8 encoding
+set encoding=utf-8
+
+" show line number, cursor position
+set ruler
+
+" show incomplete commands
+set showcmd
 
 
 map <F7> :w !xsel<CR><CR>
