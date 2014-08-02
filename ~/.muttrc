@@ -29,8 +29,13 @@ mailboxes +inbox +lovey-dovey +happy-kangaroos
 # Don't ask to delete
 set delete = yes
 set beep_new
+
+# open html on elinks
 set mailcap_path    = ~/.mutt/mailcap
+# auto open html doc with elinks
 auto_view text/html
+#set char encoding to utf-8
+set send_charset="utf-8"
 bind index "^" imap-fetch-mail
 
 #-------------------------------------------
