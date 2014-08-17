@@ -19,8 +19,7 @@ system configurations
 * Copy dotfiles you want from etc files to /etc (DON'T CREATE LINKS)
 * Some dotfiles are missing as they contain some personal informations or some
   secure data, create your own dotfiles
-* Some dotfiles needs some extra files from bin/ folder,
-  copy/link them as follow (bin/\* -> /usr/bin/, ...)
+* Some dotfiles needs some extra apps/daemons to be installed
 
 LICENCE and CREDITS
 =========
