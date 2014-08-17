@@ -1,4 +1,5 @@
 export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin"
+[ -e ~/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 export HISTSIZE=1000
 export SAVEHIST=1000
