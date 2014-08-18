@@ -1,1 +1,2 @@
 SUBSYSTEM=="backlight", ACTION=="add", KERNEL=="acpi_video0", ATTR{brightness}="20"
+SUBSYSTEM=="backlight", ACTION=="add", KERNEL=="radeon_bl0", ATTR{brightness}="15"
