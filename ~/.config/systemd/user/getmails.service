@@ -4,7 +4,9 @@ JobTimeoutSec=2min
 
 [Service]
 ExecStart=/home/lejenome/.local/bin/getmails
-User=lejenome
 Nice=19
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
+
+[Install]
+WantedBy=default.target

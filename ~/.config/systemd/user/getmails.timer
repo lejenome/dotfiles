@@ -7,4 +7,4 @@ OnUnitActiveSec=2min
 Persistent=true
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
