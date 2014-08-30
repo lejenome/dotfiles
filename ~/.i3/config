@@ -182,10 +182,10 @@ bindsym $mod+Shift+t exec ~/.i3/TERM.sh
 focus_follows_mouse no
 new_window pixel 1
 new_float pixel 1
-#exec --no-startup-id guake
+# Move i3 independent X apps to xinitrc
 #exec --no-startup-id /usr/bin/setxkbmap fr
-exec --no-startup-id urxvtd -q -o
-exec --no-startup-id xset dpms 300
+#exec --no-startup-id urxvtd -q -o
+#exec --no-startup-id xset dpms 300 360 420
 
 # Workspace names
 workspace "1:Web" output LVDS1

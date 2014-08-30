@@ -1,6 +1,4 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-setxkbmap fr
-[[ -f ~/.fehbg ]] && sh ~/.fehbg &
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -9,5 +7,15 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Xorg settings
+setxkbmap fr
+xset +dpms			# Enable DPMS
+xset dpms 300 330 360		# Set standby, suspend, & off times (in seconds)
+
+# Autostart apps/daemons
+[[ -f ~/.fehbg ]] && sh ~/.fehbg &
+urxvtd -q -o &
 redshift &
+
+# exec  DE/WM
 exec i3

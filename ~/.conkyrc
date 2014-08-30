@@ -3,6 +3,7 @@ out_to_x no
 out_to_console yes
 short_units yes
 update_interval 1
+update_interval_on_battery 3
 override_utf8_locale yes
 
 TEXT
