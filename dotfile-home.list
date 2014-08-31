@@ -4,6 +4,7 @@
 #     c: item to be copied
 # NOTE: - ITEM address should without spaces on name
 #       - comments should be on their own lines
+#       - some items are still not on the repo yet
 
 l .bash_logout
 l .local/bin
