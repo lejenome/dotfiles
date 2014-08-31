@@ -1,0 +1,27 @@
+c sysctl.d
+# SYNTAX: COMMAND <item address without profile folder address>
+# COMMAND:
+#     l: item to be linked
+#     c: item to be copied
+# NOTE: - ITEM address should without spaces on name
+#       - comments should be on their own lines
+
+c makepkg.conf
+c udev/rules.d
+c modules-load.d
+c systemd/system/user@.service.d/dbus.conf
+c systemd/journald.conf
+c systemd/user/dbus.socket
+c systemd/user/dbus.service
+c abs.conf
+c default
+c locale.conf
+c mkinitcpio.d
+c psd.conf
+c pam.d/su
+c pam.d/system-login
+c initcpio
+c modprobe.d
+c mkinitcpio-lts.conf
+c mkinitcpio.conf
+c fstab

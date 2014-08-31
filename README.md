@@ -21,6 +21,10 @@ system configurations
   secure data, create your own dotfiles
 * Some dotfiles needs some extra apps/daemons to be installed
 
+NOTE: I have added dotfiles.sh script to made it easier to sync and check
+status of dotfiles. tweak config files dotfile-{home,etc}.list to matches your
+needs before using the script
+
 LICENCE and CREDITS
 =========
 

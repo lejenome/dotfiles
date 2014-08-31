@@ -1,0 +1,67 @@
+# SYNTAX: COMMAND <item address without profile folder address>
+# COMMAND:
+#     l: item to be linked
+#     c: item to be copied
+# NOTE: - ITEM address should without spaces on name
+#       - comments should be on their own lines
+
+l .bash_logout
+l .local/bin
+l .zprofile
+l .zshrc
+l .Xresources
+l .conkyrc
+l .calcurse/conf
+l .conky
+l .tmux.conf
+l .gitconfig
+l .mozilla/firefox/profiles.ini
+l .mozilla/firefox/default/user.js
+l .vimrc
+l .cmus/autosave
+l .cmus/rc
+l .urxvt/ext
+l .gitignore
+l .weechat/weechat.conf
+l .weechat/perl
+l .bashrc
+l .xinitrc
+l .mutt
+l .gtkrc-2.0
+l .bash_profile
+l .zsh
+l .muttrc
+l .config
+l .config/gtk-2.0
+l .config/ls++
+l .config/redshift.conf
+l .config/gtk-3.0
+l .config/systemd
+l .config/lyvi
+l .config/htop
+l .i3
+
+c .config/feednix/config.json
+
+# .config/ranger
+# .cache/mozilla/firefox/default
+# .calcurse/keys
+# .weechat/rmodifier.conf
+# .weechat/plugins.conf
+# .weechat/xfer.conf
+# .weechat/trigger.conf
+# .weechat/buffers.conf
+# .weechat/script.conf
+# .weechat/relay.conf
+# .weechat/logger.conf
+# .weechat/exec.conf
+# .weechat/charset.conf
+# .weechat/aspell.conf
+# .weechat/alias.conf
+# .weechat/sec.conf
+# .mplayer
+# .vimperator/info/default/macros
+# .vimperator/info/default/ignored-keys
+# .fehbg
+# .mpv
+# .davfs2/davfs2.conf
