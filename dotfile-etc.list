@@ -4,6 +4,7 @@
 #     c: item to be copied
 # NOTE: - ITEM address should without spaces on name
 #       - comments should be on their own lines
+#       - some items are still not on the repo yet
 
 c sysctl.d
 c makepkg.conf
@@ -25,3 +26,51 @@ c modprobe.d
 c mkinitcpio-lts.conf
 c mkinitcpio.conf
 c fstab
+c yaourtrc
+c customizepkg.d
+c davfs2/davfs2.conf
+c sudoers
+c bitlbee
+# polipo
+c pacman.conf
+c sudoers.d
+c vconsole.conf
+c localtime
+c hostname
+c systemd/network
+
+
+
+# preload.conf
+# dnsmasq.conf
+# vimpagerrc
+# wpa_supplicant
+# profile
+# skel
+# profile.d
+# host.conf
+# securetty
+# ssl/openssl.cnf
+# openldap
+# pam.d
+# security
+# default
+# environment
+# X11
+# login.defs
+# udev/udev.conf
+# systemd/logind.conf
+# systemd/user.conf
+# systemd/system.conf
+# systemd/bootchart.conf
+# systemd/coredump.conf
+# systemd/journal-remote.conf
+# systemd/journal-upload.conf
+# systemd/timesyncd.conf
+# systemd/resolved.conf
+# xinetd.d
+# man_db.conf
+# nanorc
+# Muttrc
+# Muttrc.dist
+# Muttrc.gpg.dist

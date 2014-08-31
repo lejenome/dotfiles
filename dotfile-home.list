@@ -40,6 +40,8 @@ l .config/systemd
 l .config/lyvi
 l .config/htop
 l .i3
+l .hgrc
+l .urlview
 
 c .config/feednix/config.json
 
