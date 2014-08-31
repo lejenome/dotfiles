@@ -1,4 +1,3 @@
-c sysctl.d
 # SYNTAX: COMMAND <item address without profile folder address>
 # COMMAND:
 #     l: item to be linked
@@ -6,6 +5,7 @@ c sysctl.d
 # NOTE: - ITEM address should without spaces on name
 #       - comments should be on their own lines
 
+c sysctl.d
 c makepkg.conf
 c udev/rules.d
 c modules-load.d
