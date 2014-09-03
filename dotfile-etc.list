@@ -15,7 +15,7 @@ c systemd/journald.conf
 c systemd/user/dbus.socket
 c systemd/user/dbus.service
 c abs.conf
-c default
+c default/grub
 c locale.conf
 c mkinitcpio.d
 c psd.conf
@@ -28,12 +28,11 @@ c mkinitcpio.conf
 c fstab
 c yaourtrc
 c customizepkg.d
-c davfs2/davfs2.conf
-c sudoers
+#c davfs2/davfs2.conf
+#c sudoers
 c bitlbee
-# polipo
+#c polipo
 c pacman.conf
-c sudoers.d
 c vconsole.conf
 c localtime
 c hostname
@@ -54,7 +53,6 @@ c systemd/network
 # openldap
 # pam.d
 # security
-# default
 # environment
 # X11
 # login.defs

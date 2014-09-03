@@ -1,0 +1,4 @@
+#replace#global#make prepare#patch -p1 -i \\/etc\\/customizepkg.d\\/linux.config.patch \\n make prepare
+
+replace#global#cat "${srcdir}\\/config.x86_64" > .\\/.config#cat \\/etc\\/customizepkg.d\\/linux.config.x86_64 > .\\/.config
+remove#global#.*dvb.*

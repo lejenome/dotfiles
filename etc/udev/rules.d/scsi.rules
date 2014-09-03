@@ -1,0 +1,2 @@
+# SATA active link power management
+SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="min_power"

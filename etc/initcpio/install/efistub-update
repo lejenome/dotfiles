@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+build() {
+	/etc/initcpio/update-efi.sh &
+}
+
+help() {
+	cat <<HELPEOF
+This hook waits for mkinitcpio to finish and copies the finished ramdisk and kernel to the ESP
+HELPEOF
+}

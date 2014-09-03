@@ -1,0 +1,18 @@
+{
+	"colors" :
+	{
+		"active_panel" : 1,
+		"background" : 0,
+		"counter" : 5,
+		"idle_panel" : 6,
+		"instructions_line" : 4,
+		"item_highlight" : 2,
+		"item_text" : 7,
+		"read_item" : 3,
+		"status_line" : 7
+	},
+	"ctg_win_width" : 9,
+	"posts_retrive_count" : "500",
+	"preview_complete_content" : true,
+	"view_win_height_per" : 50
+}
