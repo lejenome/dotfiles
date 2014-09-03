@@ -13,8 +13,8 @@ These dotfiles files are for my personal needs and don't sweet your needs and
 system. These dotfiles depend on some other dotfiles and applications to work
 correctly or they may make your system unstable.
 
-* fork the repository and tweak the dotfiles to sweet your needs and you current
-system configurations
+* fork the repository and init submodules
+* tweak the dotfiles to sweet your needs and your current system configurations
 * Create a link of every dotfile you need from ~ folder to your home directory
 * Copy dotfiles you want from etc files to /etc (DON'T CREATE LINKS)
 * Some dotfiles are missing as they contain some personal informations or some
