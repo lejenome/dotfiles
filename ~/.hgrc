@@ -1,0 +1,75 @@
+### --- User interface
+
+[ui]
+
+verbose = True
+username = Moez Bouhlel <bmoez.j@gmail.com>
+editor = vim
+portablefilenames = warn
+reportoldssl = True
+report_untrusted = True
+slash = True
+
+[diff]
+
+git = True
+nodates = False
+showfunc = True
+ignorews = False
+ignoreblanklines = False
+
+[server]
+
+uncompressed = False
+validate = True
+
+[worker]
+
+numpcus = 8
+
+[extensions]
+
+# hgext.acl =
+# hgext.hbisect =
+# hgext.bugzilla =
+# hgext.extdiff =
+# hgext.gpg =
+# hgext.hgk =
+# hgext.strip =
+# hgext.notify =
+# hgext.patchbomb =
+# hgext.churn = /home/user/hg/hg/contrib/churn.py
+# hgext.eol =
+
+[hgk]
+
+# path = /home/user/hg/hg/contrib/hgk
+
+[hooks]
+
+# incoming.notify = python:hgext.notify.hook
+# changegroup.notify = python:hgext.notify.hook
+
+[email]
+
+# from = user@example.com
+# method = smtp
+
+[smtp]
+
+# host = mail
+# port = 25
+# tls = false
+# username = user
+# password = blivet
+# local_hostname = myhost
+
+[notify]
+
+# sources = serve push pull bundle
+# test = True
+# config = /path/to/subscription/file
+
+[web]
+
+cacerts = /etc/ssl/certs/ca-certificates.crt

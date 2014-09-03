@@ -11,7 +11,11 @@ setopt \
       ksh_glob \
       extendedglob \
       prompt_subst \
-      inc_append_history
+      inc_append_history \
+      pushd_to_home \
+      vi
+#      auto_list
+
 
 bindkey -v
 

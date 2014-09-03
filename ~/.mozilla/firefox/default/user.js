@@ -1,5 +1,6 @@
 // updeter config
-user_pref("app.update.auto", false);
+user_pref("app.update.auto", true);
+user_pref("app.update.silent", true);
 user_pref("app.update.disable_button.showUpdateHistory", false);
 // disk cache config
 user_pref("browser.cache.disk.capacity", 10240);
