@@ -41,6 +41,9 @@ l .config/htop
 l .i3
 l .hgrc
 l .urlview
+l .vimperatorrc
+l .vimperator/plugins
+l .vimperator/colors
 
 c .config/feednix/config.json
 c .cmus/autosave
@@ -62,8 +65,6 @@ c .cmus/autosave
 # .weechat/alias.conf
 # .weechat/sec.conf
 # .mplayer
-# .vimperator/info/default/macros
-# .vimperator/info/default/ignored-keys
 # .fehbg
 # .mpv
 # .davfs2/davfs2.conf

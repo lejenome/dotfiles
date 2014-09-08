@@ -19,7 +19,9 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 #font pango:DejaVu Sans Mono 8
-font xft:Cousine bold 7.5
+
+#font xft:Cousine bold 7.5
+font xft:Cousine, Icons 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -147,9 +149,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-#        font pango:DejaVu Sans Mono, Icons 8
-#        font -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
-#        status_command i3status
+        font pango:DejaVu Sans Mono, Icons 7
         status_command $HOME/.i3/conky-i3bar
         position top
 
