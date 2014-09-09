@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # NOTE:
 #     TO GET RID OF THE VERBOSE OUTPUT, REDIRECT STDOUT TO /dev/null
 #TODO: handle changing item conf from l to c
@@ -41,8 +41,9 @@ sync () {
 		echo "WARN: different item '$TARGET_DIR/$ITEM_TO_SYNC' exists" >&2
 		continue
 	fi
+	mkdir -p $(dirname "$TARGET_DIR/$ITEM_TO_SYNC")
 	case $1 in
-		l) ln -s "$PWD/$SYNC_DIR/$ITEM_TO_SYNC" "$TARGET_DIR/$ITEM_TO_SYNC"
+		l) ln -s "$SYNC_DIR/$ITEM_TO_SYNC" "$TARGET_DIR/$ITEM_TO_SYNC"
 			echo "LINKED: $ITEM_TO_SYNC"
 			;;
 		c) cp -r "$SYNC_DIR/$ITEM_TO_SYNC" "$TARGET_DIR/$ITEM_TO_SYNC"
@@ -87,6 +88,7 @@ EOF
 
 }
 
+CWD=$(dirname $0)
 if [ $# -ne 2 ]; then
 	echo "ERROR: unvalid numbber of args" >&2
 	help >&2
@@ -94,11 +96,11 @@ if [ $# -ne 2 ]; then
 fi
 case $2 in
 	etc)
-		SYNC_DIR="./etc"
+		SYNC_DIR="$CWD/etc"
 		TARGET_DIR="/etc"
 		;;
 	home)
-		SYNC_DIR="./~"
+		SYNC_DIR="$CWD/~"
 		TARGET_DIR="$HOME"
 		;;
 	*)
