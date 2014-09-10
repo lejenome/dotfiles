@@ -8,7 +8,7 @@ export DISPLAY=:0
 
 export SHELL='/bin/zsh'
 export EDITOR='/usr/bin/vim'
-export MANPAGER='/usr/bin/vimpager'
+[ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"

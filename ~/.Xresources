@@ -35,6 +35,11 @@ URxvt*cursorColor:        #ff8939
 URxvt*cursorColor2:       #151515
 
 URxvt.scrollBar: false
+URxvt*saveLines:10000
+URxvt.iso14755 : false
+URxvt*fading: 20
+!URxvt.lineSpace: 1
+!URxvt.letterSpace : -1
 
 !-*- Perl extensions -*-
 URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
@@ -49,14 +54,41 @@ URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
 URxvt.copyCommand:   xsel -ib
 URxvt.pasteCommand:  xsel -ob
 
-!URxvt.letterSpace: -3
+
 !URxvt*font: xft:Terminus:pixelsize=10,xft:Inconsolata\ for\ Powerline:pixelsize=10
 !URxvt.font : xft:Cousine:pixelsize=10
-!iURxvt.letterSpace : -1
-URxvt.iso14755 : false
-
+URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
+URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
+URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
 Xft.lcdfilter : lcddefault
 Xft.hintstyle : hintslight
 Xft.hinting : true
 Xft.antialias : true
 Xft.rgba : rgb
+Xft.dpi: 96
+
+!Tango colors
+! ! black
+! *color0:  #2E3436
+! *color8:  #555753
+! ! red
+! *color1:  #a40000
+! *color9:  #EF2929
+! ! green
+! *color2:  #4E9A06
+! *color10: #8AE234
+! ! yellow
+! *color3:  #C4A000
+! *color11: #FCE94F
+! ! blue
+! *color4:  #3465A4
+! *color12: #729FCF
+! ! purple
+! *color5:  #75507B
+! *color13: #AD7FA8
+! ! orange (replaces cyan)
+! *color6:  #ce5c00
+! *color14: #fcaf3e
+! ! white
+! *color7:  #babdb9
+! *color15: #EEEEEC

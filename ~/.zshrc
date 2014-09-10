@@ -1,3 +1,4 @@
+fpath=( $fpath ~/.zsh/completion )
 autoload -U colors && colors
 autoload -U compinit && compinit
 autoload -U vcs_info && vcs_info
