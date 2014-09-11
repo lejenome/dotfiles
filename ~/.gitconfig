@@ -82,7 +82,8 @@
 	d = diff                          # diff unstaged changes
 	dc = diff --cached                # diff staged changes
 	last = diff HEAD^                 # diff last committed change
-	l = log --graph --date=short
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	ll = log --pretty=medium --graph
 	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
 	short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
 	simple = log --pretty=format:\" * %s\"
@@ -97,11 +98,14 @@
 	filelog = log -u                  # show changes to a file
 	s = status                        # status
 	contributors = shortlog --summary --numbered
-	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-
-	# View the current working tree status using the short format
-	s = status -s
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	# Credit an author on the latest commit
+	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+	# rebase local braches to upstream branches & create missing ones
+	syncupstream = "!f() { git fetch upstream; for _b in $(git branch -a |awk 'BEGIN {FS=\"/\"} $2=\"upstream\" {print $3}'); do git co $_b && git rebase -s recursive -Xours upstream/$_b || git nb $_b upstream/$_b; done; git co master;}; f"
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -118,16 +122,8 @@
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
-
-	# Credit an author on the latest commit
-	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"

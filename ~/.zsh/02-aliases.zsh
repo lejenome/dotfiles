@@ -36,28 +36,9 @@ alias mkdir='mkdir -p'
 # Various
 alias cls='clear'
 alias h='history'
-#alias mplayer='mplayer -msgcolor'
-#alias utorrent='utserver -configfile ~/.config/utorrent/utserver.conf'
+alias mplayer='mplayer -msgcolor'
 #alias wget='wget -c'
 #alias aria='aria2c -c -x 10 -s 10 -k 10M'
-#alias burniso='cdrecord -eject dev=1,0,0 -data'
-#alias sxiv='sxiv -dr'
-#alias osstest='osstest -g 5'
-#alias pychrom='pychrom -c /usr/share/X11/rgb.txt'
-#alias rtorrent="rtorrent -n -o import=${XDG_CONFIG_HOME}/rtorrent/config.rc"
-
-# Mounting
-#alias musb='sudo mount /dev/sdb'
-#alias uusb='sudo umount /mnt/usb'
-
-# Apache
-#alias apache='sudo apache2ctl'
-
-# Tmux
-#alias irc='tmux -2 a -t irc'
-#alias imap='tmux -2 a -t imap'
-#alias torrent='tmux -2 a -t torrent'
-#alias t='tmux -2 a -t tmux'
 
 # Ping
 alias pr='ping -c 1 192.168.1.1 | tail -3'
@@ -81,10 +62,6 @@ alias gcp='git cherry-pick'
 
 # Ruby
 alias gem='sudo gem'
-
-# Handbrake (What the fuck is wrong with you guys?)
-#alias handbrake='ghb'
-#alias handbrakecli='HandBrakeCLI'
 
 # Fun with sed
 #alias df='df -h | grep sd |\
