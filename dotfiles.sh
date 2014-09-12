@@ -88,7 +88,7 @@ EOF
 
 }
 
-CWD=$(dirname $0)
+CWD=$(readlink -f $(dirname $0))
 if [ $# -ne 2 ]; then
 	echo "ERROR: unvalid numbber of args" >&2
 	help >&2

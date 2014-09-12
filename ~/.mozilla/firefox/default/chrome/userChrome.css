@@ -1,0 +1,7 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+#content browser {
+  margin-right: -14px !important;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}

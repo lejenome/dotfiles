@@ -18,6 +18,7 @@ l .tmux.conf
 l .gitconfig
 l .mozilla/firefox/profiles.ini
 l .mozilla/firefox/default/user.js
+l .mozilla/firefox/default/chrome
 l .vimrc
 l .cmus/rc
 l .urxvt/ext
@@ -38,12 +39,15 @@ l .config/gtk-3.0
 l .config/systemd
 l .config/lyvi
 l .config/htop
+l .config/weston.ini
 l .i3
 l .hgrc
 l .urlview
 l .vimperatorrc
 l .vimperator/plugins
 l .vimperator/colors
+l .hgignore
+l .zlogout
 
 c .config/feednix/config.json
 c .cmus/autosave
