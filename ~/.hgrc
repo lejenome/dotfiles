@@ -1,9 +1,6 @@
-### --- User interface
-
 [ui]
-
-verbose = True
 username = Moez Bouhlel <bmoez.j@gmail.com>
+verbose = True
 editor = vim
 portablefilenames = warn
 reportoldssl = True
@@ -11,7 +8,6 @@ report_untrusted = True
 slash = True
 
 [diff]
-
 git = True
 nodates = False
 showfunc = True
@@ -19,16 +15,13 @@ ignorews = False
 ignoreblanklines = False
 
 [server]
-
 uncompressed = False
 validate = True
 
 [worker]
-
 numpcus = 8
 
 [extensions]
-
 # hgext.acl =
 # hgext.hbisect =
 # hgext.bugzilla =
@@ -42,21 +35,17 @@ numpcus = 8
 # hgext.eol =
 
 [hgk]
-
 # path = /home/user/hg/hg/contrib/hgk
 
 [hooks]
-
 # incoming.notify = python:hgext.notify.hook
 # changegroup.notify = python:hgext.notify.hook
 
 [email]
-
 # from = user@example.com
 # method = smtp
 
 [smtp]
-
 # host = mail
 # port = 25
 # tls = false
@@ -65,11 +54,9 @@ numpcus = 8
 # local_hostname = myhost
 
 [notify]
-
 # sources = serve push pull bundle
 # test = True
 # config = /path/to/subscription/file
 
 [web]
-
 cacerts = /etc/ssl/certs/ca-certificates.crt
