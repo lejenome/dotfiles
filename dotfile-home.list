@@ -39,7 +39,6 @@ l .config/gtk-3.0
 l .config/systemd
 l .config/lyvi
 l .config/htop
-l .config/weston.ini
 l .i3
 l .hgrc
 l .urlview
@@ -48,6 +47,7 @@ l .vimperator/plugins
 l .vimperator/colors
 l .hgignore
 l .zlogout
+l .config/weston.ini
 
 c .config/feednix/config.json
 c .cmus/autosave

@@ -72,7 +72,7 @@
 	chunkyadd = add --patch           # stage commits chunk by chunk
 	b = branch -v                     # branch (verbose)
 	c = commit -m                     # commit with message
-	ca = commit -am                   # commit all with message
+	ca = commit -a -m                   # commit all with message
 	ci = commit                       # commit
 	amend = commit --amend            # ammend your last commit
 	ammend = commit --amend           # ammend your last commit

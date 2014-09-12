@@ -14,7 +14,7 @@ dotfile () {
 		exit 1
 	fi
 	echo $1 $2:
-	grep "^\w*[lc] \+[^\w]\+\w*$" dotfile-${2}.list | \
+	grep "^\w*[lc] \+[^[:space:]]\+\w*$" dotfile-${2}.list | \
 		while read line; do
 			ITEM_TO_SYNC=$(awk '{print $2}' <<< "$line")
 			if [ ! -e "$SYNC_DIR/$ITEM_TO_SYNC" ]; then
