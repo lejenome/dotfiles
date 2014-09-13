@@ -55,15 +55,21 @@ URxvt.copyCommand:   xsel -ib
 URxvt.pasteCommand:  xsel -ob
 
 
-!URxvt*font: xft:Terminus:pixelsize=10,xft:Inconsolata\ for\ Powerline:pixelsize=10
-!URxvt.font : xft:Cousine:pixelsize=10
 URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
 URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
 URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
+!URxvt*font: xft:Terminus:pixelsize=10,xft:Inconsolata\ for\ Powerline:pixelsize=10
+!URxvt.font : xft:Cousine:pixelsize=10
+!URxvt.font : xft:Anonymous Pro:pixelsize=9
+!URxvt.font : xft:ProFont:pixelsize=8
+!URxvt.font : xft:Inconsolata:pixelsize=8
+
 Xft.lcdfilter : lcddefault
-Xft.hintstyle : hintslight
-Xft.hinting : true
-Xft.antialias : true
+!Xft.hintstyle : hintslight
+Xft.autohint : 0
+Xft.hintstyle : hintfull
+Xft.hinting : 1
+Xft.antialias : 1
 Xft.rgba : rgb
 Xft.dpi: 96
 

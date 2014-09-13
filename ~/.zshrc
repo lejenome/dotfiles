@@ -1,22 +1,10 @@
-fpath=( $fpath ~/.zsh/completion )
 autoload -U colors && colors
+fpath=( $fpath ~/.zsh/completion )
 autoload -U compinit && compinit
 autoload -U vcs_info && vcs_info
 
 zmodload zsh/complist
 zmodload zsh/terminfo
-
-
-setopt \
-      autocd \
-      ksh_glob \
-      extendedglob \
-      prompt_subst \
-      inc_append_history \
-      pushd_to_home \
-      vi
-#      auto_list
-
 
 bindkey -v
 

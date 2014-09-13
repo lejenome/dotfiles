@@ -8,6 +8,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~'
+alias bk='cd $OLDPWD'
 
 # RM
 alias rm='rm -r'
@@ -20,9 +21,10 @@ alias cpz='rsync -PrlpEz'
 
 # LS
 alias l='ls -Xp --color=auto'
-alias ls='ls -Xp --color=auto'
+alias ls='ls -Xp -GFh --color=auto'
 alias la='ls -A'
-alias ll='ls -alF'
+alias ll='ls -al -GFh'
+alias lh='ls -d .*'
 
 # GREP
 alias grep='grep --color=auto'
@@ -74,3 +76,24 @@ alias gem='sudo gem'
 
 #alias duch='du -ch | grep insgesamt |\
 #	sed -e "s_[0-9]*,[0-9]*[B|G|K|M|T]_\x1b[32m&\x1b[0m_"'
+
+
+# -------------------------------------------------------------------
+# Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
+# -------------------------------------------------------------------
+alias wtf='dmesg'
+alias rtfm='man'
+alias visible='echo'
+alias invisible='cat'
+alias moar='more'
+alias icanhas='mkdir'
+alias donotwant='rm'
+alias dowant='cp'
+alias gtfo='mv'
+alias hai='cd'
+alias plz='pwd'
+alias inur='locate'
+alias nomz='ps aux | less'
+alias nomnom='killall'
+alias cya='reboot'
+alias kthxbai='halt'
