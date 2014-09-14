@@ -9,10 +9,3 @@ syntax: glob
 .*.sw[a-z]
 *.un~
 Session.vim
-
-# python: Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-# python: Installer logs
-pip-log.txt
-pip-delete-this-directory.txt

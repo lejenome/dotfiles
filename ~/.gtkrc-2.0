@@ -2,8 +2,10 @@
 
 gtk-theme-name = "Numix"
 
-gtk-document-font-name = 'Sans 9'
-gtk-font-name = 'Cantarell 9'
+#gtk-document-font-name = 'Sans 9'
+gtk-document-font-name = 'ProFont 9'
+#gtk-font-name = 'Cantarell 9'
+gtk-font-name = 'ProFont 9'
 gtk-toolbar-icons-size = 'small'
 gtk-text-scaling-factor = 1.0
 gtk-monospace-font-name = 'Monospace 9'

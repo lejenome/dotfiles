@@ -1,1 +1,4 @@
-/home/lejenome/git/dotfiles/./~/.bash_logout
+# clear sudo auth cache
+sudo -k
+# clear screen
+clear

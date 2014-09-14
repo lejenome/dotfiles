@@ -1,1 +1,11 @@
-/home/lejenome/git/dotfiles/./~/.gitignore
+syntax: glob
+
+*~
+.DS_Store
+# Thumbnails
+._*
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim

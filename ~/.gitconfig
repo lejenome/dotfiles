@@ -79,7 +79,7 @@
 	co = checkout                     # checkout
 	nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 	cp = cherry-pick -x               # grab a change from a branch
-	d = diff                          # diff unstaged changes
+	d = diff --patch-with-stat        # diff unstaged changes
 	dc = diff --cached                # diff staged changes
 	last = diff HEAD^                 # diff last committed change
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -106,9 +106,8 @@
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# rebase local braches to upstream branches & create missing ones
 	syncupstream = "!f() { git fetch upstream; for _b in $(git branch -a |awk 'BEGIN {FS=\"/\"} $2==\"upstream\" {print $3}'); do git co $_b && git rebase -s recursive -Xours upstream/$_b || git nb $_b upstream/$_b; done; git co master;}; f"
-
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	dl = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
