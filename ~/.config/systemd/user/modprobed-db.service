@@ -1,0 +1,11 @@
+[Unit]
+Description=Track probed kernel modules
+
+[Service]
+ExecStart=/usr/bin/modprobed-db store
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=default.target

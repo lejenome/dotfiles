@@ -1,0 +1,10 @@
+[Unit]
+Description=10 min check for probed modules
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=10min
+Persistent=true
+
+[Install]
+WantedBy=default.target
