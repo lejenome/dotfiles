@@ -38,7 +38,11 @@ l .muttrc
 l .config/ls++
 l .config/redshift.conf
 l .config/gtk-3.0
-l .config/systemd
+#l .config/systemd
+l .config/systemd/user/getmails.service
+l .config/systemd/user/getmails.timer
+l .config/systemd/user/modprobed-db.service
+l .config/systemd/user/modprobed-db.timer
 l .config/lyvi
 l .config/htop
 l .config/modprobed-db.conf
