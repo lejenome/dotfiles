@@ -8,7 +8,7 @@ zmodload zsh/terminfo
 
 bindkey -v
 
-source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 for r in $HOME/.zsh/*.zsh; do
         if [[ $DEBUG > 0 ]]; then
