@@ -51,6 +51,7 @@ l .vimperator/colors
 l .hgignore
 l .zlogout
 l .mplayer
+l .mpv
 l .config/weston.ini
 
 c .config/feednix/config.json
@@ -60,5 +61,4 @@ c .cmus/autosave
 # .cache/mozilla/firefox/default
 # .calcurse/keys
 # .fehbg
-# .mpv
 # .davfs2/davfs2.conf
