@@ -1,0 +1,51 @@
+msgcolor = 1
+msgmodule = 1
+fs = 0
+zoom = yes
+
+#heartbeat-cmd =
+#heartbeat-interval = 120
+
+noar = 1 # turn off appleIR remote support
+nojoystick = 1
+nolirc = 1
+cache = 100000
+
+slang = en,fr,ar #DVD: prefer english subtitles
+alang = en,fr,ar #DVD: prefer english audio tracks
+
+ao = alsa,openal,pulse,
+vo = vdpau,x11,gl,
+framedrop = yes # drop frames to preserve audio/video sync
+
+#[vo.vdpau]
+#vc=ffh264vdpau,ffodivxvdpau,ffmpeg12vdpau,
+
+###########################
+## protocol based settings #
+############################
+
+[protocol.http]
+cache-min = 1.0
+
+[protocol.http_proxy]
+cache-min = 1.0
+
+[protocol.mmst]
+cache-min = 1.0
+
+[protocol.mms]
+cache-min = 1.0
+
+[protocol.rtp]
+cache-min = 1.0
+
+[protocol.rtsp]
+cache-min = 1.0
+
+[protocol.icyx]
+cache-min = 1.0
+
+[protocol.dvdnav]
+mouse-movements=yes
+cache= 10000
