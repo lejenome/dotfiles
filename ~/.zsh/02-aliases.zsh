@@ -38,7 +38,7 @@ alias mkdir='mkdir -p'
 # Various
 alias cls='clear'
 alias h='history'
-alias mplayer='mplayer -msgcolor'
+#alias mplayer='mplayer -msgcolor'
 #alias wget='wget -c'
 #alias aria='aria2c -c -x 10 -s 10 -k 10M'
 
@@ -64,6 +64,11 @@ alias gcp='git cherry-pick'
 
 # Ruby
 alias gem='sudo gem'
+
+#systemctl
+alias suspend='systemctl suspend'
+alias hibernate='systemctl hibernate'
+alias hybrid-sleep='systemctl hybrid-sleep'
 
 # Fun with sed
 #alias df='df -h | grep sd |\

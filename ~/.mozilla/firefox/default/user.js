@@ -46,12 +46,12 @@ user_pref("dom.telephony.enabled", true);
 user_pref("dom.voicemail.enabled", true);
 user_pref("dom.w3c_pointer_events.enabled", true);
 user_pref("dom.webcomponents.enabled", true);
-//user_perf("dom.image.picture.enabled", true);
-//user_perf("dom.image.srcset.enabled", true);
-//user_perf("dom.indexedDB.experimental", true);
-//user_perf("dom.undo_manager.enabled", true);
-//user_perf("dom.mapped_arraybuffer.enabled", true);
-//user_perf("dom.quotaManager.testing", true);
+user_perf("dom.image.picture.enabled", true);
+user_perf("dom.image.srcset.enabled", true);
+user_perf("dom.indexedDB.experimental", true);
+user_perf("dom.undo_manager.enabled", true);
+user_perf("dom.mapped_arraybuffer.enabled", true);
+user_perf("dom.quotaManager.testing", true);
 // force OMTC
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("layers.enable-tiles", true);
@@ -64,16 +64,16 @@ user_pref("layout.css.dpi", 0);
 user_pref("layout.css.filters.enabled", true);
 user_pref("layout.css.grid.enabled", true);
 user_pref("layout.css.ruby.enabled", true);
-//user_pref("layout.css.vertical-text.enabled", true);
+user_pref("layout.css.vertical-text.enabled", true);
 //user_pref("layout.css.will-change.enabled", true);
 // media config
 user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 user_pref("media.mediasource.enabled", true);
 user_pref("media.webspeech.recognition.enable", true);
 user_pref("media.webspeech.synth.enabled", true);
-//user_pref("media.audio_data.enabled", true);
-//user_pref("media.eme.enabled", true);
-//user_pref("media.track.enabled", true);
+user_pref("media.audio_data.enabled", true);
+user_pref("media.eme.enabled", true);
+user_pref("media.track.enabled", true);
 // use pipe
 user_pref("network.http.pipelining", true);
 user_pref("network.http.pipelining.ssl", true);
@@ -89,9 +89,9 @@ user_pref("privacy.donottrackheader.enabled", true);
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.passwords", false);
 user_pref("services.sync.engine.prefs", false);
-//user_pref("services.push.enabled", true);
+user_pref("services.push.enabled", true);
 // webgl config
-//user_pref("webgl.force-enabled", true);
+user_pref("webgl.force-enabled", true);
 // enable shumway
 user_pref("shumway.disabled", false);
 // set default to US

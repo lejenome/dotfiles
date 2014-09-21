@@ -115,3 +115,5 @@ set ruler
 
 " show incomplete commands
 set showcmd
+
+au BufRead,BufNewFile *.less set filetype=css
