@@ -27,3 +27,9 @@ export ARCHFLAGS="-arch x86_64"
 export COLORFGBG="default;default"
 # use RAM for HOME caching for perfermance improvement
 export XDG_CACHE_HOME="/dev/shm/.cache"
+# mesa & r600 options
+export R600_DEBUG=hyperz
+export R600_STREAMOUT=1
+export R600_HYPERZ=1
+export LIBVA_DRIVER_NAME=vdpau
+export VDPAU_DRIVER=r600
