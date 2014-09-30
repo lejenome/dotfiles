@@ -117,3 +117,9 @@ set ruler
 set showcmd
 
 au BufRead,BufNewFile *.less set filetype=css
+
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+let g:syntastic_html_validator_parser = 'html5'
+"let g:syntastic_html_checkers = ['w3', 'validator']
+let g:syntastic_html_checkers = ['w3']
