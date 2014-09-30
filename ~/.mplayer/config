@@ -18,8 +18,8 @@ ao = alsa,openal,pulse,
 vo = vdpau,x11,gl,
 framedrop = yes # drop frames to preserve audio/video sync
 
-#[vo.vdpau]
-#vc=ffh264vdpau,ffodivxvdpau,ffmpeg12vdpau,
+[vo.vdpau]
+vc=ffmpeg12vdpau,ffmpeg12vdpauold,ffwmv3vdpau,ffwmv3vdpauold,ffvc1vdpau,ffvc1vdpauold,ffh264vdpau,ffh264vdpauold,ffodivxvdpau,ffodivxvdpauold,
 
 ###########################
 ## protocol based settings #
