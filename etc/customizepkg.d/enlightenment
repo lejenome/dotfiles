@@ -1,0 +1,1 @@
+replace#global#--enable-wayland-clients#--enable-wayland-clients --enable-wayland-only --enable-drm --enable-wayland --enable-systemd --enable-wl-drm --disable-shot --disable-xkbswitch --disable-conf-randr --disable-everything --disable-wl-x11
