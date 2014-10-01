@@ -38,7 +38,7 @@ c vconsole.conf
 c localtime
 c hostname
 c systemd/network
-
+c vimrc
 
 
 # preload.conf
