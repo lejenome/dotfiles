@@ -1,8 +1,5 @@
-" use Vim settings instead of Vi settings
-set nocompatible
-
-" Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source %
+set nocompatible " use Vim settings instead of Vi settings
+autocmd! bufwritepost .vimrc source % " Automatic reloading of .vimrc
 
 " Better copy & paste
 set pastetoggle=<F2>
@@ -79,7 +76,6 @@ highlight ColorColumn ctermbg=233
 vmap Q gq
 nmap Q gqap
 
-" Useful settings
 set history=700
 set undolevels=700
 
@@ -88,7 +84,7 @@ set undolevels=700
 "set shiftwidth=4
 "set shiftround
 "set expandtab
-"set smarttab
+set smarttab
 
 " Make search case insensitive
 set hlsearch
@@ -98,6 +94,7 @@ set smartcase
 
 " Disable stupid backup and swap files - they trigger too many events
 " for file system watchers
+set backupdir=/tmp/$USER-vim-backup
 set nobackup
 set nowritebackup
 set noswapfile
@@ -107,14 +104,11 @@ set noswapfile
 let g:Powerline_symbols = 'unicode'
 set laststatus=2
 
-" use UTF-8 encoding
-set encoding=utf-8
 
-" show line number, cursor position
-set ruler
-
-" show incomplete commands
-set showcmd
+set encoding=utf-8   " use UTF-8 encoding
+set ruler            " show line number, cursor position
+set showcmd          " show incomplete commands
+set ttyfast          " faster redraw
 
 au BufRead,BufNewFile *.less set filetype=css
 
