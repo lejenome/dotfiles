@@ -57,6 +57,7 @@ l .zlogout
 l .mplayer
 l .mpv
 l .config/weston.ini
+l .gnupg/gpg.conf
 
 c .config/feednix/config.json
 c .cmus/autosave

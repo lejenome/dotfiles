@@ -1,42 +1,29 @@
 set editor=vim
-set mbox_type=Maildir
-set folder=$HOME/mail
-set spoolfile=+/
-set header_cache=~/.cache/mutt
-
-
 set realname='Moez Bouhlel'
-
 set sendmail="/usr/bin/msmtp"
+set send_charset="utf-8"
 
-set edit_headers=yes
-set folder=~/mail
-set mbox=+mbox
-#set spoolfile=+inbox
-set record=+sent
-set postponed=+drafts
-set mbox_type=Maildir
-
-mailboxes +inbox +lovey-dovey +happy-kangaroos
-## General options
-#set imap_check_subscribed
-#set imap_keepalive = 300
-#unset imap_passive
-#set mail_check = 20
-#set check_new
-# move read mails automatically to $mbox
-#set move=yes
-# Don't ask to delete
 set delete = yes
 set beep_new
 
-# open html on elinks
 set mailcap_path    = ~/.mutt/mailcap
-# auto open html doc with elinks
 auto_view text/html
-#set char encoding to utf-8
-set send_charset="utf-8"
+
 bind index "^" imap-fetch-mail
+
+#-------------------------------------------
+# DIRS
+#-------------------------------------------
+
+set mbox_type=Maildir
+set folder=~/mail
+set header_cache=~/.cache/mutt
+set spoolfile=+/
+set mbox=+mbox
+set record=+sent
+set postponed=+drafts
+#set spoolfile=+inbox
+mailboxes +inbox +lovey-dovey +happy-kangaroos
 
 #-------------------------------------------
 # COLORS
@@ -44,3 +31,16 @@ bind index "^" imap-fetch-mail
 
 color hdrdefault cyan default
 color status white color24 # status lines in the folder index sed for the mini-help line
+
+#-------------------------------------------
+# HEADERS
+#-------------------------------------------
+
+set edit_headers=yes
+my_hdr X-Info: Keep It Simple, Stupid.
+my_hdr X-Operating-System: `uname -s`, kernel `uname -r`
+my_hdr X-Message-Flag: WARNING!! Outlook sucks
+my_hdr User-Agent: Every email client sucks, this one just sucks less.
+
+# EXTRA
+source ~/.mutt/gpgrc
