@@ -35,25 +35,13 @@ URxvt*cursorColor:        #ff8939
 URxvt*cursorColor2:       #151515
 
 URxvt.scrollBar: false
-URxvt*saveLines:10000
+URxvt*saveLines:0
 URxvt.iso14755 : false
 URxvt*fading: 20
 !URxvt.lineSpace: 1
 !URxvt.letterSpace : -1
-
-!-*- Perl extensions -*-
-URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
-URxvt.keysym.M-u:     perl:url-select:select_next
-URxvt.url-launcher:   /usr/bin/firefox
-URxvt.underlineURLs:  True
-URxvt.matcher.button: 1
-URxvt.keysym.M-Escape:perl:keyboard-select:activate
-URxvt.keysym.M-c:     perl:clipboard:copy
-URxvt.keysym.M-v:     perl:clipboard:paste
-URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
-URxvt.copyCommand:   xsel -ib
-URxvt.pasteCommand:  xsel -ob
-
+URxvt.perl-ext:
+URxvt.perl-ext-common:
 
 URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
 URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
