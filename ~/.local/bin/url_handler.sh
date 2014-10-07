@@ -30,7 +30,7 @@
 
 # The lists of programs to be executed are
 https_prgs="/usr/bin/firefox:XW /usr/bin/elinks:VT /usr/bin/lynx:VT"
-http_prgs="/usr/bin/elinks:VT /usr/bin/lynx:VT /usr/bin/firefox:XW"
+http_prgs="/usr/bin/firefox:XW /usr/bin/elinks:VT /usr/bin/lynx:VT"
 mailto_prgs="/usr/bin/mutt:VT /usr/bin/elm:VT /usr/bin/pine:VT /usr/bin/mail:VT"
 gopher_prgs="/usr/bin/elinks:VT /usr/bin/lynx:VT /usr/bin/gopher:VT"
 ftp_prgs="/usr/bin/elinls:VT /usr/bin/lynx:VT /usr/bin/ncftp:VT"
