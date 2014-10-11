@@ -109,6 +109,8 @@
 	# Show the diff between the latest commit and the current state
 	dl = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
+	caa = !"git add --all; git commit -am"
+
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
