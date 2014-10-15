@@ -85,6 +85,11 @@ user_pref("pdfjs.enableHandToolOnLoad", true);
 user_pref("pdfjs.enableWebGL", true);
 // privacy config
 user_pref("privacy.donottrackheader.enabled", true);
+// security
+user_pref("security.tls.version.min", 1);
+user_pref("security.csp.experimentalEnabled", true);
+user_pref("security.csp.newbackend.enable", true);
+user_pref("security.ssl.enable_alpn", true);
 // sync config
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.passwords", false);
