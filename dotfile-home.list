@@ -46,6 +46,8 @@ l .config/systemd/user/modprobed-db.timer
 l .config/lyvi
 l .config/htop
 l .config/modprobed-db.conf
+l .config/newsbeuter/config
+l .config/newsbeuter/urls
 l .i3
 l .hgrc
 l .urlview

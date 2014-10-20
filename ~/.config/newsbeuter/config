@@ -1,0 +1,18 @@
+browser "firefox %u"
+download-full-page yes
+# html-renderer "w3m -dump -T text/html"
+# pager vimpager
+reload-threads 10
+auto-reload yes
+reload-time 5
+# external-url-viewer "urlview"
+# mark-as-read-on-hover yes
+cache-file ~/.local/share/newsbeuter/cache.db
+
+# urls-source "newsblur"
+# newsblur-login "??"
+# newsblur-password "??"
+
+color info              white   color24   bold
+color listfocus         black   white     bold
+color listfocus_unread  magenta white   bold
