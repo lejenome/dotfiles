@@ -102,6 +102,14 @@ ${endif}\
 {"full_text":"${else}"},\
 {"full_text":"${if_match ${execpi 60 ls ~/mail/new |wc -l}>2}${execpi 60 ls ~/mail/new |wc -l}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
+# RSS
+{"full_text":"RSS \uF09e","color":"\#949494","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${execpi 60 cat ~/.conky/feeds}<=0}${execpi 60 cat ~/.conky/feeds}","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${execpi 60 cat ~/.conky/feeds}<=10}${execpi 60 cat ~/.conky/feeds}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${else}"},\
+{"full_text":"${if_match ${execpi 60 cat ~/.conky/feeds}>10}${execpi 60 cat ~/.conky/feeds}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${endif}${endif}${endif}"},\
 # Battery:
 {"full_text":"BAT \uF214","color":"\#949494","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${battery_percent}<30}${battery_percent}%","color":"\#924020","separator":false,"separator_block_width":6},\
