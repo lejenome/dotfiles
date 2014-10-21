@@ -1,3 +1,7 @@
+/* global user_pref */
+/* jshint maxlen: false */
+user_pref("browser.newtabpage.pinned", '[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://mail.google.com/","title":"Gmail"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"}, {"url":"http://www.deviantart.com/messages/","title":"deviantART (messages)"}]');
+user_pref("browser.search.defaultenginename", "Google");
 // updeter config
 user_pref("app.update.auto", true);
 user_pref("app.update.silent", true);
@@ -46,12 +50,12 @@ user_pref("dom.telephony.enabled", true);
 user_pref("dom.voicemail.enabled", true);
 user_pref("dom.w3c_pointer_events.enabled", true);
 user_pref("dom.webcomponents.enabled", true);
-user_perf("dom.image.picture.enabled", true);
-user_perf("dom.image.srcset.enabled", true);
-user_perf("dom.indexedDB.experimental", true);
-user_perf("dom.undo_manager.enabled", true);
-user_perf("dom.mapped_arraybuffer.enabled", true);
-user_perf("dom.quotaManager.testing", true);
+user_pref("dom.image.picture.enabled", true);
+user_pref("dom.image.srcset.enabled", true);
+user_pref("dom.indexedDB.experimental", true);
+user_pref("dom.undo_manager.enabled", true);
+user_pref("dom.mapped_arraybuffer.enabled", true);
+user_pref("dom.quotaManager.testing", true);
 // force OMTC
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("layers.enable-tiles", true);

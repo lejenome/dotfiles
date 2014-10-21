@@ -19,9 +19,11 @@ l .gitconfig
 l .mozilla/firefox/profiles.ini
 l .mozilla/firefox/default/user.js
 l .mozilla/firefox/default/chrome
+l .mozilla/firefox/default/search-metadata.json
+l .mozilla/firefox/default/searchplugins/duckduckgo.xml
 l .vimrc
 l .cmus/rc
-l .urxvt/ext
+#l .urxvt/ext
 l .gitignore
 l .weechat/weechat.conf
 l .weechat/logger.conf
@@ -48,6 +50,7 @@ l .config/htop
 l .config/modprobed-db.conf
 l .config/newsbeuter/config
 l .config/newsbeuter/urls
+l .config/user-dirs.dirs
 l .i3
 l .hgrc
 l .urlview

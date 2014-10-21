@@ -1,0 +1,6 @@
+{
+	"[app]/google.xml":{"alias":"google","order":1},
+	"[profile]/duckduckgo.xml":{"order":2,"alias":"duckduckgo"},
+	"[global]":{"current":"DuckDuckGo","hash":"SAwnRqalCPASel0MooiVGYhRsMN6LGAxjSZ0SFJCZIY="},
+	"[app]/yahoo.xml":{"alias":null,"hidden":true}
+}
