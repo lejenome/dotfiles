@@ -1,6 +1,6 @@
 /* global user_pref */
 /* jshint maxlen: false */
-user_pref("browser.newtabpage.pinned", '[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://mail.google.com/","title":"Gmail"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"}, {"url":"http://www.deviantart.com/messages/","title":"deviantART (messages)"}]');
+user_pref("browser.newtabpage.pinned", '[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://mail.google.com/","title":"Gmail"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"}, {"url":"http://www.deviantart.com/messages/","title":"deviantART (messages)"},{"url":"https://translate.google.com/","title":"Translate"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"}]');
 user_pref("browser.search.defaultenginename", "Google");
 // updeter config
 user_pref("app.update.auto", true);

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-echo -n "$@" > ~/.conky/feeds
+echo -n "$@" > /tmp/.conky_feeds

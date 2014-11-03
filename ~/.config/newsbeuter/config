@@ -23,3 +23,5 @@ notify-program ~/.conky/feeds.sh
 color info              white   color24   bold
 color listfocus         black   white     bold
 color listfocus_unread  magenta white   bold
+
+bind-key d delete-article
