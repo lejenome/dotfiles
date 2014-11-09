@@ -56,7 +56,7 @@ l .hgrc
 l .npmrc
 l .urlview
 l .vimperatorrc
-l .vimperator/plugins
+l .vimperator/plugin
 l .vimperator/colors
 l .hgignore
 l .zlogout
