@@ -1,4 +1,4 @@
-export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin"
+export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
 [ -e ~/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 export CLICOLOR=1

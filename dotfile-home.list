@@ -53,6 +53,7 @@ l .config/newsbeuter/urls
 l .config/user-dirs.dirs
 l .i3
 l .hgrc
+l .npmrc
 l .urlview
 l .vimperatorrc
 l .vimperator/plugins
