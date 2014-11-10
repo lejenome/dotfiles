@@ -1,4 +1,4 @@
-export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
+export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/ruby/2.1.0/bin"
 [ -e ~/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 export CLICOLOR=1

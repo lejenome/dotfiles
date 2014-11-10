@@ -63,7 +63,7 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
 # Ruby
-alias gem='sudo gem'
+#alias gem='sudo gem'
 
 #systemctl
 alias suspend='systemctl suspend'

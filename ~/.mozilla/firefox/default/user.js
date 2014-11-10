@@ -13,11 +13,16 @@ user_pref("browser.cache.disk.smart_size.first_run", true);
 user_pref("browser.cache.disk.smart_size.use_old_max", true);
 user_pref("browser.cache.use_new_backend", 1);
 // browser behaviours config
-user_pref("browser.fullscreen.autohide", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.zoom.full", false);
+user_pref("browser.tabs.remote.autostart", false);
+user_pref("browser.tabs.remote.autostart.1", false);
+user_pref("extensions.checkCompatibility.nightly", false);
+// enable browser dev edition futures
+user_pref("browser.devedition.theme.enabled", true);
+user_pref("browser.devedition.theme.showCustomizeButton", true);
 
 user_pref("device.storage.enabled", true);
 // devtools config
@@ -49,6 +54,7 @@ user_pref("dom.sysmsg.enabled", true);
 user_pref("dom.telephony.enabled", true);
 user_pref("dom.voicemail.enabled", true);
 user_pref("dom.w3c_pointer_events.enabled", true);
+user_pref("dom.webapps.useCurrentProfile", true);
 user_pref("dom.webcomponents.enabled", true);
 user_pref("dom.image.picture.enabled", true);
 user_pref("dom.image.srcset.enabled", true);
