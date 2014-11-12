@@ -23,6 +23,8 @@ user_pref("extensions.checkCompatibility.nightly", false);
 // enable browser dev edition futures
 user_pref("browser.devedition.theme.enabled", true);
 user_pref("browser.devedition.theme.showCustomizeButton", true);
+// enable mozilla pravicy project
+user_pref("browser.polaris.enabled", true);
 
 user_pref("device.storage.enabled", true);
 // devtools config
