@@ -1,0 +1,14 @@
+show_bar			true
+show_timer			true
+enable_skip			true
+enable_postpone			true
+idle_time			10:00
+sleep_time			30:00
+
+break				35:00	5:00	5:00
+break				5:00	0:10	0:00
+
+#font				-*-terminus-*-*-*-*-32-*-*-*-*-*-*-*
+#block				MPlayer
+block				Popcorn Time
+block				mpv

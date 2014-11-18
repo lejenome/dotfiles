@@ -47,6 +47,7 @@ l .config/systemd/user/modprobed-db.service
 l .config/systemd/user/modprobed-db.timer
 l .config/lyvi
 l .config/htop
+l .config/pokoy
 l .config/modprobed-db.conf
 l .config/newsbeuter/config
 l .config/newsbeuter/urls
