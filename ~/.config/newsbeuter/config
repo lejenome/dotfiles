@@ -1,5 +1,5 @@
 browser "firefox %u"
-download-full-page yes
+download-full-page no
 # html-renderer "w3m -dump -T text/html"
 # pager vimpager
 reload-threads 10
