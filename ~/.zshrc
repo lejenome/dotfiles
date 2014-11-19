@@ -2,6 +2,8 @@ autoload -U colors && colors
 fpath=( $fpath ~/.zsh/completion )
 autoload -U compinit && compinit
 autoload -U vcs_info && vcs_info
+autoload -U edit-command-line && zle -N edit-command-line \
+	&& bindkey -M vicmd v edit-command-line
 
 zmodload zsh/complist
 zmodload zsh/terminfo
