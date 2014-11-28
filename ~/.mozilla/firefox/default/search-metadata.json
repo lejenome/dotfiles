@@ -1,6 +1,1 @@
-{
-	"[app]/google.xml":{"alias":"google","order":1},
-	"[profile]/duckduckgo.xml":{"order":2,"alias":"duckduckgo"},
-	"[global]":{"current":"DuckDuckGo","hash":"SAwnRqalCPASel0MooiVGYhRsMN6LGAxjSZ0SFJCZIY="},
-	"[app]/yahoo.xml":{"alias":null,"hidden":true}
-}
+{"[app]/google.xml":{"alias":"google","order":1},"[profile]/duckduckgo.xml":{"order":2,"alias":"duckduckgo"},"[global]":{"current":"","hash":"oCl9JYFf6W31P+pR/cQazmltOV/9CX8qkrO/pCAwgHM="},"[app]/yahoo.xml":{"alias":null,"hidden":true,"order":7},"[app]/amazondotcom.xml":{"hidden":true,"alias":null,"order":3},"[app]/eBay.xml":{"hidden":true,"alias":null,"order":4},"[app]/twitter.xml":{"hidden":true,"alias":null,"order":5},"[app]/wikipedia.xml":{"hidden":true,"alias":null,"order":6},"[app]/bing.xml":{"hidden":true,"alias":null,"order":2}}
