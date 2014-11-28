@@ -13,6 +13,7 @@ l .zshrc
 l .Xresources
 l .conkyrc
 l .calcurse/conf
+l .elinks/elinks.conf
 l .conky
 l .tmux.conf
 l .gitconfig

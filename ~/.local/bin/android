@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#SPICE_PORT=5925
+  qemu-system-x86_64 \
+	-name Android \
+	-drive file=/home/lejenome/tmp/android.img,cache=none,if=virtio \
+	-m 1G \
+	-k fr \
+	-vga qxl \
+	-netdev user,id=androidnic,hostname=androidhost -device virtio-net,netdev=androidnic \
+	"$@"
+#	-usbdevice tablet \
+#	-cpu host \
+#	-enable-kvm \
+#        -device virtio-serial \
+#        -chardev spicevmc,id=vdagent,name=vdagent \
+#        -device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+#	-daemonize \
+#        -spice port=${SPICE_PORT},disable-ticketing \
+#exec spicec --title Android -h 127.0.0.1 -p ${SPICE_PORT}
