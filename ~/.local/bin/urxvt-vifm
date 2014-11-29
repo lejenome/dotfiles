@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+urxvt -e vifm ${1#file://}

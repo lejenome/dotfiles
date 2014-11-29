@@ -131,7 +131,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf firefox %f, zathura %c %i
+filextype *.pdf firefox %f &, zathura %c %i
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -145,24 +145,20 @@ filextype *.ps,*.eps,*.ps.gz
 filextype *.djvu
         \ {View in zathura}
         \ zathura %f,
-        \ {View in apvlv}
-        \ apvlv %f,
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
-       \ {Play using cmus}
-       \ cmus-remote -f %f,
-       \ {Play using mpv}
-       \ mpv %f,
        \ {Play using MPlayer}
        \ mplayer %f,
+       \ {Play using mpv}
+       \ mpv --no-video %f,
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
         \ {View using mpv}
-        \ mpv %f,
+        \ mpv --fullscreen %f,
         \ {View using mplayer}
         \ mplayer %f,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
@@ -185,8 +181,6 @@ fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in feh}
         \ feh -FZ %d --start-at %d/%c 2>/dev/null,
-        \ {View in gpicview}
-        \ gpicview %c,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5
