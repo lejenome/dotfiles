@@ -8,6 +8,7 @@ set beep_new
 
 set mailcap_path    = ~/.mutt/mailcap
 auto_view text/html
+alternative_order text/plain text/html
 
 bind index "^" imap-fetch-mail
 

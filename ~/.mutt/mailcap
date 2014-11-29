@@ -1,1 +1,1 @@
-text/html; elinks -dump ; copiousoutput;
+text/html; elinks -dump | strings | sed '/^[ \t]*$/d' ; copiousoutput;
