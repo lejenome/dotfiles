@@ -55,33 +55,27 @@ set wildmenu
 
 " Ignore case in search patterns unless it contains at least one uppercase
 " letter
-
 set ignorecase
 set smartcase
 
-" Don't highlight search results automatically
-
-set nohlsearch
+" Highlight search results automatically
+set hlsearch
 
 " Use increment searching (search while typing)
 set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
-
 set scrolloff=4
 
 " Don't do to much requests to slow file systems
-
 set slowfs=curlftpfs
 
 " Set custom status line look
-
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
-
 mark b ~/bin/
 mark h ~/
 
