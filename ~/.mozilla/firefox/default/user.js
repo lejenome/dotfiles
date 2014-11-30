@@ -13,18 +13,21 @@ user_pref("browser.cache.disk.smart_size.first_run", true);
 user_pref("browser.cache.disk.smart_size.use_old_max", true);
 user_pref("browser.cache.use_new_backend", 1);
 // browser behaviours config
-user_pref("browser.shell.checkDefaultBrowser", false);
+user_pref("browser.ctrlTab.previews", true);
+user_pref("browser.panorama.animate_zoom", false);
+user_pref("browser.tabs.remote.autostart", false);
+user_pref("browser.tabs.remote.autostart.1", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.zoom.full", false);
-user_pref("browser.tabs.remote.autostart", false);
-user_pref("browser.tabs.remote.autostart.1", false);
-user_pref("extensions.checkCompatibility.nightly", false);
 // enable browser dev edition futures
 user_pref("browser.devedition.theme.enabled", true);
 user_pref("browser.devedition.theme.showCustomizeButton", true);
 // enable mozilla pravicy project
-user_pref("browser.polaris.enabled", true);
+//user_pref("browser.polaris.enabled", true);
+user_pref("browser.shell.checkDefaultBrowser", false);
+//session store every 5min
+user_pref("browser.sessionstore.interval", 360000);
 
 user_pref("device.storage.enabled", true);
 // devtools config
@@ -64,19 +67,32 @@ user_pref("dom.indexedDB.experimental", true);
 user_pref("dom.undo_manager.enabled", true);
 user_pref("dom.mapped_arraybuffer.enabled", true);
 user_pref("dom.quotaManager.testing", true);
+//extension
+user_pref("extensions.checkCompatibility.nightly", false);
+// gfx settings
+user_pref("gfx.color_management.enablev4", true);
+user_pref("gfx.canvas.azure.backends", "skia,cairo");
+user_pref("gfx.content.azure.backends", "skia,cairo");
+user_pref("gfx.content.azure.enabled", true);
+user_pref("gfx.work-around-driver-bugs", false);
+user_pref("gfx.xrender.enabled", false);
 // force OMTC
 user_pref("layers.acceleration.force-enabled", true);
+user_pref("layers.async-video.enabled", true);
 user_pref("layers.enable-tiles", true);
 user_pref("layers.offmainthreadcomposition.async-animations", true);
 user_pref("layers.offmainthreadcomposition.enabled", true);
 user_pref("layers.offmainthreadcomposition.force-basic", true);
 user_pref("layers.offmainthreadcomposition.testing.enabled", true);
+user_pref("layers.use-deprecated-textures", false);
 // layout config
 user_pref("layout.css.dpi", 0);
 user_pref("layout.css.filters.enabled", true);
 user_pref("layout.css.grid.enabled", true);
 user_pref("layout.css.ruby.enabled", true);
 user_pref("layout.css.vertical-text.enabled", true);
+// enable spell checking for input/textarea
+user_pref("layout.spellcheckDefault", 2);
 //user_pref("layout.css.will-change.enabled", true);
 // media config
 user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
@@ -102,6 +118,7 @@ user_pref("security.tls.version.min", 1);
 user_pref("security.csp.experimentalEnabled", true);
 user_pref("security.csp.newbackend.enable", true);
 user_pref("security.ssl.enable_alpn", true);
+user_pref("security.dialog_enable_delay", 0);
 // sync config
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.passwords", false);
@@ -115,7 +132,5 @@ user_pref("shumway.disabled", false);
 user_pref("spellchecker.dictionary", "en-US");
 // UTF-8 as default charset
 user_pref("intl.charset.default", "UTF-8");
-// enable spell checking for input/textarea
-user_pref("layout.spellcheckDefault", 2);
 // incremental JS GC
 user_pref("dom.cycle_collector.incremental", true);

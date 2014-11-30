@@ -25,3 +25,12 @@ PERL5LIB="/home/lejenome/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5L
 PERL_LOCAL_LIB_ROOT="/home/lejenome/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"; export PERL_MM_OPT;
+
+
+export MOZ_GLX_IGNORE_BLACKLIST=1
+export MOZ_USE_OMTC=1
+export MOZILLA_X11_XINITTHREADS=1
+export MOX_X_THREADSAFE=1
+export MOZ_ACCELERATED=1
+export MOZ_DISABLE_CRASHREPORTER=1
+export MOZ_DISABLE_PANGO=1
