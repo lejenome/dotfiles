@@ -50,6 +50,7 @@ l .config/lyvi
 l .config/htop
 l .config/pokoy
 l .config/mpd
+l .config/pep8
 l .config/modprobed-db.conf
 l .config/newsbeuter/config
 l .config/newsbeuter/urls

@@ -117,3 +117,4 @@ execute pathogen#infect()
 let g:syntastic_html_validator_parser = 'html5'
 "let g:syntastic_html_checkers = ['w3', 'validator']
 let g:syntastic_html_checkers = ['w3']
+let g:syntastic_python_checkers = ['pep8', 'python']
