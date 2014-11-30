@@ -1,1 +1,2 @@
-replace#global#--enable-wayland-clients#--enable-wayland-clients --enable-wayland-only --enable-drm --enable-wayland --enable-systemd --enable-wl-drm --disable-shot --disable-xkbswitch --disable-conf-randr --disable-everything --disable-wl-x11
+replace#global#--sysconfdir=#--enable-wayland-clients --enable-wayland-only --enable-systemd --enable-wl-drm --disable-shot --disable-xkbswitch --disable-conf-randr --disable-everything --disable-wl-x11 --sysconfdir=
+#--enable-wl-desktop-shell --enable-drm --enable-wayland --enable-wayland-egl
