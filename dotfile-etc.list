@@ -30,7 +30,6 @@ c fstab
 c yaourtrc
 c customizepkg.d
 #c davfs2/davfs2.conf
-#c sudoers
 c bitlbee
 #c polipo
 c pacman.conf

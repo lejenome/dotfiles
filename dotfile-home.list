@@ -37,6 +37,7 @@ l .gtkrc-2.0
 l .bash_profile
 l .zsh
 l .muttrc
+l .polipo
 #l .config/gtk-2.0
 l .config/ls++
 l .config/redshift.conf
