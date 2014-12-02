@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#SPICE_PORT=5926
+  qemu-system-x86_64 \
+	-name UbuntuServer \
+	-drive file=/home/lejenome/tmp/ubuntu-server.img,cache=none,if=virtio \
+	-m 1G \
+	-enable-kvm \
+	-cpu host \
+	-netdev user,id=ubuntunic,hostname=ubuntuhost,hostfwd=tcp::5550-:22,hostfwd=tcp::5551-:80,hostfwd=tcp::5552-:443 \
+	-device virtio-net,netdev=ubuntunic \
+	-nographic \
+	"$@" \
+#	-kernel /boot/vmlinuz-linux-lts \
+#	-initrd /boot/initramfs-linux-lts.img \
+#	-append "root=UUID=53e4018c-a712-4874-9e77-077f3ab73ef0 ro console=ttyAMA0 console=ttyS0" \
+#	-daemonize \
+#	-vga none \
+#        -spice port=${SPICE_PORT},disable-ticketing \
+#exec spicec --title UbuntuServer -h 127.0.0.1 -p ${SPICE_PORT}
