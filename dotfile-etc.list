@@ -34,11 +34,13 @@ c customizepkg.d
 c bitlbee
 #c polipo
 c pacman.conf
+c pacman.d/mirrorlist
 c vconsole.conf
 c localtime
 c hostname
 c systemd/network
 c vimrc
+c X11/xorg.conf.d
 
 
 # preload.conf
@@ -55,7 +57,6 @@ c vimrc
 # pam.d
 # security
 # environment
-# X11
 # login.defs
 # udev/udev.conf
 # systemd/logind.conf

@@ -38,6 +38,7 @@ preexec() {
 # {{{ Oneliners
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
+cpm() { mkdir `dirname ${@[$#]}` ; cp "$@" }
 mvf() { mv "$@" && goto "$_"; }
 mkf() { mkdir -p $1; cd $1 }
 cdl() { cd $@; ls++ }
