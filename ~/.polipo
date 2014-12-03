@@ -1,59 +1,32 @@
 proxyName = "polipo.lejenome.me"
 
-# Uncomment this if there's only one user using this instance of Polipo:
 cacheIsShared = false
-
-# Uncomment this if you want to scrub private information from the log:
 scrubLogs = true
 
 
 ### Memory
-### ******
 
-# Uncomment this if you want Polipo to use a ridiculously small amount
-# of memory (a hundred C-64 worth or so):
-
-# chunkHighMark = 819200
-# objectHighMark = 128
-
-# Uncomment this if you've got plenty of memory:
-
-# chunkHighMark = 50331648
-# objectHighMark = 16384
+chunkHighMark = 100100100
+objectHighMark = 20100
 
 
 ### On-disk data
 
-# Uncomment this if you want to disable the on-disk cache:
-# diskCacheRoot = ""
 diskCacheRoot = "~/.polipo-cache/"
-
-# Uncomment this if you want to disable the local web server:
-# localDocumentRoot = ""
+maxDiskCacheEntrySize = 10100100
+diskCacheUnlinkTime = 15d
 
 disableIndexing = false
 disableServersList = false
 
 
 ### Domain Name System
-### ******************
 
-# Uncomment this if you want to contact IPv4 hosts only (and make DNS
-# queries somewhat faster):
-# dnsQueryIPv6 = no
-
-# Uncomment this if you want Polipo to prefer IPv4 to IPv6 for
-# double-stack hosts:
-# dnsQueryIPv6 = reluctantly
-
-# Uncomment this to disable Polipo's DNS resolver and use the system's
-# default resolver instead.  If you do that, Polipo will freeze during
-# every DNS query:
-dnsUseGethostbyname = yes
+dnsUseGethostbyname = reluctantly
+dnsQueryIPv6 = reluctantly
 
 
 ### HTTP
-### ****
 
 # Uncomment this if you want to enable detection of proxy loops.
 # This will cause your hostname (or whatever you put into proxyName
@@ -61,35 +34,15 @@ dnsUseGethostbyname = yes
 
 # disableVia=false
 
-# Uncomment this if you want to slightly reduce the amount of
-# information that you leak about yourself:
+censoredHeaders = from, accept-language
+censorReferer = maybe
 
-# censoredHeaders = from, accept-language
-# censorReferer = maybe
-
-# Uncomment this if your user-agent does something reasonable with
-# Warning headers (most don't):
-
-# relaxTransparency = maybe
-
-# Uncomment this if you never want to revalidate instances for which
-# data is available (this is not a good idea):
-
-# relaxTransparency = yes
-
-# Uncomment this if you have no network:
-
-# proxyOffline = yes
-
-# Uncomment this if you want to avoid revalidating instances with a
-# Vary header (this is not a good idea):
-
-# mindlesslyCacheVary = true
+relaxTransparency = maybe
 
 # Uncomment this if you want to add a no-transform directive to all
 # outgoing requests.
 
 # alwaysAddNoTransform = true
 
-allowedPorts = 1-65535
+allowedPorts = 8-100,1024-65535
 tunnelAllowedPorts = 1-65535
