@@ -42,7 +42,6 @@ c vimrc
 c X11/xorg.conf.d
 
 
-# preload.conf
 # dnsmasq.conf
 # vimpagerrc
 # wpa_supplicant

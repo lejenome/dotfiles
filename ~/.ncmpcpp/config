@@ -1,0 +1,68 @@
+mpd_music_dir = ~/Music
+
+now_playing_prefix = "$b$5>>>$9 "
+now_playing_suffix = $/b
+
+song_columns_list_format = (20)[]{a} (6f)[green]{NE} (40)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+
+playlist_display_mode = columns
+
+discard_colors_if_item_is_selected = yes
+
+autocenter_mode = yes
+centered_cursor = no
+
+user_interface = alternative
+
+header_visibility = no
+titles_visibility = no
+
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+#store_lyrics_in_song_dir = yes
+
+lastfm_preferred_language = en
+
+startup_screen = playlist
+display_volume_level = yes
+
+display_bitrate = yes
+
+mouse_support = yes
+
+external_editor = vim
+use_console_editor = yes
+
+colors_enabled = yes
+
+## %l - length
+## %f - filename
+## %D - directory
+## %a - artist
+## %A - album artist
+## %t - title
+## %b - album
+## %y - date
+## %n - track number (01/12 -> 01)
+## %N - full track info (01/12 -> 01/12)
+## %g - genre
+## %c - composer
+## %p - performer
+## $R - begin right alignment
+## - 0 - default window color (discards all other colors)
+## - 1 - black
+## - 2 - red
+## - 3 - green
+## - 4 - yellow
+## - 5 - blue
+## - 6 - magenta
+## - 7 - cyan
+## - 8 - white
+## - 9 - end of current color
+## - b - bold text
+## - u - underline text
+## - r - reverse colors
+## - a - use alternative character set
+
+#alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+#alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}

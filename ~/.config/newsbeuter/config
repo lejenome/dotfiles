@@ -4,11 +4,11 @@ download-full-page no
 # pager vimpager
 reload-threads 10
 auto-reload yes
-reload-time 5
+reload-time 180
 # external-url-viewer "urlview"
 # mark-as-read-on-hover yes
 # show-read-articles no
-max-items 50
+max-items 40
 cache-file ~/.local/share/newsbeuter/cache.db
 cleanup-on-quit yes
 

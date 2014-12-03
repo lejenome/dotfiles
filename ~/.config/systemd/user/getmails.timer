@@ -3,7 +3,7 @@ Description=2 Min updates for user mails
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=2min
+OnUnitActiveSec=50min
 Persistent=true
 
 [Install]
