@@ -1,3 +1,1 @@
-tmux -q has-session -tMAIN \
-	&& tmux new-session -tMAIN \; new-window \
-	|| exec tmux new-session -n$USER -sMAIN
+tmux new-session -tlejenome -s`date +%Y%m%d%H%M%S` \; new-window

@@ -6,4 +6,4 @@ After=network.target
 ExecStart=/usr/bin/polipo
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

@@ -3,7 +3,7 @@ Description=Clean and update newsbeuter feeds
 JobTimeoutSec=2min
 
 [Service]
-ExecStart=/usr/bin/newsbeuter -X
+ExecStartPre=/usr/bin/newsbeuter -X
 ExecStart=/usr/bin/newsbeuter -x reload
 Nice=19
 IOSchedulingClass=best-effort
