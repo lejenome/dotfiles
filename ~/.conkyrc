@@ -104,13 +104,18 @@ ${endif}\
 {"full_text":"${endif}${endif}${endif}"},\
 # RSS
 {"full_text":"RSS \uF09e","color":"\#949494","separator":false,"separator_block_width":6},\
-{"full_text":"${if_match ${execpi 30 cat /tmp/.conky_feeds}>0}"},\
-{"full_text":"${if_match ${execpi 30 cat /tmp/.conky_feeds}<=10}${execpi 30 cat /tmp/.conky_feeds}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}>0}"},\
+{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}<=10}${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}","color":"\#b27d12","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${execpi 30 cat /tmp/.conky_feeds}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${else}"},\
 {"full_text":"0","color":"\#909737","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}"},\
+#TODO.TXT
+{"full_text":"TODO \uF03A","color":"\#949494","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 30 todo.sh ls | grep -i "(A)" | wc -l}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 30 todo.sh ls | grep -i "(B)" | wc -l}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 30 todo.sh ls | wc -l}","color":"\#909737","separator":false,"separator_block_width":6},\
 # Battery:
 {"full_text":"BAT \uF214","color":"\#949494","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${battery_percent}<30}${battery_percent}%","color":"\#924020","separator":false,"separator_block_width":6},\

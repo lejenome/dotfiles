@@ -24,7 +24,6 @@ l .mozilla/firefox/default/search-metadata.json
 l .mozilla/firefox/default/searchplugins/duckduckgo.xml
 l .vimrc
 l .cmus/rc
-#l .urxvt/ext
 l .gitignore
 l .weechat/weechat.conf
 l .weechat/logger.conf
@@ -47,6 +46,10 @@ l .config/systemd/user/getmails.service
 l .config/systemd/user/getmails.timer
 l .config/systemd/user/modprobed-db.service
 l .config/systemd/user/modprobed-db.timer
+l .config/systemd/user/newsbeuter.service
+l .config/systemd/user/newsbeuter.timer
+l .config/systemd/user/polipo.service
+l .config/systemd/user/redshift.service
 l .config/lyvi
 l .config/htop
 l .config/pokoy
@@ -70,6 +73,7 @@ l .hgignore
 l .zlogout
 l .mplayer
 l .mpv
+l .todo.cfg
 l .ncmpcpp/config
 l .config/weston.ini
 l .gnupg/gpg.conf
@@ -77,8 +81,4 @@ l .gnupg/gpg.conf
 c .config/feednix/config.json
 c .cmus/autosave
 
-# .config/ranger
-# .cache/mozilla/firefox/default
-# .calcurse/keys
 # .fehbg
-# .davfs2/davfs2.conf

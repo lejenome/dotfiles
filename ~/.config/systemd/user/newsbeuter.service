@@ -1,0 +1,12 @@
+[Unit]
+Description=Get mails using getmails command
+JobTimeoutSec=2min
+
+[Service]
+ExecStart=/usr/bin/newsbeuter -x reload
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=2 Min updates for user mails
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=180min
+Persistent=true
+
+[Install]
+WantedBy=default.target

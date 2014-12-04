@@ -1,0 +1,13 @@
+[Unit]
+Description=redhift
+Requires=xorg.service
+After=xorg.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/redshift
+Environment=DISPLAY=:0
+Environment=HOME=%h
+
+[Install]
+WantedBy=default.target

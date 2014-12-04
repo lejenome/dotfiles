@@ -42,6 +42,8 @@ alias h='history'
 #alias wget='wget -c'
 #alias aria='aria2c -c -x 10 -s 10 -k 10M'
 
+alias t='todo.sh'
+
 # Ping
 alias pr='ping -c 1 192.168.1.1 | tail -3'
 alias pg='ping -c 1 google.com | tail -3'
