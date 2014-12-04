@@ -104,10 +104,10 @@ ${endif}\
 {"full_text":"${endif}${endif}${endif}"},\
 # RSS
 {"full_text":"RSS \uF09e","color":"\#949494","separator":false,"separator_block_width":6},\
-{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}>0}"},\
-{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}<=10}${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | grep -o "[[:digit:]]*" || echo 0}>0}"},\
+{"full_text":"${if_match ${execpi 60 newsbeuter -x print-unread | grep -o "[[:digit:]]*"}<=10}${execpi 60 newsbeuter -x print-unread | grep -o "[[:digit:]]*"}","color":"\#b27d12","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${execpi 60 newsbeuter -x print-unread | sed 's/ .*//'}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 60 newsbeuter -x print-unread | grep -o "[[:digit:]]*"}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${else}"},\
 {"full_text":"0","color":"\#909737","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}"},\

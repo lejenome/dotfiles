@@ -8,13 +8,9 @@ reload-time 180
 # external-url-viewer "urlview"
 # mark-as-read-on-hover yes
 # show-read-articles no
-max-items 40
+max-items 20
 cache-file ~/.local/share/newsbeuter/cache.db
 cleanup-on-quit yes
-
-notify-always yes
-notify-format "%n"
-notify-program ~/.conky/feeds.sh
 
 # urls-source "newsblur"
 # newsblur-login "??"

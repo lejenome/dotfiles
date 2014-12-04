@@ -1,5 +1,5 @@
 [Unit]
-Description=2 Min updates for user mails
+Description=3H clean and update newsbeuter feeds
 
 [Timer]
 OnBootSec=1min
