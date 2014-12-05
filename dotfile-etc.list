@@ -46,26 +46,12 @@ c slim.conf
 c slimlock.conf
 
 
-# vimpagerrc
 # wpa_supplicant
 # profile
 # skel
 # profile.d
 # host.conf
-# securetty
 # ssl/openssl.cnf
 # openldap
-# pam.d
 # security
-# environment
 # login.defs
-# udev/udev.conf
-# systemd/logind.conf
-# systemd/user.conf
-# systemd/system.conf
-# systemd/bootchart.conf
-# systemd/coredump.conf
-# systemd/journal-remote.conf
-# systemd/journal-upload.conf
-# systemd/timesyncd.conf
-# systemd/resolved.conf
