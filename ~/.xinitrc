@@ -17,9 +17,8 @@ xset dpms 300 330 360		# Set standby, suspend, & off times (in seconds)
 urxvtd -q -o &
 redshift &
 pokoy &
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
 unclutter &
+xautolock -time 5 -locker slimlock &
 
 # exec  DE/WM
 exec i3

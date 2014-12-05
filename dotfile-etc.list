@@ -40,6 +40,8 @@ c hostname
 c systemd/network
 c vimrc
 c X11/xorg.conf.d
+c slim.conf
+c slimlock.conf
 
 
 # vimpagerrc
