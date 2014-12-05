@@ -39,7 +39,7 @@ color status white color24 # status lines in the folder index sed for the mini-h
 
 set edit_headers=yes
 my_hdr X-Info: Keep It Simple, Stupid.
-my_hdr X-Operating-System: `uname -s`, kernel `uname -r`
+my_hdr X-Operating-System: `uname -o`, kernel `uname -r`
 my_hdr X-Message-Flag: WARNING!! Outlook sucks
 my_hdr User-Agent: Every email client sucks, this one just sucks less.
 

@@ -15,8 +15,8 @@ user_pref("browser.cache.use_new_backend", 1);
 // browser behaviours config
 user_pref("browser.ctrlTab.previews", true);
 user_pref("browser.panorama.animate_zoom", false);
-user_pref("browser.tabs.remote.autostart", true);
-user_pref("browser.tabs.remote.autostart.1", true);
+user_pref("browser.tabs.remote.autostart", false);
+user_pref("browser.tabs.remote.autostart.1", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.zoom.full", false);
