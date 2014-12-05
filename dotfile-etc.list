@@ -11,6 +11,7 @@ c makepkg.conf
 c udev/rules.d
 c modules-load.d
 c systemd/system/user@.service.d/dbus.conf
+c systemd/system/tmux@.service
 c systemd/journald.conf
 c systemd/user/dbus.socket
 c systemd/user/dbus.service
