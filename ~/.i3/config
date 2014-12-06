@@ -189,19 +189,24 @@ new_float pixel 1
 #exec --no-startup-id xset dpms 300 360 420
 
 # Workspace names
-workspace "1:Web" output LVDS1
-workspace "2:Term" output LVDS1
-workspace "3:Work" output LVDS1
-workspace "4:Other" output LVDS1
+set $ws1 "1:  WEB"
+set $ws2 "2:  TERM"
+set $ws3 "3:  WORK"
+set $ws4 "4:  OTHER"
+
+workspace $ws1 output LVDS1
+workspace $ws2 output LVDS1
+workspace $ws3 output LVDS1
+workspace $ws4 output LVDS1
 
 # switch to workspace
-bindsym $mod+1 workspace 1:Web
-bindsym $mod+2 workspace 2:Term
-bindsym $mod+3 workspace 3:Work
-bindsym $mod+4 workspace 4:Other
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:Web
-bindsym $mod+Shift+2 move container to workspace 2:Term
-bindsym $mod+Shift+3 move container to workspace 3:Work
-bindsym $mod+Shift+4 move container to workspace 4:Other
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
