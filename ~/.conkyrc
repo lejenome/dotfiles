@@ -93,7 +93,7 @@ ${endif}\
 {"full_text":"${endif}${endif}${endif}"},\
 # Weather: \uF3b6
 {"full_text":"\uF185","color":"\#949494","separator":false,"separator_block_width":6},\
-{"full_text":"${execpi 3600 ~/.conky/weather.sh}°","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${execpi 120 ~/.conky/weather.sh}°","color":"\#909737","separator":false,"separator_block_width":6},\
 # Mail: \uF1fa
 {"full_text":"\uF3e5","color":"\#949494","separator":false,"separator_block_width":6},\
 {"full_text":"${if_match ${execpi 30 ls ~/mail/new |wc -l}<=0}${execpi 30 ls ~/mail/new |wc -l}","color":"\#909737","separator":false,"separator_block_width":6},\
