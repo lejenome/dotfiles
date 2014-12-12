@@ -1,4 +1,4 @@
-export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/ruby/2.1.0/bin"
+export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
 [ -e ~/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 export CLICOLOR=1
@@ -33,3 +33,22 @@ export R600_STREAMOUT=1
 export R600_HYPERZ=1
 export LIBVA_DRIVER_NAME=vdpau
 export VDPAU_DRIVER=r600
+
+# PERL
+export PATH="/home/lejenome/perl5/bin${PATH+:}${PATH}"
+export PERL5LIB="/home/lejenome/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"
+export PERL_LOCAL_LIB_ROOT="/home/lejenome/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"
+export PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"
+
+# RUBY GEM
+PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"
+
+# Firefox
+export MOZ_GLX_IGNORE_BLACKLIST=1
+export MOZ_USE_OMTC=1
+export MOZILLA_X11_XINITTHREADS=1
+export MOX_X_THREADSAFE=1
+export MOZ_ACCELERATED=1
+export MOZ_DISABLE_CRASHREPORTER=1
+export MOZ_DISABLE_PANGO=1
