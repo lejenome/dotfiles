@@ -39,6 +39,7 @@ c pacman.d/mirrorlist
 c vconsole.conf
 c localtime
 c hostname
+c connman
 c systemd/network
 c vimrc
 c X11/xorg.conf.d
