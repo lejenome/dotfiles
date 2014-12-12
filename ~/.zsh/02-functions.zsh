@@ -175,3 +175,31 @@ any() {
 #displays mounted drive information in a nicely formatted manner
 #(http://catonmat.net/blog/another-ten-one-liners-from-commandlingfu-explained)
 function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
+
+pip() {
+	if [ "$1" = "install" -o "$1" = "bundle" ]; then
+		cmd="$1"
+		shift
+		/usr/bin/pip $cmd --user $@
+	else
+		/usr/bin/pip $@
+	fi
+}
+pip2() {
+	if [ "$1" = "install" -o "$1" = "bundle" ]; then
+		cmd="$1"
+		shift
+		/usr/bin/pip2 $cmd --user $@
+	else
+		/usr/bin/pip2 $@
+	fi
+}
+pip3() {
+	if [ "$1" = "install" -o "$1" = "bundle" ]; then
+		cmd="$1"
+		shift
+		/usr/bin/pip3 $cmd --user $@
+	else
+		/usr/bin/pip3 $@
+	fi
+}
