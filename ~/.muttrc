@@ -5,12 +5,25 @@ set send_charset="utf-8"
 
 set delete = yes
 set beep_new
+set fast_reply = yes
+set hostname = "lejenome.me"
 
 set mailcap_path    = ~/.mutt/mailcap
 auto_view text/html
 alternative_order text/plain text/html
 
 bind index "^" imap-fetch-mail
+
+#-------------------------------------------
+# VIEW
+#------------------------------------------
+
+set sort=threads
+set strict_threads="yes"
+set sort_browser="reverse-date"
+set sort_aux="date-sent"
+#set hide_thread_subject = no
+set pager_stop = yes
 
 #-------------------------------------------
 # DIRS
