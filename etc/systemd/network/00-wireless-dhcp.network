@@ -1,5 +1,5 @@
 [Match]
-Name=wl
+Name=wl*
 
 [Network]
-DHCP=yes
+DHCP=v4
