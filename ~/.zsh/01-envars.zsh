@@ -35,13 +35,17 @@ export LIBVA_DRIVER_NAME=vdpau
 export VDPAU_DRIVER=r600
 
 # PERL
+[ -d /usr/bin/site_perl ] && export PATH="$PATH:/usr/bin/site_perl"
+[ -d /usr/lib/perl5/site_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/site_perl/bin"
+[ -d /usr/bin/vendor_perl ] && export PATH="$PATH:/usr/bin/vendor_perl"
+[ -d /usr/lib/perl5/vendor_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/vendor_perl/bin"
+[ -d /usr/bin/core_perl ] && export PATH="$PATH:/usr/bin/core_perl"
+#CPAN
 export PATH="/home/lejenome/perl5/bin${PATH+:}${PATH}"
 export PERL5LIB="/home/lejenome/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"
 export PERL_LOCAL_LIB_ROOT="/home/lejenome/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"
 export PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"
-
-#export PATH="/usr/bin/"{core_perl:,vendor_perl:}"${PATH}"
 
 # RUBY GEM
 PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"

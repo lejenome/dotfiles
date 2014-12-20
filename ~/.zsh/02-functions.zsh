@@ -174,7 +174,7 @@ any() {
 
 #displays mounted drive information in a nicely formatted manner
 #(http://catonmat.net/blog/another-ten-one-liners-from-commandlingfu-explained)
-function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
+function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";$4="";1') | column -t ; }
 
 pip() {
 	if [ "$1" = "install" -o "$1" = "bundle" ]; then
