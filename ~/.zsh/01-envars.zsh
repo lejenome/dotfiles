@@ -47,8 +47,9 @@ export PERL_LOCAL_LIB_ROOT="/home/lejenome/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_L
 export PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"
 
-# RUBY GEM
-PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"
+# RUBY GEM & BUNDLE
+export PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"
+export GEM_HOME=~/.gem
 
 # Firefox
 export MOZ_GLX_IGNORE_BLACKLIST=1
@@ -58,3 +59,6 @@ export MOX_X_THREADSAFE=1
 export MOZ_ACCELERATED=1
 export MOZ_DISABLE_CRASHREPORTER=1
 export MOZ_DISABLE_PANGO=1
+
+# FreeType
+export FT2_SUBPIXEL_HINTING=1
