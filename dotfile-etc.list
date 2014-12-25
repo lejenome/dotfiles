@@ -45,7 +45,8 @@ c vimrc
 c X11/xorg.conf.d
 c slim.conf
 c slimlock.conf
-
+c dnsmasq.d
+c hosts.ap0
 
 # wpa_supplicant
 # profile
