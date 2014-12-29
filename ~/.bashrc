@@ -14,4 +14,4 @@ source ~/.zsh/02-aliases.zsh
 export HISTFILE=$HOME/.bash_history
 export SHELL=/bin/bash
 
-PS1='[\u@\h \W]\$ '
+PS1='\e[1;33m\u\e[0m@\e[1;31m\h\e[0m:\e[1;34m\W\e[0m (\e[36m$?\e[0m) \$ '
