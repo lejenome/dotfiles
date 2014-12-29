@@ -48,6 +48,7 @@ c slimlock.conf
 c dnsmasq.d
 c hostapd
 c hosts.ap0
+c issue
 
 # wpa_supplicant
 # profile
