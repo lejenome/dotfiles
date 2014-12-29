@@ -69,9 +69,6 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
-# Ruby
-#alias gem='sudo gem'
-
 #systemctl
 alias suspend='systemctl suspend'
 alias hibernate='systemctl hibernate'

@@ -1,21 +1,3 @@
-# {{{ Sync all git branchs
-sync_all_branch () {
-    git fetch upstream
-    for upstream_branch in   $( git branch -a |awk 'BEGIN {FS="/"} $2=="upstream" {print $3}' ) ;
-    do
-        if git checkout $upstream_branch
-        then
-            echo rebase $upstream_branch
-            git rebase -s recursive -Xours upstream/$upstream_branch
-        else
-             echo create $upstream_branch
-             git checkout -b $upstream_branch upstream/$upstream_branch
-        fi
-    done
-    git checkout master
-}
-# }}}
-
 # {{{ Title stuffs
 precmd() {
 
@@ -80,10 +62,10 @@ mkgit() {
 	mkdir $1
 	cd $1
 	git init
-	touch README.markdown
-	git add README.markdown
+	touch README.md
+	git add README.md
 	git commit -m 'inital setup - automated'
-	git remote add origin git@github.com:crshd/$1.git
+	git remote add origin git@github.com:$USER/$1.git
 	git push origin master
 } # }}}
 
@@ -95,6 +77,7 @@ ark() {
 			case $2 in
 				*.tar.bz2)   tar xvjf $2      ;;
 				*.tar.gz)    tar xvzf $2      ;;
+				*.tar.xz)    tar xvJf $2      ;;
 				*.bz2)       bunzip2 $2       ;;
 				*.rar)       unrar x $2       ;;
 				*.gz)        gunzip $2        ;;
@@ -127,23 +110,6 @@ ark() {
 	esac
 } # }}}
 
-# {{{ Function to switch packer/pacman-color, depending on options used
-#pac() {
-#	case $1 in
-#
-#		-S | -Ss | -Ssq | -Si | -G )
-#			sudo packer $@ ;;
-#
-#		-Su | -Syu )
-#			sudo packer $@
-#			echo "" > $HOME/.pacmanupdates ;;
-#
-#		* )
-#			sudo pacman-color $@ ;;
-#
-#	esac
-#} # }}}
-
 # source: http://zanshin.net/2013/02/02/zsh-configuration-from-the-ground-up/
 # -------------------------------------------------------------------
 # display a neatly formatted path
@@ -174,33 +140,9 @@ any() {
 
 #displays mounted drive information in a nicely formatted manner
 #(http://catonmat.net/blog/another-ten-one-liners-from-commandlingfu-explained)
-function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";$4="";1') | column -t ; }
+function nicemount() {
+	(echo "DEVICE PATH TYPE FLAGS" \
+		&& mount | awk '$2="";$4="";1' \
+	) | column -t
+}
 
-# using conf file instead
-#pip() {
-#	if [ "$1" = "install" -o "$1" = "bundle" ]; then
-#		cmd="$1"
-#		shift
-#		/usr/bin/pip $cmd --user $@
-#	else
-#		/usr/bin/pip $@
-#	fi
-#}
-#pip2() {
-#	if [ "$1" = "install" -o "$1" = "bundle" ]; then
-#		cmd="$1"
-#		shift
-#		/usr/bin/pip2 $cmd --user $@
-#	else
-#		/usr/bin/pip2 $@
-#	fi
-#}
-#pip3() {
-#	if [ "$1" = "install" -o "$1" = "bundle" ]; then
-#		cmd="$1"
-#		shift
-#		/usr/bin/pip3 $cmd --user $@
-#	else
-#		/usr/bin/pip3 $@
-#	fi
-#}
