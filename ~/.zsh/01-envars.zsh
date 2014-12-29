@@ -26,8 +26,6 @@ export ARCHFLAGS="-arch x86_64"
 
 # mutt background fix
 export COLORFGBG="default;default"
-# use RAM for HOME caching for perfermance improvement
-export XDG_CACHE_HOME="/dev/shm/.cache"
 # mesa & r600 options
 export R600_DEBUG=hyperz
 export R600_STREAMOUT=1
