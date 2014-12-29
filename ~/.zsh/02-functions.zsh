@@ -20,14 +20,14 @@ preexec() {
 # {{{ Oneliners
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
-cpm() { mkdir `dirname ${@[$#]}` ; cp "$@" }
+cpm() { mkdir `dirname ${@[$#]}` ; cp "$@"; }
 mvf() { mv "$@" && goto "$_"; }
-mkf() { mkdir -p $1; cd $1 }
-cdl() { cd $@; ls++ }
-d() { ($1 &) }
-zsh_stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
+mkf() { mkdir -p $1; cd $1; }
+cdl() { cd $@; ls++; }
+d() { ($1 &); }
+zsh_stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head; }
 du1() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
-epoch() { print $(( `echo $1 | cut -b 1-2` * 3600 + `echo $1 | cut -b 4-5` * 60 + `echo $1 | cut -b 7-8` )) }
+epoch() { print $(( `echo $1 | cut -b 1-2` * 3600 + `echo $1 | cut -b 4-5` * 60 + `echo $1 | cut -b 7-8` )); }
 # }}}
 
 # {{{ Create ZSH named directory
