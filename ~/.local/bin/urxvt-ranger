@@ -1,2 +1,0 @@
-#!/usr/bin/bash
-urxvt -e ranger ${1#file://}

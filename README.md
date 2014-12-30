@@ -20,6 +20,8 @@ correctly or they may make your system unstable.
 * Some dotfiles are missing as they contain some personal informations or some
   secure data, create your own dotfiles
 * Some dotfiles needs some extra apps/daemons to be installed
+* You need to copy some scripts files from my `lejenome/bin` repo to your
+  `~/.local/bin` folder.
 
 NOTE: I have added dotfiles.sh script to made it easier to sync and check
 status of dotfiles. tweak config files dotfile-{home,etc}.list to matches your

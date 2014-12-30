@@ -7,7 +7,6 @@
 #       - some items are still not on the repo yet
 
 l .bash_logout
-l .local/bin
 l .zprofile
 l .zshrc
 l .Xresources
