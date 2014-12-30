@@ -9,6 +9,7 @@ export DISPLAY=:0
 
 export SHELL='/bin/zsh'
 export EDITOR='/usr/bin/vim'
+export VISUAL='/usr/bin/vim'
 export BROWSER='/usr/bin/firefox'
 [ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 

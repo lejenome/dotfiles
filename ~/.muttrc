@@ -8,7 +8,7 @@ set beep_new
 set fast_reply = yes
 set hostname = "lejenome.me"
 
-set mailcap_path    = ~/.mutt/mailcap
+set mailcap_path    = ~/.mailcap
 auto_view text/html
 alternative_order text/plain text/html
 
