@@ -46,6 +46,10 @@ c X11/xorg.conf.d
 c slim.conf
 c slimlock.conf
 c dnsmasq.d
+c dnsmasq.conf
+c dhcpcd.conf
+c resolv.conf
+c hosts
 c hostapd
 c hosts.ap0
 c issue
