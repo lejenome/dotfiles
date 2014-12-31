@@ -12,6 +12,9 @@ c udev/rules.d
 c modules-load.d
 c systemd/system/user@.service.d/dbus.conf
 c systemd/system/tmux@.service
+c systemd/system/dnsmasq.service
+c systemd/system/docker.service
+c systemd/system/connman-vpn.service
 c systemd/journald.conf
 c systemd/logind.conf
 c systemd/user/dbus.socket
