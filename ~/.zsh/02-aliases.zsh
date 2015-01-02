@@ -69,6 +69,13 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
+# Yaourt
+alias yi='sudo yaourt -S --noconfirm'
+alias yic='sudo yaourt -S'
+alias yy='sudo yaourt -Syu --noconfirm'
+alias yq='yaourt -Q'
+alias yql='yaourt -Ql'
+
 #systemctl
 alias suspend='systemctl suspend'
 alias hibernate='systemctl hibernate'
