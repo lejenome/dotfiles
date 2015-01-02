@@ -9,6 +9,7 @@ BusName=uk.org.thekelleys.dnsmasq
 ExecStartPre=/usr/bin/dnsmasq --test
 ExecStart=/usr/bin/dnsmasq -k --enable-dbus --user=dnsmasq --pid-file
 ExecReload=/bin/kill -HUP $MAINPID
+RestartForceExitStatus=2
 
 [Install]
 WantedBy=multi-user.target
