@@ -145,4 +145,5 @@ function nicemount() {
 		&& mount | awk '$2="";$4="";1' \
 	) | column -t
 }
-
+# from https://wiki.archlinux.org/index.php/environment_variables
+envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }

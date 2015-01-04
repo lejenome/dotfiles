@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Import from zsh
+source ~/.zsh/00-environment.zsh
 source ~/.zsh/01-envars.zsh
 source ~/.zsh/02-functions.zsh
 source ~/.zsh/02-aliases.zsh
