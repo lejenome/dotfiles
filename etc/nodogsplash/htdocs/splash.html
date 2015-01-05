@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>$gatewayname Entry</title>
+	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</head>
+<body bgcolor="#DDDDDD" text="#000000">
+<!--
+	A client is authenticated by requesting the page $authtarget.
+	So, href to it here, with an img or link text the user can click on.
+	Also, note that any images you reference must reside in the
+	subdirectory that is the value of $imagesdir (default: "images").
+
+	Available variables:
+	error_msg: $error_msg
+	gatewayname: $gatewayname
+	tok: $tok
+	redir: $redir
+	authaction: $authaction
+	denyaction: $denyaction
+	authtarget: $authtarget
+	clientip: $clientip
+	clientmac: $clientmac
+	gatewaymac: $gatewaymac
+	nclients: $nclients
+	maxclients: $maxclients
+	uptime: $uptime
+	imagesdir: $imagesdir
+	pagesdir: $pagesdir
+
+	Variables that can be passed back via HTTP GET.
+	Just append them to the authentication link:
+	nodoguser
+	nodogpass
+	info
+	voucher
+-->
+
+<h2>Welcome to $gatewayname</h2>
+<p>Plz enter your username and password to have full access to the internet.</p>
+<p>For limited access, you can use $gatewayname as your username and password.</p>
+
+<img src="/splash.jpg" width="71" height="49" border="0" alt="Click to enter" title="Click to enter">
+<p>$error_msg</p>
+<form action="$authaction">
+	<p>
+	<label for="nodoguser">Username: </label>
+	<input required id="nodoguser" type="text" name="nodoguser" value="$gatewayname" />
+	</p><p>
+	<label for="nodogpass">Password: </label>
+	<input required id="nodogpass" type="password" name="nodogpass" value="$gatewayname" />
+	</p>
+	<div style="display:none">
+		<input required type="text" name="redir" value="$redir"/>
+		<input required type="text" name="tok" value="$tok" />
+	</div>
+	<p><input type="submit" value="Login" /></p>
+</form>
+<p>After Authentication, you will be redirected to your origin target link: $redir</p>
+
+</body>
+</html>

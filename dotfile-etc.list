@@ -59,6 +59,7 @@ c issue
 c qemu-ifup
 c qemu-ifdown
 c hosts.qemu0
+c nodogsplash
 
 # wpa_supplicant
 # profile
