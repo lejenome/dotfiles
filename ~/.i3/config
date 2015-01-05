@@ -141,7 +141,7 @@ colors {
     }
 }
 
-# /usr/include/X11/XF86keysym.h
+# /usr/include/X11/XF86keysym.h && xmodmap -pke
 bindsym XF86AudioMute exec "amixer set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
 bindsym XF86AudioLowerVolume exec "amixer set Master 5%-"
@@ -153,6 +153,8 @@ bindsym XF86MonBrightnessUp    exec  "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown  exec  "xbacklight -dec 10"
 bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
 bindsym Print         exec  scrot
+# used sudoers to remove the needs to enter password
+bindsym Pause         exec  sudo systemctl suspend
 
 bindsym $mod+Shift+t exec ~/.i3/TERM.sh
 
