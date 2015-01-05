@@ -81,6 +81,9 @@ alias suspend='systemctl suspend'
 alias hibernate='systemctl hibernate'
 alias hybrid-sleep='systemctl hybrid-sleep'
 
+#qemu
+alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'
+
 # Fun with sed
 #alias df='df -h | grep sd |\
 #	sed -e "s_/dev/sda[1-9]_\x1b[34m&\x1b[0m_" |\
