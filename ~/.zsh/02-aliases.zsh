@@ -77,9 +77,9 @@ alias yq='yaourt -Q'
 alias yql='yaourt -Ql'
 
 #systemctl
-alias suspend='systemctl suspend'
-alias hibernate='systemctl hibernate'
-alias hybrid-sleep='systemctl hybrid-sleep'
+alias suspend='sudo systemctl suspend'
+alias hibernate='sudo systemctl hibernate'
+alias hybrid-sleep='sudo systemctl hybrid-sleep'
 
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'

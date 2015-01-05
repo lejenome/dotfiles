@@ -37,3 +37,6 @@ export MOZ_DISABLE_PANGO=1
 
 # FreeType
 export FT2_SUBPIXEL_HINTING=1
+
+# SDL, fix mouse moves too fast
+export SDL_VIDEO_X11_DGAMOUSE=0
