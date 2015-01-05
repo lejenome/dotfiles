@@ -56,6 +56,9 @@ c hosts
 c hostapd
 c hosts.ap0
 c issue
+c qemu-ifup
+c qemu-ifdown
+c hosts.qemu0
 
 # wpa_supplicant
 # profile
