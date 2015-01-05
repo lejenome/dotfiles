@@ -1,0 +1,21 @@
+#!/bin/sh
+# to ignore typing password, add to sudoers file:
+#	Cmnd_Alias      QEMU=/etc/qemu-ifup,/etc/qemu-ifdown
+#	%kvm     ALL=NOPASSWD: QEMU
+
+br=qemu0
+tap=$1
+
+if [ -n "$1" ]; then
+
+	# Remove the tap device
+	/usr/sbin/brctl delif $br $tap
+	/sbin/ip link set dev $tap down
+	/sbin/ip link delete dev $tap
+	/sbin/ip tuntap del $tap mode tap
+	# Keep the bridge and the dns server as they are used by other virtual
+	# machines
+else
+	echo "Error: no interface specified"
+	exit 1
+fi

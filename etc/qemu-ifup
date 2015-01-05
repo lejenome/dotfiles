@@ -1,0 +1,45 @@
+#!/bin/sh
+# to ignore typing password, add to sudoers file:
+#	Cmnd_Alias      QEMU=/etc/qemu-ifup,/etc/qemu-ifdown
+#	%kvm     ALL=NOPASSWD: QEMU
+
+user=lejenome
+br=qemu0
+tap=$1
+ifname=wlp8s0
+gateway=192.168.2.1/24
+network=192.168.2.0/24
+broadcast=192.168.2.255
+
+if [ -n "$1" ]; then
+	/usr/sbin/ip link show $br 2>/dev/null >/dev/null || {
+		# Setup Bridge
+		/usr/sbin/brctl addbr $br
+		/usr/sbin/brctl stp $br off
+		/usr/sbin/brctl setfd $br 0
+		/sbin/ip addr add $gateway broadcast $broadcast dev $br
+		/sbin/ip link set $br up promisc on
+
+		# Setup NAT iptables rules
+		/usr/sbin/iptables -I INPUT -p tcp -m tcp --dport 53 -j ACCEPT
+		/usr/sbin/iptables -I INPUT -p udp -m udp --dport 53 -j ACCEPT
+		/usr/sbin/iptables -I INPUT -p tcp -m tcp --dport 67 -j ACCEPT
+		/usr/sbin/iptables -I INPUT -p udp -m udp --dport 67 -j ACCEPT
+		/usr/sbin/iptables -t nat -I POSTROUTING -o $ifname -j MASQUERADE
+		/usr/sbin/iptables -I FORWARD -i $br -s $network -j ACCEPT
+		/usr/sbin/iptables -I FORWARD -i $ifname -d $network -j ACCEPT
+
+		# Launch DNS server
+		/usr/sbin/dnsmasq -C /etc/dnsmasq.d/${br}.conf -x /var/run/dnsmasq-${br}.pid -8 /var/run/dnsmasq-${br}.log
+	}
+
+	# Setup Tap device and link it to the bridge
+	/sbin/ip tuntap add name $tap mode tap user $user
+	/sbin/ip addr add 0.0.0.0 dev $tap
+	/sbin/ip link set $tap up
+	sleep 0.5s
+	/usr/sbin/brctl addif $br $tap
+else
+	echo "Error: no interface specified"
+	exit 1
+fi
