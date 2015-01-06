@@ -3,8 +3,8 @@ export CLICOLOR=1
 export HISTSIZE=1000
 export SAVEHIST=1000
 export HISTFILESIZE=1000
-export HISTFILE=$HOME/.zsh_history
-export DISPLAY=:0
+export HISTFILE="$HOME/.zsh_history"
+#export DISPLAY=:0
 
 export SHELL='/bin/zsh'
 
@@ -17,7 +17,7 @@ export DEBUG_CFLAGS="-g -fvar-tracking-assignments"
 export DEBUG_CXXFLAGS="-g -fvar-tracking-assignments"
 export ARCHFLAGS="-arch x86_64"
 
-[ -n "$TMUX" ] && export TERM=screen-256color
+[ -n "$TMUX" ] && export TERM="screen-256color"
 
 # mutt background fix
 export COLORFGBG="default;default"
@@ -30,4 +30,4 @@ export PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"
 
 # RUBY GEM & BUNDLE
-export GEM_HOME=~/.gem
+export GEM_HOME="$HOME/.gem"

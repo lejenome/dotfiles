@@ -40,3 +40,11 @@ export FT2_SUBPIXEL_HINTING=1
 
 # SDL, fix mouse moves too fast
 export SDL_VIDEO_X11_DGAMOUSE=0
+
+# XDG envars
+if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
+	source "$HOME/.config/user-dirs.dirs"
+	for var in $(grep "^XDG_" "$HOME/.config/user-dirs.dirs"); do
+		export ${var%%=*}
+	done
+fi
