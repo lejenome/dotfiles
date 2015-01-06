@@ -41,6 +41,9 @@ export FT2_SUBPIXEL_HINTING=1
 # SDL, fix mouse moves too fast
 export SDL_VIDEO_X11_DGAMOUSE=0
 
+# XKB
+export XKB_DEFAULT_LAYOUT=fr
+
 # XDG envars
 if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
 	source "$HOME/.config/user-dirs.dirs"
