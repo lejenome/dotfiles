@@ -69,10 +69,11 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
-# Yaourt
+# Yaourt & Pacman
 alias yi='sudo yaourt -S --noconfirm'
 alias yic='sudo yaourt -S'
 alias yy='sudo yaourt -Syu --noconfirm'
+alias yu='sudo pacman -U'
 alias yq='yaourt -Q'
 alias yql='yaourt -Ql'
 
