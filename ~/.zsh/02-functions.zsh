@@ -18,11 +18,18 @@ preexec() {
 } # }}}
 
 # {{{ Oneliners
+# go to dir after cp/mv/mkdir
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
-cpf() { cp "$@" && goto "$_"; }
-cpm() { mkdir `dirname ${@[$#]}` ; cp "$@"; }
-mvf() { mv "$@" && goto "$_"; }
-mkf() { mkdir -p $1; cd $1; }
+cpg() { cp "$@" && goto "$_"; }
+mvg() { mv "$@" && goto "$_"; }
+mkg() { mkdir -p $1; cd $1; }
+# mkdir dest folder then cp/mv
+cpd() { mkdir -p "${@[$#]}" ; cp -r "$@"; }
+mvd() { mkdir -p "${@[$#]}" ; mv "$@"; }
+# mkdir of dirname of dest file then cp/mv
+cpf() { mkdir -p `dirname "${@[$#]}"` ; cp -r "$@"; }
+mvf() { mkdir -p `dirname "${@[$#]}"` ; mv "$@"; }
+# other stuff
 cdl() { cd $@; ls++; }
 d() { ($1 &); }
 zsh_stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head; }
