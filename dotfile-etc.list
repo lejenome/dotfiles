@@ -60,6 +60,11 @@ c qemu-ifup
 c qemu-ifdown
 c hosts.qemu0
 c nodogsplash
+c ssh/ssh_config
+c ssh/sshd_config
+c ssh/ssh_host_key
+c ssh/ssh_host_dsa_key
+c ssh/ssh_host_ecdsa_key
 
 # wpa_supplicant
 # profile

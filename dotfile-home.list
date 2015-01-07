@@ -77,6 +77,7 @@ l .todo.cfg
 l .ncmpcpp/config
 l .config/weston.ini
 l .gnupg/gpg.conf
+l .ssh/config
 
 c .config/feednix/config.json
 c .cmus/autosave
