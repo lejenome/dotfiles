@@ -9,22 +9,31 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~'
 alias bk='cd $OLDPWD'
+alias -- -='cd -'
+
+# MV
+alias mv='mv -v'
+
+# LN
+alias ln='ln -v'
 
 # RM
-alias rm='rm -r'
-alias rmf='rm -rf'
+alias rm='rm -rv'
+alias rmf='rm -rvf'
 
 # CP
-alias cp='cp -r'
+alias cp='cp -rv'
 alias cpp='rsync -PrlpE'
 alias cpz='rsync -PrlpEz'
 
-# LS
+# LS/DIR/VDIR
 alias l='ls -Xp --color=auto'
 alias ls='ls -Xp -GFh --color=auto'
 alias la='ls -A'
 alias ll='ls -al -GFh'
 alias lh='ls -d .*'
+alias dir='dir -h --color=auto'
+alias vdir='vdir -h --color=auto'
 
 # GREP
 alias grep='grep --color=auto'
@@ -53,21 +62,8 @@ alias t='todo.sh'
 alias pr='ping -c 1 192.168.1.1 | tail -3'
 alias pg='ping -c 1 google.com | tail -3'
 
-# Git
+# Git ( more at ~/.gitconfig )
 alias g='git'
-alias ga='git add'
-alias gst='git status'
-alias gl='git pull'
-alias gup='git fetch && git rebase'
-alias gp='git push'
-alias gd='git diff | mate'
-alias gdv='git diff -w "$@" | vim -R -'
-alias gc='git commit -m'
-alias gca='git commit -v -a'
-alias gb='git branch'
-alias gba='git branch -a'
-alias gcount='git shortlog -sn'
-alias gcp='git cherry-pick'
 
 # Yaourt & Pacman
 alias yi='sudo yaourt -S --noconfirm'
@@ -77,10 +73,16 @@ alias yu='sudo pacman -U'
 alias yq='yaourt -Q'
 alias yql='yaourt -Ql'
 
-#systemctl
+# Systemctl
 alias suspend='sudo systemctl suspend'
 alias hibernate='sudo systemctl hibernate'
 alias hybrid-sleep='sudo systemctl hybrid-sleep'
+alias -- s+='sudo systemctl start'
+alias -- s-='sudo systemctl stop'
+alias sr='sudo systemctl restart'
+alias se='sudo systemctl enable'
+alias sd='sudo systemctl disable'
+alias st='systemctl status'
 
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'
