@@ -117,6 +117,26 @@ ark() {
 	esac
 } # }}}
 
+### Google Translate
+say() {
+	[[ -z "$@" ]] && echo "USAGE: `basename $0` [-[FROM_LANG][TO_LANG]] text..." >&2 && return
+	local SL TL TEXT
+	[[ "${1[1]}" == "-" ]] && SL=${1:1:2} && TL=${1:3:2} && shift
+	SL=${SL:-en}
+	TL=${TL:-$SL}
+	TEXT="$(echo "$@" | perl -MURI::Escape -ne 'chomp;print uri_escape($_)')"
+	mpv -really-quiet "http://translate.google.com/translate_tts?ie=UTF-8&tl=$TL&sl=$SL&q=$TEXT" &> /dev/null
+}
+translate() {
+	[[ -z "$@" ]] && echo "USAGE: `basename $0` [-[FROM_LANG][TO_LANG]] text..." >&2 && return
+	local SL TL TEXT
+	[[ "${1[1]}" == "-" ]] && SL=${1:1:2} && TL=${1:3:2} && shift
+	SL=${SL:-en}
+	TL=${TL:-fr}
+	TEXT="$(echo "$@" | perl -MURI::Escape -ne 'chomp;print uri_escape($_)')"
+	curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?client=t&ie=UTF-8&text=$TEXT&sl=$SL&tl=$TL" | awk -F'"' '{print $2}'
+}
+
 # source: http://zanshin.net/2013/02/02/zsh-configuration-from-the-ground-up/
 # -------------------------------------------------------------------
 # display a neatly formatted path
