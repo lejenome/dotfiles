@@ -82,7 +82,7 @@ alias -- s-='sudo systemctl stop'
 alias sr='sudo systemctl restart'
 alias se='sudo systemctl enable'
 alias sd='sudo systemctl disable'
-alias st='systemctl status'
+alias st='systemctl status -l'
 
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'

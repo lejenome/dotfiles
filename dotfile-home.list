@@ -78,6 +78,7 @@ l .ncmpcpp/config
 l .config/weston.ini
 l .gnupg/gpg.conf
 l .ssh/config
+l .jshintrc
 
 c .config/feednix/config.json
 c .cmus/autosave
