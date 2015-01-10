@@ -9,6 +9,8 @@ export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
 [ -d /usr/bin/vendor_perl ] && export PATH="$PATH:/usr/bin/vendor_perl"
 [ -d /usr/lib/perl5/vendor_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/vendor_perl/bin"
 [ -d /usr/bin/core_perl ] && export PATH="$PATH:/usr/bin/core_perl"
+[ -d "$HOME/.perl5/bin" ] && export PATH="${PATH}:$HOME/.perl5/bin"
+
 # GEM PATH
 [ -d "$HOME/.gem" ] && export PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"
 

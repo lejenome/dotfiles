@@ -23,11 +23,10 @@ export ARCHFLAGS="-arch x86_64"
 export COLORFGBG="default;default"
 
 #CPAN
-export PATH="/home/lejenome/perl5/bin${PATH+:}${PATH}"
-export PERL5LIB="/home/lejenome/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"
-export PERL_LOCAL_LIB_ROOT="/home/lejenome/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"
-export PERL_MB_OPT="--install_base \"/home/lejenome/perl5\""
-export PERL_MM_OPT="INSTALL_BASE=/home/lejenome/perl5"
+export PERL5LIB="$HOME/.perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"
+export PERL_LOCAL_LIB_ROOT="$HOME/.perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"
+export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
+export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 
 # RUBY GEM & BUNDLE
 export GEM_HOME="$HOME/.gem"

@@ -16,7 +16,7 @@ objectHighMark = 20100
 
 ### On-disk data
 
-diskCacheRoot = "~/.polipo-cache/"
+diskCacheRoot = "/home/cache/polipo"
 maxDiskCacheEntrySize = 10100100
 diskCacheUnlinkTime = 15d
 
