@@ -6,4 +6,17 @@
 127.0.0.1	localhost.localdomain	localhost
 ::1		localhost.localdomain	localhost
 
+192.168.2.3     android.qemu
+192.168.2.2     ubuntu.qemu
+
+192.168.1.4     hanen.lan
+192.168.1.6     fatma.lan
+192.168.1.7     yassine.lan
+192.168.1.8     mourad.lan
+
+192.168.20.2    hanen.ap
+192.168.20.3    fatma.ap
+192.168.20.4    yassine.ap
+192.168.20.5    mourad.ap
+
 # End of file

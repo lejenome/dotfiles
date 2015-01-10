@@ -1,1 +1,6 @@
-192.168.20.1 ap.lejenome.me myrouter
+192.168.20.1 ap.lejenome.me myrouter lejenome.lan www.lan
+
+192.168.20.2 hanen.lan
+192.168.20.3 fatma.lan
+192.168.20.4 yassine.lan
+192.168.20.5 mourad.lan
