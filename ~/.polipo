@@ -1,4 +1,8 @@
 proxyName = "polipo.lejenome.me"
+displayName = "Polipo Proxy"
+# proxyAddress = 0.0.0.0
+# allowedClients = 192.168.0.0/16, 172.0.0.1
+
 
 cacheIsShared = false
 scrubLogs = true
@@ -16,8 +20,10 @@ diskCacheRoot = "~/.polipo-cache/"
 maxDiskCacheEntrySize = 10100100
 diskCacheUnlinkTime = 15d
 
-disableIndexing = false
-disableServersList = false
+localDocumentRoot = ""
+disableConfiguration  = true
+disableIndexing = true
+disableServersList = true
 
 
 ### Domain Name System
@@ -44,5 +50,9 @@ relaxTransparency = maybe
 
 # alwaysAddNoTransform = true
 
-allowedPorts = 8-100,1024-65535
+allowedPorts = 80-100,1024-65535
 tunnelAllowedPorts = 1-65535
+
+idleTime = 60s
+maxObjectsWhenIdle = 64
+maxWriteoutWhenIdle = 256kB
