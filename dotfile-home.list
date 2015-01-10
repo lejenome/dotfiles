@@ -71,8 +71,8 @@ l .vifm/vifmrc
 l .vifm/colors
 l .hgignore
 l .zlogout
-l .mplayer
-l .mpv
+l .mplayer/config
+l .mpv/config
 l .todo.cfg
 l .ncmpcpp/config
 l .config/weston.ini

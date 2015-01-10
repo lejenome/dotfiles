@@ -10,3 +10,6 @@ gtk-toolbar-icons-size = 'small'
 gtk-text-scaling-factor = 1.0
 gtk-monospace-font-name = 'Monospace 9'
 gtk-menu-popup-delay = 0
+
+# disable ~/.local/share/recently-used.xbel
+gtk-recent-files-max-age=0
