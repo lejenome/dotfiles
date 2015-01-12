@@ -1,0 +1,2 @@
+replace#global#--enable-snmp#--disable-snmp
+replace#global#--disable-arch-native#--enable-arch-native --disable-auto-locate --disable-internal-dns --disable-translation --with-openssl --enable-optimizations
