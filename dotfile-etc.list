@@ -11,6 +11,7 @@ c makepkg.conf
 c udev/rules.d
 c modules-load.d
 c systemd/system/user@.service.d/dbus.conf
+c systemd/system/sshdgenkeys.service
 c systemd/system/tmux@.service
 c systemd/system/dnsmasq.service
 c systemd/system/docker.service
@@ -62,9 +63,6 @@ c hosts.qemu0
 c nodogsplash
 c ssh/ssh_config
 c ssh/sshd_config
-c ssh/ssh_host_key
-c ssh/ssh_host_dsa_key
-c ssh/ssh_host_ecdsa_key
 
 # wpa_supplicant
 # profile
