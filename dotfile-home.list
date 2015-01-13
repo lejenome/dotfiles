@@ -80,6 +80,7 @@ l .gnupg/gpg.conf
 l .ssh/config
 l .jshintrc
 l .gemrc
+l .keynavrc
 
 c .config/feednix/config.json
 c .cmus/autosave
