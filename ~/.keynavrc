@@ -1,0 +1,48 @@
+daemonize
+
+Up     cut-up
+Down   cut-down
+Left   cut-left
+Right  cut-right
+ctrl+Up     move-up
+ctrl+Down   move-down
+ctrl+Left   move-left
+ctrl+Right  move-right
+
+KP_1 cut-down,cut-left
+KP_2 cut-down
+KP_3 cut-down,cut-right
+KP_4 cut-left
+KP_5 cut-left,cut-down,move-right 0.5,move-up 0.5
+KP_6 cut-right
+KP_7 cut-up,cut-left
+KP_8 cut-up
+KP_9 cut-up,cut-right
+
+ctrl+KP_1 move-down,move-left
+ctrl+KP_2 move-down
+ctrl+KP_3 move-down,move-right
+ctrl+KP_4 move-left
+ctrl+KP_5 warp
+ctrl+KP_6 move-right
+ctrl+KP_7 move-up,move-left
+ctrl+KP_8 move-up
+ctrl+KP_9 move-up,move-right
+
+Delete history-back
+BackSpace history-back
+
+Return warp,click 1,quit
+space warp,click 3,quit
+
+ctrl+semicolon start
+Escape quit
+ctrl+bracketleft quit
+semicolon warp,quit
+
+1 click 1
+2 click 2
+3 click 3
+
+w windowzoom
+a history-back

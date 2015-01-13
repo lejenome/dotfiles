@@ -84,6 +84,10 @@ alias se='sudo systemctl enable'
 alias sd='sudo systemctl disable'
 alias st='systemctl status -l'
 
+# Journalctl
+alias jx="sudo journalctl -xea"
+alias ju="sudo journalctl -xea -u"
+
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'
 

@@ -63,6 +63,7 @@ c hosts.qemu0
 c nodogsplash
 c ssh/ssh_config
 c ssh/sshd_config
+c squid/squid.conf
 
 # wpa_supplicant
 # profile
