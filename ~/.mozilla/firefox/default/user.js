@@ -133,4 +133,4 @@ user_pref("spellchecker.dictionary", "en-US");
 // UTF-8 as default charset
 user_pref("intl.charset.default", "UTF-8");
 // incremental JS GC
-user_pref("dom.cycle_collector.incremental", true);
+//user_pref("dom.cycle_collector.incremental", true);

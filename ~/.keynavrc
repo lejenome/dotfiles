@@ -23,7 +23,8 @@ ctrl+KP_1 move-down,move-left
 ctrl+KP_2 move-down
 ctrl+KP_3 move-down,move-right
 ctrl+KP_4 move-left
-ctrl+KP_5 warp
+# per > 1.0 will be counted as absolute val not a per
+#ctrl+KP_5 move-left 0.5,move-down 0.5,cut-right 2,cut-top 2
 ctrl+KP_6 move-right
 ctrl+KP_7 move-up,move-left
 ctrl+KP_8 move-up

@@ -56,5 +56,12 @@ my_hdr X-Operating-System: `uname -o`, kernel `uname -r`
 my_hdr X-Message-Flag: WARNING!! Outlook sucks
 my_hdr User-Agent: Every email client sucks, this one just sucks less.
 
+#-------------------------------------------
+# ALIASES
+#-------------------------------------------
+
+set alias_file=~/.mail-aliases
+source $alias_file
+
 # EXTRA
 source ~/.mutt/gpgrc
