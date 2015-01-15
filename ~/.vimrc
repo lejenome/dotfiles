@@ -109,6 +109,7 @@ set encoding=utf-8   " use UTF-8 encoding
 set ruler            " show line number, cursor position
 set showcmd          " show incomplete commands
 set ttyfast          " faster redraw
+set viminfo+=n~/.cache/viminfo
 
 au BufRead,BufNewFile *.less set filetype=css
 
