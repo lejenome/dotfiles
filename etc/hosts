@@ -6,17 +6,26 @@
 127.0.0.1	localhost.localdomain	localhost
 ::1		localhost.localdomain	localhost
 
-192.168.2.3     android.qemu
+192.168.2.1     www.qemu router.qemu
 192.168.2.2     ubuntu.qemu
+192.168.2.3     android.qemu
 
-192.168.1.4     hanen.lan
-192.168.1.6     fatma.lan
-192.168.1.7     yassine.lan
-192.168.1.8     mourad.lan
+192.168.1.1     www.lan router.lan
+192.168.1.2     wifi.lejenome.lan
+192.168.1.3     eth.lejenome.lan
+192.168.1.4     wifi.hanen.lan
+192.168.1.6     android.fatma.lan
+192.168.1.7     android.yassine.lan
+192.168.1.8     android.mourad.lan
+192.168.1.9     wifi.firas.lan
+192.168.1.10    mobile.firas.lan
 
-192.168.20.2    hanen.ap
-192.168.20.3    fatma.ap
-192.168.20.4    yassine.ap
-192.168.20.5    mourad.ap
+192.168.20.1    www.ap router.ap
+192.168.20.2    wifi.hanen.ap
+192.168.20.3    android.fatma.ap
+192.168.20.4    android.yassine.ap
+192.168.20.5    android.mourad.ap
+192.168.20.6    wifi.firas.ap
+192.168.20.7    mobile.firas.ap
 
 # End of file

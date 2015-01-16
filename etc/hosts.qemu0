@@ -1,4 +1,4 @@
-192.168.2.1 qemu.lejenome.me myrouter lejenome.lan www.lan
+192.168.2.1 qemu.lejenome.me myrouter lejenome.lan www.lan router.lan
 
 192.168.2.2 ubuntu.lan
 192.168.2.3 android.lan
