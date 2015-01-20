@@ -14,10 +14,4 @@ source ~/.vim/common.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/bundle")
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
-" POWERLINE
-Plugin 'Lokaltog/powerline'
-let g:Powerline_symbols = 'unicode'
-set laststatus=2
-
 source ~/.vim/vundle.vim

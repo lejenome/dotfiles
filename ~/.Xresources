@@ -38,28 +38,40 @@ URxvt.scrollBar: false
 URxvt*saveLines:0
 URxvt.iso14755 : false
 URxvt*fading: 20
-!URxvt.lineSpace: 1
-!URxvt.letterSpace : -1
 URxvt.perl-ext:
 URxvt.perl-ext-common:
+!URxvt.lineSpace: 1
+!URxvt.letterSpace : -1
+
+Xft.lcdfilter : lcddefault
+Xft.autohint : false
+!!Xft.hintstyle : hintslight
+Xft.hintstyle : hintfull
+Xft.hinting : true
+Xft.antialias : true
+Xft.rgba : rgb
+Xft.dpi: 96
 
 URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
 URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
 URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
-!URxvt*font: xft:Terminus:pixelsize=10,xft:Inconsolata\ for\ Powerline:pixelsize=10
-!URxvt.font : xft:Cousine:pixelsize=10
-!URxvt.font : xft:Anonymous Pro:pixelsize=9
-!URxvt.font : xft:ProFont:pixelsize=8
-!URxvt.font : xft:Inconsolata:pixelsize=8
 
-Xft.lcdfilter : lcddefault
-!Xft.hintstyle : hintslight
-Xft.autohint : 0
-Xft.hintstyle : hintfull
-Xft.hinting : 1
-Xft.antialias : 1
-Xft.rgba : rgb
-Xft.dpi: 96
+!URxvt*font: xft:Terminus:pixelsize=9,xft:Inconsolata\ for\ Powerline:pixelsize=9
+!URxvt.lineSpace: 1
+!URxvt.letterSpace : -1
+
+!URxvt.font : xft:ProFont:pixelsize=8
+!URxvt.lineSpace: 1
+!URxvt.letterSpace : -2
+
+
+!URxvt.font : xft:Cousine:pixelsize=10
+!URxvt.lineSpace: 0
+!URxvt.letterSpace : 0
+
+!URxvt.font : xft:Anonymous Pro:pixelsize=10
+!URxvt.lineSpace: 0
+!URxvt.letterSpace : 1
 
 !Tango colors
 ! ! black

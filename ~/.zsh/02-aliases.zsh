@@ -82,7 +82,7 @@ alias -- s-='sudo systemctl stop'
 alias sr='sudo systemctl restart'
 alias se='sudo systemctl enable'
 alias sd='sudo systemctl disable'
-alias st='systemctl status -l'
+alias s!='systemctl status -l'
 
 # Journalctl
 alias jx="sudo journalctl -xea"

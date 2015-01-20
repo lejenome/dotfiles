@@ -13,12 +13,4 @@ call vundle#begin("~/.nvim/bundle")
 " FLOOBITS
 Plugin 'floobits/floobits-neovim'
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIM-AIRLINE
-Plugin 'bling/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='powerlineish' "or tomorrow
-
 source ~/.vim/vundle.vim
