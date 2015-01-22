@@ -18,8 +18,8 @@ alias mv='mv -v'
 alias ln='ln -v'
 
 # RM
-alias rm='rm -rv'
-alias rmf='rm -rvf'
+alias rm='rm -rv  -I --preserve-root'
+alias rmf='rm -rvf  -I --preserve-root'
 
 # CP
 alias cp='cp -rv'
@@ -41,8 +41,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # MKDIR
-alias mk='mkdir -p'
-alias mkdir='mkdir -p'
+alias mk='mkdir -pv'
+alias mkdir='mkdir -pv'
 
 # Various
 alias cls='clear'
@@ -91,6 +91,16 @@ alias ju="sudo journalctl -xea -u"
 
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'
+
+#IPTABLES
+alias ipt='sudo /sbin/iptables'
+alias iptlist='sudo /sbin/iptables -n -v --line-numbers -L'
+
+
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
 
 # Fun with sed
 #alias df='df -h | grep sd |\

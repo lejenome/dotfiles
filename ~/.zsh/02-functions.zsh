@@ -17,6 +17,11 @@ preexec() {
 	esac
 } # }}}
 
+rebootsagem() {
+	local pw="$(gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/secret/router-pw.gpg)"
+	curl --silent -u "admin:$pw" "http://192.168.1.1/rebootinfo.cgi" >/dev/null
+}
+
 # {{{ Oneliners
 # go to dir after cp/mv/mkdir
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }

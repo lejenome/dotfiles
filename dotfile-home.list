@@ -83,6 +83,7 @@ l .ssh/config
 l .jshintrc
 l .gemrc
 l .keynavrc
+l .msmtprc
 
 c .config/feednix/config.json
 c .cmus/autosave
