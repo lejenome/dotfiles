@@ -72,6 +72,7 @@ alias yy='sudo yaourt -Syu --noconfirm'
 alias yu='sudo pacman -U'
 alias yq='yaourt -Q'
 alias yql='yaourt -Ql'
+alias yr='sudo yaourt -R'
 
 # Systemctl
 alias suspend='sudo systemctl suspend'
