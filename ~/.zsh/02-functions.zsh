@@ -17,9 +17,16 @@ preexec() {
 	esac
 } # }}}
 
-rebootsagem() {
+sagem-reboot() {
 	local pw="$(gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/secret/router-pw.gpg)"
 	curl --silent -u "admin:$pw" "http://192.168.1.1/rebootinfo.cgi" >/dev/null
+}
+sagem-status() {
+	local pw="$(gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/secret/router-pw.gpg)"
+	links -dump "http://admin:${pw}@192.168.1.1/wancfg.cmd?action=refresh" \
+		| tail -3 \
+		| awk '(NR == 1 || NR == 2) {print $2" "$3" "$4} END {print}' \
+		| column -t
 }
 
 # {{{ Oneliners
