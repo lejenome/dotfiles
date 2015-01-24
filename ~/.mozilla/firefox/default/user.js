@@ -102,6 +102,7 @@ user_pref("media.webspeech.synth.enabled", true);
 user_pref("media.audio_data.enabled", true);
 user_pref("media.eme.enabled", true);
 user_pref("media.track.enabled", true);
+user_pref("media.gmp-gmpopenh264.enabled", true);
 // use pipe
 user_pref("network.http.pipelining", true);
 user_pref("network.http.pipelining.ssl", true);
@@ -111,6 +112,13 @@ user_pref("notification.feature.enabled", true);
 // pdfjs config
 user_pref("pdfjs.enableHandToolOnLoad", true);
 user_pref("pdfjs.enableWebGL", true);
+// plugins config
+user_pref("plugin.default.state", 0);
+user_pref("plugin.state.flash", 0);
+user_pref("plugin.state.libplugins", 0);
+user_pref("plugin.state.npatgpc", 0);
+user_pref("plugin.state.npbispbrowser", 0);
+user_pref("plugin.state.npesteid-firefox-plugin", 0);
 // privacy config
 user_pref("privacy.donottrackheader.enabled", true);
 // security
