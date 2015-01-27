@@ -60,6 +60,7 @@ l .config/modprobed-db.conf
 l .config/newsbeuter/config
 l .config/newsbeuter/urls
 l .config/user-dirs.dirs
+l .config/user-dirs.locale
 l .config/surfraw/conf
 l .config/git
 l .i3
