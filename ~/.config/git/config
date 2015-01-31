@@ -106,7 +106,7 @@
 	# Credit an author on the latest commit
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# rebase local braches to upstream branches & create missing ones
-	syncupstream = "!f() { git fetch upstream; for _b in $(git branch -a |awk 'BEGIN {FS=\"/\"} $2==\"upstream\" {print $3}'); do git co $_b && git rebase -s recursive -Xours upstream/$_b || git nb $_b upstream/$_b; done; git co master;}; f"
+	syncupstream = "!f() { git fetch upstream; for _b in $(git branch -a |awk 'BEGIN {FS=\"/\"} $2==\"upstream\" {print $3}'); do git co $_b && git rebase -s recursive -Xours upstream/$_b $@ || git nb $_b upstream/$_b; done; git co master;}; f $@"
 	# Show the diff between the latest commit and the current state
 	dl = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 

@@ -51,7 +51,8 @@ alias h='history'
 #alias wget='wget -c'
 #alias aria='aria2c -c -x 10 -s 10 -k 10M'
 
-alias st="st -f 'Anonymous Pro:pixelsize=11:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
+alias st="st -f 'SourceCodePro-ExtraLight:pixelsize=10:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
+#alias st="st -f 'Anonymous Pro:pixelsize=11:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
 #alias st="st -f 'Inconsolata:pixelsize=10:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
 #alias st="st -f 'DejaVu Sans Mono-7:pixelsize=9:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
 #alias st="st -f 'Envy Code R:pixelsize=10:antialias=true:autohint=false:lcdfilter=lcddefault:hinting=1:rgba=rgb:dpi=96'"
