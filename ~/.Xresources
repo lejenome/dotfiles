@@ -45,16 +45,19 @@ URxvt.perl-ext-common:
 
 Xft.lcdfilter : lcddefault
 Xft.autohint : false
-!!Xft.hintstyle : hintslight
 Xft.hintstyle : hintfull
 Xft.hinting : true
 Xft.antialias : true
 Xft.rgba : rgb
 Xft.dpi: 96
 
-URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
-URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
-URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
+!URxvt*font :     *-*-fixed-medium-r-normal--11-*-100-100-*-*-iso8859-1,xft:Icons:8
+!URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
+!URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
+
+URxvt*font: xft:SourceCodePro-ExtraLight:pixelsize=10
+URxvt.letterSpace : -2
+URxvt.lineSpace: 0
 
 !URxvt*font: xft:Terminus:pixelsize=9,xft:Inconsolata\ for\ Powerline:pixelsize=9
 !URxvt.lineSpace: 1
@@ -63,7 +66,6 @@ URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
 !URxvt.font : xft:ProFont:pixelsize=8
 !URxvt.lineSpace: 1
 !URxvt.letterSpace : -2
-
 
 !URxvt.font : xft:Cousine:pixelsize=10
 !URxvt.lineSpace: 0
