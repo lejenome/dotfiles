@@ -42,6 +42,7 @@ l .polipo
 l .config/ls++
 l .config/redshift.conf
 l .config/gtk-3.0
+l .config/fontconfig
 #l .config/systemd
 l .config/systemd/user/getmails.service
 l .config/systemd/user/getmails.timer
