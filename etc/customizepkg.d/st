@@ -1,0 +1,1 @@
+replace#global#cp $srcdir\\/config.h config.h#cp \\/etc\\/customizepkg.d\\/st.config.h config.h
