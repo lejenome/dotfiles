@@ -27,7 +27,7 @@ font xft:Cousine, Icons 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc -e ~/.i3/MAIN.sh
+bindsym $mod+Return exec st -e ~/.i3/MAIN.sh
 
 # kill focused window
 bindsym $mod+Shift+Q kill
