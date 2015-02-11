@@ -20,5 +20,10 @@ pokoy &
 unclutter &
 xautolock -time 5 -locker slimlock &
 
-# exec  DE/WM
-exec i3
+# exec  DE/WM :: Get first arg or exported XSESSION var
+XSESSION=${1:-$XSESSION}
+if [ -n "$XSESSION" ]; then
+	exec $XSESSION
+else
+	exec i3
+fi
