@@ -23,6 +23,7 @@ c systemd/user/dbus.service
 c abs.conf
 c default/grub
 c locale.conf
+c locale.gen
 c mkinitcpio.d
 c psd.conf
 c asd.conf
