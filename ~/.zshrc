@@ -18,4 +18,5 @@ for r in $HOME/.zsh/*.zsh; do
         fi
         source $r
 done
+umask 077
 eval $( dircolors -b $HOME/.zsh/LS_COLORS )

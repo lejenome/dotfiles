@@ -4,6 +4,7 @@ export HISTSIZE=1000
 export SAVEHIST=1000
 export HISTFILESIZE=1000
 export HISTFILE="$HOME/.zsh_history"
+export LESS='-F -g -i -M -R -S -w -X -z-4'
 #export DISPLAY=:0
 
 export SHELL='/bin/zsh'

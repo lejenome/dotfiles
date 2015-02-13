@@ -6,7 +6,7 @@ set nofullscreen
 set toolbars=none
 set status=input,location,bookmark,history,tabcount,position,ssl
 
-set editor="urxvt -e /usr/bin/vim -f"
+set editor="st -e /usr/bin/vim -f"
 
 set incsearch
 set smartcase

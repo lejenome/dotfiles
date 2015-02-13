@@ -1,5 +1,5 @@
-# Sudo
 alias s='sudo'
+alias vi="vim"
 
 # CD
 alias cd..='cd ..'
