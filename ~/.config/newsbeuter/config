@@ -1,4 +1,4 @@
-browser "firefox %u"
+browser "firefox %u 2>/dev/null"
 download-full-page no
 # html-renderer "w3m -dump -T text/html"
 # pager vimpager

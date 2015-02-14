@@ -28,7 +28,7 @@ Plugin 'tpope/vim-fugitive'
 " CSS3 & LESS Syntax
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'skammer/vim-css-color'
+"Plugin 'skammer/vim-css-color' " f**k slow
 Plugin 'groenewege/vim-less'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""

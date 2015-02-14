@@ -1,17 +1,23 @@
-#~/.gtkrc-2.0
+include "/usr/share/themes/Numix/gtk-2.0/gtkrc"
 
+gtk-icon-theme-name = "Numix-Circle"
 gtk-theme-name = "Numix"
+gtk-font-name = "SourceCodePro Medium 8"
+style "MyFont"
+{
+	font_name = "SourceCodePro Medium 8"
+}
+widget_class "*" style "MyFont"
 
-#gtk-document-font-name = 'Sans 9'
-gtk-document-font-name = 'ProFont 9'
-#gtk-font-name = 'Cantarell 9'
-gtk-font-name = 'ProFont 9'
+gtk-document-font-name = "SourceCodePro Medium 8"
 gtk-toolbar-icons-size = 'small'
 gtk-text-scaling-factor = 1.0
-gtk-monospace-font-name = 'Monospace 9'
+gtk-monospace-font-name = 'Monospace 8'
 gtk-menu-popup-delay = 0
-gtk-xft-dpi = 96
 
 # disable ~/.local/share/recently-used.xbel
 gtk-recent-files-max-age = 0
 gtk-recent-files-limit = 0
+
+gtk-entry-password-hint-timeout = 400
+gtk-print-preview-command = "zathura %f"
