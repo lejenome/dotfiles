@@ -69,6 +69,13 @@ user_pref("dom.mapped_arraybuffer.enabled", true);
 user_pref("dom.quotaManager.testing", true);
 //extension
 user_pref("extensions.checkCompatibility.nightly", false);
+// font settings
+user_pref("font.minimum-size.x-western", 8);
+user_pref("font.name.monospace.x-western", "Source Code Pro");
+user_pref("font.name.sans-serif.x-western", "Source Code Pro");
+user_pref("font.name.serif.x-western", "Source Code Pro");
+user_pref("font.size.fixed.x-western", 11);
+user_pref("font.size.variable.x-western", 11);
 // gfx settings
 user_pref("gfx.color_management.enablev4", true);
 user_pref("gfx.canvas.azure.backends", "skia,cairo");
