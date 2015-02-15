@@ -1,0 +1,34 @@
+# Default settings for chromium. This file is sourced by /usr/bin/chromium
+# More @ http://peter.sh/experiments/chromium-command-line-switches/
+# Other Prolicies are added to /etc/chromium/policies/managed/prefs.json
+CHROMIUM_FLAGS=" \
+	--enable-fast-unload \
+	--javascript-harmony \
+	--enable-experimental-web-platform-features \
+	--enable-devtools-experiments \
+	--enable-download-resumption \
+	--enable-viewport-meta \
+	--ui-enable-impl-side-painting \
+	--enable-lcd-text \
+	--enable-offline-auto-reload-visible-only \
+	--enable-tcp-fastopen \
+	--enable-device-discovery-notifications \
+	--enable-webgl-draft-extensions \
+	--new-profile-management \
+	--fast-user-switching \
+	--enable-new-avatar-menu \
+	--google-profile-info \
+	--enable-ephemeral-apps-in-webstore \
+	--enable-out-of-process-pdf \
+	--enable-save-password-bubble \
+	--enable-smooth-scrolling \
+	--extension-content-verification=enforce_strict \
+	--enable-tab-audio-muting \
+	--enable-overlay-scrollbar \
+	--enable-tcp-fastopen \
+	--enable-web-based-signin \
+	--enable-experimental-extension-apis \
+	--enable-material-design-ntp \
+	--enable-nacl \
+	--allow-nacl-socket-api=* \
+	"

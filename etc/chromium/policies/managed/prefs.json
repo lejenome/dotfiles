@@ -1,0 +1,19 @@
+{
+	"DefaultPluginsSetting": 3,
+	"DefaultPopupsSetting": 2,
+	"HomepageIsNewTabPage": true,
+	"ProxyMode": "fixed_servers",
+	"ProxyServer": "127.0.0.1:3128",
+	"ProxyBypassList": "localhost;*.localdomain;*10.0.0.0/8;127.16.0.0/12;192.168.0.0/16",
+	"RestoreOnStartup": 1,
+	"AllowOutdatedPlugins": false,
+	"AlwaysAuthorizePlugins": false,
+	"AutoFillEnabled": true,
+	"BackgroundModeEnabled": false,
+	"BlockThirdPartyCookies": true,
+	"BookmarkBarEnabled": false,
+	"DefaultBrowserSettingEnabled": false,
+	"DisabledPlugins": ["Java", "Shockwave Flash"],
+	"SSLVersionFallbackMin": "tls1.2",
+	"SSLVersionMin": "tls1.1"
+}
