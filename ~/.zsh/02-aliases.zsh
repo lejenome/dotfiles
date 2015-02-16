@@ -1,3 +1,6 @@
+# First fix aliases not passed to sudo
+alias sudo='sudo '
+
 alias s='sudo'
 alias vi="vim"
 
