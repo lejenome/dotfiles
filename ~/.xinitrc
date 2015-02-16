@@ -8,7 +8,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Xorg settings
-setxkbmap fr
 #xset +dpms			# Enable DPMS
 #xset dpms 300 330 360		# Set standby, suspend, & off times (in seconds)
 
