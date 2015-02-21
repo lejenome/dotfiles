@@ -173,9 +173,9 @@ new_float pixel 1
 #exec --no-startup-id xset dpms 300 360 420
 
 # Workspace names
-set $ws1 "1:  WEB"
+set $ws1 "1:  TERM"
 #0xF0AC
-set $ws2 "2:  TERM"
+set $ws2 "2:  WEB"
 #0xF120
 set $ws3 "3:  WORK"
 #0xF085
@@ -223,4 +223,4 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-exec --no-startup-id i3-msg "workspace 1:  WEB"
+exec --no-startup-id i3-msg "workspace 1:  TERM"
