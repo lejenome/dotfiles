@@ -26,18 +26,9 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
 bindsym $mod+Return exec st -e ~/.i3/MAIN.sh
-
-# kill focused window
 bindsym $mod+Shift+Q kill
-
-# start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -163,6 +154,14 @@ bindsym XF86Explorer  exec  "urxvt-vifm"
 
 bindsym $mod+Shift+m exec sh ~/.i3/keymouse.sh
 bindsym $mod+Shift+t exec ~/.i3/TERM.sh
+bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
+
+# Going Back and Forth
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+# Mark and Goto
+bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
+bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
 focus_follows_mouse no
 new_window pixel 1
