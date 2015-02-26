@@ -66,6 +66,7 @@ c ssh/ssh_config
 c ssh/sshd_config
 c squid/squid.conf
 c chromium
+c kmscon
 
 # wpa_supplicant
 # profile

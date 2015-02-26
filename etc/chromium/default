@@ -31,4 +31,5 @@ CHROMIUM_FLAGS=" \
 	--enable-material-design-ntp \
 	--enable-nacl \
 	--allow-nacl-socket-api=* \
+	--allow-file-access-from-files \
 	"
