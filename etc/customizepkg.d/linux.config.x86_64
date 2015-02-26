@@ -550,7 +550,7 @@ CONFIG_HOTPLUG_CPU=y
 # CONFIG_DEBUG_HOTPLUG_CPU0 is not set
 # CONFIG_COMPAT_VDSO is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="ath9k.ps_enable=1 snd_hda_intel.power_save=1 radeon.tv=0 radeon.audio=0 radeon.dpm=1 radeon.pcie_gen2=1 usbcore.autosuspend=2 rfkill.default_state=0 pcie_aspm=force drm.vblankoffdelay=1 lpj=2394494 rootfstype=btrfs rootflags=compress=lzo,commit=120,space_cache screen=1600x900"
+CONFIG_CMDLINE="noinitrd ath9k.ps_enable=1 snd_hda_intel.power_save=1 radeon.tv=0 radeon.audio=0 radeon.dpm=1 radeon.pcie_gen2=1 usbcore.autosuspend=2 rfkill.default_state=0 pcie_aspm=force drm.vblankoffdelay=1 lpj=2394494 root=/dev/sda7 rootfstype=btrfs rootflags=compress=lzo,commit=120,space_cache screen=1600x900"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_ARCH_ENABLE_MEMORY_HOTPLUG=y
 CONFIG_ARCH_ENABLE_MEMORY_HOTREMOVE=y
