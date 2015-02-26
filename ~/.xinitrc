@@ -17,6 +17,7 @@ fi
 redshift &
 pokoy &
 unclutter &
+numlockx &
 xautolock -time 5 -locker slimlock &
 
 # exec  DE/WM :: Get first arg or exported XSESSION var
