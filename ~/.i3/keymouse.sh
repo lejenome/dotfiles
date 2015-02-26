@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+kill $(pidof keynav)
 keynav
-sleep 0.2
+sleep 0.3
 xdotool key "ctrl+semicolon"

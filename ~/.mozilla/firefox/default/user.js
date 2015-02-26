@@ -85,8 +85,9 @@ user_pref("gfx.work-around-driver-bugs", false);
 user_pref("gfx.xrender.enabled", false);
 // force OMTC
 user_pref("layers.acceleration.force-enabled", true);
+user_pref("layers.async-pan-zoom.enabled", true);
 user_pref("layers.async-video.enabled", true);
-user_pref("layers.enable-tiles", true);
+//user_pref("layers.enable-tiles", true);
 user_pref("layers.offmainthreadcomposition.async-animations", true);
 user_pref("layers.offmainthreadcomposition.enabled", true);
 user_pref("layers.offmainthreadcomposition.force-basic", true);
