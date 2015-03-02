@@ -11,7 +11,7 @@ SURFRAW_text_browser=lynx
 
 # name/path of browser executable
 # e.g mozilla, netscape etc
-SURFRAW_graphical_browser=firefox
+SURFRAW_graphical_browser=$BROWSER
 
 # text browser arguments, or "none"
 SURFRAW_text_browser_args=none

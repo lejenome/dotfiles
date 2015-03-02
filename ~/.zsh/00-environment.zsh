@@ -17,11 +17,11 @@ export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
 # DEFAULT tools and directories
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='/usr/bin/firefox'
+export BROWSER='firefox'
 [ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 export MAIL="$HOME/mail"
-export EMAIL="bmoez.j@gmail.com"
-export TERMINAL=urxvtc
+export EMAIL='bmoez.j@gmail.com'
+export TERMINAL='urxvtc'
 
 # mesa & r600 options
 export R600_DEBUG=hyperz
