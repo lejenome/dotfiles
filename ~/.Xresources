@@ -37,7 +37,7 @@ URxvt*cursorColor2:       #151515
 URxvt.scrollBar: false
 URxvt*saveLines:0
 URxvt.iso14755 : false
-URxvt*fading: 20
+URxvt*fading: 10
 URxvt.perl-ext:
 URxvt.perl-ext-common:
 !URxvt.lineSpace: 1
