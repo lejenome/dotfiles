@@ -26,7 +26,7 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec st -e ~/.i3/MAIN.sh
+bindsym $mod+Return exec i3-sensible-terminal -e ~/.i3/MAIN.sh
 bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
@@ -153,7 +153,7 @@ bindsym XF86Explorer  exec  "urxvt-vifm"
 
 
 bindsym $mod+Shift+m exec sh ~/.i3/keymouse.sh
-bindsym $mod+Shift+t exec ~/.i3/TERM.sh
+bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.i3/TERM.sh
 bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
 
 # Going Back and Forth

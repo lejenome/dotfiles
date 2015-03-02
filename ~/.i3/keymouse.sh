@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 kill $(pidof keynav)
 keynav
 sleep 0.3

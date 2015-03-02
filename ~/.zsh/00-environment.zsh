@@ -21,6 +21,7 @@ export BROWSER='/usr/bin/firefox'
 [ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 export MAIL="$HOME/mail"
 export EMAIL="bmoez.j@gmail.com"
+export TERMINAL=urxvtc
 
 # mesa & r600 options
 export R600_DEBUG=hyperz

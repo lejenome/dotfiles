@@ -13,7 +13,7 @@ fi
 
 # Autostart apps/daemons
 [[ -f ~/.fehbg ]] && sh ~/.fehbg &
-# urxvtd -q -o &
+urxvtd -q -o &
 redshift &
 pokoy &
 unclutter &
