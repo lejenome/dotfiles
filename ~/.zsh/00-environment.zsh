@@ -23,6 +23,8 @@ export MAIL="$HOME/mail"
 export EMAIL='bmoez.j@gmail.com'
 export TERMINAL='urxvtc'
 
+# node modules additional lookup dirs
+export NODE_PATH="$HOME/.node/lib/node_modules"
 # mesa & r600 options
 export R600_DEBUG=hyperz
 export R600_STREAMOUT=1
