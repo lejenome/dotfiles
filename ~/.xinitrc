@@ -19,6 +19,7 @@ pokoy &
 unclutter &
 numlockx &
 xautolock -time 5 -locker slimlock &
+setxkbmap fr
 
 # exec  DE/WM :: Get first arg or exported XSESSION var
 XSESSION=${1:-$XSESSION}
