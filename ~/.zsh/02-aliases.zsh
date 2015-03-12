@@ -50,9 +50,9 @@ alias mkdir='mkdir -pv'
 # Various
 alias cls='clear'
 alias h='history'
-#alias mplayer='mplayer -msgcolor'
-#alias wget='wget -c'
-#alias aria='aria2c -c -x 10 -s 10 -k 10M'
+alias -- +x='chmod +x'
+alias wget='wget -c'
+alias curl='curl -C -'
 
 alias t='todo.sh'
 
@@ -101,17 +101,13 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # Fun with sed
-#alias df='df -h | grep sd |\
-#	sed -e "s_/dev/sda[1-9]_\x1b[34m&\x1b[0m_" |\
-#	sed -e "s_/dev/sd[b-z][1-9]_\x1b[33m&\x1b[0m_" |\
-#	sed -e "s_[,0-9]*[MG]_\x1b[36m&\x1b[0m_" |\
-#	sed -e "s_[0-9]*%_\x1b[32m&\x1b[0m_" |\
-#	sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" |\
-#	sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
-
-#alias duch='du -ch | grep insgesamt |\
-#	sed -e "s_[0-9]*,[0-9]*[B|G|K|M|T]_\x1b[32m&\x1b[0m_"'
-
+alias df='df -h |\
+	sed -e "s_/dev/sda[1-9]_\x1b[34m&\x1b[0m_" |\
+	sed -e "s_/dev/sd[b-z][1-9]_\x1b[33m&\x1b[0m_" |\
+	sed -e "s_[.,0-9]*[MG]_\x1b[36m&\x1b[0m_" |\
+	sed -e "s_[0-9]*%_\x1b[32m&\x1b[0m_" |\
+	sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" |\
+	sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
 
 # -------------------------------------------------------------------
 # Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
