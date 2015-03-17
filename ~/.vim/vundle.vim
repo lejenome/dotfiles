@@ -79,6 +79,13 @@ let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#syntastic#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Google Code Fmt
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmtlib'
+Plugin 'google/vim-codefmt'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
 call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -87,6 +87,7 @@ l .jshintrc
 l .gemrc
 l .keynavrc
 l .msmtprc
+l .clang-format
 
 c .config/feednix/config.json
 c .cmus/autosave
