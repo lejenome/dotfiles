@@ -1,6 +1,6 @@
 # sourced by login shell: .zprofile & .bash_profile.
 
-export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin"
+export PATH="$PATH:$BIN_HOME:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/bin"
 [ -e ~/.local/bin ] && export PATH="$HOME/.local/bin:$PATH"
 
 # PERL PATH
