@@ -86,6 +86,23 @@ Plugin 'google/vim-codefmtlib'
 Plugin 'google/vim-codefmt'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color Matching Tag on HTML
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'gregsexton/MatchTag'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_cmd = 'CtrlPMRU'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Github Issues
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'jaxbot/github-issues.vim'
+let g:github_same_window = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
 call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
