@@ -82,6 +82,7 @@ l .todo.cfg
 l .ncmpcpp/config
 l .config/weston.ini
 l .gnupg/gpg.conf
+l .gnupg/gpg-agent.conf
 l .ssh/config
 l .jshintrc
 l .gemrc
