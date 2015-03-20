@@ -101,3 +101,7 @@ au BufRead,BufNewFile *.less set filetype=css
 " fixes for status line
 set timeoutlen=50
 set laststatus=2
+
+" Netrw settings
+let g:netrw_altv              = 1
+let g:netrw_liststyle         = 1
