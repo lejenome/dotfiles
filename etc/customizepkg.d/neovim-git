@@ -1,0 +1,1 @@
+replace#global#make DESTDIR="${pkgdir}" install#make DESTDIR="${pkgdir}" install || true
