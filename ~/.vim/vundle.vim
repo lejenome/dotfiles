@@ -10,8 +10,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 let g:syntastic_html_validator_parser = 'html5'
 "let g:syntastic_html_checkers = ['w3', 'validator']
-let g:syntastic_html_checkers = ['w3']
+let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_python_checkers = ['pep8', 'python']
+let b:syntastic_c_cflags = '-I/usr/include/SDL2'
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_html_tidy_exec = '/usr/bin/tidy5'
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
