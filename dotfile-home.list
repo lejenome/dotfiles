@@ -89,6 +89,7 @@ l .gemrc
 l .keynavrc
 l .msmtprc
 l .clang-format
+l .color_coded
 
 c .config/feednix/config.json
 c .cmus/autosave
