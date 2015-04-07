@@ -14,4 +14,9 @@ source ~/.vim/common.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/bundle")
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntax highliht using libClang
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'jeaye/color_coded'
+
 source ~/.vim/vundle.vim
