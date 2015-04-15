@@ -50,6 +50,7 @@ c localtime
 c hostname
 c connman
 c systemd/network
+c samba/smb.conf
 c vimrc
 c X11/xorg.conf.d
 c slim.conf
