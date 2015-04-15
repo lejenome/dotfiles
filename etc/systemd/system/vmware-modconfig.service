@@ -1,0 +1,9 @@
+[Unit]
+Description=VMware modules rebuild
+
+[Service]
+ExecStart=/usr/bin/vmware-modconfig --install-all
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

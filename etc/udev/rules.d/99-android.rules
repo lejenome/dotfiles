@@ -1,0 +1,4 @@
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e40", MODE="0666", OWNER="lejenome" # Bootloader
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d001", MODE="0666", OWNER="lejenome" # Recovery
+
+SUBSYSTEM=="usb", ATTR{idVendor}=="2207", MODE="0666", OWNER="lejenome"
