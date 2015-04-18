@@ -66,3 +66,10 @@ colors_enabled = yes
 
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum" # (spectrum/wave)
