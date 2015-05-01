@@ -70,8 +70,9 @@ c nodogsplash
 c ssh/ssh_config
 c ssh/sshd_config
 c squid/squid.conf
-c chromium
 c kmscon
+
+#c chromium
 
 # wpa_supplicant
 # profile

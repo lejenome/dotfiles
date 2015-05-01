@@ -1,7 +1,7 @@
 [Unit]
 Description=VMware daemon
-#Requires=vmware-USBArbitrator.service
-#After=vmware-USBArbitrator.service
+Requires=vmware-USBArbitrator.service
+After=vmware-USBArbitrator.service
 After=vmware-modconfig.service
 OnFailure=vmware-modconfig.service vmware.service
 
