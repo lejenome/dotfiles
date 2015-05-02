@@ -31,7 +31,7 @@ var INFO =xml`
       let tw = "https://twitter.com/intent/tweet?url=" + url + "&text=" +title;
       let gp = "https://plus.google.com/share?url=" + url + "&soc-app=170&text=" + title;
       let li = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title;
-      let tu = "https://www.tumblr.com/share?v=3&u=" url + "&t=" + title;
+      let tu = "https://www.tumblr.com/share?v=3&u=" + url + "&t=" + title;
 
       gBrowser.selectedTab = gBrowser.addTab(fb);
       gBrowser.selectedTab = gBrowser.addTab(tw);
