@@ -1,5 +1,6 @@
 [Unit]
 Description=VMware modules rebuild
+Before=vmware-modconfig.service
 
 [Service]
 ExecStart=/usr/bin/vmware-modconfig --install-all
