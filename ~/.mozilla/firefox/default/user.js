@@ -13,7 +13,6 @@ user_pref("browser.cache.disk.smart_size.first_run", true);
 user_pref("browser.cache.disk.smart_size.use_old_max", true);
 user_pref("browser.cache.use_new_backend", 1);
 // browser behaviours config
-user_pref("browser.ctrlTab.previews", true);
 user_pref("browser.panorama.animate_zoom", false);
 user_pref("browser.tabs.remote.autostart", false);
 user_pref("browser.tabs.remote.autostart.1", false);

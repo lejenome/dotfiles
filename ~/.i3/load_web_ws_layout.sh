@@ -7,6 +7,6 @@ tmux kill-session -t MUTT
 tmux kill-session -t WEECHAT
 tmux kill-session -t NCMPCPP
 (kill -9 $(pidof weechat); \
- $TERMINAL $NAMEARG WEECHAT -e zsh -c "tmux new-session -s WEECHAT \; new-window weechat" )&
+ $TERMINAL $NAMEARG WEECHAT -e zsh -c "tmux new-session -s WEECHAT \; new-window" )&
 ($TERMINAL $NAMEARG MUTT    -e zsh -c "tmux new-session -s MUTT    \; new-window mutt" )&
 ($TERMINAL $NAMEARG NCMPCPP -e zsh -c "tmux new-session -s NCMPCPP \; new-window ncmpcpp" )&
