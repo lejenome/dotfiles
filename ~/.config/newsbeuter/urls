@@ -5,7 +5,6 @@ http://www.fudzilla.com/?format=feed "tech"
 http://planet.ubuntu.com/rss20.xml "distros"
 http://distrowatch.feedsportal.com/c/34025/f/617435/index.rss "distros"
 http://feeds.feedburner.com/d0od?format=xml "distros"
-http://worldofgnome.org/feed/ "distros"
 http://feeds.feedburner.com/webupd8?format=xml "distros"
 http://www.developpez.com/index/rss
 http://www.linux-magazine.com/rss/feed/lmi_news
@@ -13,7 +12,6 @@ http://planet.gnome.org/atom.xml
 http://planet.mozilla.org/atom.xml
 https://hacks.mozilla.org/feed/
 http://feeds2.feedburner.com/KorbensBlog-UpgradeYourMind
-https://developer.gm.com/blog/feed
 http://www.authenticjobs.com/rss/custom.php?terms=&type=3,5,2,6,4&cats=&onlyremote=1&location=
 http://www.jeunesse.francophonie.org/flux/appels-et-concours/rss.xml
 
