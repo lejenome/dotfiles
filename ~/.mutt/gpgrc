@@ -15,6 +15,7 @@ set pgp_good_sign="`gettext -d gnupg -s 'Good signature from "' | tr -d '"'`"
 #set pgp_good_sign="^gpg: Good signature from"
 
 set pgp_sign_as = 73659C9D
+set postpone_encrypt_as = 73659C9D
 set pgp_timeout = 3600
 
 set pgp_auto_decode=yes
@@ -26,3 +27,6 @@ set crypt_replyencrypt
 set crypt_replysignencrypted
 set pgp_show_unusable=no
 set crypt_autosign = yes
+
+#encrypt postpone mails before saving
+set postpone_encrypt = yes
