@@ -71,6 +71,7 @@ c ssh/ssh_config
 c ssh/sshd_config
 c squid/squid.conf
 c kmscon
+c mail.rc
 
 #c chromium
 
