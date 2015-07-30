@@ -54,9 +54,17 @@ set t_Co=256
 filetype off
 filetype plugin indent on
 syntax on
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
 
 " Automaticlly indent when adding a curly barket, ...
 set smartindent
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
+
+" show a visual line under the cursor's current line
+set cursorline
 
 " Showing line numbers and length
 set number  " show line numbers
