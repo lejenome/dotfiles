@@ -49,6 +49,7 @@ export SDL_VIDEO_X11_DGAMOUSE=0
 
 # XKB
 export XKB_DEFAULT_LAYOUT=fr
+#export XKB_DEFAULT_VARIANT=azerty
 
 # XDG envars
 if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
@@ -57,3 +58,6 @@ if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
 		export ${var%%=*}
 	done
 fi
+
+# GITHUB for Release-it
+export GITHUB_TOKEN=$(cat $HOME/secret/github_token)

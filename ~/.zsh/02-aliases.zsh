@@ -88,7 +88,7 @@ alias jx="sudo journalctl -xea"
 alias ju="sudo journalctl -xea -u"
 
 #qemu
-alias qemu='qemu-system-x86_64 -enable-kvm -cpu host'
+alias qemu='qemu-system-x86_64 -enable-kvm -cpu host -m 1G'
 
 #IPTABLES
 alias ipt='sudo /sbin/iptables'

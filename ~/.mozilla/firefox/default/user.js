@@ -16,6 +16,7 @@ user_pref("browser.cache.use_new_backend", 1);
 user_pref("browser.panorama.animate_zoom", false);
 user_pref("browser.tabs.remote.autostart", false);
 user_pref("browser.tabs.remote.autostart.1", false);
+user_pref("browser.tabs.remote.autostart.2", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.zoom.full", false);
@@ -70,6 +71,7 @@ user_pref("dom.quotaManager.testing", true);
 */
 //extension
 user_pref("extensions.checkCompatibility.nightly", false);
+user_pref("xpinstall.signatures.required", false);
 // font settings
 //user_pref("font.minimum-size.x-western", 8);
 user_pref("font.name.monospace.x-western", "Source Code Pro");
