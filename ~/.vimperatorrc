@@ -3,7 +3,7 @@ colorscheme indigo
 set titlestring=Firefox
 set nofullscreen
 
-set toolbars=none
+set toolbars=all,noaddons,nobookmarks,nomenu,nonavigation
 set status=input,location,bookmark,history,tabcount,position,ssl
 
 set editor="st -e /usr/bin/vim -f"
