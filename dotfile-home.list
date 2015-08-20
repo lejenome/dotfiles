@@ -68,7 +68,6 @@ l .config/chromium-flags.conf
 l .config/git
 l .i3
 l .hgrc
-l .npmrc
 l .urlview
 l .vimperatorrc
 l .vimperator/plugin
@@ -94,5 +93,6 @@ l .color_coded
 
 c .config/feednix/config.json
 c .cmus/autosave
+c .npmrc
 
 # .fehbg
