@@ -18,8 +18,6 @@ c systemd/system/dnsmasq.service
 c systemd/system/docker.service
 c systemd/system/connman-vpn.service
 c systemd/system/kexec-load@.service
-c systemd/system/vmware.service
-c systemd/system/vmware-modconfig.service
 c systemd/journald.conf
 c systemd/logind.conf
 c systemd/user/dbus.socket

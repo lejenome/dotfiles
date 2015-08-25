@@ -11,6 +11,6 @@ call vundle#begin("~/.nvim/bundle")
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " FLOOBITS
-Plugin 'floobits/floobits-neovim'
+"Plugin 'floobits/floobits-neovim'
 
 source ~/.vim/vundle.vim
