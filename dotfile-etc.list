@@ -22,6 +22,7 @@ c systemd/journald.conf
 c systemd/logind.conf
 c systemd/user/dbus.socket
 c systemd/user/dbus.service
+c laptop-mode
 c abs.conf
 c default/grub
 c locale.conf
