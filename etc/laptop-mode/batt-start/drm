@@ -1,11 +1,12 @@
-#!/bin/bash
-echo drm $@ >> /home/lejenome/test
+#!/bin/bash -x
 if [ "$1" == "start" ]; then
 	for i in /sys/class/drm/card*/device/power_method; do echo profile > "$i"; done
 	for i in /sys/class/drm/card*/device/power_profile; do echo low > "$i"; done
 	for i in /sys/class/drm/card*/device/power_dpm_state; do echo battery > "$i"; done
-else if [ "$1" == "stop" ]; then
-	#for i in /sys/class/drm/card*/device/power_method; do echo profile > "$i"; done
-	#for i in /sys/class/drm/card*/device/power_profile; do echo low > "$i"; done
-	#for i in /sys/class/drm/card*/device/power_dpm_state; do echo battery > "$i"; done
+	for i in /sys/class/drm/card*/device/power_dpm_force_performance_level; do echo low > "$i"; done
+elif [ "$1" == "stop" ]; then
+	for i in /sys/class/drm/card*/device/power_method; do echo profile > "$i"; done
+	for i in /sys/class/drm/card*/device/power_profile; do echo default > "$i"; done
+	for i in /sys/class/drm/card*/device/power_dpm_state; do echo balanced > "$i"; done
+	for i in /sys/class/drm/card*/device/power_dpm_force_performance_level; do echo auto > "$i"; done
 fi
