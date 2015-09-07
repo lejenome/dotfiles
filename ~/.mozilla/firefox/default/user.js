@@ -7,7 +7,7 @@ user_pref("app.update.auto", true);
 user_pref("app.update.silent", true);
 user_pref("app.update.disable_button.showUpdateHistory", false);
 // disk cache config
-user_pref("browser.cache.disk.capacity", 10240);
+user_pref("browser.cache.disk.capacity", 50240);
 user_pref("browser.cache.disk.smart_size.enabled", true);
 user_pref("browser.cache.disk.smart_size.first_run", true);
 user_pref("browser.cache.disk.smart_size.use_old_max", true);
