@@ -1,0 +1,9 @@
+[Unit]
+Description=Dynamic DNS Update Client
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ddclient -foreground
+
+[Install]
+WantedBy=multi-user.target

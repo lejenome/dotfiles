@@ -18,6 +18,8 @@ c systemd/system/dnsmasq.service
 c systemd/system/docker.service
 c systemd/system/connman-vpn.service
 c systemd/system/kexec-load@.service
+c systemd/system/efistub-update.path
+c systemd/system/efistub-update.service
 c systemd/journald.conf
 c systemd/logind.conf
 c systemd/user/dbus.socket
@@ -32,7 +34,6 @@ c psd.conf
 c asd.conf
 c pam.d/su
 c pam.d/system-login
-c initcpio
 c modprobe.d
 c mkinitcpio-lts.conf
 c mkinitcpio.conf
