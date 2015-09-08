@@ -4,6 +4,6 @@ Description=Copy EFISTUB Kernel to UEFISYS Partition
 [Service]
 Type=oneshot
 Environment=esp=/boot/efi
-ExecStart=/usr/bin/cp -f /boot/vmlinuz-linux $esp/EFI/arch/vmlinuz-linux.efi
-ExecStart=/usr/bin/cp -f /boot/initramfs-linux.img $esp/EFI/arch/initramfs-linux.img
-ExecStart=/usr/bin/cp -f /boot/initramfs-linux-fallback.img $esp/EFI/arch/initramfs-linux-fallback.img
+ExecStart=/usr/bin/cp -f /boot/vmlinuz-linux ${esp}/EFI/arch/vmlinuz-linux.efi
+ExecStart=/usr/bin/cp -f /boot/initramfs-linux.img ${esp}/EFI/arch/initramfs-linux.img
+ExecStart=/usr/bin/cp -f /boot/initramfs-linux-fallback.img ${esp}/EFI/arch/initramfs-linux-fallback.img
