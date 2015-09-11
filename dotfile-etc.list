@@ -45,6 +45,7 @@ c customizepkg.d
 #c polipo
 c pacman.conf
 c pacman.d/mirrorlist
+c powerpill/
 c vconsole.conf
 c localtime
 c hostname

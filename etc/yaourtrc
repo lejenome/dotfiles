@@ -48,7 +48,7 @@ USECOLOR=1
 #TERMINALTITLE=1
 
 # Command
-PACMAN="pacman"
+PACMAN="powerpill"
 DIFFEDITCMD="vimdiff"
 
 # pacdiffviewer
