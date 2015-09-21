@@ -131,7 +131,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i, $BROWSER %f &
+filextype *.pdf zathura %c %i, firefox %f &
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -166,7 +166,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.m
 
 " Web
 filextype *.html,*.htm
-        \ $BROWSER %f &,
+        \ firefox "%f" &,
 filetype *.html,*.htm links, lynx
 
 " Object
