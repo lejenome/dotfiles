@@ -39,6 +39,7 @@ l .zsh
 l .muttrc
 l .polipo
 #l .config/gtk-2.0
+l .config/archey3.cfg
 l .config/ls++
 l .config/redshift.conf
 l .config/gtk-3.0
