@@ -2,4 +2,12 @@
 Name=wl*
 
 [Network]
-DHCP=v4
+DHCP=ipv4
+DNS=127.0.0.1
+DNS=8.8.8.8
+
+[DHCP]
+# Do not trust the out-door network
+useDNS=no
+useNTP=no
+useDomains=no

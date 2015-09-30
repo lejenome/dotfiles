@@ -1,4 +1,13 @@
 [Match]
-Name=eth*
+Name=en*
+
 [Network]
 DHCP=yes
+DNS=127.0.0.1
+DNS=8.8.8.8
+
+[DHCP]
+# Do not trust the out-door network
+useDNS=no
+useNTP=no
+useDomains=no
