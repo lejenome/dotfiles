@@ -44,6 +44,7 @@ l .config/ls++
 l .config/redshift.conf
 l .config/gtk-3.0
 l .config/fontconfig
+l .config/aria2/aria2.conf
 #l .config/systemd
 l .config/systemd/user/getmails.service
 l .config/systemd/user/getmails.timer
@@ -93,6 +94,7 @@ l .clang-format
 l .color_coded
 
 c .config/feednix/config.json
+c .config/aria2/session.lock
 c .cmus/autosave
 c .npmrc
 
