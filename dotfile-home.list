@@ -53,6 +53,7 @@ l .config/systemd/user/modprobed-db.timer
 l .config/systemd/user/newsbeuter.service
 l .config/systemd/user/newsbeuter.timer
 l .config/systemd/user/polipo.service
+l .config/systemd/user/aria2c.service
 l .config/systemd/user/tmux@.service
 l .config/lyvi
 l .config/htop
