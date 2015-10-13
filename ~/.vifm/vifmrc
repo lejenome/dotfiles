@@ -73,6 +73,9 @@ set slowfs=curlftpfs
 " Set custom status line look
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
+" disable confirm dialog
+set noconfirm
+
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
