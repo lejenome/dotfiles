@@ -12,3 +12,7 @@ set incsearch
 set smartcase
 set hlsearch
 set autocomplete
+command print hardcopy
+command about dialog about
+command printpreview dialog printpreview
+command aboutconfig tabopen about:config
