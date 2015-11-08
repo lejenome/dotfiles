@@ -180,7 +180,7 @@ filetype *.[1-8] gtbl %c | groff -Tascii -man | less
 fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.gif,*.xpm
         \ {View in feh}
         \ feh -FZ %d --start-at %d/%c 2>/dev/null,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
