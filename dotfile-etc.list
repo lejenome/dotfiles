@@ -20,6 +20,7 @@ c systemd/system/connman-vpn.service
 c systemd/system/kexec-load@.service
 c systemd/system/efistub-update.path
 c systemd/system/efistub-update.service
+c systemd/system/promiscuous@.service
 c systemd/journald.conf
 c systemd/logind.conf
 c systemd/user/dbus.socket
