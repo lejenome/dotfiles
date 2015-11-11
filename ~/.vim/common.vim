@@ -115,3 +115,16 @@ let g:netrw_altv              = 1
 let g:netrw_liststyle         = 1
 
 set cm=blowfish2 "change crypto algo to better one
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
+
+" undo changes backups
+set undodir=~/.cache " better be on a tmpfs type mount point
+set undofile
+set undoreload=10000
+
+
+" File Types special configs
+autocmd FileType php,python,java,c,cpp,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us textwidth=78
