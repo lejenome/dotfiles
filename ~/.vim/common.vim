@@ -124,7 +124,9 @@ set undoreload=10000
 
 
 " File Types special configs
-autocmd FileType php,python,java,c,cpp,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us textwidth=78
+
+set wildmenu " Turn on WiLd menu
