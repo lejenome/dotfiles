@@ -1,0 +1,11 @@
+#!/bin/bash
+xrandr -q | grep "LVDS connected .* [[:digit:]]\+x[[:digit:]]\+" > /dev/null
+LVDS=$?
+xrandr -q | grep "VGA-0 connected .* [[:digit:]]\+x[[:digit:]]\+" > /dev/null
+VGA=$?
+case "$VGA$LVDS" in
+	00|11) xrandr --output LVDS --auto --primary --output VGA-0 --off ;; # FROM both/none TO LVDS
+	10) xrandr --output LVDS --off --output VGA-0 --auto ;; # FROM LVDS TO VGA
+	01) xrandr --output LVDS --auto --primary --output VGA-0 --auto --right-of LVDS ;; # FROM VGA TO both
+esac
+sh ~/.fehbg
