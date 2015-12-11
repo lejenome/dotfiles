@@ -2,7 +2,7 @@
 Name=en*
 
 [Network]
-DHCP=yes
+DHCP=ipv4
 DNS=127.0.0.1
 DNS=8.8.8.8
 
@@ -11,3 +11,4 @@ DNS=8.8.8.8
 useDNS=no
 useNTP=no
 useDomains=no
+RouteMetric=10

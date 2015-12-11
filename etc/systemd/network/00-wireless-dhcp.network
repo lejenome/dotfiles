@@ -11,3 +11,4 @@ DNS=8.8.8.8
 useDNS=no
 useNTP=no
 useDomains=no
+RouteMetric=20

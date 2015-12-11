@@ -6,9 +6,6 @@ no-video-unscaled
 #heartbeat-cmd =
 #heartbeat-interval = 120
 
-#no-input-appleremote
-no-input-joystick
-no-input-lirc
 cache = 100000
 
 slang = en,fr,ar #DVD: prefer english subtitles
@@ -16,7 +13,7 @@ alang = en,fr,ar #DVD: prefer english audio tracks
 
 ao = alsa,openal,pulse,
 vo = vdpau,vaapi,opengl,x11,wayland,
-framedrop = yes # drop frames to preserve audio/video sync
+#framedrop = vo
 
 [vo.vdpau]
 hwdec=vdpau

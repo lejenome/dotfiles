@@ -13,7 +13,8 @@
       "--max-connection-per-server=5",
       "--min-split-size=5M",
       "--remote-time=true",
-      "--show-console-readout=true"
+      "--show-console-readout=true",
+      "--no-conf"
     ],
     "path": "/usr/bin/aria2c"
   },
