@@ -20,4 +20,8 @@ ${EXIT} %F{202}»%f "
     PROMPT="${vcs_info_msg_0_}
 $PRMPT"
   fi
+  if [ -n "${SCHROOT_COMMAND}" ]; then
+	  PROMPT="%F{9}(schroot:%F{3}%{$IT%}$SCHROOT_CHROOT_NAME%{$ST%}%F{1})%f
+$PRMPT"
+  fi
 }

@@ -12,8 +12,9 @@ slang = en,fr,ar #DVD: prefer english subtitles
 alang = en,fr,ar #DVD: prefer english audio tracks
 
 ao = alsa,openal,pulse,
-vo = vdpau,vaapi,opengl,x11,wayland,
+vo = vdpau,opengl-hd,opengl,x11,wayland,drm,
 #framedrop = vo
+softvol-max=600
 
 [vo.vdpau]
 hwdec=vdpau

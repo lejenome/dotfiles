@@ -14,6 +14,7 @@ let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_python_checkers = ['pep8', 'python']
 let b:syntastic_c_cflags = '-I/usr/include/SDL2'
 let g:syntastic_c_compiler = 'clang'
+let b:syntastic_cpp_cflags = '-I/usr/include/qt/QtWidgets -I/usr/include/qt/QtTest -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/qt' " -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtQuick -I/usr/include/qt/QtQml -I/usr/include/qt/QtNetwork
 let g:syntastic_html_tidy_exec = '/usr/bin/tidy5'
 
 
@@ -104,6 +105,27 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'jaxbot/github-issues.vim'
 let g:github_same_window = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Clang colored C/C++ code
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'jeaye/color_coded'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TagList Plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugin 'taglist.vim' " from pacman -S vim-taglist
+let Tlist_Compact_Format = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+nnoremap <C-l> :TlistToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope_maps.vim Plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'steffanc/cscopemaps.vim'
+set timeoutlen=4000
+set ttimeout
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END

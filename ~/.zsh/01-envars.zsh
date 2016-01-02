@@ -10,7 +10,7 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 export SHELL='/bin/zsh'
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
-export CFLAGS="-march=native -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -fdiagnostics-color=auto" # -flto
+export CFLAGS="-march=native -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -fdiagnostics-color=auto" # -flto=4
 export CXXFLAGS=${CFLAGS}
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto" # --fuse-ld=gold #  Bdirect  # -zdynsort # -hashvals #  -Wl,-flto ### -Wl,--hash-style=gnu ###  -Wl,--enable-new-dtags
 export MAKEFLAGS="-j8"
@@ -31,3 +31,10 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 
 # RUBY GEM & BUNDLE
 export GEM_HOME="$HOME/.gem"
+
+# Steam
+export STEAM_FRAME_FORCE_CLOSE=1
+export STEAM_RUNTIME=0
+
+# cscope DB file path
+export CSCOPE_DB=$HOME/git/cscope.out

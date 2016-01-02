@@ -46,6 +46,7 @@ export FT2_SUBPIXEL_HINTING=1
 
 # SDL, fix mouse moves too fast
 export SDL_VIDEO_X11_DGAMOUSE=0
+export SDL_AUDIODRIVER=alsa # force alsa audio driver
 
 # XKB
 export XKB_DEFAULT_LAYOUT=fr
@@ -59,5 +60,9 @@ if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
 	done
 fi
 
-# GITHUB for Release-it
-export GITHUB_TOKEN=$(cat $HOME/secret/github_token)
+# Java
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on
+	-Dswing.aatext=true
+	-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
+	-Djava.net.useSystemProxies=true
+	-Dsun.java2d.opengl=true'
