@@ -1,6 +1,6 @@
 /* global user_pref */
-/* jshint maxlen: false */
-user_pref("browser.newtabpage.pinned", '[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://mail.google.com/","title":"Gmail"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"}, {"url":"http://www.deviantart.com/messages/","title":"deviantART (messages)"},{"url":"https://translate.google.com/","title":"Translate"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"}]');
+/* jshint maxlen: false, esnext:true */
+user_pref("browser.newtabpage.pinned",'[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"},{"url":"https://www.hackerrank.com/contests","title":"HackerRank"}]');
 user_pref("browser.search.defaultenginename", "Google");
 // updeter config
 user_pref("app.update.auto", true);
@@ -24,9 +24,9 @@ user_pref("browser.zoom.full", false);
 user_pref("browser.devedition.theme.enabled", true);
 user_pref("browser.devedition.theme.showCustomizeButton", true);
 // enable mozilla pravicy project
-//user_pref("browser.polaris.enabled", true);
+// user_pref("browser.polaris.enabled", true);
 user_pref("browser.shell.checkDefaultBrowser", false);
-//session store every 5min
+// session store every 5min
 user_pref("browser.sessionstore.interval", 360000);
 
 user_pref("device.storage.enabled", true);
@@ -69,16 +69,16 @@ user_pref("dom.undo_manager.enabled", true);
 user_pref("dom.mapped_arraybuffer.enabled", true);
 user_pref("dom.quotaManager.testing", true);
 */
-//extension
+// extension
 user_pref("extensions.checkCompatibility.nightly", false);
 user_pref("xpinstall.signatures.required", false);
 // font settings
-//user_pref("font.minimum-size.x-western", 8);
+// user_pref("font.minimum-size.x-western", 8);
 user_pref("font.name.monospace.x-western", "Source Code Pro");
 user_pref("font.name.sans-serif.x-western", "Source Code Pro");
 user_pref("font.name.serif.x-western", "Source Code Pro");
-//user_pref("font.size.fixed.x-western", 11);
-///user_pref("font.size.variable.x-western", 11);
+// user_pref("font.size.fixed.x-western", 11);
+/// user_pref("font.size.variable.x-western", 11);
 // gfx settings
 user_pref("gfx.color_management.enablev4", true);
 user_pref("gfx.canvas.azure.backends", "skia,cairo");
@@ -90,7 +90,7 @@ user_pref("gfx.xrender.enabled", false);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("layers.async-pan-zoom.enabled", true);
 user_pref("layers.async-video.enabled", true);
-//user_pref("layers.enable-tiles", true);
+// user_pref("layers.enable-tiles", true);
 user_pref("layers.offmainthreadcomposition.async-animations", true);
 user_pref("layers.offmainthreadcomposition.enabled", true);
 user_pref("layers.offmainthreadcomposition.force-basic", true);
@@ -104,7 +104,7 @@ user_pref("layout.css.ruby.enabled", true);
 user_pref("layout.css.vertical-text.enabled", true);
 // enable spell checking for input/textarea
 user_pref("layout.spellcheckDefault", 2);
-//user_pref("layout.css.will-change.enabled", true);
+// user_pref("layout.css.will-change.enabled", true);
 // media config
 user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 user_pref("media.mediasource.enabled", true);
@@ -152,4 +152,4 @@ user_pref("spellchecker.dictionary", "en-US");
 // UTF-8 as default charset
 user_pref("intl.charset.default", "UTF-8");
 // incremental JS GC
-//user_pref("dom.cycle_collector.incremental", true);
+// user_pref("dom.cycle_collector.incremental", true);

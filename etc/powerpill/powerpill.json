@@ -45,11 +45,6 @@
     "db only": true,
     "path": "/usr/bin/rsync",
     "servers": [
-      "rsync://ftp.nluug.nl/archlinux/$repo/os/$arch",
-      "rsync://archlinux.polymorf.fr/archlinux/$repo/os/$arch",
-      "rsync://mirror.fs.cx/archlinux/$repo/os/$arch",
-      "rsync://mirror.one.com/archlinux/$repo/os/$arch",
-      "rsync://mirror.js-webcoding.de/pub/archlinux/$repo/os/$arch"
     ]
   }
 }
