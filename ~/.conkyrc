@@ -41,11 +41,11 @@ ${if_match ${downspeedf wlp8s0}>0} \
 {"full_text":"${if_match ${downspeedf wlp8s0}>=3000}${downspeed wlp8s0}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
 ${else}\
-{"full_text":"${if_match ${downspeedf ppp0}<1000}${downspeed ppp0}","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${downspeedf enp0s26u1u2}<1000}${downspeed enp0s26u1u2}","color":"\#909737","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${downspeedf ppp0}<3000}${downspeed ppp0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${downspeedf enp0s26u1u2}<3000}${downspeed enp0s26u1u2}","color":"\#b27d12","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${downspeedf ppp0}>=3000}${downspeed ppp0}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${downspeedf enp0s26u1u2}>=3000}${downspeed enp0s26u1u2}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
 ${endif}\
 ${endif}\
@@ -67,11 +67,11 @@ ${if_match ${upspeedf wlp8s0}>0} \
 {"full_text":"${if_match ${upspeedf wlp8s0}>=3000}${upspeed wlp8s0}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
 ${else}\
-{"full_text":"${if_match ${upspeedf ppp0}<1000}${upspeed ppp0}","color":"\#909737","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${upspeedf enp0s26u1u2}<1000}${upspeed enp0s26u1u2}","color":"\#909737","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${upspeedf ppp0}<3000}${upspeed ppp0}","color":"\#b27d12","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${upspeedf enp0s26u1u2}<3000}${upspeed enp0s26u1u2}","color":"\#b27d12","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${upspeedf ppp0}>=3000}${upspeed ppp0}","color":"\#924020","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${upspeedf enp0s26u1u2}>=3000}${upspeed enp0s26u1u2}","color":"\#924020","separator":false,"separator_block_width":6},\
 {"full_text":"${endif}${endif}${endif}"},\
 ${endif}\
 ${endif}\
