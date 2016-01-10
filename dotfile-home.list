@@ -70,6 +70,7 @@ l .config/user-dirs.locale
 l .config/surfraw/conf
 l .config/chromium-flags.conf
 l .config/git
+l .config/zathura
 l .i3
 l .hgrc
 l .urlview
