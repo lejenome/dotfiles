@@ -75,6 +75,7 @@ c squid/squid.conf
 c kmscon
 c mail.rc
 c schroot/schroot.conf
+c schroot/arch32/
 
 #c chromium
 
