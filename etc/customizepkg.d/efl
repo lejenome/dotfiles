@@ -1,2 +1,0 @@
-replace#global#--enable-wayland#--enable-wayland --enable-drm --enable-egl --with-opengl=es --enable-gl-drm
-#     --with-tests=none --with-opengl=full --disable-egl
