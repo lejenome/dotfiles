@@ -10,10 +10,8 @@ l .bash_logout
 l .zprofile
 l .zshrc
 l .Xresources
-l .conkyrc
 l .calcurse/conf
 l .elinks/elinks.conf
-l .conky
 l .tmux.conf
 l .mozilla/firefox/profiles.ini
 l .mozilla/firefox/default/user.js
@@ -71,6 +69,8 @@ l .config/surfraw/conf
 l .config/chromium-flags.conf
 l .config/git
 l .config/zathura
+l .config/conky
+l .config/dunst
 l .i3
 l .hgrc
 l .urlview
