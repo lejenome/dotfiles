@@ -92,7 +92,6 @@ l .ssh/config
 l .jshintrc
 l .gemrc
 l .keynavrc
-l .msmtprc
 l .clang-format
 l .color_coded
 

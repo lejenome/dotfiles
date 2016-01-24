@@ -12,5 +12,5 @@ LABEL=EFI       /boot/efi             vfat   defaults,nodev,nosuid,noexec       
 none            /home/lejenome/.cache tmpfs  defaults,nodev,nosuid,uid=lejenome,gid=lejenome,mode=700          0 0
 
 LABEL=Windows	/mnt/windows          ntfs   defaults,noauto,user                                              0 0
-LABEL=Ubuntu	/mnt/ubuntu           ext4   defaults,noauto,user                                              0 0
+LABEL=Ubuntu	/mnt/ubuntu           ext4   defaults,noauto,user,exec,suid                                              0 0
 /dev/sdb1       /mnt/usb              ntfs   defaults,noauto,user                                              0 0

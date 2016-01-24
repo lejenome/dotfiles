@@ -8,7 +8,7 @@ set beep_new
 set fast_reply = yes
 set use_from=yes
 set envelope_from=yes
-set hostname = "lejenome.me"
+set hostname = "lejenome"
 
 set mailcap_path    = ~/.mailcap
 auto_view text/html
@@ -65,5 +65,10 @@ my_hdr User-Agent: Every email client sucks, this one just sucks less.
 set alias_file=~/.mail-aliases
 source $alias_file
 
+#-------------------------------------------
+# Multi mails
+#-------------------------------------------
+macro generic "<esc>1" ":set from=bmoez.j@gmail.com realname=Moez Bouhlel"
+macro generic "<esc>2" ":set from=mtcfss@outlook.com realname='Microsoft Tech Club FSS'"
 # EXTRA
 source ~/.mutt/gpgrc

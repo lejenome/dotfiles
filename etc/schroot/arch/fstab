@@ -11,6 +11,6 @@ tmpfs		/dev/shm	tmpfs	defaults	0	0
 /tmp		/tmp		none	rw,bind		0	0
 /home		/home		none	rw,bind		0	0
 /mnt/Others	/mnt/Others	none	rw,bind		0	0
-/var/run	/var/run	none	rw,bind		0	0
 /var/lib/dbus	/var/lib/dbus	none	rw,bind		0	0
-/var/run/cups	/var/run/cups	none	rw,bind		0	0
+/run		/run		none	rw,bind		0	0
+/run/user/1000	/run/user/1000	none	rw,bind		0	0

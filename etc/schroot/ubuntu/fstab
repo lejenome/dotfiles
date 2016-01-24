@@ -1,0 +1,12 @@
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/proc           /proc           none    rw,bind         0       0
+/sys            /sys            none    rw,bind         0       0
+/dev            /dev            none    rw,bind         0       0
+/dev/pts        /dev/pts        none    rw,bind         0       0
+#/home           /home           none    rw,bind         0       0
+/tmp            /tmp            none    rw,bind         0       0
+tmpfs           /dev/shm        tmpfs   defaults        0       0
+/mnt/Others     /media/lejenome/Others none rw,bind     0       0
+/var/lib/dbus	/var/lib/dbus	none	rw,bind		0	0
+/run		/run		none	rw,bind		0	0
+/run/user/1000	/run/user/1000	none	rw,bind		0	0

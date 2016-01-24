@@ -1,6 +1,6 @@
 # sourced by login shell: .zprofile & .bash_profile.
 
-export PATH="$PATH:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/bin"
+export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/bin"
 [ -e ~/.local/bin ] && export PATH="$HOME/.local/bin:$PATH"
 
 # PERL PATH
@@ -12,7 +12,7 @@ export PATH="$PATH:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem
 [ -d "$HOME/.perl5/bin" ] && export PATH="${PATH}:$HOME/.perl5/bin"
 
 # GEM PATH
-[ -d "$HOME/.gem" ] && export PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':'):${PATH}"
+[ -d "$HOME/.gem" ] && export PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
 
 # DEFAULT tools and directories
 export EDITOR='/usr/bin/vim'
