@@ -124,10 +124,21 @@ set undoreload=10000
 
 
 " File Types special configs
-autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent
+autocmd FileType javascript,css,html,xml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us,fr textwidth=78
-autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=78
+autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us,fr textwidth=79
+autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=79
 
 set wildmenu " Turn on WiLd menu
+
+let python_highlight_all = 1
+
+" change split direction
+set splitbelow
+set splitright
+
+" Enable folding with the spacebar
+"nnoremap <space> za
+set foldmethod=indent
+set foldlevel=99

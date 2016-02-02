@@ -12,7 +12,7 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 [ -d "$HOME/.perl5/bin" ] && export PATH="${PATH}:$HOME/.perl5/bin"
 
 # GEM PATH
-[ -d "$HOME/.gem" ] && export PATH="$(ls -d ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
+[ -d "$HOME/.gem" ] && export PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
 
 # DEFAULT tools and directories
 export EDITOR='/usr/bin/vim'

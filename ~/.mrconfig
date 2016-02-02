@@ -1,0 +1,42 @@
+
+[git/linux]
+checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
+
+[git/Clementine]
+checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementine'
+
+[git/vimperator-labs]
+checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
+
+[git/angular]
+checkout = git clone 'https://github.com/angular/angular' 'angular'
+
+[git/angular.js]
+checkout = git clone 'https://github.com/angular/angular.js' 'angular.js'
+
+[git/buildroot]
+checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
+
+[git/kernel_gcc_patch]
+checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_patch'
+
+[git/ncmpcpp]
+checkout = git clone 'https://github.com/arybczak/ncmpcpp' 'ncmpcpp'
+
+[git/sdl2]
+checkout = hg clone 'https://hg.libsdl.org/SDL' 'sdl2'
+
+[git/SDL_ttf]
+checkout = hg clone 'https://hg.libsdl.org/SDL_ttf/' 'SDL_ttf'
+
+[git/stdman]
+checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
+
+[git/sway]
+checkout = git clone 'https://github.com/SirCmpwn/sway' 'sway'
+
+[git/zsh-syntax-highlighting]
+checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting.git' 'zsh-syntax-highlighting'
+
+[git/angular.io]
+checkout = git clone 'https://github.com/angular/angular.io' 'angular.io'

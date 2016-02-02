@@ -21,7 +21,7 @@ user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.zoom.full", false);
 // enable browser dev edition futures
-user_pref("browser.devedition.theme.enabled", true);
+// user_pref("browser.devedition.theme.enabled", true);
 user_pref("browser.devedition.theme.showCustomizeButton", true);
 // enable mozilla pravicy project
 // user_pref("browser.polaris.enabled", true);
@@ -71,6 +71,7 @@ user_pref("dom.quotaManager.testing", true);
 */
 // extension
 user_pref("extensions.checkCompatibility.nightly", false);
+user_pref("extensions.checkCompatibility.aurora", false);
 user_pref("xpinstall.signatures.required", false);
 // font settings
 // user_pref("font.minimum-size.x-western", 8);
@@ -84,6 +85,7 @@ user_pref("gfx.color_management.enablev4", true);
 user_pref("gfx.canvas.azure.backends", "skia,cairo");
 user_pref("gfx.content.azure.backends", "skia,cairo");
 user_pref("gfx.content.azure.enabled", true);
+user_pref("gfx.offscreencanvas.enabled", true);
 user_pref("gfx.work-around-driver-bugs", false);
 user_pref("gfx.xrender.enabled", false);
 // force OMTC
@@ -109,7 +111,7 @@ user_pref("layout.spellcheckDefault", 2);
 user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 user_pref("media.mediasource.enabled", true);
 user_pref("media.webspeech.recognition.enable", true);
-user_pref("media.webspeech.synth.enabled", true);
+user_pref("media.webspeech.synth.enabled", false); // true crash FF v.44
 user_pref("media.audio_data.enabled", true);
 user_pref("media.eme.enabled", true);
 user_pref("media.track.enabled", true);

@@ -127,6 +127,9 @@ Plugin 'steffanc/cscopemaps.vim'
 set timeoutlen=4000
 set ttimeout
 
+" Focus on your work more
+Plugin 'junegunn/goyo.vim'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
 call vundle#end()            " required
