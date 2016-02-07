@@ -129,6 +129,8 @@ set ttimeout
 
 " Focus on your work more
 Plugin 'junegunn/goyo.vim'
+let g:goyo_height='90%'
+let g:goyo_width=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
