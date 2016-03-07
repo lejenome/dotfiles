@@ -117,7 +117,9 @@ set laststatus=2
 let g:netrw_altv              = 1
 let g:netrw_liststyle         = 1
 
-set cm=blowfish2 "change crypto algo to better one
+if !has('nvim')
+	set cm=blowfish2 "change crypto algo to better one
+endif
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
 
 " undo changes backups

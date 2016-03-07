@@ -1,3 +1,6 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin("~/.vim/bundle")
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,7 +115,9 @@ let g:github_same_window = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'jeaye/color_coded'
+if !has('nvim')
+	Plugin 'jeaye/color_coded'
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope_maps.vim Plugin

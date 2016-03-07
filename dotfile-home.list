@@ -22,7 +22,6 @@ l .vim/common.vim
 l .vim/vundle.vim
 l .vimpagerrc
 l .vimrc
-l .nvimrc
 l .cmus/rc
 l .weechat/weechat.conf
 l .weechat/logger.conf
@@ -71,6 +70,7 @@ l .config/git
 l .config/zathura
 l .config/conky
 l .config/dunst
+l .config/nvim
 l .i3
 l .hgrc
 l .urlview
