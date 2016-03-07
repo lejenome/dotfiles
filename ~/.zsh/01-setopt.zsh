@@ -12,8 +12,8 @@ setopt ksh_glob # the interpretation of parentheses is affected by a preceding `
 setopt extended_glob # treat #, ~, and ^ as part of patterns for filename generation
 
 # ===== History
-#setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
-#setopt extended_history # save timestamp of command and duration
+unsetopt append_history # Allow multiple terminal sessions to all append to one zsh command history
+unsetopt extended_history # save timestamp of command and duration
 setopt inc_append_history # Add comamnds as they are typed, don't wait until shell exit
 setopt hist_expire_dups_first # when trimming history, lose oldest duplicates first
 setopt hist_ignore_dups # Do not write events to history that are duplicates of previous events

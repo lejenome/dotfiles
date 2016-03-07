@@ -168,7 +168,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.m
          \ ffprobe -pretty %c 2>&1
 
 " Web
-filextype *.html,*.htm
+filextype *.html,*.htm,*.svg
         \ firefox %f &,
 filetype *.html,*.htm links, lynx
 

@@ -5,6 +5,17 @@ export SAVEHIST=1000
 export HISTFILESIZE=1000
 export HISTFILE="$HOME/.zsh_history"
 export LESS='-F -g -i -M -R -S -w -X -z-4'
+export LESS_TERMCAP_mb=$(printf "\e[1;31m")
+export LESS_TERMCAP_md=$(printf "\e[0;93m")
+export LESS_TERMCAP_me=$(printf "\e[0m")
+export LESS_TERMCAP_se=$(printf "\e[0m")
+export LESS_TERMCAP_so=$(printf "\e[1;104;30m")
+export LESS_TERMCAP_ue=$(printf "\e[0m")
+export LESS_TERMCAP_us=$(printf "\e[1;32m")
+export PAGER="less"
+export MANPAGER="less"
+export _NROFF_U=1
+
 #export DISPLAY=:0
 
 export SHELL='/bin/zsh'

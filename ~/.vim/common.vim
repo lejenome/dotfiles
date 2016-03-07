@@ -18,20 +18,23 @@ noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
 
+let mapleader = ","
+" set timeoutlen=1000
+
 " Quick quit command
 noremap <Leader>e :quit<CR>  " Quit current window
 noremap <Leader>E :qa!<CR>   " Quit all windows
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+"map <c-j> <c-w>j
+"map <c-k> <c-w>k
+"map <c-l> <c-w>l
+"map <c-h> <c-w>h
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <Leader>p <esc>:previous<CR>
+map <Leader>n <esc>:next<CR>
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
@@ -107,7 +110,7 @@ set showcmd          " show incomplete commands
 au BufRead,BufNewFile *.less set filetype=css
 
 " fixes for status line
-set timeoutlen=50
+"set timeoutlen=50
 set laststatus=2
 
 " Netrw settings
@@ -130,6 +133,8 @@ autocmd FileType javascript,css,html,xml setlocal tabstop=2 shiftwidth=2 softtab
 autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us,fr textwidth=79
 autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=79
 
+autocmd BufNewFile,BufRead *.pgsql,*.plpgsql set filetype=sql syntax=pgsql
+
 set wildmenu " Turn on WiLd menu
 
 let python_highlight_all = 1
@@ -142,3 +147,14 @@ set splitright
 "nnoremap <space> za
 set foldmethod=indent
 set foldlevel=99
+
+if $VIM_BG == "light"
+	set background=light
+elseif $VIM_BG == "dark"
+	set background=dark
+endif
+if $VIM_COLORSCHEME != ""
+	colorscheme $VIM_COLORSCHEME
+else
+	colorscheme wombat256mod
+endif

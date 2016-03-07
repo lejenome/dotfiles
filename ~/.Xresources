@@ -39,7 +39,7 @@ URxvt*saveLines:0
 URxvt.iso14755 : false
 URxvt*fading: 10
 !URxvt.perl-ext:
-URxvt.perl-ext-common: ...,font-size
+URxvt.perl-ext-common: font-size
 URxvt.keysym.M-Up:     font-size:increase
 URxvt.keysym.M-Down:   font-size:decrease
 URxvt.keysym.M-S-Up:   font-size:incglobal
@@ -59,7 +59,12 @@ Xft.dpi: 96
 !URxvt*boldFont :   *-*-fixed-bold-r-normal--*-11-*-100-100-*-*-iso8859-1,xft:Icons:8
 !URxvt*italicFont :   *-*-*-medium-i-normal-*-8-*-*-*-*-*-*-*,xft:Icons:8
 
-URxvt*font: xft:SourceCodePro-ExtraLight:pixelsize=10
+URxvt*font:	xft:SourceCodePro-ExtraLight:pixelsize=10,xft:Sauce Code Pro ExtraLight
+!		xft:WenQuanYi Zen Hei-10:medium;antialias=True,\
+!		xft:HanaMinA-10:medium;antialias:True,\
+!		xft:HanaMinB-10:medium;antialias:True,\
+!		xft:HanaMinPlus-10:medium;antialias:True
+!URxvt*font: xft:SourceCodePro-ExtraLight:pixelsize=10
 URxvt.letterSpace : -1
 URxvt.lineSpace: 0
 

@@ -155,7 +155,7 @@ bindsym Pause         exec  "sudo systemctl suspend"
 bindsym Scroll_Lock   exec  "sudo shutdown 0"
 bindsym XF86Search    exec  "~/.i3/keymouse.sh"
 # FIXME: FN + F4
-bindsym 0xffc1        exec  "~/.i3/toggle-display"
+# bindsym 0xffc1        exec  "~/.i3/toggle-display"
 bindsym XF86Mail      exec  "getmails"
 bindsym XF86HomePage  exec  "i3-msg 'workspace 2:  TERM'"
 bindsym XF86Explorer  exec  "urxvt-vifm"

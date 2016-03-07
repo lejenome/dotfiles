@@ -22,6 +22,10 @@ $PRMPT"
   fi
   if [ -n "${SCHROOT_COMMAND}" ]; then
 	  PROMPT="%F{9}(schroot:%F{3}%{$IT%}$SCHROOT_CHROOT_NAME%{$ST%}%F{1})%f
-$PRMPT"
+$PROMPT"
+  fi
+  if [ -n "${VIRTUAL_ENV}" ]; then
+	  PROMPT="%F{9}(pyvenv:%F{7}%{$IT%}$(basename $VIRTUAL_ENV)%{$ST%}%F{1})%f
+$PROMPT"
   fi
 }

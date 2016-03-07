@@ -3,6 +3,7 @@ alias sudo='sudo '
 
 alias s='sudo'
 alias vi="vim"
+alias v="vim"
 
 # CD
 alias cd..='cd ..'
@@ -54,6 +55,12 @@ alias -- +x='chmod +x'
 alias wget='wget -c'
 alias curl='curl -C -'
 
+alias hgrep="fc -El 0 | grep"
+alias help='man'
+alias p='ps -f'
+alias sortnr='sort -n -r'
+alias unexport='unset'
+
 alias t='todo.sh'
 
 # Ping
@@ -102,7 +109,37 @@ alias pacman32="sudo pacman --root /opt/arch32 --config /opt/arch32/etc/pacman.c
 alias pacman64="sudo pacman --root /opt/arch64"
 alias yaourt32="yaourt --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
 alias yaourt64="yaourt --root /opt/arch64"
+alias apt-get64="sudo schroot -c ubuntu -u root -- apt-get"
+alias dpkg64="sudo schroot -c ubuntu -u root -- dpkg"
 
+
+# open browser on urls
+_browser_fts=(htm html de org net com at cx nl se dk dk php)
+for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
+
+_editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
+for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
+
+_image_fts=(jpg jpeg png gif mng tiff tif xpm)
+for ft in $_image_fts ; do alias -s $ft=feh; done
+
+_media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
+for ft in $_media_fts ; do alias -s $ft=mpv ; done
+
+_compress_fts=(tar tar.gz tgz tar.bz2 tbz tar.xz txz tar.zma tlz)
+for ft in $_compress_fts ; do alias -s $ft='tar xvf' ; done
+alias -s zip="unzip -l"
+alias -s rar="unrar l"
+alias -s lzma=unlzma
+alias -s Z=uncompress
+alias -s 7z="7za x"
+
+#read documents
+alias -s pdf=zathura
+alias -s ps=zathura
+alias -s djvu=zathura
+alias -s dvi=xdvi
+alias -s chm=xchm
 
 # Parenting changing perms on / #
 alias chown='chown --preserve-root'
