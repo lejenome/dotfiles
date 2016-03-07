@@ -1,8 +1,8 @@
 # {{{ Title stuffs
 precmd() {
 
-	vcs_info
-	setprompt
+	vcs_info # FIXME: too slow
+	setprompt # 06-prompt.zsh
 
 	case $TERM in
 		rxvt-256color | screen-256color )
