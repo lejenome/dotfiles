@@ -4,6 +4,7 @@ alias sudo='sudo '
 alias s='sudo'
 alias vi="vim"
 alias v="vim"
+alias nv="nvim"
 
 # CD
 alias cd..='cd ..'

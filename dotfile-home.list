@@ -71,6 +71,7 @@ l .config/zathura
 l .config/conky
 l .config/dunst
 l .config/nvim
+l .config/sway
 l .i3
 l .hgrc
 l .urlview

@@ -1,0 +1,8 @@
+[Unit]
+Description=Virtualbox setup
+
+[Service]
+ExecStart=/usr/bin/rcvboxdrv setup
+
+[Install]
+WantedBy=multi-user.target
