@@ -21,6 +21,7 @@ numlockx &
 xautolock -time 5 -locker slimlock &
 setxkbmap fr
 dmenu_path & # cache exec path
+xmodmap ~/.xmodmap
 
 # exec  DE/WM :: Get first arg or exported XSESSION var
 XSESSION=${1:-$XSESSION}

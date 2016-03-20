@@ -1,8 +1,6 @@
 " vim: filetype=vim :
 
 set vicmd=vim
-" set vicmd=elvis\ -G\ termcap
-" set vicmd=vile
 
 " Trash Directory
 set trash
@@ -79,7 +77,13 @@ set noconfirm
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
-mark b ~/bin/
+mark b ~/.local/bin/
+mark g ~/git
+mark d ~/Downloads
+mark p ~/Pictures
+mark m ~/Music
+mark v ~/Videos
+mark o /mnt/Others
 mark h ~/
 
 " ------------------------------------------------------------------------------
@@ -139,30 +143,23 @@ fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
-        \ {View in zathura}
         \ zathura %f,
-        \ {View in gv}
         \ gv %c %i &,
 
 " Djvu
 filextype *.djvu
-        \ {View in zathura}
         \ zathura %f,
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
-       \ {Play using MPlayer}
        \ mplayer %f,
-       \ {Play using mpv}
        \ mpv --no-video %f,
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
-        \ {View using mpv}
         \ mpv --no-terminal --fullscreen %f &,
-        \ {View using mplayer}
         \ mplayer %f,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
          \ ffprobe -pretty %c 2>&1
@@ -181,66 +178,53 @@ fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
 filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in feh}
         \ feh -FZ %d --start-at %d/%c 2>/dev/null,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5
 filetype *.md5
-       \ {Check MD5 hash sum}
        \ md5sum -c %f,
 
 " GPG signature
 filetype *.asc
-       \ {Check signature}
        \ !!gpg --verify %c,
 
 " Torrent
 filetype *.torrent ktorrent %f &
 fileviewer *.torrent dumptorrent -v %c
 
-" FuseZipMount
-filetype *.zip,*.jar,*.war,*.ear,*.oxt
-       \ {Mount with fuse-zip}
-       \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
-       \ {View contents}
-       \ zip -sf %c | less,
-       \ {Extract here}
-       \ tar -xf %c,
-fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
-
-" ArchiveMount
-filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
-       \ {Mount with archivemount}
-       \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
+filetype *.zip,*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
+       \ vim %c,
 fileviewer *.tgz,*.tar.gz tar -tzf %c
 fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
 fileviewer *.tar.txz,*.txz xz --list %c
 
+" FuseZipMount
+filetype *.zip,*.jar,*.war,*.ear,*.oxt
+       \ zip -sf %c | less,
+       \ tar -xf %c,
+fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
+
+
 " Rar2FsMount and rar archives
 filetype *.rar
-       \ {Mount with rar2fs}
        \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.rar unrar v %c
 
 " IsoMount
 filetype *.iso
-       \ {Mount with fuseiso}
        \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
 
 " SshMount
 filetype *.ssh
-       \ {Mount with sshfs}
        \ FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR,
 
 " FtpMount
 filetype *.ftp
-       \ {Mount with curlftpfs}
        \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR,
 
 " Fuse7z and 7z archives
 filetype *.7z
-       \ {Mount with fuse-7z}
        \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.7z 7z l %c
 
@@ -255,10 +239,6 @@ filetype *.tudu tudu -f %c
 " Qt projects
 filextype *.pro qtcreator %f &
 
-" Directories
-filextype */
-        \ {View in thunar}
-        \ Thunar %f &,
 fileviewer .*/,*/ tree %f
 
 " Syntax highlighting in preview

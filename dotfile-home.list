@@ -97,6 +97,7 @@ l .clang-format
 l .color_coded
 l .mrconfig
 l .urxvt/ext
+l .xmodmap
 
 c .config/feednix/config.json
 c .config/aria2/session.lock

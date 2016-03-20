@@ -160,3 +160,10 @@ if $VIM_COLORSCHEME != ""
 else
 	colorscheme wombat256mod
 endif
+
+" want n to always search forward and N backward
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
+
+" complete redraw and fix for screen
+nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
