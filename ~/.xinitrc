@@ -12,7 +12,12 @@ fi
 #xset dpms 300 330 360		# Set standby, suspend, & off times (in seconds)
 
 # Autostart apps/daemons
+
 [[ -f ~/.fehbg ]] && sh ~/.fehbg &
+# choose random bg wallpaper
+# echo $RANDOM >/dev/null && \
+#	feh --bg-fill $( ls $HOME/Pictures/wallpapers/* | sed "$((RANDOM%$(ls $HOME/Pictures/wallpapers/| wc -l)))p;d" )
+
 urxvtd -q -o &
 redshift &
 pokoy &
