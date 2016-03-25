@@ -9,9 +9,12 @@ set bs=2     " make backspace behave like normal again
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+" noremap <C-n> :nohl<CR>
+" vnoremap <C-n> :nohl<CR>
+" inoremap <C-n> :nohl<CR>
+
+inoremap <C-C> <Esc>
+" nnoremap <C-C> :q<CR>
 
 " Quicksave command
 noremap <C-Z> :update<CR>
@@ -71,6 +74,7 @@ set cursorline
 
 " Showing line numbers and length
 set number  " show line numbers
+set relativenumber
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
@@ -137,9 +141,10 @@ autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=79
 
 autocmd BufNewFile,BufRead *.pgsql,*.plpgsql set filetype=sql syntax=pgsql
 
-set wildmenu " Turn on WiLd menu
-
+autocmd FileType python set breakindentopt=shift:4
 let python_highlight_all = 1
+
+set wildmenu " Turn on WiLd menu
 
 " change split direction
 set splitbelow

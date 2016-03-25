@@ -172,6 +172,14 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 nnoremap <C-l> :TlistToggle<CR>
 
+Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_path_to_python_interpreter = '/usr/bin/python3'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
 call vundle#end()            " required

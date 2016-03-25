@@ -1,3 +1,4 @@
 source ~/.vimrc
 
 set nonumber
+set wrap
