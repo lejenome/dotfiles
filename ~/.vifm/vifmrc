@@ -140,6 +140,9 @@ command! reload :write | restart
 " Pdf
 filextype *.pdf zathura %c %i, firefox %f &
 fileviewer *.pdf pdftotext -nopgbrk %c -
+filextype *.pdf.gz
+	\ gunzip -d -k -c %f |zathura -&,
+
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
@@ -149,6 +152,9 @@ filextype *.ps,*.eps,*.ps.gz
 " Djvu
 filextype *.djvu
         \ zathura %f,
+
+filextype *.epub,*.mobi,*.chm,*.fb2
+	\ FBReader %f &,
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3

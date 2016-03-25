@@ -95,6 +95,7 @@ l .gemrc
 l .keynavrc
 l .clang-format
 l .color_coded
+l .ycm_extra_conf.py
 l .mrconfig
 l .urxvt/ext
 l .xmodmap
