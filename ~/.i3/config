@@ -93,6 +93,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# lock screen
+bindsym $mod+Control+l exec i3lock --dpms --color 000000 --inactivity-timeout 7 -f
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -168,6 +170,10 @@ bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
 # Going Back and Forth
 bindsym $mod+z workspace back_and_forth
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+# go to the next workspace
+bindsym $mod+Tab workspace next
+# go to the prevoious workspace
+bindsym $mod+Shift+Tab workspace prev
 # Mark and Goto
 bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
@@ -181,20 +187,16 @@ new_float pixel 1
 #exec --no-startup-id xset dpms 300 360 420
 
 # Workspace names
-set $ws1 "1:  TERM"
-#0xF0AC
-set $ws2 "2:  WEB"
-#0xF120
-set $ws3 "3:  WORK"
-#0xF085
-set $ws4 "4:  OTHER"
-#0xF07B
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:&#xf120;  TERM"
+set $ws2 "2:&#xf0ac;  WEB"
+set $ws3 "3:&#xf085;  WORK"
+set $ws4 "4:&#xf07b;  OTHER"
+set $ws5 "5:&#xf120;"
+set $ws6 "6:&#xf121;"
+set $ws7 "7:&#xf269;"
+set $ws8 "8:&#xf17e;"
+set $ws9 "9:&#xf0e0;"
+set $ws10 "10:&#xf15b;"
 
 workspace $ws1 output LVDS1
 workspace $ws2 output LVDS1
