@@ -7,6 +7,8 @@ call vundle#begin("~/.vim/bundle")
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'airblade/vim-rooter'
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -46,7 +48,8 @@ Plugin 'othree/html5.vim'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR SCHEME
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'wombat256.vim'
+" Plugin 'wombat256.vim'
+Plugin 'flazz/vim-colorschemes'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-AIRLINE
@@ -151,9 +154,21 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
+"Plugin 'nathanaelkane/vim-indent-guides'
+"let g:indent_guides_start_level=2
+"let g:indent_guides_guide_size=1
+"let g:indent_guides_space_guides = 1
+"let g:indent_guides_enable_on_vim_startup = 1
+
+Plugin 'Yggdroot/indentLine'
+set list lcs=tab:\¦\.
+" let g:indentLine_concealcursor = 'inc'
+" let g:indentLine_conceallevel = 2
+" let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_leadingSpaceChar = '.'  " ˰··
+let g:indentLine_leadingSpaceEnabled = 1
 
 Plugin 'justinmk/vim-syntax-extra'
 
@@ -163,14 +178,16 @@ map <C-e> :NERDTreeToggle<CR>
 Plugin 'ryanoasis/vim-devicons'
 let g:airline_powerline_fonts=1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TagList Plugin
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Plugin 'taglist.vim' " from pacman -S vim-taglist
-let Tlist_Compact_Format = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-nnoremap <C-l> :TlistToggle<CR>
+
+"Plugin 'taglist.vim'
+"let Tlist_Compact_Format = 1
+"let Tlist_GainFocus_On_ToggleOpen = 1
+"let Tlist_Close_On_Select = 1
+"nnoremap <C-l> :TlistToggle<CR>
+
+Plugin 'majutsushi/tagbar'
+nnoremap <C-l> :TagbarToggle<CR>
+
 
 Plugin 'terryma/vim-multiple-cursors'
 
@@ -179,6 +196,15 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 
+
+Plugin 'tfnico/vim-gradle'
+Plugin 'artur-shaik/vim-javacomplete2'
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType ant compiler ant
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+
+let g:syntastic_java_javac_classpath = 'src/:src/*/java/:lib/'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END

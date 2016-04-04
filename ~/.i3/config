@@ -26,75 +26,75 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal -e ~/.i3/MAIN.sh
-bindsym $mod+Shift+Q kill
-bindsym $mod+d exec dmenu_run
+    bindsym $mod+Return exec i3-sensible-terminal -e ~/.i3/MAIN.sh
+    bindsym $mod+Shift+q kill
+    bindsym $mod+d exec dmenu_run
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+    bindsym $mod+j focus left
+    bindsym $mod+k focus down
+    bindsym $mod+l focus up
+    bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+colon move right
+    bindsym $mod+Shift+j move left
+    bindsym $mod+Shift+k move down
+    bindsym $mod+Shift+l move up
+    bindsym $mod+Shift+colon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+    bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+    bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+    bindsym $mod+f fullscreen
 
-bindsym $mod+Ctrl+Left move workspace to output left
-bindsym $mod+Ctrl+Right move workspace to output right
-bindsym $mod+Ctrl+Up move workspace to output up
-bindsym $mod+Ctrl+Down move workspace to output down
-bindsym $mod+Ctrl+s move position center
-bindsym $mod+Ctrl+a sticky toggle
+    bindsym $mod+Ctrl+Left move workspace to output left
+    bindsym $mod+Ctrl+Right move workspace to output right
+    bindsym $mod+Ctrl+Up move workspace to output up
+    bindsym $mod+Ctrl+Down move workspace to output down
+    bindsym $mod+Ctrl+s move position center
+    bindsym $mod+Ctrl+a sticky toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+    bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+    bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+    bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+    bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen
-bindsym $mod+Control+l exec i3lock --dpms --color 000000 --inactivity-timeout 7 -f
+    bindsym $mod+Control+l exec i3lock --dpms --color 000000 --inactivity-timeout 7 -f
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -120,63 +120,63 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+    bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:DejaVu Sans Mono, Icons 7
-        status_command $HOME/.i3/conky-i3bar
-        position top
+	font pango:DejaVu Sans Mono, Icons 7
+	status_command $HOME/.i3/conky-i3bar
+	position top
 
-colors {
-            background #161616
-            statusline #605c5a
-# class                     border      backgrd     text
-            focused_workspace  #161616  #909737  #ffffff
-            active_workspace   #161616  #161616  #a5a5a5
-            inactive_workspace #161616  #545454  #a5a5a5
-            urgent_workspace   #161616  #545454   #a5a5a5
-    }
+	colors {
+		background #161616
+		statusline #605c5a
+		# class            border   backgrd  text
+		focused_workspace  #161616  #909737  #ffffff
+		active_workspace   #161616  #161616  #a5a5a5
+		inactive_workspace #161616  #545454  #a5a5a5
+		urgent_workspace   #161616  #545454  #a5a5a5
+	}
 }
 
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
-bindsym XF86AudioMute exec "amixer set Master toggle"
-bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
-bindsym XF86AudioLowerVolume exec "amixer set Master 5%-"
-bindsym XF86AudioPlay exec "mpc toggle"
-bindsym XF86AudioStop exec "mpc stop"
-bindsym XF86AudioNext exec "mpc next"
-bindsym XF86AudioPrev exec "mpc prev"
-bindsym XF86MonBrightnessUp    exec  "sudo backlightctl +10"
-bindsym XF86MonBrightnessDown  exec  "sudo backlightctl -10"
-bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
-bindsym Print         exec  "scrot"
+    bindsym XF86AudioMute exec "amixer set Master toggle"
+    bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
+    bindsym XF86AudioLowerVolume exec "amixer set Master 5%-"
+    bindsym XF86AudioPlay exec "mpc toggle"
+    bindsym XF86AudioStop exec "mpc stop"
+    bindsym XF86AudioNext exec "mpc next"
+    bindsym XF86AudioPrev exec "mpc prev"
+    bindsym XF86MonBrightnessUp    exec  "sudo backlightctl +10"
+    bindsym XF86MonBrightnessDown  exec  "sudo backlightctl -10"
+    bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
+    bindsym Print         exec  "scrot"
 # used sudoers to remove the needs to enter password
-bindsym Pause         exec  "sudo systemctl suspend"
-bindsym Scroll_Lock   exec  "sudo shutdown 0"
-bindsym XF86Search    exec  "~/.i3/keymouse.sh"
+    bindsym Pause         exec  "sudo systemctl suspend"
+    bindsym Scroll_Lock   exec  "sudo shutdown 0"
+    bindsym XF86Search    exec  "~/.i3/keymouse.sh"
 # FIXME: FN + F4
 # bindsym 0xffc1        exec  "~/.i3/toggle-display"
-bindsym XF86Mail      exec  "getmails"
-bindsym XF86HomePage  exec  "i3-msg 'workspace 2:  TERM'"
-bindsym XF86Explorer  exec  "urxvt-vifm"
+    bindsym XF86Mail      exec  "getmails"
+    bindsym XF86HomePage  exec  "i3-msg 'workspace 2:  TERM'"
+    bindsym XF86Explorer  exec  "urxvt-vifm"
 
 
-bindsym $mod+Shift+m exec sh ~/.i3/keymouse.sh
-bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.i3/TERM.sh
-bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
+    bindsym $mod+Shift+m exec sh ~/.i3/keymouse.sh
+    bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.i3/TERM.sh
+    bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
 
 # Going Back and Forth
-bindsym $mod+z workspace back_and_forth
-bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+    bindsym $mod+z workspace back_and_forth
+    bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 # go to the next workspace
-bindsym $mod+Tab workspace next
+    bindsym $mod+Tab workspace next
 # go to the prevoious workspace
-bindsym $mod+Shift+Tab workspace prev
+    bindsym $mod+Shift+Tab workspace prev
 # Mark and Goto
-bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
-bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
+    bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
+    bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
 focus_follows_mouse no
 new_window pixel 1
@@ -210,30 +210,30 @@ workspace $ws9 output LVDS1
 workspace $ws10 output LVDS1
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $ws10
 
-exec --no-startup-id i3-msg "workspace 1:  TERM"
+exec --no-startup-id i3-msg 'workspace "1:&#xf120;  TERM"'
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable

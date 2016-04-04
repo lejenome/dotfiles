@@ -93,6 +93,8 @@ floating_modifier $mod
     bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
     bindsym $mod+Shift+e exit
+# lock screen
+    bindsym $mod+Control+l exec i3lock --dpms --color 000000 --inactivity-timeout 7 -f
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -168,6 +170,10 @@ bar {
 # Going Back and Forth
     bindsym $mod+z workspace back_and_forth
     bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+# go to the next workspace
+    bindsym $mod+Tab workspace next
+# go to the prevoious workspace
+    bindsym $mod+Shift+Tab workspace prev
 # Mark and Goto
     bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
     bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
@@ -182,58 +188,51 @@ exec --no-startup-id /usr/bin/xrdb /home/lejenome/.Xresources
 #exec --no-startup-id xset dpms 300 360 420
 
 # Workspace names
-set $ws1 "1:  TERM"
-#0xF0AC
-set $ws2 "2:  WEB"
-#0xF120
-set $ws3 "3:  WORK"
-#0xF085
-set $ws4 "4:  OTHER"
-#0xF07B
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:&#xf120;  TERM"
+set $ws2 "2:&#xf0ac;  WEB"
+set $ws3 "3:&#xf085;  WORK"
+set $ws4 "4:&#xf07b;  OTHER"
+set $ws5 "5:&#xf120;"
+set $ws6 "6:&#xf121;"
+set $ws7 "7:&#xf269;"
+set $ws8 "8:&#xf17e;"
+set $ws9 "9:&#xf0e0;"
+set $ws10 "10:&#xf15b;"
 
-#workspace $ws1 output LVDS1
-#workspace $ws2 output LVDS1
-#workspace $ws3 output LVDS1
-#workspace $ws4 output LVDS1
-#workspace $ws5 output LVDS1
-#workspace $ws6 output LVDS1
-#workspace $ws7 output LVDS1
-#workspace $ws8 output LVDS1
-#workspace $ws9 output LVDS1
-#workspace $ws10 output LVDS1
+workspace $ws1 output LVDS1
+workspace $ws2 output LVDS1
+workspace $ws3 output LVDS1
+workspace $ws4 output LVDS1
+workspace $ws5 output LVDS1
+workspace $ws6 output LVDS1
+workspace $ws7 output LVDS1
+workspace $ws8 output LVDS1
+workspace $ws9 output LVDS1
+workspace $ws10 output LVDS1
 
 # switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
-
-    bindsym $mod+Shift+minus move scratchpad
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $ws10
 
 exec --no-startup-id i3-msg "workspace 1:  TERM"
 
