@@ -122,3 +122,12 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
         operator pcap postfix postgres privoxy pulse pvm quagga radvd \
         rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs
 zstyle '*' single-ignored show
+
+if whence dircolors >/dev/null; then
+  eval $( dircolors -b $HOME/.zsh/LS_COLORS )
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  # alias ls='ls --color'
+else
+  export CLICOLOR=1
+  zstyle ':completion:*:default' list-colors ''
+fi
