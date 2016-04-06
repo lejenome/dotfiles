@@ -1,10 +1,12 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin("~/.vim/bundle")
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
-" VUNDLE
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
-" let Vundle manage Vundle, required
+if has('vim_starting')
+  set rtp+=~/.vim/bundle/Vundle.vim
+  if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+    echo "Installing Vundle\n"
+    silent execute '!mkdir -p ~/.vim/bundle'
+    silent execute '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim'
+  endif
+endif
+call vundle#begin(expand("~/.vim/bundle"))
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'airblade/vim-rooter'
@@ -166,6 +168,7 @@ set list lcs=tab:\¦\.
 " let g:indentLine_conceallevel = 2
 " let g:indentLine_char = '|'
 let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_leadingSpaceChar = '.'  " ˰··
 let g:indentLine_leadingSpaceEnabled = 1
@@ -173,7 +176,19 @@ let g:indentLine_leadingSpaceEnabled = 1
 Plugin 'justinmk/vim-syntax-extra'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 map <C-e> :NERDTreeToggle<CR>
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?",
+    \ }
 
 Plugin 'ryanoasis/vim-devicons'
 let g:airline_powerline_fonts=1
@@ -188,6 +203,16 @@ let g:airline_powerline_fonts=1
 Plugin 'majutsushi/tagbar'
 nnoremap <C-l> :TagbarToggle<CR>
 
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-easytags'
+
+" Plugin 'SirVer/ultisnips'
+
+Plugin 'tpope/vim-dispatch'
+
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'tpope/vim-surround'
 
 Plugin 'terryma/vim-multiple-cursors'
 

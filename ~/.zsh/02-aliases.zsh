@@ -105,11 +105,13 @@ alias ipt='sudo /sbin/iptables'
 alias iptlist='sudo /sbin/iptables -n -v --line-numbers -L'
 
 #Schroot
-alias schroot64="schroot -c Arch64"
 alias pacman32="sudo pacman --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
-alias pacman64="sudo pacman --root /opt/arch64"
 alias yaourt32="yaourt --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
+
+alias schroot64="schroot -c Arch64"
+alias pacman64="sudo pacman --root /opt/arch64"
 alias yaourt64="yaourt --root /opt/arch64"
+
 alias apt-get64="sudo schroot -c ubuntu -u root -- apt-get"
 alias dpkg64="sudo schroot -c ubuntu -u root -- dpkg"
 
