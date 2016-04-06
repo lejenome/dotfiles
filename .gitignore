@@ -1,4 +1,5 @@
 *.pacnew
 *.pacsave
 *.pacorig
+~/.vim/bundle
 !~
