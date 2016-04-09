@@ -23,8 +23,8 @@ alias mv='mv -v'
 alias ln='ln -v'
 
 # RM
-alias rm='rm -rv  -I --preserve-root'
-alias rmf='rm -rvf  -I --preserve-root'
+alias rm='rm -rv --preserve-root'
+alias rmf='rm -rvf --preserve-root'
 
 # CP
 alias cp='cp -rv'
