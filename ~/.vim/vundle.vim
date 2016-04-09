@@ -120,7 +120,7 @@ let g:github_same_window = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-if !has('nvim')
+if !has('nvim') && (v:version > 7.4 || has('patch330'))
 	Plugin 'jeaye/color_coded'
 endif
 
@@ -190,8 +190,8 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?",
     \ }
 
-Plugin 'ryanoasis/vim-devicons'
-let g:airline_powerline_fonts=1
+" Plugin 'ryanoasis/vim-devicons'
+" let g:airline_powerline_fonts=1
 
 
 "Plugin 'taglist.vim'

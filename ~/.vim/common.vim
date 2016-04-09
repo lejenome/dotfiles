@@ -121,7 +121,7 @@ set laststatus=2
 let g:netrw_altv              = 1
 let g:netrw_liststyle         = 1
 
-if !has('nvim')
+if !has('nvim') && (v:version > 704 || has('patch401'))
 	set cm=blowfish2 "change crypto algo to better one
 endif
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
