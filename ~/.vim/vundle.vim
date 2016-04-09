@@ -120,7 +120,7 @@ let g:github_same_window = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-if !has('nvim') && (v:version > 7.4 || has('patch330'))
+if !has('nvim') && (v:version > 704 || has('patch330'))
 	Plugin 'jeaye/color_coded'
 endif
 
