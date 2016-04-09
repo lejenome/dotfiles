@@ -17,10 +17,6 @@ else
 fi
 
 for r in $HOME/.zsh/*.zsh; do
-        if [[ $DEBUG > 0 ]]; then
-                echo "zsh: sourcing $r"
-        fi
         source $r
 done
-umask 077
-eval $( dircolors -b $HOME/.zsh/LS_COLORS )
+# umask 077
