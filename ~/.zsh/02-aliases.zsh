@@ -1,7 +1,7 @@
 # First fix aliases not passed to sudo
-alias sudo='sudo '
+alias sudo='/usr/bin/sudo '
 
-alias s='sudo'
+alias s='/usr/bin/sudo '
 alias vi="vim"
 alias v="vim"
 alias nv="nvim"
@@ -48,6 +48,9 @@ alias egrep='egrep --color=auto'
 # MKDIR
 alias mk='mkdir -pv'
 alias mkdir='mkdir -pv'
+
+alias info="info --vi-keys"
+alias diff="colordiff"
 
 # Various
 alias cls='clear'
