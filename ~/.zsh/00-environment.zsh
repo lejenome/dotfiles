@@ -66,3 +66,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on
 	-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
 	-Djava.net.useSystemProxies=true
 	-Dsun.java2d.opengl=true'
+
+# Steam
+export STEAM_FRAME_FORCE_CLOSE=1
+export STEAM_RUNTIME=0

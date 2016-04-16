@@ -43,9 +43,5 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 # RUBY GEM & BUNDLE
 export GEM_HOME="$HOME/.gem"
 
-# Steam
-export STEAM_FRAME_FORCE_CLOSE=1
-export STEAM_RUNTIME=0
-
 # cscope DB file path
 export CSCOPE_DB=$HOME/git/cscope.out
