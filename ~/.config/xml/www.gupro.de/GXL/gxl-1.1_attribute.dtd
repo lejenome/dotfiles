@@ -1,0 +1,106 @@
+<!-- GXL (1.1)
+     Document Type Definition
+     (October 9, 2003)
+
+copyright by
+
+       Andy Schuerr
+         Real-Time Systems Lab
+         Darmstadt University of Technology
+         Merckstr. 25, D-64283 Darmstadt, Germany
+         andy.schuerr@es.tu-darmstadt.de
+
+       Susan Elliott Sim
+         School of Information and Computer Science
+         444 Computer Science Bldg.
+         University of California, Irvine
+         ses@ics.uci.edu
+
+       Ric Holt
+         Department of Computer Science
+         University of Waterloo
+         Waterloo N2L 3G1, Canada
+         holt@plg.uwaterloo.ca
+
+       Andreas Winter
+         Institute for Software Technology
+         University of Koblenz-Landau
+         Universitaetsstrasse 1, D-56070 Koblenz, Germany
+         winter@uni-koblenz.de
+-->
+<!-- Extensions -->
+<!ENTITY % value-extension "">
+<!-- Value attributes -->
+<!ENTITY % defined "defined (true | false) 'true' ">
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup   |
+            struct   |
+            graph   |
+            freeType
+           %value-extension;">
+<!-- attr -->
+<!ELEMENT attr (%val;)>
+<!ATTLIST attr
+        name NMTOKEN #REQUIRED
+        validity (valid | unknown) "valid"
+>
+<!-- struct -->
+<!ELEMENT struct (attr)*>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+        xlink:type (simple) #FIXED "simple"
+        xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ATTLIST bool
+        %defined;
+>
+<!ELEMENT int (#PCDATA)>
+<!ATTLIST int
+        %defined;
+>
+<!ELEMENT float (#PCDATA)>
+<!ATTLIST float
+        %defined;
+>
+<!ELEMENT string (#PCDATA)>
+<!ATTLIST string
+        %defined;
+>
+<!ELEMENT enum (#PCDATA)>
+<!ATTLIST enum
+        %defined;
+>
+<!ELEMENT freeType (#PCDATA)>
+<!ATTLIST freeType
+        %defined;
+>
+<!-- composite values -->
+<!ELEMENT seq (%val;)*>
+<!ATTLIST seq
+        %defined;
+>
+<!ELEMENT set (%val;)*>
+<!ATTLIST set
+        %defined;
+>
+<!ELEMENT bag (%val;)*>
+<!ATTLIST bag
+        %defined;
+>
+<!ELEMENT tup (%val;)*>
+<!ATTLIST tup
+        %defined;
+>

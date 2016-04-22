@@ -148,6 +148,10 @@ translate() {
 	TEXT="$(echo "$@" | perl -MURI::Escape -ne 'chomp;print uri_escape($_)')"
 	curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?client=t&ie=UTF-8&text=$TEXT&sl=$SL&tl=$TL" | awk -F'"' '{print $2}'
 }
+weather() {
+	local city=${1:-Sfax}
+	curl "wttr.in/$city"
+}
 
 # source: http://zanshin.net/2013/02/02/zsh-configuration-from-the-ground-up/
 # -------------------------------------------------------------------

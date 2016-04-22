@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <group prefer="public">
+
+    <public
+      publicId="-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+      uri="1.0/sdocbook.dtd"/>
+
+    <public
+      publicId="-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+      uri="1.1/sdocbook.dtd"/>
+
+    <public
+      publicId="-//OASIS//DTD Simplified DocBook XML V1.2CR1//EN"
+      uri="1.2CR1/sdocbook.dtd"/>
+
+    <public
+      publicId="-//OASIS//DTD Simplified DocBook XML V4.1.2.5//EN"
+      uri="4.1.2.5/sdocbook.dtd"/>
+
+  </group>
+
+</catalog>

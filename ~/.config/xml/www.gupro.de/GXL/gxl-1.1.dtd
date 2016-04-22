@@ -1,0 +1,56 @@
+<!-- GXL (1.1)
+     Document Type Definition
+     (October 9, 2003)
+
+copyright by
+
+       Andy Schuerr
+         Real-Time Systems Lab
+         Darmstadt University of Technology
+         Merckstr. 25, D-64283 Darmstadt, Germany
+         andy.schuerr@es.tu-darmstadt.de
+
+       Susan Elliott Sim
+         School of Information and Computer Science
+         444 Computer Science Bldg.
+         University of California, Irvine
+         ses@ics.uci.edu
+
+       Ric Holt
+         Department of Computer Science
+         University of Waterloo
+         Waterloo N2L 3G1, Canada
+         holt@plg.uwaterloo.ca
+
+       Andreas Winter
+         Institute for Software Technology
+         University of Koblenz-Landau
+         Universitaetsstrasse 1, D-56070 Koblenz, Germany
+         winter@uni-koblenz.de
+-->
+<!-- Extensions -->
+<!ENTITY % gxl-extension "">
+<!ENTITY % header-extension "">
+<!ENTITY % gxl-attr-extension "">
+<!ENTITY % header-attr-extension "">
+<!-- Modularization -->
+<!ENTITY % gxl-1.1_graph SYSTEM "gxl-1.1_graph.dtd">
+%gxl-1.1_graph;
+<!ENTITY % gxl-1.1_attribute SYSTEM "gxl-1.1_attribute.dtd">
+%gxl-1.1_attribute;
+<!-- gxl -->
+<!ELEMENT gxl (header?, graph* %gxl-extension;) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+	xmlns:gxl CDATA #FIXED "http://www.gupro.de/GXL/gxl-1.1.dtd"
+	%gxl-attr-extension; 
+>
+<!-- header -->
+<!ELEMENT header (attr* %header-extension;)>
+<!ATTLIST header
+	GXLVersion CDATA #IMPLIED
+	generatorTool CDATA #IMPLIED
+	Author CDATA #IMPLIED
+	Date CDATA #IMPLIED
+	%header-attr-extension;
+>

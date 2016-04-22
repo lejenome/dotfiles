@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <!--Schematron 1.5-->
+  <group prefer="public">
+    <uri
+      name="http://www.ascc.net/xml/schematron"
+      uri="v1.5/schematron1-5.xsd"/>
+    <public
+      publicId="+//IDN sinica.edu.tw//DTD Schematron 1.5//EN"
+      uri="v1.5/schematron1-5.dtd"/>
+    <public
+      publicId="http://www.ascc.net/xml/schematron"
+      uri="v1.5/schematron1-5.dtd"/>
+    <system
+      systemId="http://www.ascc.net/xml/schematron/schematron1-5.dtd"
+      uri="v1.5/schematron1-5.dtd"/>
+  </group>
+
+  <!--ISO Schematron-->
+  <!--See https://code.google.com/p/schematron/ -->
+  <!--See http://www.schematron.com/ -->
+  <group prefer="public">
+    <!--Note: These xsd were created by converting rnc to xsd with trang-->
+    <uri
+      name="http://purl.oclc.org/dsdl/schematron"
+      uri="iso/schematron.xsd"/>
+    <uri
+      name="http://purl.oclc.org/dsdl/svrl"
+      uri="iso/svrl.xsd"/>
+  </group>
+
+</catalog>

@@ -1,0 +1,149 @@
+<!-- ....................................................................... -->
+<!-- XHTML DTD  ............................................................ -->
+<!-- file: xhtml11-arch.dtd
+-->
+
+<!-- XHTML 1.1 Architectural DTD
+
+     This is XHTML, a reformulation of HTML as a modular XML application.
+
+     Copyright 1998-2000 World Wide Web Consortium
+        (Massachusetts Institute of Technology, Institut National de
+         Recherche en Informatique et en Automatique, Keio University).
+         All Rights Reserved.
+
+     Permission to use, copy, modify and distribute the XHTML 1.1 DTD and
+     its accompanying documentation for any purpose and without fee is
+     hereby granted in perpetuity, provided that the above copyright notice
+     and this paragraph appear in all copies.  The copyright holders make
+     no representation about the suitability of the DTD for any purpose.
+
+     It is provided "as is" without expressed or implied warranty.
+
+        Author:     Murray M. Altheim <altheim@eng.sun.com>
+        Revision:   $Id: xhtml11-arch.dtd,v 2.1 2000/02/02 23:18:40 altheim Exp $ SMI
+
+
+     This is the driver file for version 1.1 of the XHTML Architectural DTD.
+
+     Please use the formal public identifier to identify it:
+
+         "-//W3C//DTD XHTML Architecture 1.1//EN"
+-->
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!ENTITY % Framework "IGNORE">
+<![%Framework;[
+<!-- Modular Framework Module (required) ......................... -->
+<!ENTITY % xhtml-framework.module "INCLUDE" >
+]]>
+<!ENTITY % xhtml-framework.module "IGNORE" >
+
+<!ENTITY % Text "IGNORE">
+<![%Text;[
+<!-- Text Module (Required)  ..................................... -->
+<!ENTITY % xhtml-text.module    "INCLUDE" >
+]]>
+<!ENTITY % xhtml-text.module    "IGNORE" >
+
+<!ENTITY % Hypertext "IGNORE">
+<![%Hypertext;[
+<!-- Hypertext Module (required) ................................. -->
+<!ENTITY % xhtml-hypertext.module "INCLUDE" >
+]]>
+<!ENTITY % xhtml-hypertext.module "IGNORE" >
+
+<!ENTITY % Lists "IGNORE">
+<![%Lists;[
+<!-- Lists Module (required)  .................................... -->
+<!ENTITY % xhtml-list.module    "INCLUDE" >
+]]>
+<!ENTITY % xhtml-list.module    "IGNORE" >
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!ENTITY % Standard "IGNORE">
+<![%Standard;[
+<!-- Edit Module  ................................................ -->
+<!ENTITY % xhtml-edit.module    "INCLUDE" >
+
+<!-- BIDI Override Module  ....................................... -->
+<!ENTITY % xhtml-bdo.module     "INCLUDE" >
+
+<!-- Ruby Module  ................................................ -->
+<!ENTITY % xhtml-ruby.module    "INCLUDE" >
+
+<!-- Presentation Module  ........................................ -->
+<!ENTITY % xhtml-pres.module    "INCLUDE" >
+
+<!-- Param Element Module  ....................................... -->
+<!ENTITY % xhtml-param.module   "INCLUDE" >
+
+<!-- Java Applet Element Module  ................................. -->
+<!ENTITY % xhtml-applet.module  "INCLUDE" >
+
+<!-- Link Element Module  ........................................ -->
+<!ENTITY % xhtml-link.module    "INCLUDE" >
+
+<!-- Document Metainformation Module  ............................ -->
+<!ENTITY % xhtml-meta.module    "INCLUDE" >
+
+<!-- Base Element Module  ........................................ -->
+<!ENTITY % xhtml-base.module    "INCLUDE" >
+
+<!-- Scripting Module  ........................................... -->
+<!ENTITY % xhtml-script.module  "INCLUDE" >
+
+<!-- Stylesheets Module  ......................................... -->
+<!ENTITY % xhtml-style.module   "INCLUDE" >
+
+<!-- Image Module  ............................................... -->
+<!ENTITY % xhtml-image.module   "INCLUDE" >
+
+<!-- Client-side Image Map Module  ............................... -->
+<!ENTITY % xhtml-csismap.module "INCLUDE" >
+
+<!-- Server-side Image Map Module  ............................... -->
+<!ENTITY % xhtml-ssismap.module "INCLUDE" >
+
+<!-- Tables Module ............................................... -->
+<!ENTITY % xhtml-table.module   "INCLUDE" >
+
+<!-- Forms Module  ............................................... -->
+<!ENTITY % xhtml-form.module    "INCLUDE" >
+]]>
+<!ENTITY % xhtml-edit.module    "IGNORE" >
+<!ENTITY % xhtml-bdo.module     "IGNORE" >
+<!ENTITY % xhtml-ruby.module    "IGNORE" >
+<!ENTITY % xhtml-pres.module    "IGNORE" >
+<!ENTITY % xhtml-param.module   "IGNORE" >
+<!ENTITY % xhtml-applet.module  "IGNORE" >
+<!ENTITY % xhtml-link.module    "IGNORE" >
+<!ENTITY % xhtml-meta.module    "IGNORE" >
+<!ENTITY % xhtml-base.module    "IGNORE" >
+<!ENTITY % xhtml-script.module  "IGNORE" >
+<!ENTITY % xhtml-style.module   "IGNORE" >
+<!ENTITY % xhtml-image.module   "IGNORE" >
+<!ENTITY % xhtml-csismap.module "IGNORE" >
+<!ENTITY % xhtml-ssismap.module "IGNORE" >
+<!ENTITY % xhtml-table.module   "IGNORE" >
+<!ENTITY % xhtml-form.module    "IGNORE" >
+
+<!ENTITY % Legacy "IGNORE">
+<![%Legacy;[
+<!-- Legacy Markup ............................................... -->
+<!ENTITY % xhtml-legacy.module "IGNORE" >
+]]>
+
+<!ENTITY % Structure "IGNORE">
+<![%Structure;[
+<!-- Document Structure Module (required)  ....................... -->
+<!ENTITY % xhtml-struct.module "INCLUDE" >
+<!ENTITY % XHTML.dtd  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+                      "xhtml11.dtd" >
+%XHTML.dtd;
+]]>
+
+<!-- end of XHTML Architecture 1.1 DTD  .................................... -->
+<!-- ....................................................................... -->

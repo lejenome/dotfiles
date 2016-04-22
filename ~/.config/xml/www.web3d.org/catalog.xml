@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+    <public publicId="ISO//Web3D//DTD X3D 3.0//EN" uri="x3d-3.0.dtd"/>
+    <public publicId="ISO//Web3D//DTD X3D 3.1//EN" uri="x3d-3.1.dtd"/>
+    <public publicId="ISO//Web3D//DTD X3D 3.2//EN" uri="x3d-3.2.dtd"/>
+
+    <uri name="http://www.web3d.org/specifications/x3d-3.0.dtd" uri="x3d-3.0.dtd"/>
+    <uri name="http://www.web3d.org/specifications/x3d-3.1.dtd" uri="x3d-3.1.dtd"/>
+    <uri name="http://www.web3d.org/specifications/x3d-3.2.dtd" uri="x3d-3.2.dtd"/>
+
+    <!-- For XML schemas the <uri> element is recommended to specify the resource, e.g: -->
+    <uri name="http://www.web3d.org/specifications/x3d-3.0.xsd" uri="x3d-3.0.xsd"/>
+    <uri name="http://www.web3d.org/specifications/x3d-3.1.xsd" uri="x3d-3.1.xsd"/>
+    <uri name="http://www.web3d.org/specifications/x3d-3.2.xsd" uri="x3d-3.2.xsd"/>
+
+    <system systemId="http://www.web3d.org/specifications/x3d-3.0.xsd" uri="x3d-3.0.xsd"/>
+    <system systemId="http://www.web3d.org/specifications/x3d-3.1.xsd" uri="x3d-3.1.xsd"/>
+    <system systemId="http://www.web3d.org/specifications/x3d-3.2.xsd" uri="x3d-3.2.xsd"/>
+
+    <rewriteURI    uriStartString="http://www.web3d.org/specifications/" rewritePrefix="./"/>
+    <rewriteSystem systemIdStartString="http://www.web3d.org/specifications/" rewritePrefix="./"/>
+
+</catalog>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <group prefer="public">
+
+    <public
+      publicId="-//W3C//DTD MathML 3.0//EN"
+      uri="mathml3.dtd"/>
+
+    <public
+      publicId="-//W3C//ENTITIES MathML 3.0 Qualified Names 1.0//EN"
+      uri="mathml3-qname.mod"/>
+
+  </group>
+
+</catalog>

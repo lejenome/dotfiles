@@ -1,5 +1,6 @@
 # First fix aliases not passed to sudo
 alias sudo='/usr/bin/sudo '
+alias nobody='sudo -u nobody'
 
 alias s='/usr/bin/sudo '
 alias vi="vim"

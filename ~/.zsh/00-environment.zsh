@@ -70,3 +70,6 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on
 # Steam
 export STEAM_FRAME_FORCE_CLOSE=1
 export STEAM_RUNTIME=0
+
+# XML Catalog
+export XML_CATALOG_FILES="${HOME}/.config/xml/catalog.xml /etc/xml/catalog"

@@ -140,6 +140,7 @@ autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us,fr textwidt
 autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=79
 
 autocmd BufNewFile,BufRead *.pgsql,*.plpgsql set filetype=sql syntax=pgsql
+autocmd BufRead,BufNewFile *.xaml :set filetype=xml
 
 autocmd FileType python set breakindentopt=shift:4
 let python_highlight_all = 1
@@ -172,3 +173,9 @@ nnoremap <expr> N  'nN'[v:searchforward]
 
 " complete redraw and fix for screen
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+
+
+autocmd FileType ant compiler ant
+autocmd BufNewFile,BufRead *.gradle compiler gradle
+autocmd FileType csharp compiler xbuild
+autocmd FileType python setlocal makeprg=python\ %

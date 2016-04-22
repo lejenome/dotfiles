@@ -1,0 +1,219 @@
+<!-- XHTML Mobile 1.1 DTD  ...................................................... -->
+<!-- file: xhtml-mobile11.dtd -->
+<!-- 
+     This is XHTML Mobile profile, a proper subset of XHTML.
+     
+     @Wireless Application Protocol Forum, Ltd. 2002.
+
+     © 2006 Open Mobile Alliance Ltd.  All Rights Reserved.
+     Used with the permission of the Open Mobile Alliance Ltd. under the
+     terms set forth below.
+
+     LEGAL DISCLAIMER
+
+     Use of this document is subject to all of the terms and conditions
+     of the Use Agreement located at
+	http://www.openmobilealliance.org/UseAgreement.html
+
+    NO REPRESENTATIONS OR WARRANTIES (WHETHER EXPRESS OR IMPLIED) ARE
+    MADE BY THE OPEN MOBILE ALLIANCE OR ANY OPEN MOBILE ALLIANCE MEMBER
+    OR ITS AFFILIATES REGARDING ANY OF THE IPR’S REPRESENTED ON THE “OMA
+    IPR DECLARATIONS” LIST, INCLUDING, BUT NOT LIMITED TO THE ACCURACY,
+    COMPLETENESS, VALIDITY OR RELEVANCE OF THE INFORMATION OR WHETHER OR
+    NOT SUCH RIGHTS ARE ESSENTIAL OR NON-ESSENTIAL.
+
+    THE OPEN MOBILE ALLIANCE IS NOT LIABLE FOR AND HEREBY DISCLAIMS ANY
+    DIRECT, INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR
+    EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OF
+    DOCUMENTS AND THE INFORMATION CONTAINED IN THE DOCUMENTS.
+    
+-->
+<!-- This is the driver file for version 1.1 of the XHTML Mobile DTD.
+
+     This DTD is identified by the PUBLIC and SYSTEM identifiers:
+
+     PUBLIC: "-//WAPFORUM//DTD XHTML Mobile 1.1//EN"
+     SYSTEM: "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd"
+-->
+<!ENTITY % XHTML.version  "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" >
+
+<!-- Use this URI to identify the default namespace:
+
+         "http://www.w3.org/1999/xhtml"
+
+     See the Qualified Names module for information
+     on the use of namespace prefixes in the DTD.
+-->
+<!ENTITY % NS.prefixed "IGNORE" >
+<!ENTITY % XHTML.prefix  "" >
+
+<!-- For example, if you are using XHTML Mobile 1.1 directly, use
+     the FPI in the DOCTYPE declaration, with the xmlns attribute
+     on the document element to identify the default namespace:
+
+         <?xml version="1.0"?>
+         <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN"
+             "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd" >
+         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+         ...
+         </html>
+-->
+
+<!-- Reserved for future use with document profiles -->
+<!ENTITY % XHTML.profile  "" >
+
+<!-- Intrinsic Events Module  ................................................... -->
+<!ENTITY % xhtml-events.module "INCLUDE" >
+
+<!-- Inline Style Module  ....................................................... -->
+<!ENTITY % xhtml-inlstyle.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Inline Style 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-inlstyle-1.mod" >
+%xhtml-inlstyle.mod;
+
+<!-- Document Model ............................................................. -->
+<!ENTITY % xhtml-model.mod
+     PUBLIC "-//WAPFORUM//ENTITIES XHTML Mobile 1.1 Document Model 1.0//EN"
+            "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11-model-1.mod" >
+
+<!-- XHTML Framework ............................................................ -->
+<!ENTITY % XHTML.bidi  "IGNORE" >
+<!ENTITY % xhtml-framework.mod
+     PUBLIC "-//W3C//ENTITIES XHTML Modular Framework 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-framework-1.mod" >
+%xhtml-framework.mod;
+
+<!-- XHTML Core Modules ......................................................... -->
+<!ENTITY % pre.content
+     "( #PCDATA
+      | %InlStruct.class;
+      %InlPhras.class;
+      %Anchor.class;
+      %Inline.extra; )*"
+>
+
+<!ENTITY % xhtml-text.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Text 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-text-1.mod" >
+%xhtml-text.mod;
+
+<!ENTITY % xhtml-hypertext.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Hypertext 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-hypertext-1.mod" >
+%xhtml-hypertext.mod;
+
+<!ENTITY % xhtml-list.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Lists 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-list-1.mod" >
+%xhtml-list.mod;
+<!-- Extend lists with value and start attributes --> 
+<!ATTLIST %li.qname;
+      value        %Number.datatype;         #IMPLIED
+>
+<!ATTLIST %ol.qname;
+      start        %Number.datatype;        #IMPLIED
+>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!-- Image Module  ............................................... -->
+<!ENTITY % xhtml-image.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Images 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-image-1.mod" >
+%xhtml-image.mod;
+
+<!-- Tables Module ............................................... -->
+<!ENTITY % xhtml-table.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Basic Tables 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-basic-table-1.mod" >
+%xhtml-table.mod;
+
+<!-- Forms Module  ............................................... 
+	XHTML basic forms module extended with optgroup and fieldset
+-->
+<!ELEMENT %optgroup.qname; (%option.qname;)+>
+<!ATTLIST %optgroup.qname;
+	%Common.attrib; 
+	label %Text.datatype; #REQUIRED
+>
+<!ENTITY % select.content "( %optgroup.qname; | %option.qname; )+">
+<!ELEMENT %fieldset.qname; (#PCDATA | %Flow.mix;)*>
+<!ATTLIST %fieldset.qname;
+	%Common.attrib; 
+>
+<!ENTITY % form.content "( %BlkNoForm.mix; | %fieldset.qname; )+">
+<!ENTITY % xhtml-form.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Basic Forms 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-basic-form-1.mod" >
+%xhtml-form.mod;
+
+<!-- Link Element Module  ........................................ -->
+<!ENTITY % xhtml-link.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Link Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-link-1.mod" >
+%xhtml-link.mod;
+
+<!-- Document Metainformation Module  ............................ -->
+<!ENTITY % xhtml-meta.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Metainformation 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-meta-1.mod" >
+%xhtml-meta.mod;
+
+<!-- Base Element Module  ........................................ -->
+<!ENTITY % xhtml-base.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Base Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-base-1.mod" >
+%xhtml-base.mod;
+
+<!-- Scripting Module  ........................................... -->
+<!ENTITY % xhtml-script.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Scripting 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-script-1.mod" >
+%xhtml-script.mod;
+
+<!-- Style Sheets Module  ......................................... -->
+<!ENTITY % xhtml-style.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Style Sheets 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-style-1.mod" >
+%xhtml-style.mod;
+
+<!-- Param Element Module  ....................................... -->
+<!ENTITY % xhtml-param.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Param Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-param-1.mod" >
+%xhtml-param.mod;
+
+<!-- Embedded Object Module  ..................................... -->
+<!ENTITY % xhtml-object.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Embedded Object 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-object-1.mod" >
+%xhtml-object.mod;
+
+<!-- Document Structure Module  ..................................... -->
+<!ENTITY % xhtml-struct.mod
+     PUBLIC "-//W3C//ELEMENTS XHTML Document Structure 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-struct-1.mod" >
+%xhtml-struct.mod;
+
+<!-- Block Presentation ........................................ -->
+<!ENTITY % xhtml-blkpres.mod PUBLIC "-//W3C//ELEMENTS XHTML Block Presentation 1.0//EN"
+ 		"http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-blkpres-1.mod" >
+%xhtml-blkpres.mod;
+
+<!-- ========================================== -->
+<!-- 
+	Inline Presentation: b, big, i, small		
+-->
+<!ENTITY % sub.element "IGNORE">
+<!ENTITY % sub.attlist "IGNORE">
+<!ENTITY % sup.element "IGNORE">
+<!ENTITY % sup.attlist "IGNORE">
+<!ENTITY % tt.element  "IGNORE">
+<!ENTITY % tt.attlist  "IGNORE">
+<!ENTITY % xhtml-inlpres.mod PUBLIC "-//W3C//ELEMENTS XHTML Inline Presentation 1.0//EN"
+		"http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-inlpres-1.mod">
+%xhtml-inlpres.mod;
+
+<!-- end of XHTML Mobile 1.1 DTD  ........................................... -->
+
+

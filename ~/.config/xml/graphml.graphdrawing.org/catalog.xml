@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="system">
+
+  <!--See http://graphml.graphdrawing.org/primer/graphml-primer.html -->
+  <group prefer="system" xml:base="dtds">
+    <system
+      systemId="graphml.dtd"
+      uri="graphml.dtd"/>
+    <system
+      systemId="http://graphml.graphdrawing.org/dtds/graphml.dtd"
+      uri="graphml.dtd"/>
+  </group>
+
+  <group prefer="system" xml:base="xmlns/1.1">
+
+    <uri
+      name="http://graphml.graphdrawing.org/xmlns"
+      uri="graphml.xsd"/>
+    <system
+      systemId="graphml.xsd"
+      uri="graphml.xsd"/>
+    <uri
+      name="graphml.xsd"
+      uri="graphml.xsd"/>
+    <system
+      systemId="http://graphml.graphdrawing.org/xmlns/1.1/graphml.xsd"
+      uri="graphml.xsd"/>
+
+    <system
+      systemId="graphml-structure.xsd"
+      uri="graphml-structure.xsd"/>
+    <system
+      systemId="http://graphml.graphdrawing.org/xmlns/1.1/graphml-structure.xsd"
+      uri="graphml-structure.xsd"/>
+
+    <system
+      systemId="graphml-attributes.xsd"
+      uri="graphml-attributes.xsd"/>
+    <system
+      systemId="http://graphml.graphdrawing.org/xmlns/1.1/graphml-attributes.xsd"
+      uri="graphml-attributes.xsd"/>
+
+    <system
+      systemId="graphml-parseinfo.xsd"
+      uri="graphml-parseinfo.xsd"/>
+    <system
+      systemId="http://graphml.graphdrawing.org/xmlns/1.1/graphml-parseinfo.xsd"
+      uri="graphml-parseinfo.xsd"/>
+
+    <!--Uses its own definition of xlink-->
+    <system
+      systemId="http://graphml.graphdrawing.org/xmlns/1.1/xlink.xsd"
+      uri="xlink.xsd"/>
+
+  </group>
+
+</catalog>

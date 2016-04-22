@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <group prefer="public">
+
+    <!--2007 entities-->
+    <public
+      publicId="-//W3C//ENTITIES uppercase aliases for HTML//EN//XML"
+      uri="html5-uppercase.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES HTML MathML Set//EN//XML"
+      uri="htmlmathml.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Arrow Relations//EN//XML"
+      uri="isoamsa.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Binary Operators//EN//XML"
+      uri="isoamsb.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Delimiters//EN//XML"
+      uri="isoamsc.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Negated Relations//EN//XML"
+      uri="isoamsn.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Ordinary//EN//XML"
+      uri="isoamso.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Math Symbols: Relations//EN//XML"
+      uri="isoamsr.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Box and Line Drawing//EN//XML"
+      uri="isobox.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Russian Cyrillic//EN//XML"
+      uri="isocyr1.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Non-Russian Cyrillic//EN//XML"
+      uri="isocyr2.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Diacritical Marks//EN//XML"
+      uri="isodia.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Greek Letters//EN//XML"
+      uri="isogrk1.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Monotoniko Greek//EN//XML"
+      uri="isogrk2.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Greek Symbols//EN//XML"
+      uri="isogrk3.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Alternative Greek Symbols//EN//XML"
+      uri="isogrk4.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Latin 1//EN//XML"
+      uri="isolat1.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Added Latin 2//EN//XML"
+      uri="isolat2.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Math Alphabets: Fraktur//EN//XML"
+      uri="isomfrk.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Math Alphabets: Open Face//EN//XML"
+      uri="isomopf.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Math Alphabets: Script//EN//XML"
+      uri="isomscr.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Numeric and Special Graphic//EN//XML"
+      uri="isonum.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Publishing//EN//XML"
+      uri="isopub.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES General Technical//EN//XML"
+      uri="isotech.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES MathML Aliases//EN//XML"
+      uri="mmlalias.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Additional MathML Symbols//EN//XML"
+      uri="mmlextra.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Predefined XML//EN///XML"
+      uri="predefined.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Combined Set//EN//XML"
+      uri="w3centities.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Latin for HTML//EN//XML"
+      uri="xhtml1-lat1.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Special for HTML//EN//XML"
+      uri="xhtml1-special.ent"/>
+    <public
+      publicId="-//W3C//ENTITIES Symbol for HTML//EN//XML"
+      uri="xhtml1-symbol.ent"/>
+
+    <!--iso8879 entities-->
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Arrow Relations//EN//XML"
+      uri="isoamsa.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Binary Operators//EN//XML"
+      uri="isoamsb.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Delimiters//EN//XML"
+      uri="isoamsc.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Negated Relations//EN//XML"
+      uri="isoamsn.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Ordinary//EN//XML"
+      uri="isoamso.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Relations//EN//XML"
+      uri="isoamsr.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Box and Line Drawing//EN//XML"
+      uri="isobox.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Russian Cyrillic//EN//XML"
+      uri="isocyr1.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Non-Russian Cyrillic//EN//XML"
+      uri="isocyr2.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Diacritical Marks//EN//XML"
+      uri="isodia.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Greek Letters//EN//XML"
+      uri="isogrk1.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Monotoniko Greek//EN//XML"
+      uri="isogrk2.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Greek Symbols//EN//XML"
+      uri="isogrk3.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Alternative Greek Symbols//EN//XML"
+      uri="isogrk4.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Latin 1//EN//XML"
+      uri="isolat1.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Added Latin 2//EN//XML"
+      uri="isolat2.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN//XML"
+      uri="isonum.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES Publishing//EN//XML"
+      uri="isopub.ent"/>
+    <public
+      publicId="ISO 8879:1986//ENTITIES General Technical//EN//XML"
+      uri="isotech.ent"/>
+
+    <!--iso9573-1991 entities-->
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Arrow Relations //EN//XML"
+      uri="isoamsa.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Binary Operators //EN//XML"
+      uri="isoamsb.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Delimiters //EN//XML"
+      uri="isoamsc.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Negated Relations //EN//XML"
+      uri="isoamsn.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Ordinary //EN//XML"
+      uri="isoamso.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Added Math Symbols: Relations //EN//XML"
+      uri="isoamsr.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Greek Symbols //EN//XML"
+      uri="isogrk3.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Alternative Greek Symbols //EN//XML"
+      uri="isogrk4.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Math Alphabets: Fraktur //EN//XML"
+      uri="isomfrk.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Math Alphabets: Open Face //EN//XML"
+      uri="isomopf.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES Math Alphabets: Script //EN//XML"
+      uri="isomscr.ent"/>
+    <public
+      publicId="ISO 9573-13:1991//ENTITIES General Technical //EN//XML"
+      uri="isotech.ent"/>
+
+    <!--iso9573-2003 entities-->
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Arrow Relations//EN//XML"
+      uri="isoamsa.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Binary Operators//EN//XML"
+      uri="isoamsb.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Delimiters//EN//XML"
+      uri="isoamsc.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Negated Relations//EN//XML"
+      uri="isoamsn.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Ordinary//EN//XML"
+      uri="isoamso.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Math Symbols: Relations//EN//XML"
+      uri="isoamsr.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Box and Line Drawing//EN//XML"
+      uri="isobox.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Russian Cyrillic//EN//XML"
+      uri="isocyr1.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Non-Russian Cyrillic//EN//XML"
+      uri="isocyr2.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Diacritical Marks//EN//XML"
+      uri="isodia.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Greek Letters//EN//XML"
+      uri="isogrk1.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Monotoniko Greek//EN//XML"
+      uri="isogrk2.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Greek Symbols//EN//XML"
+      uri="isogrk3.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Alternative Greek Symbols//EN//XML"
+      uri="isogrk4.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Latin 1//EN//XML"
+      uri="isolat1.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Added Latin 2//EN//XML"
+      uri="isolat2.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Math Alphabets: Fraktur//EN//XML"
+      uri="isomfrk.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Math Alphabets: Open Face//EN//XML"
+      uri="isomopf.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Math Alphabets: Script//EN//XML"
+      uri="isomscr.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Numeric and Special Graphic//EN//XML"
+      uri="isonum.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES Publishing//EN//XML"
+      uri="isopub.ent"/>
+    <public
+      publicId="ISO 9573-13:2003//ENTITIES General Technical//EN//XML"
+      uri="isotech.ent"/>
+
+  </group>
+</catalog>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <group prefer="public">
+
+    <!---//OASIS//DTD DocBook HTML Forms Module V1.0//EN-->
+    <!--Note: Uses -//OASIS//DTD DocBook XML V4.1.2//EN-->
+    <public
+      publicId="-//OASIS//DTD DocBook HTML Forms Module V1.0//EN"
+      uri="1.0/dbforms.dtd"/>
+
+    <!---//OASIS//DTD DocBook HTML Forms Module V1.1//EN-->
+    <!--Note: Uses -//OASIS//DTD DocBook XML V4.1.2//EN-->
+    <public
+      publicId="-//OASIS//DTD DocBook HTML Forms Module V1.1//EN"
+      uri="1.1/dbforms.dtd"/>
+
+    <!---//OASIS//DTD DocBook HTML Forms Module V1.2CR1//EN-->
+    <!--Note: Uses -//OASIS//DTD DocBook XML V4.3//EN-->
+    <public
+      publicId="-//OASIS//DTD DocBook HTML Forms Module V1.2CR1//EN"
+      uri="1.2CR1/dbforms.dtd"/>
+
+  </group>
+
+</catalog>

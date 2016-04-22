@@ -218,6 +218,8 @@ Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_path_to_python_interpreter = '/usr/bin/python3'
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 
@@ -225,7 +227,6 @@ let g:ycm_confirm_extra_conf = 0
 Plugin 'tfnico/vim-gradle'
 Plugin 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType ant compiler ant
 nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 

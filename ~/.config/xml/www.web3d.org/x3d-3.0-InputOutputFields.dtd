@@ -1,0 +1,330 @@
+<!--
+#
+# X3D InputOutputFields DTD:
+#
+#	http://www.web3d.org/specifications/x3d-3.0-InputOutputFields.dtd
+#
+#	current version:  3.0.7
+#
+#	revised:          19 December 2005
+#
+#	Author:           Don Brutzman
+#
+# Purpose: the primary Extensible 3D (X3D) Document Type Definition (DTD)
+# is augmented by field definitions in x3d-3.0-InputOutputFields.dtd
+#
+# X3D Specification DTDs:
+#	http://www.web3d.org/specifications/x3d-3.0.dtd
+#	http://www.web3d.org/specifications/x3d-3.0-InputOutputFields.dtd
+#	http://www.web3d.org/specifications/x3d-3.0-Web3dExtensions.dtd
+#
+# Typical system location for this resource is adjacent to x3d-3.0.dtd:
+#	file://c:/www.web3d.org/specifications/x3d-3.0-InputOutputFields.dtd
+#	  file:///www.web3d.org/specifications/x3d-3.0-InputOutputFields.dtd
+#
+# changelog:
+#	http://www.web3d.org/specifications/x3d-dtd-changelog.txt
+#
+# Note on typing:
+#	CDATA used for %SFBool; definitions to allow #FIXED "" initialization,
+#	  since DTD rules otherwise require enumeration values to be 
+#	  initialized to true|false.
+#
+-->
+
+<!ATTLIST AudioClip
+	elapsedTime   %SFTime;    #FIXED ""
+	duration_changed %SFTime; #FIXED ""
+	isPaused      CDATA       #FIXED ""
+	isActive      CDATA       #FIXED "">
+	
+<!ATTLIST Background
+	set_bind    CDATA      #FIXED ""
+	bindTime    %SFTime;   #FIXED ""
+	isBound     CDATA      #FIXED "">
+
+<!ATTLIST BooleanFilter
+	set_boolean CDATA #FIXED ""
+	inputTrue   CDATA #FIXED ""
+	inputFalse  CDATA #FIXED ""
+	inputNegate CDATA #FIXED "">
+	
+<!-- value_changed is CDATA instead of %SFBool% in order to set empty value on an enumeration -->
+
+<!ATTLIST BooleanSequencer
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    CDATA  #FIXED ""
+	previous CDATA   #FIXED ""
+	next     CDATA   #FIXED "">
+
+<!ATTLIST BooleanToggle
+	set_boolean CDATA #FIXED "">
+	
+<!ATTLIST BooleanTrigger
+	set_triggerTime %SFTime; #FIXED ""
+	triggerTrue     CDATA    #FIXED "">
+
+<!ATTLIST Collision
+	collideTime %SFTime;   #FIXED ""
+	isActive    CDATA      #FIXED "">
+
+<!ATTLIST ColorInterpolator
+	set_fraction    %SFFloat; #FIXED ""
+	value_changed       %SFColor; #FIXED "">
+
+<!ATTLIST CoordinateInterpolator
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %MFVec3f; #FIXED "">
+
+<!ATTLIST CoordinateInterpolator2D
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %MFVec2f; #FIXED "">
+
+<!ATTLIST CylinderSensor
+	isActive   CDATA     	#FIXED ""
+	isOver     CDATA     	#FIXED ""
+	rotation_changed   %SFRotation; #FIXED ""
+	trackPoint_changed %SFVec3f;    #FIXED "">
+
+<!ATTLIST ElevationGrid
+	set_height      %MFFloat; #FIXED "">
+
+<!ATTLIST Extrusion
+	set_crossSection %MFVec2f;    #FIXED ""
+	set_orientation  %MFRotation; #FIXED ""
+	set_scale        %MFVec2f;    #FIXED ""
+	set_spine        %MFVec3f;    #FIXED "">
+
+<!ATTLIST Fog
+	set_bind        CDATA      #FIXED ""
+	bindTime        %SFTime;   #FIXED ""
+	isBound         CDATA      #FIXED "">
+
+<!ATTLIST IndexedFaceSet
+	set_colorIndex      %MFInt32; #FIXED ""
+	set_coordIndex      %MFInt32; #FIXED ""
+	set_normalIndex     %MFInt32; #FIXED ""
+	set_texCoordIndex   %MFInt32; #FIXED "">
+
+<!ATTLIST IndexedLineSet
+	set_colorIndex  %MFInt32; #FIXED ""
+	set_coordIndex  %MFInt32; #FIXED "">
+
+<!ATTLIST IndexedTriangleFanSet
+	set_index  %MFInt32; #FIXED "">
+
+<!ATTLIST IndexedTriangleSet
+	set_index  %MFInt32; #FIXED "">
+
+<!ATTLIST IndexedTriangleStripSet
+	set_index  %MFInt32; #FIXED "">
+
+<!ATTLIST IntegerSequencer
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %SFInt32; #FIXED ""
+	previous CDATA   #FIXED ""
+	next     CDATA   #FIXED "">
+
+<!ATTLIST IntegerTrigger
+	set_boolean  CDATA #FIXED ""
+	triggerValue %SFInt32;   #FIXED "">
+
+<!ATTLIST KeySensor
+	isActive		CDATA      	#FIXED ""
+	keyPress		%SFString;	#FIXED ""
+	keyRelease		%SFString;	#FIXED ""
+	actionKeyPress		%SFInt32;	#FIXED ""
+	actionKeyRelease	%SFInt32;	#FIXED ""
+	altKey			CDATA  		#FIXED ""
+	controlKey		CDATA  		#FIXED ""
+	shiftKey		CDATA  		#FIXED "">
+
+<!ATTLIST LoadSensor 
+	isActive		CDATA       	#FIXED ""
+	isLoaded		CDATA  		#FIXED ""
+	loadTime		%SFTime;	#FIXED ""
+	progress		%SFFloat;	#FIXED "">
+
+<!ATTLIST MovieTexture
+	elapsedTime       %SFTime;  #FIXED ""
+	duration_changed  %SFTime;  #FIXED ""
+	isPaused          CDATA     #FIXED ""
+	isActive          CDATA     #FIXED "">
+
+<!ATTLIST NavigationInfo
+	set_bind        CDATA      #FIXED ""
+	bindTime        %SFTime;   #FIXED ""
+	isBound         CDATA      #FIXED "">
+
+<!ATTLIST NormalInterpolator
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %MFVec3f; #FIXED "">
+
+<!ATTLIST OrientationInterpolator
+	set_fraction %SFFloat;    #FIXED ""
+	value_changed    %SFRotation; #FIXED "">
+
+<!ATTLIST PlaneSensor
+	isActive    CDATA  	#FIXED ""
+	isOver      CDATA     	#FIXED ""
+	trackPoint_changed  %SFVec3f; #FIXED ""
+	translation_changed %SFVec3f; #FIXED "">
+
+<!ATTLIST PositionInterpolator
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %SFVec3f; #FIXED "">
+
+<!ATTLIST PositionInterpolator2D
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %SFVec2f; #FIXED "">
+
+<!ATTLIST ProximitySensor
+	isActive    CDATA     	 #FIXED ""
+	position_changed    %SFVec3f;    #FIXED ""
+	orientation_changed %SFRotation; #FIXED ""
+	centerOfRotation_changed  %SFVec3f;	#FIXED ""
+	enterTime   %SFTime;     #FIXED ""
+	exitTime    %SFTime;     #FIXED "">
+	
+<!ATTLIST ScalarInterpolator
+	set_fraction %SFFloat; #FIXED ""
+	value_changed    %SFFloat; #FIXED "">
+
+<!ATTLIST SphereSensor
+	isActive   CDATA     	#FIXED ""
+	isOver      CDATA     	#FIXED ""
+	rotation_changed   %SFRotation; #FIXED ""
+	trackPoint_changed %SFVec3f;    #FIXED "">
+
+<!ATTLIST StringSensor
+	isActive		CDATA     	#FIXED ""
+	enteredText		%SFString;	#FIXED ""
+	finalText		%SFString;	#FIXED "">
+
+<!ATTLIST TextureBackground
+	set_bind     CDATA      #FIXED ""
+	bindTime     %SFTime;   #FIXED ""
+	isBound      CDATA      #FIXED "">
+
+<!ATTLIST TimeSensor
+	elapsedTime   %SFTime;  #FIXED ""
+	cycleTime     %SFTime;  #FIXED ""
+	fraction_changed  %SFFloat; #FIXED ""
+	isActive      CDATA    	#FIXED ""
+	isPaused      CDATA    	#FIXED ""
+	time          %SFTime;  #FIXED "">
+
+<!ATTLIST TimeTrigger
+	set_boolean  CDATA #FIXED ""
+	triggerTime %SFTime;   #FIXED "">
+
+<!ATTLIST TouchSensor
+	hitNormal_changed    %SFVec3f; 	#FIXED ""
+	hitPoint_changed     %SFVec3f; 	#FIXED ""
+	hitTexCoord_changed  %SFVec2f; 	#FIXED ""
+	isActive     CDATA     #FIXED ""
+	isOver       CDATA     #FIXED ""
+	touchTime    %SFTime;  #FIXED "">
+
+<!ATTLIST Viewpoint
+	set_bind    CDATA        #FIXED ""
+	bindTime    %SFTime;     #FIXED ""
+	isBound     CDATA        #FIXED "">
+
+<!ATTLIST VisibilitySensor
+	enterTime %SFTime;  #FIXED ""
+	exitTime  %SFTime;  #FIXED ""
+	isActive  CDATA     #FIXED "">
+
+<!ATTLIST EspduTransform
+	isStandAlone		 		CDATA		#FIXED ""
+	isNetworkReader	 			CDATA		#FIXED ""
+	isNetworkWriter	 			CDATA		#FIXED ""
+	isRtpHeaderHeard     			CDATA		#FIXED ""
+	isActive   				CDATA		#FIXED ""
+	timestamp	 			%SFTime;	#FIXED ""
+	set_articulationParameterValue0		%SFFloat;	#FIXED ""
+	set_articulationParameterValue1		%SFFloat;	#FIXED ""
+	set_articulationParameterValue2		%SFFloat;	#FIXED ""
+	set_articulationParameterValue3		%SFFloat;	#FIXED ""
+	set_articulationParameterValue4		%SFFloat;	#FIXED ""
+	set_articulationParameterValue5		%SFFloat;	#FIXED ""
+	set_articulationParameterValue6		%SFFloat;	#FIXED ""
+	set_articulationParameterValue7		%SFFloat;	#FIXED ""
+	articulationParameterValue0_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue1_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue2_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue3_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue4_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue5_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue6_changed	%SFFloat;	#FIXED ""
+	articulationParameterValue7_changed	%SFFloat;	#FIXED ""
+	isCollided   				CDATA		#FIXED ""
+	collideTime   				%SFTime;	#FIXED ""
+	isDetonated   				CDATA		#FIXED ""
+	detonateTime   				%SFTime;	#FIXED ""
+	firedTime   				%SFTime;	#FIXED ""
+>
+<!ATTLIST ReceiverPdu 
+	isStandAlone		 		CDATA		#FIXED ""
+	isNetworkReader	 			CDATA		#FIXED ""
+	isNetworkWriter	 			CDATA		#FIXED ""
+	isRtpHeaderHeard     			CDATA		#FIXED ""
+	isActive   				CDATA		#FIXED ""
+	timestamp	 			%SFTime;	#FIXED ""
+>
+
+<!ATTLIST SignalPdu
+	isStandAlone		 		CDATA		#FIXED ""
+	isNetworkReader	 			CDATA		#FIXED ""
+	isNetworkWriter	 			CDATA		#FIXED ""
+	isRtpHeaderHeard     			CDATA		#FIXED ""
+	isActive   				CDATA		#FIXED ""
+	timestamp	 			%SFTime;	#FIXED ""
+>
+
+<!ATTLIST TransmitterPdu
+	isStandAlone		 		CDATA		#FIXED ""
+	isNetworkReader	 			CDATA		#FIXED ""
+	isNetworkWriter	 			CDATA		#FIXED ""
+	isRtpHeaderHeard     			CDATA		#FIXED ""
+	isActive   				CDATA		#FIXED ""
+	timestamp	 			%SFTime;	#FIXED ""
+>
+
+<!ATTLIST GeoElevationGrid
+	set_height	%MFDouble; 	#FIXED "">
+	
+<!ATTLIST GeoPositionInterpolator
+	set_fraction	 %SFFloat;	#FIXED ""
+	value_changed	 %SFVec3f;	#FIXED ""
+	geovalue_changed %SFVec3d;	#FIXED "">
+
+<!ATTLIST GeoTouchSensor
+	isActive		CDATA		#FIXED ""
+	isOver			CDATA		#FIXED ""
+	touchTime		%SFTime;	#FIXED ""	
+	hitGeoCoord_changed	%SFVec3d;	#FIXED ""
+	hitNormal_changed	%SFVec3f;	#FIXED ""
+	hitPoint_changed	%SFVec3f;	#FIXED ""
+	hitTexCoord_changed 	%SFVec2f;	#FIXED "">
+	
+<!ATTLIST GeoViewpoint
+	set_bind        CDATA        #FIXED ""
+	set_orientation %SFRotation; #FIXED ""
+	set_position    %SFVec3d;    #FIXED ""
+	bindTime        %SFTime;     #FIXED ""
+	isBound         CDATA        #FIXED "">
+
+<!ATTLIST NurbsOrientationInterpolator
+	set_fraction		%SFFloat;	#FIXED ""
+	value_changed		%SFRotation;	#FIXED "">
+
+<!ATTLIST NurbsPositionInterpolator
+	set_fraction		%SFFloat;	#FIXED ""
+	value_changed		%SFVec3f;	#FIXED "">
+
+<!ATTLIST NurbsSurfaceInterpolator
+	set_fraction		%SFVec2f;	#FIXED ""
+	normal_changed		%SFVec3f;	#FIXED ""
+	position_changed	%SFVec3f;	#FIXED "">

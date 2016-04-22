@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <group prefer="public">
+
+    <!--XHTML+RDFa-->
+    <public
+      publicId="-//W3C//DTD XHTML+RDFa 1.1//EN"
+      uri="xhtml-rdfa-2.dtd"/>
+    <public
+      publicId="-//W3C//ENTITIES XHTML+RDFa Document Model 1.1//EN"
+      uri="xhtml-rdfa-model-2.mod"/>
+    <public
+      publicId="-//W3C//ENTITIES XHTML MetaAttributes 1.0//EN"
+      uri="xhtml-metaAttributes-2.mod"/>
+
+  </group>
+</catalog>

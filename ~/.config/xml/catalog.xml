@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<catalog
+  xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+  prefer="public">
+
+  <nextCatalog catalog="www.oasis-open.org/catalog/catalog.xml"/>
+
+  <!--http://www.w3.org/XML/1998/namespace -->
+  <nextCatalog catalog="www.w3.org/xml/catalog.xml"/>
+
+  <!--xmlschema-->
+  <nextCatalog catalog="www.w3.org/xmlschema/catalog.xml"/>
+
+  <!--http://www.w3.org/1999/xlink-->
+  <nextCatalog catalog="www.w3.org/xlink/catalog.xml"/>
+
+  <!--http://www.w3.org/2001/XInclude-->
+  <nextCatalog catalog="www.w3.org/xinclude/catalog.xml"/>
+
+  <!--Add w3c entity definitions-->
+  <!--  ISO 8879:1986-->
+  <!--  ISO 9573-13:1991-->
+  <!--  ISO 9573-13:2003-->
+  <!--  W3C ENTITIES-->
+  <nextCatalog catalog="www.w3.org/entities/catalog.xml"/>
+
+  <!---//W3C//DTD HTML 4.01//EN-->
+  <!---//W3C//DTD HTML 4.01 Transitional//EN-->
+  <!---//W3C//DTD HTML 4.01 Frameset//EN-->
+  <nextCatalog catalog="www.w3.org/html401/catalog.xml"/>
+
+  <!--Modular DTD components used by xhtml and other DTDs-->
+  <nextCatalog catalog="www.w3.org/xhtml-modularization/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML 1.0 Transitional//EN-->
+  <!---//W3C//DTD XHTML 1.0 Strict//EN-->
+  <!---//W3C//DTD XHTML 1.0 Frameset//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml1/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML 1.1//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml11/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML Basic 1.0//EN-->
+  <!---//W3C//DTD XHTML Basic 1.1//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml-basic/catalog.xml"/>
+
+  <!---//WAPFORUM//DTD XHTML Mobile 1.0//EN-->
+  <nextCatalog catalog="www.wapforum.org/DTD/catalog.xml"/>
+
+  <!---//WAPFORUM//DTD XHTML Mobile 1.1//EN-->
+  <!---//WAPFORUM//DTD XHTML Mobile 1.2//EN-->
+  <!---//OMA//DTD XHTML Mobile 1.2//EN-->
+  <nextCatalog catalog="www.openmobilealliance.org/tech/DTD/catalog.xml"/>
+
+  <!---//W3C//DTD MathML 2.0//EN-->
+  <!---//W3C//DTD XHTML 1.1 plus MathML 2.0//EN-->
+  <nextCatalog catalog="www.w3.org/mathml2/catalog.xml"/>
+
+  <!--XHTML 1.1 plus MathML 2.0 plus SVG 1.1-->
+  <!--*** Currently categorized as obsolete-->
+  <nextCatalog catalog="www.w3.org/xhtml-math-svg/catalog.xml"/>
+
+  <!---//W3C//DTD MathML 3.0//EN-->
+  <nextCatalog catalog="www.w3.org/mathml3/catalog.xml"/>
+
+  <!---//W3C//DTD SVG 1.1//EN-->
+  <!---//W3C//DTD SVG 1.1 Tiny//EN-->
+  <!---//W3C//DTD SVG 1.1 Basic//EN-->
+  <nextCatalog catalog="www.w3.org/svg/1.1/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML+ARIA 1.0//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml-aria/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML-Print 1.0//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml-print/catalog.xml"/>
+
+  <!---//W3C//DTD XHTML+RDFa 1.1//EN-->
+  <nextCatalog catalog="www.w3.org/xhtml-rdfa/catalog.xml"/>
+
+  <!---//W3C//DTD HTML 4.01+RDFa 1.1//EN-->
+  <nextCatalog catalog="www.w3.org/html401-rdfa/catalog.xml"/>
+
+  <!---//OASIS//DTD DocBook XML V4.1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.1/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.1.1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.1.1/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.1.2//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.1.2/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.2//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.2/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.3//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.3/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.4//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.4/catalog.xml"/>
+  <!---//OASIS//DTD DocBook XML V4.5//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/4.5/catalog.xml"/>
+
+  <!---//OASIS//DTD DocBook EBNF Module V1.0//EN-->
+  <!---//OASIS//DTD DocBook EBNF Module V1.1CR1//EN-->
+  <!---//OASIS//DTD DocBook EBNF Module V1.2CR1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/ebnf/catalog.xml"/>
+
+  <!---//OASIS//DTD DocBook HTML Forms Module V1.0//EN-->
+  <!---//OASIS//DTD DocBook HTML Forms Module V1.1//EN-->
+  <!---//OASIS//DTD DocBook HTML Forms Module V1.2CR1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/htmlforms/catalog.xml"/>
+
+  <!---//OASIS//DTD DocBook MathML Module V1.0//EN-->
+  <!---//OASIS//DTD DocBook MathML Module V1.1CR1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/mathml/catalog.xml"/>
+
+  <!--<nextCatalog catalog="www.oasis-open.org/docbook/simple/catalog.xml"/>-->
+
+  <!---//OASIS//DTD DocBook SVG Module V1.0CR1//EN-->
+  <!---//OASIS//DTD DocBook SVG Module V1.1CR1//EN-->
+  <nextCatalog catalog="www.oasis-open.org/docbook/svg/catalog.xml"/>
+
+  <!--DITA v1.2 DTDs and XSDs-->
+  <nextCatalog catalog="www.oasis-open.org/dita/v1.2/dtd/catalog-dita.xml"/>
+  <nextCatalog catalog="www.oasis-open.org/dita/v1.2/xsd/catalog-dita-xsd.xml"/>
+
+  <!--graphxml-->
+  <nextCatalog catalog="graphml.graphdrawing.org/catalog.xml"/>
+
+  <!--GXL-->
+  <nextCatalog catalog="www.gupro.de/GXL/catalog.xml"/>
+
+  <!--schematron-->
+  <nextCatalog catalog="schematron/catalog.xml"/>
+
+  <!--schematron-->
+  <nextCatalog catalog="www.web3d.org/catalog.xml"/>
+
+  <!--fxsl-->
+  <nextCatalog catalog="../xslt-devenv/xsl/fxsl-xsl2/catalog.xml"/>
+
+</catalog>

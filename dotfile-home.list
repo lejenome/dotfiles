@@ -72,6 +72,7 @@ l .config/conky
 l .config/dunst
 l .config/nvim
 l .config/sway
+l .config/xml
 l .i3
 l .hgrc
 l .urlview

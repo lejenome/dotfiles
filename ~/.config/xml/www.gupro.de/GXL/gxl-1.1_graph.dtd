@@ -1,0 +1,98 @@
+<!-- GXL (1.1)
+     Document Type Definition
+     (October 9, 2003)
+
+copyright by
+
+       Andy Schuerr
+         Real-Time Systems Lab
+         Darmstadt University of Technology
+         Merckstr. 25, D-64283 Darmstadt, Germany
+         andy.schuerr@es.tu-darmstadt.de
+
+       Susan Elliott Sim
+         School of Information and Computer Science
+         444 Computer Science Bldg.
+         University of California, Irvine
+         ses@ics.uci.edu
+
+       Ric Holt
+         Department of Computer Science
+         University of Waterloo
+         Waterloo N2L 3G1, Canada
+         holt@plg.uwaterloo.ca
+
+       Andreas Winter
+         Institute for Software Technology
+         University of Koblenz-Landau
+         Universitaetsstrasse 1, D-56070 Koblenz, Germany
+         winter@uni-koblenz.de
+-->
+<!-- Extensions -->
+<!ENTITY % graph-extension "">
+<!ENTITY % node-extension "">
+<!ENTITY % edge-extension "">
+<!ENTITY % rel-extension "">
+<!ENTITY % relend-extension "">
+<!ENTITY % graph-attr-extension "">
+<!ENTITY % node-attr-extension "">
+<!ENTITY % edge-attr-extension "">
+<!ENTITY % rel-attr-extension "">
+<!ENTITY % relend-attr-extension "">
+<!-- graph -->
+<!ELEMENT graph (attr* , ( node | edge | rel )* %graph-extension;) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	type CDATA #IMPLIED
+	schema CDATA #IMPLIED
+	role NMTOKEN #IMPLIED
+	defaultdirected (true | false) "true"
+	defaultattrvalidity (valid | unknown) "valid"
+	%graph-attr-extension; 
+>
+<!-- graphref -->
+<!ELEMENT graphref EMPTY>
+<!ATTLIST graphref
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- node -->
+<!ELEMENT node (attr*, (graph|graphref)* %node-extension;) >
+<!ATTLIST node
+	id ID #REQUIRED
+	type CDATA #IMPLIED
+	order CDATA #IMPLIED
+	%node-attr-extension; 
+>
+<!-- edge -->
+<!ELEMENT edge (attr*, (graph|graphref)* %edge-extension;) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	type CDATA #IMPLIED
+	order CDATA #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+	%edge-attr-extension; 
+>
+<!-- rel -->
+<!ELEMENT rel (attr*, (graph|graphref)*, relend* %rel-extension;) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	type CDATA #IMPLIED
+	order CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+	%rel-attr-extension; 
+>
+<!-- relend -->
+<!ELEMENT relend (attr* %relend-extension;) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+	%relend-attr-extension; 
+>
