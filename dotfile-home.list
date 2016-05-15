@@ -56,7 +56,6 @@ l .config/systemd/user/tmux@.service
 l .config/lyvi
 l .config/htop
 l .config/pokoy
-l .config/mpd
 l .config/pep8
 l .config/pip
 l .config/modprobed-db.conf
@@ -73,6 +72,10 @@ l .config/dunst
 l .config/nvim
 l .config/sway
 l .config/xml
+l .config/ncmpcpp
+l .config/mpd
+l .config/mpv
+l .mplayer/config
 l .i3
 l .hgrc
 l .urlview
@@ -83,10 +86,7 @@ l .vifm/vifmrc
 l .vifm/colors
 l .hgignore
 l .zlogout
-l .mplayer/config
-l .mpv/config
 l .todo.cfg
-l .ncmpcpp/config
 l .config/weston.ini
 l .gnupg/gpg.conf
 l .gnupg/gpg-agent.conf
