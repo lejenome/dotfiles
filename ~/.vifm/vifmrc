@@ -172,7 +172,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.m
 
 " Web
 filextype *.html,*.htm,*.svg
-        \ firefox %f &,
+        \ firefox %f >/dev/null &,
 filetype *.html,*.htm links, lynx
 
 " Object

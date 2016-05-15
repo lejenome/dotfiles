@@ -70,7 +70,17 @@ set smartindent
 set showmatch
 
 " show a visual line under the cursor's current line
-set cursorline
+"set cursorline
+
+" speed up vim cursor movement
+set synmaxcol=200 " Limit syntax highlighting
+set ttyscroll=3
+set ttyfast " u got a fast terminal
+set lazyredraw " to avoid scrolling problems
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+"syntax sync minlines=256
 
 " Showing line numbers and length
 set number  " show line numbers
@@ -106,7 +116,6 @@ set smartcase
 set nobackup
 set nowritebackup
 set noswapfile
-
 
 set ruler            " show line number, cursor position
 set showcmd          " show incomplete commands
