@@ -82,8 +82,8 @@ l .urlview
 l .vimperatorrc
 l .vimperator/plugin
 l .vimperator/colors
-l .vifm/vifmrc
-l .vifm/colors
+l .config/vifm/vifmrc
+l .config/vifm/colors
 l .hgignore
 l .zlogout
 l .todo.cfg
