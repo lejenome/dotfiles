@@ -11,6 +11,8 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 [ -d /usr/bin/core_perl ] && export PATH="$PATH:/usr/bin/core_perl"
 [ -d "$HOME/.perl5/bin" ] && export PATH="${PATH}:$HOME/.perl5/bin"
 
+[ -d /usr/share/perl6/vendor/bin ] && export PATH="$PATH:/usr/share/perl6/vendor/bin"
+
 # GEM PATH
 [ -d "$HOME/.gem" ] && export PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
 

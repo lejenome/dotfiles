@@ -3,7 +3,7 @@ mpd_music_dir = ~/Music
 now_playing_prefix = "$b$5>>>$9 "
 now_playing_suffix = $/b
 
-song_columns_list_format = (20)[]{a} (6f)[green]{NE} (40)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{a} (40)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
 
 playlist_display_mode = columns
 
@@ -65,7 +65,7 @@ colors_enabled = yes
 ## - a - use alternative character set
 
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-#alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}{ - $3%g$9}}|{%D}
 
 
 #visualizer_fifo_path = "/tmp/mpd.fifo"

@@ -14,6 +14,7 @@ export LESS_TERMCAP_ue=$(printf "\e[0m")
 export LESS_TERMCAP_us=$(printf "\e[1;32m")
 export PAGER="less"
 export MANPAGER="less"
+export SDCV_PAGER="less"
 export _NROFF_U=1
 
 #export DISPLAY=:0
@@ -49,3 +50,6 @@ export GEM_HOME="$HOME/.gem"
 
 # cscope DB file path
 export CSCOPE_DB=$HOME/git/cscope.out
+
+# Android toolchains
+export ANDROID_NDK=$HOME/Public/android-sdk/ndk-bundle/

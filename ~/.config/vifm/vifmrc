@@ -81,7 +81,11 @@ mark b ~/.local/bin/
 mark g ~/git
 mark d ~/Downloads
 mark p ~/Pictures
+mark P ~/Public
 mark m ~/Music
+mark M ~/more
+mark s ~/searchs
+mark D ~/Documents
 mark v ~/Videos
 mark o /mnt/Others
 mark h ~/
