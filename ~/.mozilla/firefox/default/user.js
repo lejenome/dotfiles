@@ -1,6 +1,6 @@
 /* global user_pref */
 /* jshint maxlen: false, esnext:true */
-user_pref("browser.newtabpage.pinned",'[{"url":"https://www.facebook.com/","title":"Facebook"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"},{"url":"https://www.hackerrank.com/contests","title":"HackerRank"}]');
+user_pref("browser.newtabpage.pinned",'[{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"},{"url":"https://www.hackerrank.com/contests","title":"HackerRank"}]');
 user_pref("browser.search.defaultenginename", "Google");
 // updeter config
 user_pref("app.update.auto", true);
