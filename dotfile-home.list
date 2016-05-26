@@ -101,6 +101,8 @@ l .mrconfig
 l .urxvt/ext
 l .xmodmap
 
+l .config/proxy.pac
+
 c .config/feednix/config.json
 c .config/aria2/session.lock
 c .cmus/autosave
