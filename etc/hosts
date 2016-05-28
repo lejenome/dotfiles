@@ -28,9 +28,9 @@
 192.168.20.6    wifi.firas.ap
 192.168.20.7    mobile.firas.ap
 
-196.203.59.42	connexion.ooredoo.tn
-196.203.59.19	ooredoo.tn www.ooredoo.tn espaceclient.ooredoo.tn
-196.203.59.12	eddenyalive.com
-41.228.40.69	espaceclient.eddenyalive.com
+#196.203.59.42	connexion.ooredoo.tn
+#196.203.59.19	ooredoo.tn www.ooredoo.tn espaceclient.ooredoo.tn
+#196.203.59.12	eddenyalive.com
+#41.228.40.69	espaceclient.eddenyalive.com
 
 # End of file

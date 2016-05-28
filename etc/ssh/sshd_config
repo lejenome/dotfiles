@@ -118,7 +118,7 @@ Compression delayed
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner /etc/issue
 
 # override default of no subsystems
 Subsystem	sftp	/usr/lib/ssh/sftp-server
