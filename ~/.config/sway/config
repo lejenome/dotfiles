@@ -26,7 +26,7 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-    bindsym $mod+Return exec i3-sensible-terminal -e ~/.i3/MAIN.sh
+    bindsym $mod+Return exec i3-sensible-terminal -e $HOME/.config/i3/MAIN.sh
     bindsym $mod+Shift+q kill
     bindsym $mod+d exec dmenu_run
 
@@ -126,7 +126,7 @@ mode "resize" {
 # finds out, if available)
 bar {
 	font pango:DejaVu Sans Mono, Icons 7
-	status_command $HOME/.i3/conky-i3bar
+	status_command conky --config=$HOME/.config/i3/conky.conf
 	position top
 
 	colors {
@@ -155,17 +155,17 @@ bar {
 # used sudoers to remove the needs to enter password
     bindsym Pause         exec  sudo systemctl suspend
     bindsym Scroll_Lock   exec  sudo shutdown 0
-    bindsym XF86Search    exec  ~/.i3/keymouse.sh
+    bindsym XF86Search    exec  ~/.config/i3/keymouse.sh
 # FIXME: FN + F4
-# bindsym 0xffc1        exec  "~/.i3/toggle-display"
+# bindsym 0xffc1        exec  "~/.config/i3/toggle-display"
     bindsym XF86Mail      exec  getmails
     bindsym XF86HomePage  exec  i3-msg 'workspace 2:  TERM'
     bindsym XF86Explorer  exec  urxvt-vifm
 
 
-    bindsym $mod+Shift+m exec sh ~/.i3/keymouse.sh
-    bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.i3/TERM.sh
-    bindsym $mod+Shift+w exec ~/.i3/load_web_ws_layout.sh
+    bindsym $mod+Shift+m exec sh ~/.config/i3/keymouse.sh
+    bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.config/i3/TERM.sh
+    bindsym $mod+Shift+w exec ~/.config/i3/load_web_ws_layout.sh
 
 # Going Back and Forth
     bindsym $mod+z workspace back_and_forth
