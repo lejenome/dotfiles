@@ -9,6 +9,16 @@ elif [[ $XDG_VTNR -eq 2 ]]; then
 #	export ELM_ENGINE=wayland_egl
 	enlightenment_start
 	exit
-elif [[ $XDG_VTNR -eq 3 ]]; then
-	weston
+elif [[ -z $DISPLAY && $XDG_VTNR -eq 3 ]]; then
+	# Autostart apps/daemons
+	#[[ -f ~/.fehbg ]] && sh ~/.fehbg &
+	urxvtd -q -o &
+	#redshift &
+	#pokoy &
+	#unclutter &
+	#numlockx &
+	#xautolock -time 5 -locker slimlock &
+	#setxkbmap fr
+	dmenu_path >/dev/null & # cache exec path
+	sway
 fi
