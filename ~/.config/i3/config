@@ -126,7 +126,7 @@ mode "resize" {
 # finds out, if available)
 bar {
 	font pango:DejaVu Sans Mono, Icons 7
-	status_command $HOME/.config/i3/conky-i3bar
+	status_command conky --config=$HOME/.config/i3/conky.conf
 	position top
 
 	colors {
