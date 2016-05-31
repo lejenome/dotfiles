@@ -76,7 +76,7 @@ l .config/ncmpcpp
 l .config/mpd
 l .config/mpv
 l .mplayer/config
-l .i3
+l .config/i3
 l .hgrc
 l .urlview
 l .vimperatorrc

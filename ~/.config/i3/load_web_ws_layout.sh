@@ -1,6 +1,6 @@
 #!/bin/bash
 
-i3-msg "workspace \"2:&#xf0ac;  WEB\"; append_layout $HOME/.i3/web_ws_layout.json"
+i3-msg "workspace \"2:&#xf0ac;  WEB\"; append_layout $HOME/.config/i3/web_ws_layout.json"
 ($BROWSER &)
 # st -c else {urxvt,xterm} -name
 [[ "$TERMINAL" == st* ]] && NAMEARG="-c" || NAMEARG="-name"
