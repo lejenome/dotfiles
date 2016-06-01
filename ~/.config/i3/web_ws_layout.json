@@ -7,8 +7,11 @@
        "x": 0,
        "y": 0
     },
-    "percent": 0.7,
+   "percent": 0.7,
     "swallows": [
+       {
+        "class": "qutebrowser"
+       },
        {
         "window_role": "^browser$"
        }

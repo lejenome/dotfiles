@@ -19,7 +19,7 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 # DEFAULT tools and directories
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='firefox'
+export BROWSER='qutebrowser'
 [ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 export MAIL="$HOME/mail"
 export EMAIL='bmoez.j@gmail.com'
@@ -51,7 +51,9 @@ export SDL_VIDEO_X11_DGAMOUSE=0
 export SDL_AUDIODRIVER=alsa # force alsa audio driver
 
 # XKB
-export XKB_DEFAULT_LAYOUT=fr
+export XKB_DEFAULT_LAYOUT=fr,us,ma
+export XKB_DEFAULT_MODEL=pc105
+export XKB_DEFAULT_OPTIONS=grp:rwin_toggle
 #export XKB_DEFAULT_VARIANT=azerty
 
 # XDG envars
@@ -75,3 +77,6 @@ export STEAM_RUNTIME=0
 
 # XML Catalog
 export XML_CATALOG_FILES="${HOME}/.config/xml/catalog.xml /etc/xml/catalog"
+
+# SWAY
+export SWAYSOCK=/run/user/$UID/sway-ipc.sock

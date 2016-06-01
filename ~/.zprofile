@@ -20,5 +20,6 @@ elif [[ -z $DISPLAY && $XDG_VTNR -eq 3 ]]; then
 	#xautolock -time 5 -locker slimlock &
 	#setxkbmap fr
 	dmenu_path >/dev/null & # cache exec path
+	export I3SOCK=$SWAYSOCK
 	sway
 fi

@@ -142,7 +142,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i, firefox %f &
+filextype *.pdf zathura %c %i, $BROWSER %f &, firefox %f &
 fileviewer *.pdf pdftotext -nopgbrk %c -
 filextype *.pdf.gz
 	\ gunzip -d -k -c %f |zathura -&,
@@ -176,7 +176,8 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.m
 
 " Web
 filextype *.html,*.htm,*.svg
-        \ firefox %f >/dev/null &,
+        \ qutebrowser %f 2>&1 >/dev/null &,
+        \ firefox %f 2>&1 >/dev/null &,
 filetype *.html,*.htm links, lynx
 
 " Object

@@ -67,11 +67,11 @@ l .config/surfraw/conf
 l .config/chromium-flags.conf
 l .config/git
 l .config/zathura
-l .config/conky
 l .config/dunst
 l .config/nvim
 l .config/sway
 l .config/xml
+l .config/qutebrowser
 l .config/ncmpcpp
 l .config/mpd
 l .config/mpv
