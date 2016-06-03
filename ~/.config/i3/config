@@ -30,6 +30,7 @@ floating_modifier $mod
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
     bindsym $mod+d exec dmenu_run
+    bindsym $mod+shift+d exec i3-dmenu-desktop
 
 # change focus
     bindsym $mod+j focus left

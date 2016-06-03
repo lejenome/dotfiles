@@ -30,6 +30,8 @@ floating_modifier $mod
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
     bindsym $mod+d exec dmenu_run
+    bindsym $mod+shift+d exec i3-dmenu-desktop
+
 
 # change focus
     bindsym $mod+j focus left
@@ -208,7 +210,7 @@ workspace "$ws10" output LVDS-1
     bindsym XF86MonBrightnessUp    exec  sudo backlightctl +10
     bindsym XF86MonBrightnessDown  exec  sudo backlightctl -10
     bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')
-    bindsym Print         exec  scrot
+    bindsym Print         exec  swaygrab
 # used sudoers to remove the needs to enter password
     bindsym Pause         exec  sudo systemctl suspend
     bindsym Scroll_Lock   exec  sudo shutdown 0
