@@ -189,6 +189,7 @@ fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
 filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.gif,*.xpm
+        \ imv -f -s %d -n %d/%c >/dev/null,
         \ sxiv -a -f %f>/dev/null,
         \ feh -FZ %d --start-at %d/%c 2>/dev/null,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null

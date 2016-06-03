@@ -1,0 +1,16 @@
+#!/bin/zsh
+export CLUTTER_BACKEND=wayland
+export GDK_BACKEND=wayland
+export QT_QPA_PLATFORM=wayland-egl
+export SDL_VIDEODRIVER=wayland
+
+export ECORE_EVAS_ENGINE=wayland_egl
+export ELM_ENGINE=wayland_egl
+export E_WL_FORCE=drm
+export ELM_DISPLAY=wl
+export ELM_ACCEL=opengl
+
+export WLC_XWAYLAND=0
+export WLC_LIBINPUT=1
+
+export TERMINAL=sakura

@@ -7,3 +7,12 @@
 .titlebar {
 	border-radius: 0;
 }
+
+.header-bar {
+  background-image: none;
+  background-color: #ededed;
+  box-shadow: none;
+}
+GtkLabel.title {
+  opacity: 0;
+}
