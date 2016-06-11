@@ -9,11 +9,7 @@ elif [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]]; then
 	dmenu_path >/dev/null & # cache exec path
 	export I3SOCK=$SWAYSOCK
 	exec sway
-elif [[ $XDG_VTNR -eq 3 ]]; then
-	[[ -e ~/.zsh/00-wayland ]] && source ~/.zsh/00-wayland
-	export E_WL_FORCE=drm
-      	export ELM_DISPLAY=wl
-    	export ELM_ACCEL=opengl
-#	export ELM_ENGINE=wayland_egl
-	exec enlightenment_start
+#elif [[ $XDG_VTNR -eq 3 ]]; then
+#	[[ -e ~/.zsh/00-wayland ]] && source ~/.zsh/00-wayland
+#	exec enlightenment_start
 fi
