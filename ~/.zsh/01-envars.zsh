@@ -24,7 +24,7 @@ export SHELL='/bin/zsh'
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
 export CFLAGS="-march=native -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -fdiagnostics-color=auto" # -flto=4
-export CXXFLAGS=${CFLAGS}
+export CXXFLAGS="${CFLAGS}"
 # export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto" # --fuse-ld=gold #  Bdirect  # -zdynsort # -hashvals #  -Wl,-flto ### -Wl,--hash-style=gnu ###  -Wl,--enable-new-dtags
 LDFLAGS="${LDFLAGS} -B/usr/bin/ld.gold" #use gold linker with clang
 LDFLAGS="${LDFLAGS} -fuse-ld=gold"      #use gold linker with gcc
