@@ -142,7 +142,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i, $BROWSER %f &, firefox %f &
+filextype *.pdf zathura %c %i &, $BROWSER %f &, firefox %f &
 fileviewer *.pdf pdftotext -nopgbrk %c -
 filextype *.pdf.gz
 	\ gunzip -d -k -c %f |zathura -&,
@@ -150,12 +150,12 @@ filextype *.pdf.gz
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
-        \ zathura %f,
+        \ zathura %f &,
         \ gv %c %i &,
 
 " Djvu
 filextype *.djvu
-        \ zathura %f,
+        \ zathura %f &,
 
 filextype *.epub,*.mobi,*.chm,*.fb2
 	\ FBReader %f &,
@@ -170,7 +170,7 @@ fileviewer *.flac soxi
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
         \ mpv --no-terminal --fullscreen %f &,
-        \ mplayer %f,
+        \ mplayer %f &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
          \ ffprobe -pretty %c 2>&1
 
@@ -189,9 +189,9 @@ fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
 filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.gif,*.xpm
-        \ imv -f -s %d -n %d/%c >/dev/null,
-        \ sxiv -a -f %f>/dev/null,
-        \ feh -FZ %d --start-at %d/%c 2>/dev/null,
+        \ imv -f -s %d -n %d/%c >/dev/null &,
+        \ sxiv -a -f %f>/dev/null &,
+        \ feh -FZ %d --start-at %d/%c 2>/dev/null &,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5

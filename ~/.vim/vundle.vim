@@ -35,17 +35,18 @@ Plugin 'jamessan/vim-gnupg'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'tpope/vim-fugitive'
 
+" lang pack for vim (syntax, compiler, indent, ...)
+Plugin 'sheerun/vim-polyglot'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " CSS3 & LESS Syntax
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'hail2u/vim-css3-syntax'
-"Plugin 'skammer/vim-css-color' " f**k slow
-Plugin 'groenewege/vim-less'
-
+" Plugin 'hail2u/vim-css3-syntax'
+""Plugin 'skammer/vim-css-color' " f**k slow
+" Plugin 'groenewege/vim-less'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " HTML5 Syntax
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'othree/html5.vim'
+" Plugin 'othree/html5.vim'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR SCHEME
@@ -137,22 +138,25 @@ let g:goyo_height='90%'
 let g:goyo_width=80
 
 
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'exu/pgsql.vim'
+" Plugin 'exu/pgsql.vim'
 
-Plugin 'ivalkeen/vim-simpledb'
-let g:simpledb_show_timing = 0
+" Plugin 'ivalkeen/vim-simpledb'
+" let g:simpledb_show_timing = 0
 
-Plugin 'NLKNguyen/papercolor-theme'
+" Plugin 'NLKNguyen/papercolor-theme'
 
 let python_highlight_all = 1
-Plugin 'hdima/python-syntax'
+" Plugin 'hdima/python-syntax'
 
-Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'godlygeek/tabular'
+" Plugin 'plasticboy/vim-markdown'
+" set conceallevel=2
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini']
 
 Plugin 'airblade/vim-gitgutter'
 
@@ -231,6 +235,8 @@ nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 
 let g:syntastic_java_javac_classpath = 'src/:src/*/java/:lib/'
+
+Plugin 'Ada-Bundle'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
