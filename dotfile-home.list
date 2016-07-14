@@ -34,6 +34,7 @@ l .mailcap
 l .gtkrc-2.0
 l .bash_profile
 l .zsh
+l .ipython/profile_default/ipython_config.py
 l .muttrc
 l .polipo
 #l .config/gtk-2.0
