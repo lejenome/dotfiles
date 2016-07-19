@@ -1,42 +1,105 @@
 
-[git/linux]
-checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
-
-[git/Clementine]
+[/mnt/Others/git/Clementine]
 checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementine'
 
-[git/vimperator-labs]
-checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
-
-[git/angular]
+[/mnt/Others/git/angular]
 checkout = git clone 'https://github.com/angular/angular' 'angular'
 
-[git/angular.js]
-checkout = git clone 'https://github.com/angular/angular.js' 'angular.js'
+[/mnt/Others/git/angular-cli]
+checkout = git clone 'https://github.com/angular/angular-cli' 'angular-cli'
 
-[git/buildroot]
-checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
+[/mnt/Others/git/clang]
+checkout = git clone 'https://github.com/llvm-mirror/clang' 'clang'
 
-[git/kernel_gcc_patch]
+[/mnt/Others/git/coreboot]
+checkout = git clone 'http://review.coreboot.org/p/coreboot.git' 'coreboot'
+
+[/mnt/Others/git/devdocs]
+checkout = git clone 'https://github.com/Thibaut/devdocs.git' 'devdocs'
+
+[/mnt/Others/git/electron]
+checkout = git clone 'https://github.com/atom/electron' 'electron'
+
+[/mnt/Others/git/emscripten-ports/SDL2]
+checkout = git clone 'https://github.com/emscripten-ports/SDL2' 'SDL2'
+
+[/mnt/Others/git/emscripten-ports/SDL2_ttf]
+checkout = git clone 'https://github.com/emscripten-ports/SDL2_ttf' 'SDL2_ttf'
+
+[/mnt/Others/git/emscripten-freetype]
+checkout = git clone 'https://github.com/juj/emscripten-freetype' 'emscripten-freetype'
+
+[/mnt/Others/git/firefox-hg]
+checkout = hg clone 'http://hg.mozilla.org/mozilla-central' 'firefox-hg'
+
+[/mnt/Others/git/jpm]
+checkout = git clone 'github:mozilla/jpm' 'jpm'
+
+[/mnt/Others/git/kernel_gcc_patch]
 checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_patch'
 
-[git/ncmpcpp]
-checkout = git clone 'https://github.com/arybczak/ncmpcpp' 'ncmpcpp'
+[/mnt/Others/git/libcxx]
+checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
 
-[git/sdl2]
+[/mnt/Others/git/libbus1]
+checkout = git clone 'https://github.com/bus1/libbus1.git' 'libbus1'
+
+[/mnt/Others/git/linux]
+checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
+
+[/mnt/Others/git/mbed]
+checkout = git clone 'https://github.com/mbedmicro/mbed/' 'mbed'
+
+[/mnt/Others/git/sdl2]
 checkout = hg clone 'https://hg.libsdl.org/SDL' 'sdl2'
 
-[git/SDL_ttf]
+[/mnt/Others/git/SDL_ttf]
 checkout = hg clone 'https://hg.libsdl.org/SDL_ttf/' 'SDL_ttf'
 
-[git/stdman]
-checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
-
-[git/sway]
+[/mnt/Others/git/sway]
 checkout = git clone 'https://github.com/SirCmpwn/sway' 'sway'
 
-[git/zsh-syntax-highlighting]
-checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting.git' 'zsh-syntax-highlighting'
+[/mnt/Others/git/urxvt-font-size]
+checkout = git clone 'https://github.com/majutsushi/urxvt-font-size.git' 'urxvt-font-size'
 
-[git/angular.io]
-checkout = git clone 'https://github.com/angular/angular.io' 'angular.io'
+[/mnt/Others/git/vimperator-labs]
+checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
+
+[/mnt/Others/git/zeal]
+checkout = git clone 'https://github.com/zealdocs/zeal/' 'zeal'
+
+[/mnt/Others/git/zephyr]
+checkout = git clone 'https://gerrit.zephyrproject.org/r/zephyr' 'zephyr'
+
+[/mnt/Others/git/angular.js]
+checkout = git clone 'https://github.com/angular/angular.js' 'angular.js'
+
+[/mnt/Others/git/addons-validator]
+checkout = git clone 'https://github.com/mozilla/addons-validator' 'addons-validator'
+
+[/mnt/Others/git/buildroot]
+checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
+
+[/mnt/Others/git/frecon]
+checkout = git clone 'https://chromium.googlesource.com/chromiumos/platform/frecon' 'frecon'
+
+[/mnt/Others/git/libarchive]
+checkout = git clone 'https://github.com/libarchive/libarchive/' 'libarchive'
+
+[/mnt/Others/git/llvm]
+checkout = git clone 'https://github.com/llvm-mirror/llvm' 'llvm'
+
+[/mnt/Others/git/oh-my-zsh]
+checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
+
+[/mnt/Others/git/rappel]
+checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
+
+[/mnt/Others/git/stdman]
+checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
+
+[/mnt/Others/git/Syte2]
+checkout = git clone 'https://github.com/rigoneri/Syte2' 'Syte2'
+
+[/mnt/Others/git/zlib]
+checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
