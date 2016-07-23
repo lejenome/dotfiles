@@ -29,12 +29,6 @@ checkout = git clone 'https://github.com/emscripten-ports/SDL2_ttf' 'SDL2_ttf'
 [/mnt/Others/git/emscripten-freetype]
 checkout = git clone 'https://github.com/juj/emscripten-freetype' 'emscripten-freetype'
 
-[/mnt/Others/git/firefox-hg]
-checkout = hg clone 'http://hg.mozilla.org/mozilla-central' 'firefox-hg'
-
-[/mnt/Others/git/jpm]
-checkout = git clone 'github:mozilla/jpm' 'jpm'
-
 [/mnt/Others/git/kernel_gcc_patch]
 checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_patch'
 
@@ -103,3 +97,6 @@ checkout = git clone 'https://github.com/rigoneri/Syte2' 'Syte2'
 
 [/mnt/Others/git/zlib]
 checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
+
+[/mnt/Others/git/firefox-hg]
+checkout = hg clone 'http://hg.mozilla.org/mozilla-central' 'firefox-hg'

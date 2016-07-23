@@ -72,7 +72,7 @@ set slowfs=curlftpfs
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
 " disable confirm dialog
-set noconfirm
+set confirm=
 
 " ------------------------------------------------------------------------------
 

@@ -3,6 +3,9 @@
 	email = "bmoez.j@gmail.com"
 	signingkey = "73659C9D"
 
+[commit]
+	gpgsign = true
+
 [core]
 	autocrlf = false
 	editor = vim

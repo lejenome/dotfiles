@@ -29,6 +29,21 @@
 *color7:     #dddddd
 *color15:    #dddddd
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!               Xautolock              !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Xautolock.time: 5
+Xautolock.locker: i3lock --dpms --color 000000 --inactivity-timeout 7 -f
+!Xautolock.corners: 0+00
+!Xautolock.cornerdelay: 1
+!Xautolock.cornerredelay: 30
+Xautolock.notify: 5
+Xautolock.notifier: notify-send 'Locking Display ...' --expire-time=4000 --urgency=critical
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                 urxvt                !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 URxvt*borderColor:        #151515
 URxvt*colorBD:            #ffffff
 URxvt*cursorColor:        #ff8939

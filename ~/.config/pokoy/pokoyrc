@@ -9,6 +9,7 @@ break				55:00	5:00	5:00
 break				10:00	0:10	0:00
 
 #font				-*-terminus-*-*-*-*-32-*-*-*-*-*-*-*
-#block				MPlayer
+block				MPlayer
 block				Popcorn Time
 block				mpv
+block				qemu-system-x86_64

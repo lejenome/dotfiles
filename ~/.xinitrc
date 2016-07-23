@@ -23,7 +23,7 @@ redshift &
 pokoy &
 unclutter &
 numlockx &
-xautolock -time 5 -locker "i3lock --dpms --color 000000 --inactivity-timeout 7 -f" &
+xautolock &
 setxkbmap fr
 dmenu_path & # cache exec path
 xmodmap ~/.xmodmap
