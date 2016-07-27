@@ -1,6 +1,6 @@
 c = get_config()
 
-c.TerminalInteractiveShell.autocall = 1
+# c.TerminalInteractiveShell.autocall = 1
 c.TerminalInteractiveShell.automagic = True
 c.TerminalInteractiveShell.confirm_exit = False
 c.TerminalInteractiveShell.display_completions = 'multicolumn'

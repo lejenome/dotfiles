@@ -2,4 +2,5 @@
 *.pacsave
 *.pacorig
 ~/.vim/bundle
+~/.config/qutebrowser/qsettings/
 !~
