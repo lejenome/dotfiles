@@ -10,6 +10,8 @@ flags = [
     '-DNDEBUG',
     '-I',
     '.',
+    '-I',
+    'include/'
 ]
 
 SOURCE_EXTENSIONS = ['.cpp', '.cxx', '.cc', '.c', '.m', '.mm']
