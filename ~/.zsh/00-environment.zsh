@@ -19,11 +19,11 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 # DEFAULT tools and directories
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='qutebrowser'
+export BROWSER='/usr/bin/qutebrowser'
 [ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
 export MAIL="$HOME/mail"
 export EMAIL='bmoez.j@gmail.com'
-export TERMINAL='urxvtc'
+export TERMINAL='/usr/bin/urxvtc'
 
 # node modules additional lookup dirs
 export NODE_PATH="$HOME/.node/lib/node_modules"

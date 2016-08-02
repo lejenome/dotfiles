@@ -52,6 +52,13 @@ checkout = git clone 'https://chromium.googlesource.com/chromiumos/platform/frec
 [/mnt/Others/git/stdman]
 checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
 
+[git/mdp]
+checkout = git clone 'https://github.com/visit1985/mdp' 'mdp'
+
+[git/pokoy]
+checkout = git clone 'https://github.com/ttygde/pokoy' 'pokoy'
+
+
 
 
 [DEFAULT]
