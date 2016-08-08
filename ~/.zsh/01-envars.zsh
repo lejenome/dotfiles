@@ -23,12 +23,10 @@ export SHELL='/bin/zsh'
 
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
-export CFLAGS="-march=native -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -fdiagnostics-color=auto" # -flto=4
+export CFLAGS="-march=native -mtune=native -O2 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fdiagnostics-color=auto -flto=8"
 export CXXFLAGS="${CFLAGS}"
-# export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto" # --fuse-ld=gold #  Bdirect  # -zdynsort # -hashvals #  -Wl,-flto ### -Wl,--hash-style=gnu ###  -Wl,--enable-new-dtags
-LDFLAGS="${LDFLAGS} -B/usr/bin/ld.gold" #use gold linker with clang
-LDFLAGS="${LDFLAGS} -fuse-ld=gold"      #use gold linker with gcc
-export LDFLAGS="${LDFLAGS} -Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto" # Bdirect # -zdynsort # -hashvals # -Wl,-flto ### -Wl,--hash-style=gnu ###  -Wl,--enable-new-dtags
+LDFLAGS="-B/usr/bin/ld.gold -fuse-ld=gold" #use gold linker with clang & use gold linker with gcc
+export LDFLAGS="${LDFLAGS} -Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto=8" # Bdirect # -zdynsort # -hashvals
 export MAKEFLAGS="-j8 -Otarget"
 export DEBUG_CFLAGS="-g -fvar-tracking-assignments"
 export DEBUG_CXXFLAGS="${DEBUG_CFLAGS}"
