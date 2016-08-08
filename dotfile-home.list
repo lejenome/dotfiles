@@ -68,6 +68,7 @@ l .config/surfraw/conf
 l .config/chromium-flags.conf
 l .config/transmission/settings.json
 l .config/transmission-daemon/settings.json
+l .config/transmission-remote-cli/settings.cfg
 l .config/git
 l .config/zathura
 l .config/dunst
