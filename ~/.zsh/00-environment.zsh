@@ -71,6 +71,9 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on
 	-Djava.net.useSystemProxies=true
 	-Dsun.java2d.opengl=true'
 
+# Python
+export PYTHONOPTIMIZE=1
+
 # Steam
 export STEAM_FRAME_FORCE_CLOSE=1
 export STEAM_RUNTIME=0

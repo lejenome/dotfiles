@@ -17,18 +17,6 @@ preexec() {
 	esac
 } # }}}
 
-sagem-reboot() {
-	local pw="$(gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/secret/router-pw.gpg)"
-	curl --silent -u "admin:$pw" "http://192.168.1.1/rebootinfo.cgi" >/dev/null
-}
-sagem-status() {
-	local pw="$(gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/secret/router-pw.gpg)"
-	links -dump "http://admin:${pw}@192.168.1.1/wancfg.cmd?action=refresh" \
-		| tail -3 \
-		| awk '(NR == 1 || NR == 2) {print $2" "$3" "$4} END {print}' \
-		| column -t
-}
-
 # {{{ Oneliners
 # go to dir after cp/mv/mkdir
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
@@ -137,7 +125,8 @@ say() {
 	SL=${SL:-en}
 	TL=${TL:-$SL}
 	TEXT="$(echo "$@" | perl -MURI::Escape -ne 'chomp;print uri_escape($_)')"
-	mpv -really-quiet "http://translate.google.com/translate_tts?ie=UTF-8&tl=$TL&sl=$SL&q=$TEXT" &> /dev/null
+	mpv --really-quiet --user-agent=Mozilla "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${TL}&sl=${SL}&q=${TEXT}"
+
 }
 translate() {
 	[[ -z "$@" ]] && echo "USAGE: `basename $0` [-[FROM_LANG][TO_LANG]] text..." >&2 && return
@@ -146,7 +135,7 @@ translate() {
 	SL=${SL:-en}
 	TL=${TL:-fr}
 	TEXT="$(echo "$@" | perl -MURI::Escape -ne 'chomp;print uri_escape($_)')"
-	curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?client=t&ie=UTF-8&text=$TEXT&sl=$SL&tl=$TL" | awk -F'"' '{print $2}'
+	curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?client=tw-ob&ie=UTF-8&text=$TEXT&sl=$SL&tl=$TL" | awk -F'"' '{print $2}'
 }
 weather() {
 	local city=${1:-Sfax}

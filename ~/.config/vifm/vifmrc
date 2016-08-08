@@ -164,8 +164,8 @@ filextype *.epub,*.mobi,*.chm,*.fb2
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
-       \ mplayer %f,
        \ mpv --no-video %f,
+       \ mplayer %f,
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 

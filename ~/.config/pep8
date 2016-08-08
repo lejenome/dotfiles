@@ -3,5 +3,5 @@ ignore = E402,E302
 # ignores:
 #  E402: import not at top of file
 #  E302: 2 blank lines before func and class def
-max-line-length = 200
+# max-line-length = 200
 # exclude=.git,.svn,CSV,.bzr,.hg,__pycache__,.tox,env,build,doc

@@ -96,6 +96,10 @@ alias sr='sudo systemctl restart'
 alias se='sudo systemctl enable'
 alias sd='sudo systemctl disable'
 alias s!='systemctl status -l'
+alias -- u+='systemctl --user start'
+alias -- u-='systemctl --user stop'
+alias ur='systemctl --user restart'
+alias u!='systemctl --user status -l'
 
 # Journalctl
 alias jx="sudo journalctl -xea"

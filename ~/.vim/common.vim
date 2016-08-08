@@ -145,7 +145,7 @@ set undoreload=10000
 autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent
 autocmd FileType javascript,css,html,xml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us,fr textwidth=79
+autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us,fr textwidth=79
 autocmd FileType mail setlocal spell spelllang=en_us,fr textwidth=79
 
 autocmd BufNewFile,BufRead *.pgsql,*.plpgsql set filetype=sql syntax=pgsql

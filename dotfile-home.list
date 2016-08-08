@@ -66,6 +66,8 @@ l .config/user-dirs.dirs
 l .config/user-dirs.locale
 l .config/surfraw/conf
 l .config/chromium-flags.conf
+l .config/transmission/settings.json
+l .config/transmission-daemon/settings.json
 l .config/git
 l .config/zathura
 l .config/dunst
