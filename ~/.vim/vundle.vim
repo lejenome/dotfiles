@@ -135,9 +135,9 @@ let g:github_same_window = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-if !has('nvim') && (v:version > 704 || has('patch330'))
-	Plugin 'jeaye/color_coded'
-endif
+"if !has('nvim') && (v:version > 704 || has('patch330'))
+"	Plugin 'jeaye/color_coded'
+"endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope_maps.vim Plugin
