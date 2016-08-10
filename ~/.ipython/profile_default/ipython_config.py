@@ -26,4 +26,6 @@ c.TerminalInteractiveShell.highlighting_style = 'native'
 
 c.InteractiveShellApp.exec_lines = ["""
 %rehashx
+import sys
+import os
 """]
