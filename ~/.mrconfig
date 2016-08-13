@@ -14,6 +14,9 @@ checkout = git clone 'https://github.com/SirCmpwn/sway' 'sway'
 [/mnt/Others/git/oh-my-zsh]
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
 
+[git/zsh-syntax-highlighting]
+checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting.git' 'zsh-syntax-highlighting'
+
 [/mnt/Others/git/linux]
 checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
 
