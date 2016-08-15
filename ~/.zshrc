@@ -15,10 +15,10 @@ zmodload zsh/terminfo
 
 bindkey -v
 
-if [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -e "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+	source "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 else
-	source $HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 for r in $HOME/.zsh/*.zsh; do
