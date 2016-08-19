@@ -17,6 +17,9 @@ checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
 [git/zsh-syntax-highlighting]
 checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting.git' 'zsh-syntax-highlighting'
 
+[git/LS_COLORS]
+checkout = git clone 'https://github.com/trapd00r/LS_COLORS' 'LS_COLORS'
+
 [/mnt/Others/git/linux]
 checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
 

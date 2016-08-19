@@ -45,7 +45,7 @@ zstyle ':completion:*:*:kill:*:processes' \
   list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 zstyle ':completion::complete:*'             use-cache on
-zstyle ':completion::complete:*'             cache-path ~/.zcompcache
+zstyle ':completion::complete:*'             cache-path "$HOME/.local/share/zsh/zcompcache"
 zstyle ':completion:*:processes'             command 'ps -axw'
 zstyle ':completion:*:processes-names'       command 'ps -awxho command'
 zstyle ':completion:*'                       matcher-list 'm:{a-z}={A-Z}'
@@ -58,7 +58,7 @@ zstyle ':completion:*:*:(mplayer|mpv):*'           file-patterns   \
        '*:all-files' '*(-/):directories'
 
 zstyle ':completion:*:*:(vim|rview|vimdiff|xxd|nvim):*:*files' \
-  ignored-patterns '*~|*.(old|bak|zwc|viminfo|rxvt-*|zcompdump|zcompcache)|pm_to_blib|cover_db|blib' \
+  ignored-patterns '*~|*.(old|bak|zwc|viminfo|rxvt-*|zcompdump*|zcompcache)|pm_to_blib|cover_db|blib' \
   file-sort modification
 zstyle ':completion:*:*:(vim|rview|vimdiff|xxd|nvim):*' \
   file-sort modification
@@ -124,7 +124,7 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 zstyle '*' single-ignored show
 
 if whence dircolors >/dev/null; then
-  eval $( dircolors -b $HOME/.zsh/LS_COLORS )
+  eval $( dircolors -b ~/git/LS_COLORS/LS_COLORS )
   zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
   # alias ls='ls --color'
 else

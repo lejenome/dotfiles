@@ -5,9 +5,15 @@ After=network.target docker.socket
 Requires=docker.socket
 
 [Service]
-ExecStart=/usr/bin/docker --dns 8.8.8.8 -d -H fd://
+Type=notify
+ExecStart=/usr/bin/docker daemon --dns 8.8.8.8 -H fd://
+MountFlags=slave
 LimitNOFILE=1048576
 LimitNPROC=1048576
+LimitCORE=infinity
+TimeoutStartSec=0
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
 
 [Install]
 WantedBy=multi-user.target

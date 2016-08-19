@@ -1,7 +1,10 @@
 *.pacnew
 *.pacsave
 *.pacorig
-~/.vim/bundle
-~/.config/qutebrowser/qsettings/
+/~/.vim/bundle
+/~/.config/qutebrowser/qsettings/
 !~
-.flagged
+/.flagged
+/etc/systemd/*/*.wants/
+/~/.config/zsh/.zcompdump*
+/~/.zsh/zcompcache/

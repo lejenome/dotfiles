@@ -6,7 +6,7 @@ http://planet.ubuntu.com/rss20.xml "distros"
 http://distrowatch.feedsportal.com/c/34025/f/617435/index.rss "distros"
 http://feeds.feedburner.com/d0od?format=xml "distros"
 http://feeds.feedburner.com/webupd8?format=xml "distros"
-http://www.developpez.com/index/rss
+# http://www.developpez.com/index/rss
 http://www.linux-magazine.com/rss/feed/lmi_news
 http://planet.gnome.org/atom.xml
 http://planet.mozilla.org/atom.xml
@@ -16,5 +16,5 @@ https://www.dreamspark.com/RSS/HomePageFeed.aspx?Locale=en-US
 http://www.authenticjobs.com/rss/custom.php?terms=&type=3,5,2,6,4&cats=&onlyremote=1&location=
 http://www.jeunesse.francophonie.org/flux/appels-et-concours/rss.xml
 
-http://rss.gmane.org/topics/complete/gmane.linux.kernel.kernelnewbies
+# http://rss.gmane.org/topics/complete/gmane.linux.kernel.kernelnewbies
 http://www.ibm.com/developerworks/views/linux/rss/libraryview.jsp?site_id=1&contentarea_by=Linux&topic_by=&product_by=&search_by=&industry_by=&sort_by=Date&series_title_by=&type_by=All%20Types
