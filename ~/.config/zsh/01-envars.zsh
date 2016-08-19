@@ -17,6 +17,8 @@ export MANPAGER="less"
 export SDCV_PAGER="less"
 export _NROFF_U=1
 
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+
 #export DISPLAY=:0
 
 export SHELL='/bin/zsh'

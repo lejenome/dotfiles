@@ -16,10 +16,8 @@ l .mozilla/firefox/default/user.js
 l .mozilla/firefox/default/chrome
 l .mozilla/firefox/default/search-metadata.json
 l .mozilla/firefox/default/searchplugins/duckduckgo.xml
-l .vim/common.vim
-l .vim/vundle.vim
 l .vimpagerrc
-l .vimrc
+l .config/vim
 l .cmus/rc
 l .weechat/weechat.conf
 l .weechat/logger.conf

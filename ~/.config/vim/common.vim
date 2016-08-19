@@ -140,7 +140,6 @@ set undodir=~/.cache " better be on a tmpfs type mount point
 set undofile
 set undoreload=10000
 
-
 " File Types special configs
 autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent
 autocmd FileType javascript,css,html,xml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab

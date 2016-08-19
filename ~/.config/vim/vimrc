@@ -1,6 +1,7 @@
 " uncommon settings
+" set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 set nocompatible
-autocmd! bufwritepost .vimrc source %
+"autocmd! bufwritepost .vimrc source %
 set ttyfast
 set encoding=utf-8   " use UTF-8 encoding
 
@@ -18,7 +19,7 @@ set viminfo+=n~/.cache/viminfo
 "set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 " vundle
-source ~/.vim/vundle.vim
+source ~/.config/vim/vundle.vim
 
 " common settings
-source ~/.vim/common.vim
+source ~/.config/vim/common.vim

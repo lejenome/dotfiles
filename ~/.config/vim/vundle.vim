@@ -1,12 +1,12 @@
 if has('vim_starting')
-  set rtp+=~/.vim/bundle/Vundle.vim
-  if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+  set rtp+=~/.local/share/vim/bundle/Vundle.vim
+  if !isdirectory(expand('~/.local/share/vim/bundle/Vundle.vim'))
     echo "Installing Vundle\n"
-    silent execute '!mkdir -p ~/.vim/bundle'
-    silent execute '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim'
+    silent execute '!mkdir -p ~/.local/share/vim/bundle'
+    silent execute '!git clone https://github.com/gmarik/Vundle.vim ~/.local/share/vim/bundle/Vundle.vim'
   endif
 endif
-call vundle#begin(expand("~/.vim/bundle"))
+call vundle#begin(expand("~/.local/share/vim/bundle"))
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'airblade/vim-rooter'
