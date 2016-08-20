@@ -1,0 +1,29 @@
+# $PYTHONSTARTUP - Python interactive startup script
+# vim: ft=python:ts=4:sw=4:et
+
+import math
+import os
+import sys
+
+def _init_():
+    import atexit
+    import readline
+    import rlcompleter
+
+    readline.parse_and_bind("tab: complete")
+
+    hist_file = os.path.expanduser("~/.cache/python.history")
+    if os.path.exists(hist_file):
+        readline.read_history_file(hist_file)
+    atexit.register(lambda: readline.write_history_file(hist_file))
+
+    fmt = lambda s: "\001%s\002" % s
+    csi = lambda s: fmt("\033[%sm" % s)
+
+    color = "38;5;169" if sys.version_info[0] >= 3 else "38;5;67"
+    name = "py%d.%d " % sys.version_info[0:2]
+
+    sys.ps1 = csi("") + csi(color) + name + csi("1") + ">>>" + csi("") + " "
+    sys.ps2 = " " * len(name) + csi(";1;30") + "..." + csi("") + " "
+
+_init_()

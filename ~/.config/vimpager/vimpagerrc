@@ -1,4 +1,4 @@
-source ~/.config/vim/vimrc
+source $XDG_CONFIG_HOME/vim/vimrc
 
 set nonumber
 set wrap

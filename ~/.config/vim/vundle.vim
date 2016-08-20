@@ -237,7 +237,7 @@ Plugin 'Ada-Bundle'
 Plugin 'jpalardy/vim-slime'
 let g:slime_target = 'tmux'
 let g:slime_python_ipython = 1
-let g:slime_paste_file = "$HOME/.cache/slime_paste"
+let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END

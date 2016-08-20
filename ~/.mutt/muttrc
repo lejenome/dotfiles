@@ -10,7 +10,7 @@ set use_from=yes
 set envelope_from=yes
 set hostname = "lejenome"
 
-set mailcap_path    = ~/.mailcap
+set mailcap_path    = $MAILCAP
 auto_view text/html
 alternative_order text/plain text/html
 
@@ -33,7 +33,7 @@ set pager_stop = yes
 
 set mbox_type=Maildir
 set folder=~/mail
-set header_cache=~/.cache/mutt
+set header_cache=$XDG_CACHE_HOME/mutt
 set spoolfile=+/
 set mbox=+mbox
 set record=+sent

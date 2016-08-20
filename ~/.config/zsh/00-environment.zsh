@@ -9,7 +9,6 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 [ -d /usr/bin/vendor_perl ] && export PATH="$PATH:/usr/bin/vendor_perl"
 [ -d /usr/lib/perl5/vendor_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/vendor_perl/bin"
 [ -d /usr/bin/core_perl ] && export PATH="$PATH:/usr/bin/core_perl"
-[ -d "$HOME/.perl5/bin" ] && export PATH="${PATH}:$HOME/.perl5/bin"
 
 [ -d /usr/share/perl6/vendor/bin ] && export PATH="$PATH:/usr/share/perl6/vendor/bin"
 
@@ -17,13 +16,16 @@ export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}
 [ -d "$HOME/.gem" ] && export PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
 
 # DEFAULT tools and directories
-export EDITOR='/usr/bin/vim'
-export VISUAL='/usr/bin/vim'
-export BROWSER='/usr/bin/qutebrowser'
-[ -e /usr/bin/vimpager ] && export MANPAGER='/usr/bin/vimpager'
+export NAME="Moez Bouhlel"
 export MAIL="$HOME/mail"
 export EMAIL='bmoez.j@gmail.com'
 export TERMINAL='/usr/bin/urxvtc'
+export TZ="Africa/Tunis"
+
+export EDITOR='/usr/bin/vim'
+export VISUAL='/usr/bin/vim'
+export BROWSER='/usr/bin/qutebrowser'
+export PAGER='less'
 
 # node modules additional lookup dirs
 export NODE_PATH="$HOME/.node/lib/node_modules"
@@ -65,11 +67,12 @@ if [[ -e "$HOME/.config/user-dirs.dirs" ]]; then
 fi
 
 # Java
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on
 	-Dswing.aatext=true
 	-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
 	-Djava.net.useSystemProxies=true
-	-Dsun.java2d.opengl=true'
+	-Dsun.java2d.opengl=true
+	-Duser.home=$XDG_DATA_HOME/Java"
 
 # Python
 export PYTHONOPTIMIZE=1
@@ -109,5 +112,10 @@ export HGRCPATH=/etc/merical/hgrc:/etc/merical/hgrc.d/:"$XDG_CONFIG_HOME"/hg/hgr
 export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
 export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME"/vimperator
 export VIMPAGER_RC="$XDG_CONFIG_HOME"/vimpager/vimpagerrc
+export GEMRC="$XDG_CONFIG_HOME"/gemrc
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
+export MAILCAP="$XDG_CONFIG_HOME/mailcap"
+export MAILCAPS="$MAILCAP"
+export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
 
 export MANPATH=:"$XDG_DATA_HOME"/man

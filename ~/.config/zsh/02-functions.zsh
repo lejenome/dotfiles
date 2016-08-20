@@ -39,7 +39,7 @@ epoch() { print $(( `echo $1 | cut -b 1-2` * 3600 + `echo $1 | cut -b 4-5` * 60 
 
 # {{{ Create ZSH named directory
 namedir() {
-	echo "$1=$PWD ;  : ~$1" >> ~/.config/zsh/directories
+	echo "$1=$PWD ;  : ~$1" >> $XDG_CONFIG_HOME/zsh/directories
 	. $XDG_CONFIG_HOME/zsh/directories
 } # }}}
 
