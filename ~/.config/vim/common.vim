@@ -136,7 +136,7 @@ endif
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
 
 " undo changes backups
-set undodir=~/.cache " better be on a tmpfs type mount point
+set undodir=$XDG_CACHE_HOME " better be on a tmpfs type mount point
 set undofile
 set undoreload=10000
 

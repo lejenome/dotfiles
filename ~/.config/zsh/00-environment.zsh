@@ -109,3 +109,5 @@ export HGRCPATH=/etc/merical/hgrc:/etc/merical/hgrc.d/:"$XDG_CONFIG_HOME"/hg/hgr
 export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
 export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME"/vimperator
 export VIMPAGER_RC="$XDG_CONFIG_HOME"/vimpager/vimpagerrc
+
+export MANPATH=:"$XDG_DATA_HOME"/man
