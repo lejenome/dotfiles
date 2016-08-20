@@ -79,10 +79,10 @@ export STEAM_FRAME_FORCE_CLOSE=1
 export STEAM_RUNTIME=0
 
 # XML Catalog
-export XML_CATALOG_FILES="${HOME}/.config/xml/catalog.xml /etc/xml/catalog"
+export XML_CATALOG_FILES="${XDG_CONFIG_HOME}/xml/catalog.xml /etc/xml/catalog"
 
 # SWAY
-export SWAYSOCK=/run/user/$UID/sway-ipc.sock
+export SWAYSOCK="$XDG_RUNTIME_DIR"/sway-ipc.sock
 
 # XDG CONFIG for some apps
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME"/gimp
@@ -97,8 +97,15 @@ export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export PYTHON_EGG_CACHE="$XDG_CACHE_HOME"/python-eggs
 export RLWRAP_HOME="$XDG_DATA_HOME"/rlwrap
 # export TMUX_TMPDIR="$XDG_RUNTIME_DIR"/tmux
-export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
+export RXVT_PERL_LIB="$XDG_CONFIG_HOME"/urxvt/ext
+export XENVIRONMENT="$XDG_CONFIG_HOME"/X11/xresources
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/Xiceauthority
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export ATOM_HOME="$XDG_DATA_HOME"/atom
+export HGRCPATH=/etc/merical/hgrc:/etc/merical/hgrc.d/:"$XDG_CONFIG_HOME"/hg/hgrc:"$XDG_CONFIG_HOME"/hgrc.d
+export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
+export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME"/vimperator
+export VIMPAGER_RC="$XDG_CONFIG_HOME"/vimpager/vimpagerrc
