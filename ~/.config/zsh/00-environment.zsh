@@ -83,3 +83,22 @@ export XML_CATALOG_FILES="${HOME}/.config/xml/catalog.xml /etc/xml/catalog"
 
 # SWAY
 export SWAYSOCK=/run/user/$UID/sway-ipc.sock
+
+# XDG CONFIG for some apps
+export GIMP2_DIRECTORY="$XDG_CONFIG_HOME"/gimp
+export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
+export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export LESSHISTFILE="$XDG_CACHE_HOME"/less_history
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
+export PYTHON_EGG_CACHE="$XDG_CACHE_HOME"/python-eggs
+export RLWRAP_HOME="$XDG_DATA_HOME"/rlwrap
+# export TMUX_TMPDIR="$XDG_RUNTIME_DIR"/tmux
+export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+export ICEAUTHORITY="$XDG_RUNTIME_DIR"/Xiceauthority
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc

@@ -1,0 +1,97 @@
+" vim: filetype=vim :
+highlight clear
+highlight Win             cterm=none ctermfg=default    ctermbg=none
+
+highlight CurrLine        cterm=bold ctermfg=default    ctermbg=blue
+
+highlight WildMenu        cterm=underline,reverse ctermfg=white ctermbg=black
+highlight CmdLine         cterm=none ctermfg=white ctermbg=black
+highlight ErrorMsg        cterm=none ctermfg=red ctermbg=black
+
+
+highlight TopLine	cterm=none	ctermfg=108	ctermbg=235
+highlight TopLineSel	cterm=bold	ctermfg=186	ctermbg=235
+highlight Border          cterm=none ctermfg=blue       ctermbg=none
+
+highlight Directory	cterm=none	ctermfg=108	ctermbg=237
+highlight CurrLine	cterm=none	ctermfg=223	ctermbg=235
+highlight OtherLine	cterm=none	ctermfg=247	ctermbg=237
+highlight Selected	cterm=none	ctermfg=116	ctermbg=238
+
+highlight JobLine	cterm=bold	ctermfg=116	ctermbg=238
+highlight StatusLine	cterm=bold	ctermfg=144	ctermbg=236
+highlight ErrorMsg	cterm=bold	ctermfg=115	ctermbg=237
+highlight WildMenu	cterm=bold	ctermfg=235	ctermbg=144
+
+" generic file types
+highlight BrokenLink cterm=bold ctermfg=232 ctermbg=196
+highlight Device cterm=bold ctermfg=113 ctermbg=default
+highlight Directory cterm=none ctermfg=30 ctermbg=default
+highlight Executable cterm=bold ctermfg=208 ctermbg=default
+highlight Fifo cterm=none ctermfg=126 ctermbg=default
+highlight Link cterm=none ctermfg=default ctermbg=default
+highlight Socket cterm=none ctermfg=197 ctermbg=default
+
+" file name specific highlight
+highlight /.*\.ini$|.*\.pcf$|.*\.psf$|.*\.viminfo$|.*cfg$|.*conf$|.*rc$/I cterm=bold ctermfg=default ctermbg=default
+highlight /.*\.coffee$|.*\.java$|.*\.js$|.*\.jsm$|.*\.jsp$/I cterm=bold ctermfg=074 ctermbg=default
+highlight /.*\.Rproj$/I cterm=none ctermfg=11 ctermbg=default
+highlight /.*\.H$|.*\.M$|.*\.S$|.*\.h$|.*\.h++$|.*\.hi$|.*\.hpp$|.*\.hxx$|.*\.ii$|.*\.m$|.*\.s$|.*\.tcc$/I cterm=none ctermfg=110 ctermbg=default
+highlight /.*\.doc$|.*\.docx$|.*\.odb$|.*\.odt$|.*\.rtf$/I cterm=none ctermfg=111 ctermbg=default
+highlight /.*\.docm$/I cterm=underline ctermfg=111 ctermbg=default
+highlight /.*\.allow$|.*\.ods$|.*\.xls$|.*\.xlsx$/I cterm=none ctermfg=112 ctermbg=default
+highlight /.*\.xlsxm$/I cterm=underline ctermfg=112 ctermbg=default
+highlight /.*\.IFO$|.*\.MOV$|.*\.avi$|.*\.divx$|.*\.m2v$|.*\.m4v$|.*\.mkv$|.*\.mov$|.*\.mp4$|.*\.mpeg$|.*\.mpg$|.*\.ogm$|.*\.rmvb$|.*\.sample$|.*\.wmv$/I cterm=none ctermfg=114 ctermbg=default
+highlight /.*\.3g2$|.*\.3gp$|.*\.asf$|.*\.f4v$|.*\.flv$|.*\.gp3$|.*\.gp4$|.*\.ogv$|.*\.ts$|.*\.webm$/I cterm=none ctermfg=115 ctermbg=default
+highlight /.*\.VOB$|.*\.vob$/I cterm=bold ctermfg=115 ctermbg=default
+highlight /.*\.application$|.*\.cue$|.*\.description$|.*\.directory$|.*\.m3u$|.*\.m3u8$|.*\.md5$|.*\.properties$|.*\.sfv$|.*\.srt$|.*\.theme$|.*\.torrent$|.*\.urlview$/I cterm=none ctermfg=116 ctermbg=default
+highlight /.*\.bin$|.*\.dmg$|.*\.iso$|.*\.nrg$|.*\.qcow$|.*\.sparseimage$|.*\.toast$|.*\.vcd$|.*\.vmdk$/I cterm=none ctermfg=124 ctermbg=default
+highlight /.*\.css$|.*\.eml$|.*\.htm$|.*\.html$|.*\.jhtm$|.*\.less$|.*\.mht$|.*\.mustache$|.*\.sass$|.*\.scss$/I cterm=bold ctermfg=125 ctermbg=default
+highlight /.*\.aiff$|.*\.alac$|.*\.ape$|.*\.cda$|.*\.flac$|.*\.midi$|.*\.pcm$|.*\.wav$|.*\.wv$|.*\.wvc$/I cterm=bold ctermfg=136 ctermbg=default
+highlight /.*\.3ga$|.*\.S3M$|.*\.aac$|.*\.au$|.*\.dat$|.*\.dts$|.*\.fcm$|.*\.m4a$|.*\.mid$|.*\.mod$|.*\.mp3$|.*\.mp4a$|.*\.oga$|.*\.ogg$|.*\.opus$|.*\.s3m$|.*\.sid$|.*\.wma$/I cterm=bold ctermfg=137 ctermbg=default
+highlight /.*\.PDF$|.*\.cbr$|.*\.cbz$|.*\.chm$|.*\.djvu$|.*\.pdf$/I cterm=none ctermfg=141 ctermbg=default
+highlight /.*Makefile$/I cterm=none ctermfg=155 ctermbg=default
+highlight /.*\.PL$/I cterm=none ctermfg=160 ctermbg=default
+highlight /.*\.err$|.*\.error$|.*\.stderr$/I cterm=bold ctermfg=160 ctermbg=default
+highlight /.*\.odp$|.*\.pps$|.*\.ppt$|.*\.ppts$|.*\.pptx$/I cterm=none ctermfg=166 ctermbg=default
+highlight /.*\.pptsm$|.*\.pptxm$/I cterm=underline ctermfg=166 ctermbg=default
+highlight /.*\.BAT$|.*\.awk$|.*\.bash$|.*\.bat$|.*\.sed$|.*\.sh$|.*\.vim$|.*\.zsh$/I cterm=none ctermfg=172 ctermbg=default
+highlight /.*\.RData$|.*\.json$|.*\.msg$|.*\.pgn$|.*\.rdata$|.*\.rss$|.*\.xml$|.*\.yml$/I cterm=none ctermfg=178 ctermbg=default
+highlight /.*\.etx$|.*\.info$|.*\.markdown$|.*\.md$|.*\.mkd$|.*\.nfo$|.*\.tex$|.*\.textile$/I cterm=none ctermfg=184 ctermbg=default
+highlight /.*\.log$/I cterm=none ctermfg=190 ctermbg=default
+highlight /.*\.asc$|.*\.bfe$|.*\.enc$|.*\.gpg$|.*\.p12$|.*\.pem$|.*\.pgp$|.*\.sig$|.*\.signature$/I cterm=reverse ctermfg=192 ctermbg=default
+highlight /.*\.deny$/I cterm=none ctermfg=196 ctermbg=default
+highlight /.*\.git$/I cterm=none ctermfg=197 ctermbg=default
+highlight /.*\.pl$/I cterm=none ctermfg=208 ctermbg=default
+highlight /.*\.32x$|.*\.A64$|.*\.a00$|.*\.a52$|.*\.a64$|.*\.a78$|.*\.adf$|.*\.atr$|.*\.cdi$|.*\.fm2$|.*\.gb$|.*\.gba$|.*\.gbc$|.*\.gel$|.*\.gg$|.*\.ggl$|.*\.ipk$|.*\.j64$|.*\.nds$|.*\.nes$|.*\.rom$|.*\.sav$|.*\.sms$|.*\.st$/I cterm=none ctermfg=213 ctermbg=default
+highlight /.*\.apk$|.*\.bsp$|.*\.cab$|.*\.deb$|.*\.jad$|.*\.jar$|.*\.pak$|.*\.pk3$|.*\.vdf$|.*\.vpk$/I cterm=none ctermfg=215 ctermbg=default
+highlight /.*AUTHORS$|.*CHANGES$|.*CONTRIBUTORS$|.*COPYING$|.*COPYRIGHT$|.*HISTORY$|.*INSTALL$|.*LICENSE$|.*NOTICE$|.*PATENTS$|.*README$|.*VERSION$/I cterm=bold ctermfg=220 ctermbg=default
+highlight /.*\.msql$|.*\.mysql$|.*\.pgsql$|.*\.sql$/I cterm=none ctermfg=222 ctermbg=default
+highlight /.*\.part$|.*\.r00$|.*\.r01$|.*\.r02$|.*\.r03$|.*\.r04$|.*\.r05$|.*\.r06$|.*\.r07$|.*\.r08$|.*\.r09$|.*\.r10$|.*\.r100$|.*\.r101$|.*\.r102$|.*\.r103$|.*\.r104$|.*\.r105$|.*\.r106$|.*\.r107$|.*\.r108$|.*\.r109$|.*\.r11$|.*\.r110$|.*\.r111$|.*\.r112$|.*\.r113$|.*\.r114$|.*\.r115$|.*\.r116$|.*\.r12$|.*\.r13$|.*\.r14$|.*\.r15$|.*\.r16$|.*\.r17$|.*\.r18$|.*\.r19$|.*\.r20$|.*\.r21$|.*\.r22$|.*\.r25$|.*\.r26$|.*\.r27$|.*\.r28$|.*\.r29$|.*\.r30$|.*\.r31$|.*\.r32$|.*\.r33$|.*\.r34$|.*\.r35$|.*\.r36$|.*\.r37$|.*\.r38$|.*\.r39$|.*\.r40$|.*\.r41$|.*\.r42$|.*\.r43$|.*\.r44$|.*\.r45$|.*\.r46$|.*\.r47$|.*\.r48$|.*\.r49$|.*\.r50$|.*\.r51$|.*\.r52$|.*\.r53$|.*\.r54$|.*\.r55$|.*\.r56$|.*\.r57$|.*\.r58$|.*\.r59$|.*\.r60$|.*\.r61$|.*\.r62$|.*\.r63$|.*\.r64$|.*\.r65$|.*\.r66$|.*\.r67$|.*\.r68$|.*\.r69$|.*\.r70$|.*\.r71$|.*\.r72$|.*\.r73$|.*\.r74$|.*\.r75$|.*\.r76$|.*\.r77$|.*\.r78$|.*\.r79$|.*\.r80$|.*\.r81$|.*\.r82$|.*\.r83$|.*\.r84$|.*\.r85$|.*\.r86$|.*\.r87$|.*\.r88$|.*\.r89$|.*\.r90$|.*\.r91$|.*\.r92$|.*\.r93$|.*\.r94$|.*\.r95$|.*\.r96$|.*\.r97$|.*\.r98$|.*\.r99$|.*\.z00$|.*\.z01$|.*\.z02$|.*\.z03$|.*\.z04$|.*\.z05$|.*\.z06$|.*\.z07$|.*\.z08$|.*\.z09$|.*\.z10$|.*\.z100$|.*\.z101$|.*\.z102$|.*\.z103$|.*\.z104$|.*\.z105$|.*\.z106$|.*\.z107$|.*\.z108$|.*\.z109$|.*\.z11$|.*\.z110$|.*\.z111$|.*\.z112$|.*\.z113$|.*\.z114$|.*\.z115$|.*\.z116$|.*\.z12$|.*\.z13$|.*\.z14$|.*\.z15$|.*\.z16$|.*\.z17$|.*\.z18$|.*\.z19$|.*\.z20$|.*\.z21$|.*\.z22$|.*\.z25$|.*\.z26$|.*\.z27$|.*\.z28$|.*\.z29$|.*\.z30$|.*\.z31$|.*\.z32$|.*\.z33$|.*\.z34$|.*\.z35$|.*\.z36$|.*\.z37$|.*\.z38$|.*\.z39$|.*\.z40$|.*\.z41$|.*\.z42$|.*\.z43$|.*\.z44$|.*\.z45$|.*\.z46$|.*\.z47$|.*\.z48$|.*\.z49$|.*\.z50$|.*\.z51$|.*\.z52$|.*\.z53$|.*\.z54$|.*\.z55$|.*\.z56$|.*\.z57$|.*\.z58$|.*\.z59$|.*\.z60$|.*\.z61$|.*\.z62$|.*\.z63$|.*\.z64$|.*\.z65$|.*\.z66$|.*\.z67$|.*\.z68$|.*\.z69$|.*\.z70$|.*\.z71$|.*\.z72$|.*\.z73$|.*\.z74$|.*\.z75$|.*\.z76$|.*\.z77$|.*\.z78$|.*\.z79$|.*\.z80$|.*\.z81$|.*\.z82$|.*\.z83$|.*\.z84$|.*\.z85$|.*\.z86$|.*\.z87$|.*\.z88$|.*\.z89$|.*\.z90$|.*\.z91$|.*\.z92$|.*\.z93$|.*\.z94$|.*\.z95$|.*\.z96$|.*\.z97$|.*\.z98$|.*\.z99$|.*\.zx00$|.*\.zx01$|.*\.zx02$|.*\.zx03$|.*\.zx04$|.*\.zx05$|.*\.zx06$|.*\.zx07$|.*\.zx08$|.*\.zx09$|.*\.zx10$|.*\.zx100$|.*\.zx101$|.*\.zx102$|.*\.zx103$|.*\.zx104$|.*\.zx105$|.*\.zx106$|.*\.zx107$|.*\.zx108$|.*\.zx109$|.*\.zx11$|.*\.zx110$|.*\.zx111$|.*\.zx112$|.*\.zx113$|.*\.zx114$|.*\.zx115$|.*\.zx116$|.*\.zx12$|.*\.zx13$|.*\.zx14$|.*\.zx15$|.*\.zx16$|.*\.zx17$|.*\.zx18$|.*\.zx19$|.*\.zx20$|.*\.zx21$|.*\.zx22$|.*\.zx25$|.*\.zx26$|.*\.zx27$|.*\.zx28$|.*\.zx29$|.*\.zx30$|.*\.zx31$|.*\.zx32$|.*\.zx33$|.*\.zx34$|.*\.zx35$|.*\.zx36$|.*\.zx37$|.*\.zx38$|.*\.zx39$|.*\.zx40$|.*\.zx41$|.*\.zx42$|.*\.zx43$|.*\.zx44$|.*\.zx45$|.*\.zx46$|.*\.zx47$|.*\.zx48$|.*\.zx49$|.*\.zx50$|.*\.zx51$|.*\.zx52$|.*\.zx53$|.*\.zx54$|.*\.zx55$|.*\.zx56$|.*\.zx57$|.*\.zx58$|.*\.zx59$|.*\.zx60$|.*\.zx61$|.*\.zx62$|.*\.zx63$|.*\.zx64$|.*\.zx65$|.*\.zx66$|.*\.zx67$|.*\.zx68$|.*\.zx69$|.*\.zx70$|.*\.zx71$|.*\.zx72$|.*\.zx73$|.*\.zx74$|.*\.zx75$|.*\.zx76$|.*\.zx77$|.*\.zx78$|.*\.zx79$|.*\.zx80$|.*\.zx81$|.*\.zx82$|.*\.zx83$|.*\.zx84$|.*\.zx85$|.*\.zx86$|.*\.zx87$|.*\.zx88$|.*\.zx89$|.*\.zx90$|.*\.zx91$|.*\.zx92$|.*\.zx93$|.*\.zx94$|.*\.zx95$|.*\.zx96$|.*\.zx97$|.*\.zx98$|.*\.zx99$/I cterm=none ctermfg=239 ctermbg=default
+highlight /.*\.gitattributes$|.*\.gitignore$|.*\.gitmodules$|.*\.pyc$|.*pm_to_blib$/I cterm=none ctermfg=240 ctermbg=default
+highlight /.*\.BUP$|.*\.bak$|.*\.dump$|.*\.o$|.*\.orig$|.*\.rlib$|.*\.stackdump$|.*\.un~$|.*\.zcompdump$|.*\.zwc$/I cterm=none ctermfg=241 ctermbg=default
+highlight /.*\.am$|.*\.hin$|.*\.in$|.*\.m4$|.*\.old$|.*\.out$|.*\.scan$/I cterm=none ctermfg=242 ctermbg=default
+highlight /.*MANIFEST$/I cterm=none ctermfg=243 ctermbg=default
+highlight /.*\.SKIP$|.*\.sassc$|.*\.swo$|.*\.swp$|.*\.tmp$/I cterm=none ctermfg=244 ctermbg=default
+highlight /.*\.pid$|.*\.state$|.*lockfile$/I cterm=none ctermfg=248 ctermbg=default
+highlight /.*\.txt$/I cterm=none ctermfg=253 ctermbg=default
+highlight /.*\.cap$|.*\.dmp$|.*\.pcap$/I cterm=none ctermfg=29 ctermbg=default
+highlight /.*\.pacnew$/I cterm=none ctermfg=33 ctermbg=default
+highlight /.*\.7z$|.*\.a$|.*\.arj$|.*\.bz2$|.*\.gz$|.*\.rar$|.*\.tar$|.*\.tgz$|.*\.xz$|.*\.zip$|.*\.zoo$/I cterm=none ctermfg=40 ctermbg=default
+highlight /.*\.ahk$|.*\.py$/I cterm=none ctermfg=41 ctermbg=default
+highlight /.*@.service$|.*\.automount$|.*\.device$|.*\.mount$|.*\.path$|.*\.service$|.*\.snapshot$|.*\.socket$|.*\.swap$|.*\.target$|.*\.timer$/I cterm=none ctermfg=45 ctermbg=default
+highlight /.*\.R$|.*\.r$/I cterm=none ctermfg=49 ctermbg=default
+highlight /.*\.accdb$|.*\.accde$|.*\.accdr$|.*\.accdt$|.*\.db$|.*\.localstorage$|.*\.mdb$|.*\.mde$|.*\.nc$|.*\.sqlite$|.*\.typelib$/I cterm=none ctermfg=60 ctermbg=default
+highlight /.*\.tcl$/I cterm=bold ctermfg=64 ctermbg=default
+highlight /.*\.PFA$|.*\.afm$|.*\.fnt$|.*\.fon$|.*\.otf$|.*\.pfa$|.*\.pfb$|.*\.pfm$|.*\.ttf$/I cterm=none ctermfg=66 ctermbg=default
+highlight /.*\.1p$|.*\.3p$|.*\.cnc$|.*\.def$|.*\.ex$|.*\.example$|.*\.feature$|.*\.gbr$|.*\.ger$|.*\.map$|.*\.mf$|.*\.mfasl$|.*\.mi$|.*\.mm$|.*\.mtx$|.*\.pc$|.*\.pcb$|.*\.pi$|.*\.plt$|.*\.pm$|.*\.pod$|.*\.pot$|.*\.rb$|.*\.rdf$|.*\.rst$|.*\.ru$|.*\.sch$|.*\.scm$|.*\.sis$|.*\.spl$|.*\.sty$|.*\.sug$|.*\.t$|.*\.tdy$|.*\.tfm$|.*\.tfnt$|.*\.tg$|.*\.vcard$|.*\.vcf$|.*\.xln$/I cterm=none ctermfg=7 ctermbg=default
+highlight /.*\.xltx$/I cterm=none ctermfg=73 ctermbg=default
+highlight /.*\.xltm$/I cterm=underline ctermfg=73 ctermbg=default
+highlight /.*\.xla$/I cterm=none ctermfg=76 ctermbg=default
+highlight /.*\.csv$/I cterm=none ctermfg=78 ctermbg=default
+highlight /.*\.C$|.*\.asm$|.*\.c$|.*\.c++$|.*\.cc$|.*\.cl$|.*\.cp$|.*\.cpp$|.*\.cr$|.*\.cs$|.*\.ctp$|.*\.cxx$|.*\.f$|.*\.for$|.*\.ftn$|.*\.go$|.*\.gs$|.*\.hs$|.*\.lhs$|.*\.lisp$|.*\.lua$|.*\.moon$|.*\.php$|.*\.rs$|.*\.sx$|.*\.twig$|.*\.vb$|.*\.vba$|.*\.vbs$/I cterm=none ctermfg=81 ctermbg=default
+highlight /.*\.JPG$|.*\.TIFF$|.*\.bmp$|.*\.cdr$|.*\.gif$|.*\.ico$|.*\.jpeg$|.*\.jpg$|.*\.nth$|.*\.png$|.*\.psd$|.*\.tif$|.*\.tiff$|.*\.xpm$/I cterm=none ctermfg=97 ctermbg=default
+highlight /.*\.ai$|.*\.drw$|.*\.eps$|.*\.epsf$|.*\.ps$|.*\.svg$/I cterm=none ctermfg=99 ctermbg=default
+highlight /.*\.diff$/I cterm=none ctermfg=232 ctermbg=197
+highlight /.*\.patch$/I cterm=bold ctermfg=232 ctermbg=197
+highlight /.*LS_COLORS$/I cterm=bold,reverse,underline,reverse ctermfg=197 ctermbg=89

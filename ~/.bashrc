@@ -13,7 +13,7 @@ source ~/.zsh/02-proxy.zsh
 source ~/.zsh/02-aliases.zsh
 
 # fix some envars from zsh
-export HISTFILE=$HOME/.bash_history
+export HISTFILE="$XDG_DATA_HOME"/bash/history
 export SHELL=/bin/bash
 export HISTCONTROL="ignoreboth"
 

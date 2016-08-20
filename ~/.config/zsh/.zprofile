@@ -2,7 +2,7 @@ export ZDOTDIR="${ZDOTDIR:-$HOME}"
 [[ -e "$ZDOTDIR/00-environment.zsh" ]] && source "$ZDOTDIR/00-environment.zsh"
 
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx
+	exec startx $XINITRC
 elif [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]]; then
 	[[ -e "$ZDOTDIR/00-wayland" ]] && source "$ZDOTDIR/00-wayland"
 	urxvtd -q -o &

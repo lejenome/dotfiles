@@ -36,7 +36,8 @@ set norunexec
 set noiec
 
 " Selected color scheme
-colorscheme istib-solarized-dark
+"colorscheme istib-solarized-dark
+colorscheme ls_colors
 
 " The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
 " Unless it exists with write/exec permissions set, vifm will attempt to
@@ -163,14 +164,14 @@ filextype *.epub,*.mobi,*.chm,*.fb2
 	\ FBReader %f &,
 
 " Audio
-filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3
        \ mpv --no-video %f,
        \ mplayer %f,
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 
 " Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v,*.ogg
         \ mpv --no-terminal --fullscreen %f &,
         \ mplayer %f &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
