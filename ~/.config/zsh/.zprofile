@@ -1,4 +1,4 @@
-export ZDOTDIR="${ZDOTDIR:-$HOME}"
+export ZDOTDIR="${ZDOTDIR:-$HOME/.config/zsh}"
 [[ -e "$ZDOTDIR/00-environment.zsh" ]] && source "$ZDOTDIR/00-environment.zsh"
 
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then

@@ -1,5 +1,5 @@
-set editor=vim
-set realname='Moez Bouhlel'
+set editor=$EDITOR
+set realname=$NAME
 set sendmail="/usr/bin/msmtp"
 set send_charset="utf-8"
 
@@ -8,7 +8,7 @@ set beep_new
 set fast_reply = yes
 set use_from=yes
 set envelope_from=yes
-set hostname = "lejenome"
+set hostname = $USER
 
 set mailcap_path    = $MAILCAP
 auto_view text/html
@@ -32,7 +32,7 @@ set pager_stop = yes
 #-------------------------------------------
 
 set mbox_type=Maildir
-set folder=~/mail
+set folder=$MAIL
 set header_cache=$XDG_CACHE_HOME/mutt
 set spoolfile=+/
 set mbox=+mbox
@@ -68,7 +68,7 @@ source $alias_file
 #-------------------------------------------
 # Multi mails
 #-------------------------------------------
-macro generic "<esc>1" ":set from=bmoez.j@gmail.com realname=Moez Bouhlel"
+macro generic "<esc>1" ":set from=$EMAIL realname='$NAME'"
 macro generic "<esc>2" ":set from=mtcfss@outlook.com realname='Microsoft Tech Club FSS'"
 # EXTRA
 source ~/.mutt/gpgrc

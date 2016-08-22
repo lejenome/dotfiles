@@ -6,7 +6,7 @@ local FMT_ACTION="(%F{3}%a%f)"
 local FMT_PATH="%F{1}%R%F{2}/%S%f"
 
 setprompt() {
-  local USER="%(#.%F{1}.%F{3})%n%f"
+  local USER="%(#.%K{1}%F{0}.%F{3})%n%f%k"
   local HOST="%F{1}%M%f"
   local PWD="%F{7}$($ZDOTDIR/zsh_path.sh)%f"
   local TTY="%F{4}%y%f"
