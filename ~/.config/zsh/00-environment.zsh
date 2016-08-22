@@ -16,7 +16,7 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d /usr/share/perl6/vendor/bin ] && PATH="$PATH:/usr/share/perl6/vendor/bin"
 
 # GEM PATH
-[ -d "$HOME/.gem" ] && PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
+[ -d "$HOME/.local/lib/ruby/gems" ] && PATH="$(ls -rd ${HOME}/.local/lib/ruby/gems/ruby/*/bin | tr '\n' ':')${PATH}"
 export PATH
 
 # DEFAULT tools and directories
@@ -106,7 +106,7 @@ export RLWRAP_HOME="$XDG_DATA_HOME"/rlwrap
 # export TMUX_TMPDIR="$XDG_RUNTIME_DIR"/tmux
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
-export RXVT_PERL_LIB="$XDG_CONFIG_HOME"/urxvt/ext
+export URXVT_PERL_LIB="$XDG_CONFIG_HOME"/urxvt/ext
 export XENVIRONMENT="$XDG_CONFIG_HOME"/X11/xresources
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/Xiceauthority
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
@@ -117,9 +117,14 @@ export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
 export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME"/vimperator
 export VIMPAGER_RC="$XDG_CONFIG_HOME"/vimpager/vimpagerrc
 export GEMRC="$XDG_CONFIG_HOME"/gemrc
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
 export MAILCAP="$XDG_CONFIG_HOME/mailcap"
 export MAILCAPS="$MAILCAP"
 export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
+
+export TASKRC="$XDG_CONFIG_HOME/taskrc"
+export TASKDATA="$XDG_DATA_HOME/task"
 
 export MANPATH=:"$XDG_DATA_HOME"/man

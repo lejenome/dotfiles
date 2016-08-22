@@ -12,6 +12,7 @@ export LESS_TERMCAP_se=$(printf "\e[0m")
 export LESS_TERMCAP_so=$(printf "\e[1;104;30m")
 export LESS_TERMCAP_ue=$(printf "\e[0m")
 export LESS_TERMCAP_us=$(printf "\e[1;32m")
+export LESSCHARSET="UTF-8"
 export PAGER="less"
 export MANPAGER="$PAGER"
 export SDCV_PAGER="$PAGER"
@@ -47,10 +48,13 @@ export PERL_MB_OPT="--install_base '$HOME/.local'"
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.local"
 
 # RUBY GEM & BUNDLE
-export GEM_HOME="$HOME/.gem"
+export GEM_HOME=$HOME/.local/lib/ruby/gems
+export GEM_SPEC_CACHE=$GEM_HOME/specs
 
 # cscope DB file path
 export CSCOPE_DB=$HOME/git/cscope.out
 
 # Android toolchains
-export ANDROID_NDK=$HOME/Public/android-sdk/ndk-bundle/
+export ANDROID_NDK=$HOME/archive/android-sdk/ndk-bundle/
+
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle

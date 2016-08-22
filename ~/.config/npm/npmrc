@@ -1,5 +1,5 @@
 prefix = "${HOME}/.local"
-cache = "${XDG_CACHE_HOME}"
+cache = "${XDG_CACHE_HOME}/npm"
 
 init-author-email = "bmoez.j@gmail.com"
 init-author-name = "Moez Bouhlel"
