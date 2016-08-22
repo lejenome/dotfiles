@@ -2,7 +2,7 @@
 # /etc/fstab: static file system information
 #
 # <file system>	<dir>	<type>	<options>	                                 <dump>	<pass>
-LABEL=Arch      /                     btrfs  rw,space_cache,async,relatime,nodiratime,commit=120,compress=lzo  0 0
+LABEL=Arch      /                     btrfs  rw,space_cache=v2,async,noatime,nodiratime,commit=180,compress=zlib,thread_pool=8  0 0
 LABEL=Swap      none                  swap   defaults,nodev,nosuid                                             0 0
 none            /tmp                  tmpfs  defaults,size=8G,nodev,nosuid                                     0 0
 #LABEL=Others    /mnt/Others           ext4   defaults,noatime,nodev,nosuid,comment=systemd.automount           0 0

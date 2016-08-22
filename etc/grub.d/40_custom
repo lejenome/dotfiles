@@ -1,0 +1,38 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry "System shutdown" {
+	echo "System shutting down..."
+	halt
+}
+menuentry "System restart" {
+	echo "System rebooting..."
+	reboot
+}
+menuentry "Boot from 2nd device" {
+	set root=(hd1,1)
+	chainloader +1
+	boot
+}
+menuentry "Boot from 3rd device" {
+	set root=(hd2,1)
+	chainloader +1
+	boot
+}
+menuentry "Boot from 4th device" {
+	set root=(hd3,1)
+	chainloader +1
+	boot
+}
+menuentry "Boot from 1st usb" {
+	set root=(usb0)
+	chainloader +1
+	boot
+}
+menuentry "Boot from 2nd usb" {
+	set root=(usb1)
+	chainloader +1
+	boot
+}
