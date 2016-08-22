@@ -1,19 +1,23 @@
 # sourced by login shell: .zprofile & .bash_profile.
-
-export PATH="$PATH:/bin:/sbin:/usr/sbin:/usr/local/bin:${HOME}/.node/bin:${HOME}/.gem/bin"
-[ -e ~/.local/bin ] && export PATH="$HOME/.local/bin:$PATH"
+PATH="/usr/bin"
+[ -d "/bin" -a ! -L "/bin" ] && PATH="$PATH:/bin"
+[ -d "/sbin" -a ! -L "/sbin" ] && PATH="$PATH:/sbin"
+[ -d "/usr/sbin" -a ! -L "/usr/sbin" ] && PATH="$PATH:/usr/sbin"
+PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+[ -e ~/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
 
 # PERL PATH
-[ -d /usr/bin/site_perl ] && export PATH="$PATH:/usr/bin/site_perl"
-[ -d /usr/lib/perl5/site_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/site_perl/bin"
-[ -d /usr/bin/vendor_perl ] && export PATH="$PATH:/usr/bin/vendor_perl"
-[ -d /usr/lib/perl5/vendor_perl/bin ] && export PATH="$PATH:/usr/lib/perl5/vendor_perl/bin"
-[ -d /usr/bin/core_perl ] && export PATH="$PATH:/usr/bin/core_perl"
+[ -d /usr/bin/site_perl ] && PATH="$PATH:/usr/bin/site_perl"
+[ -d /usr/lib/perl5/site_perl/bin ] && PATH="$PATH:/usr/lib/perl5/site_perl/bin"
+[ -d /usr/bin/vendor_perl ] && PATH="$PATH:/usr/bin/vendor_perl"
+[ -d /usr/lib/perl5/vendor_perl/bin ] && PATH="$PATH:/usr/lib/perl5/vendor_perl/bin"
+[ -d /usr/bin/core_perl ] && PATH="$PATH:/usr/bin/core_perl"
 
-[ -d /usr/share/perl6/vendor/bin ] && export PATH="$PATH:/usr/share/perl6/vendor/bin"
+[ -d /usr/share/perl6/vendor/bin ] && PATH="$PATH:/usr/share/perl6/vendor/bin"
 
 # GEM PATH
-[ -d "$HOME/.gem" ] && export PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
+[ -d "$HOME/.gem" ] && PATH="$(ls -rd ${HOME}/.gem/ruby/*/bin | tr '\n' ':')${PATH}"
+export PATH
 
 # DEFAULT tools and directories
 export NAME="Moez Bouhlel"
