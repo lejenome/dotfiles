@@ -11,7 +11,6 @@ c makepkg.conf
 c udev/rules.d
 c modules-load.d
 c systemd/system/getty@.service.d/
-c systemd/system/user@.service.d/dbus.conf
 c systemd/system/sshdgenkeys.service
 c systemd/system/tmux@.service
 c systemd/system/dnsmasq.service
@@ -23,8 +22,8 @@ c systemd/system/efistub-update.service
 c systemd/system/promiscuous@.service
 c systemd/journald.conf
 c systemd/logind.conf
-c systemd/user/dbus.socket
-c systemd/user/dbus.service
+c systemd/resolved.conf
+c systemd/user.conf
 c laptop-mode
 c abs.conf
 c default/grub
@@ -55,8 +54,8 @@ c systemd/network
 c samba/smb.conf
 c vimrc
 c X11/xorg.conf.d
-c slim.conf
-c slimlock.conf
+# c slim.conf
+# c slimlock.conf
 c dnsmasq.d
 c dnsmasq.conf
 c dhcpcd.conf
@@ -68,11 +67,11 @@ c issue
 c qemu-ifup
 c qemu-ifdown
 c hosts.qemu0
-c nodogsplash
+# c nodogsplash
 c ssh/ssh_config
 c ssh/sshd_config
 c squid/squid.conf
-c kmscon
+# c kmscon
 c mail.rc
 c schroot/schroot.conf
 c schroot/arch/
