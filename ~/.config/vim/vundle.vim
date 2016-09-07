@@ -9,7 +9,7 @@ endif
 call vundle#begin(expand("~/.local/share/vim/bundle"))
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'airblade/vim-rooter'
+" Plugin 'airblade/vim-rooter'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
@@ -28,12 +28,12 @@ let g:syntastic_html_tidy_exec = '/usr/bin/tidy5'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM GNUPG
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'jamessan/vim-gnupg'
+" Plugin 'jamessan/vim-gnupg'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM FUGITIVE (Git Wrapper)
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM GITGUTTER (Git Status bar)
@@ -60,6 +60,7 @@ let python_highlight_all = 1
 " set conceallevel=2
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini']
+" Plugin 'justinmk/vim-syntax-extra'
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,8 +130,8 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Github Issues
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'jaxbot/github-issues.vim'
-let g:github_same_window = 1
+" Plugin 'jaxbot/github-issues.vim'
+" let g:github_same_window = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
@@ -162,18 +163,16 @@ let g:goyo_width=80
 "let g:indent_guides_space_guides = 1
 "let g:indent_guides_enable_on_vim_startup = 1
 
-Plugin 'Yggdroot/indentLine'
 set list lcs=tab:\¦\.
+"Plugin 'Yggdroot/indentLine'
 " let g:indentLine_concealcursor = 'inc'
 " let g:indentLine_conceallevel = 2
 " let g:indentLine_char = '|'
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#09AA08'
-let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_leadingSpaceChar = '.'  " ˰··
-let g:indentLine_leadingSpaceEnabled = 1
-
-Plugin 'justinmk/vim-syntax-extra'
+"let g:indentLine_color_term = 239
+"let g:indentLine_color_gui = '#09AA08'
+"let g:indentLine_showFirstIndentLevel = 1
+"let g:indentLine_leadingSpaceChar = '.'  " ˰··
+"let g:indentLine_leadingSpaceEnabled = 1
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -229,10 +228,9 @@ Plugin 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
-
 let g:syntastic_java_javac_classpath = 'src/:src/*/java/:lib/'
 
-Plugin 'Ada-Bundle'
+" Plugin 'Ada-Bundle'
 
 Plugin 'jpalardy/vim-slime'
 let g:slime_target = 'tmux'

@@ -37,8 +37,8 @@ export NODE_PATH="$HOME/.node/lib/node_modules"
 export R600_DEBUG=hyperz
 export R600_STREAMOUT=1
 export R600_HYPERZ=1
-export LIBVA_DRIVER_NAME=vdpau
-export VDPAU_DRIVER=r600
+# export LIBVA_DRIVER_NAME=vdpau
+# export VDPAU_DRIVER=r600
 
 # Firefox
 export MOZ_GLX_IGNORE_BLACKLIST=1

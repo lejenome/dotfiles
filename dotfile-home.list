@@ -33,6 +33,7 @@ l .config/zsh
 l .config/jupyter/profile_default/ipython_config.py
 #l .polipo
 l .curlrc
+l .asoundrc
 l .config/archey3.cfg
 l .config/ls++
 l .config/redshift.conf
