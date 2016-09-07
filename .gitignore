@@ -8,3 +8,4 @@
 /etc/systemd/*/*.wants/
 /~/.config/zsh/.zcompdump*
 /~/.zsh/zcompcache/
+/~/.config/vimperator/info/
