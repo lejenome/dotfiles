@@ -62,7 +62,7 @@ my_hdr User-Agent: Every email client sucks, this one just sucks less.
 # ALIASES
 #-------------------------------------------
 
-set alias_file=~/.mail-aliases
+set alias_file=$XDG_CONFIG_HOME/mail-aliases
 source $alias_file
 
 #-------------------------------------------
