@@ -198,6 +198,17 @@ workspace "$ws10" output LVDS-1
     bindsym $mod+Shift+ccedilla    move container to workspace "$ws9"
     bindsym $mod+Shift+agrave      move container to workspace "$ws10"
 
+    bindsym $mod+KP_8     exec "amixer set Master 5%+"
+    bindsym $mod+KP_2     exec "amixer set Master 5%-"
+    bindsym $mod+KP_5     exec "mpc toggle"
+    bindsym $mod+KP_6     exec "mpc next"
+    bindsym $mod+KP_4     exec "mpc prev"
+    bindsym $mod+Shift+KP_Up    exec "sudo backlightctl +10"
+    bindsym $mod+Shift+KP_Down  exec "sudo backlightctl -10"
+    bindsym $mod+Shift+KP_Right exec "mpc seek +1"
+    bindsym $mod+Shift+KP_Left  exec "mpc seek -1"
+    bindsym $mod+Shift+KP_Begin exec "mpc stop"
+
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
     bindsym XF86AudioMute exec "amixer set Master toggle"
     bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
