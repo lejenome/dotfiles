@@ -99,6 +99,7 @@ l .ycm_extra_conf.py
 l .mrconfig
 l .config/urxvt
 l .xmodmap
+l .config/color
 
 l .config/proxy.pac
 
