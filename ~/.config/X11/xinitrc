@@ -19,7 +19,7 @@ fi
 #	feh --bg-fill $( ls $HOME/Pictures/wallpapers/* | sed "$((RANDOM%$(ls $HOME/Pictures/wallpapers/| wc -l)))p;d" )
 
 urxvtd -q -o &
-redshift &
+# redshift &
 pokoy &
 unclutter &
 numlockx &

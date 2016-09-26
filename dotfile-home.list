@@ -31,6 +31,7 @@ l .config/gtk-2.0
 l .bash_profile
 l .config/zsh
 l .config/jupyter/profile_default/ipython_config.py
+l .config/jupyter/jupyter_qtconsole_config.py
 #l .polipo
 l .curlrc
 l .asoundrc
