@@ -27,7 +27,7 @@ xautolock &
 setxkbmap fr
 dmenu_path & # cache exec path
 xmodmap ~/.xmodmap
-dispwin -d1 ~/.config/color/icc/ICC_Lenovo_G500s_1366x768_glossy_SAMSUNG__L_ATLTN156AT30L01.icm
+dispwin -d1 ~/.config/color/icc/Toshiba_C50D_A_10E_HD_Glare__LG_Display_LP156WH4_TLN2_.icm
 
 # exec  DE/WM :: Get first arg or exported XSESSION var
 XSESSION=${1:-$XSESSION}
