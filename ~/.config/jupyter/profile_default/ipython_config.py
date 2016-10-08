@@ -26,10 +26,14 @@ c.TerminalInteractiveShell.highlighting_style = 'native'
 class ShellPrompt(Prompts):
 
     def in_prompt_tokens(self, cli=None):
-        return [(Token, os.getcwd()),
-                (Token.Prompt, '|'),
-                (Token.PromptNum, str(self.shell.execution_count)),
-                (Token.Prompt, ' > ')]
+        return [
+            (Token.Prompt, '['),
+            (Token, os.environ["USER"]),
+            (Token.Prompt, ' : '),
+            (Token, os.getcwd()),
+            (Token.Prompt, ']\n'),
+            (Token.PromptNum, str(self.shell.execution_count)),
+            (Token.Prompt, ' > ')]
 c.TerminalInteractiveShell.prompts_class = ShellPrompt
 
 c.InteractiveShellApp.exec_lines = [

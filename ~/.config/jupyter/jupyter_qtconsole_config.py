@@ -1,3 +1,6 @@
+import qtconsole.ansi_code_processor
+qtconsole.ansi_code_processor.AnsiCodeProcessor.bold_text_enabled = True
+
 c = get_config()
 
 c.JupyterApp.answer_yes = False
