@@ -1,9 +1,12 @@
 #!/bin/bash
 if [ -n "$(iw dev wlp8s0 station dump)" ]; then
-	echo 100 $(iw dev wlp8s0 station dump | grep signal: | sed 's/^.*\[\(.*\)].*$/\1/' ) | bc
+	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
 	exit 0
 elif [ -n "$(iw dev wlp8s1 station dump)" ]; then
-	echo 100 $(iw dev wlp8s1 station dump | grep signal: | sed 's/^.*\[\(.*\)].*$/\1/' ) | bc
+	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
+	exit 0
+elif [ -n "$(iw dev wlp2s0 station dump)" ]; then
+	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
 	exit 0
 fi
 (networkctl status | head -1 | grep routable > /dev/null && echo 100) \
