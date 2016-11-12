@@ -150,6 +150,9 @@
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 
+[url "https://github.com/"]
+	InsteadOf = "git://github.com/"
+
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	insteadOf = "github:"
