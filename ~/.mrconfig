@@ -132,11 +132,11 @@ checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
 [/mnt/Others/git/zlib]
 checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
 
-# [/mnt/Others/git/ipython]
-# checkout = git clone 'https://github.com/ipython/ipython.git' 'ipython'
+[/mnt/Others/git/ipython]
+checkout = git clone 'https://github.com/ipython/ipython.git' 'ipython'
 
-# [/mnt/Others/git/qtconsole]
-# checkout = git clone 'https://github.com/jupyter/qtconsole.git' 'qtconsole'
+[/mnt/Others/git/qtconsole]
+checkout = git clone 'https://github.com/jupyter/qtconsole.git' 'qtconsole'
 
 [/mnt/Others/git/firefox]
 checkout = hg clone 'https://hg.mozilla.org/mozilla-central' 'firefox'

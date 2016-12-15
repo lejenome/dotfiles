@@ -56,11 +56,11 @@ URxvt*fading: 10
 
 URxvt.perl-ext:
 URxvt.perl-ext-common:
-!URxvt.perl-ext-common: font-size,-default
-!URxvt.keysym.M-Up:     font-size:increase
-!URxvt.keysym.M-Down:   font-size:decrease
-!URxvt.keysym.M-S-Up:   font-size:incglobal
-!URxvt.keysym.M-S-Down: font-size:decglobal
+URxvt.perl-ext-common: font-size,-default
+URxvt.keysym.M-Up:     font-size:increase
+URxvt.keysym.M-Down:   font-size:decrease
+URxvt.keysym.M-S-Up:   font-size:incglobal
+URxvt.keysym.M-S-Down: font-size:decglobal
 !
 !URxvt.lineSpace: 1
 !URxvt.letterSpace : -1

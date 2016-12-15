@@ -1,4 +1,5 @@
 mpd_music_dir = ~/Music
+allow_for_physical_item_deletion = yes
 
 now_playing_prefix = "$b$5>>>$9 "
 now_playing_suffix = $/b
