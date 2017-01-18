@@ -16,13 +16,14 @@ flags = [
 
 SOURCE_EXTENSIONS = ['.cpp', '.cxx', '.cc', '.c', '.m', '.mm']
 
+
 def FlagsForFile(filename, **kwargs):
     global flags
 
     ext = os.path.splitext(filename)[1]
-    if ext in ['.cpp', '.cxx', '.cc', '.mm']:
+    if ext in ['.cpp', '.cxx', '.cc', '.mm', '.hpp']:
         flags += [
-            '-std=gnu++1y',
+            '-std=gnu++1z',
             '-x',
             'c++',
         ]

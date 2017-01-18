@@ -1,1 +1,9 @@
 set selection-clipboard clipboard
+set font CharisSIL normal 10
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+
+set page-cache-size 30
+
+set smooth-scroll true

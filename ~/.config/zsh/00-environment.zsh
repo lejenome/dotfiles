@@ -76,7 +76,9 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on
 	-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
 	-Djava.net.useSystemProxies=true
 	-Dsun.java2d.opengl=true
-	-Duser.home=$XDG_DATA_HOME/Java"
+	-Duser.home=$XDG_DATA_HOME/Java
+	-Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine
+	-Djava.net.preferIPv4Stack=true"
 
 # Python
 export PYTHONOPTIMIZE=1

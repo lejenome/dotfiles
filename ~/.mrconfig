@@ -40,6 +40,9 @@ checkout = git clone 'https://github.com/llvm-mirror/llvm' 'llvm'
 [/mnt/Others/git/clang]
 checkout = git clone 'https://github.com/llvm-mirror/clang' 'clang'
 
+[/mnt/Others/git/gcc]
+checkout = git clone 'https://github.com/gcc-mirror/gcc' 'gcc'
+
 [/mnt/Others/git/zeal]
 checkout = git clone 'https://github.com/zealdocs/zeal/' 'zeal'
 

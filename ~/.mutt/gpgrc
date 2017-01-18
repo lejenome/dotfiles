@@ -28,6 +28,7 @@ set crypt_replysignencrypted
 set pgp_show_unusable=no
 set crypt_autosign = yes
 #set smime_sign_digest_alg="sha512"
+set crypt_autosmime=no
 
 #encrypt postpone mails before saving
 set postpone_encrypt = yes

@@ -26,12 +26,11 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-    bindsym $mod+Return exec i3-sensible-terminal -e $HOME/.config/i3/MAIN.sh
+    bindsym $mod+Return exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/MAIN.sh
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
     bindsym $mod+d exec dmenu_run
     bindsym $mod+shift+d exec i3-dmenu-desktop
-
 
 # change focus
     bindsym $mod+j focus left
@@ -129,7 +128,7 @@ mode "resize" {
 # finds out, if available)
 bar {
 	font pango:DejaVu Sans Mono, Icons 7
-	status_command conky --config=$HOME/.config/i3/conky.conf
+	status_command conky --config=$XDG_CONFIG_HOME/i3/conky.conf
 	position top
 
 	colors {
@@ -199,6 +198,30 @@ workspace "$ws10" output LVDS-1
     bindsym $mod+Shift+ccedilla    move container to workspace "$ws9"
     bindsym $mod+Shift+agrave      move container to workspace "$ws10"
 
+
+# FIXME
+    bindsym $mod+KP_8     exec "amixer set Master 5%+"
+    bindsym $mod+KP_2     exec "amixer set Master 5%-"
+    bindsym $mod+KP_5     exec "mpc toggle"
+    bindsym $mod+KP_6     exec "mpc next"
+    bindsym $mod+KP_4     exec "mpc prev"
+    bindsym $mod+Shift+KP_Up    exec "sudo backlightctl +10"
+    bindsym $mod+Shift+KP_Down  exec "sudo backlightctl -10"
+    bindsym $mod+Shift+KP_Right exec "mpc seek +1"
+    bindsym $mod+Shift+KP_Left  exec "mpc seek -1"
+    bindsym $mod+Shift+KP_Begin exec "mpc stop"
+# FIXME
+    bindcode $mod+80     exec "amixer set Master 5%+"
+    bindcode $mod+88     exec "amixer set Master 5%-"
+    bindcode $mod+84     exec "mpc toggle"
+    bindcode $mod+85     exec "mpc next"
+    bindcode $mod+83     exec "mpc prev"
+    bindcode $mod+Shift+80    exec "sudo backlightctl +10"
+    bindcode $mod+Shift+88  exec "sudo backlightctl -10"
+    bindcode $mod+Shift+85 exec "mpc seek +1"
+    bindcode $mod+Shift+83  exec "mpc seek -1"
+    bindcode $mod+Shift+84 exec "mpc stop"
+
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
     bindsym XF86AudioMute exec amixer set Master toggle
     bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
@@ -222,9 +245,9 @@ workspace "$ws10" output LVDS-1
     bindsym XF86Explorer  exec  urxvt-vifm
 
 
-    bindsym $mod+Shift+m exec sh ~/.config/i3/keymouse.sh
-    bindsym $mod+Shift+t exec i3-sensible-terminal -e ~/.config/i3/TERM.sh
-    bindsym $mod+Shift+w exec ~/.config/i3/load_web_ws_layout.sh "$ws2"
+    bindsym $mod+Shift+m exec sh $XDG_CONFIG_HOME/i3/keymouse.sh
+    bindsym $mod+Shift+t exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/TERM.sh
+    bindsym $mod+Shift+w exec $XDG_CONFIG_HOME/i3/load_web_ws_layout.sh "$ws2"
 
 # Going Back and Forth
     bindsym $mod+z workspace back_and_forth
@@ -244,8 +267,7 @@ exec --no-startup-id i3-msg "workspace $ws1"
 # for_window [window_role="About"] floating enable
 for_window [class="mpv"] floating enable
 
-output * bg /mnt/Others/Pictures/archlinux_1.jpg fill
-#output * bg /usr/share/sway/wallpaper.jpg fill
+output * bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
 
 # smart_gaps on
 # gaps 15
