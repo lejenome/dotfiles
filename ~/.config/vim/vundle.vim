@@ -111,10 +111,12 @@ let g:airline#extensions#syntastic#enabled = 1
 " Google Code Fmt
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmtlib'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
 " Glaive codefmt plugin[mappings]
+
+""" Better alternative ??
+" Plugin 'coala/coala-vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Matching Tag on HTML
@@ -207,8 +209,10 @@ nnoremap <C-l> :TagbarToggle<CR>
 
 " Plugin 'SirVer/ultisnips'
 
+" auto set :make compiler based on file extension
 Plugin 'tpope/vim-dispatch'
 
+" comment bloks
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'tpope/vim-surround'
@@ -236,6 +240,7 @@ Plugin 'jpalardy/vim-slime'
 let g:slime_target = 'tmux'
 let g:slime_python_ipython = 1
 let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
+" ctrl + double `c`, default pane name, select :.0 for pane 0 on current win
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " END
