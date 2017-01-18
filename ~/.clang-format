@@ -1,3 +1,4 @@
+---
 BasedOnStyle: LLVM
 IndentCaseLabels: false
 ---
@@ -20,3 +21,4 @@ AllowShortBlocksOnASingleLine: false
 AllowShortIfStatementsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: Empty
 ...
+

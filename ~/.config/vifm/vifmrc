@@ -165,20 +165,20 @@ filextype *.epub,*.mobi,*.chm,*.fb2
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3
-       \ mpv --no-video %f,
+       \ mpv --no-video %f 2>/dev/null &,
        \ mplayer %f,
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v,*.ogg
-        \ mpv --no-terminal --fullscreen %f &,
+        \ mpv --no-terminal --fullscreen %f 2>/dev/null &,
         \ mplayer %f &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
          \ ffprobe -pretty %c 2>&1
 
 " Web
-filextype *.html,*.htm,*.svg
+filextype *.html,*.htm,*.mhtml,*.svg
         \ qutebrowser %f 2>&1 >/dev/null &,
         \ firefox %f 2>&1 >/dev/null &,
 filetype *.html,*.htm links, lynx
@@ -191,9 +191,13 @@ filetype *.[1-8] gtbl %c | groff -Tascii -man | less
 fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
-filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.xpm
         \ feh -FZ %d --start-at %d/%c 2>/dev/null &,
         \ imv -f -s %d -n %d/%c >/dev/null &,
+        \ sxiv -a -f %f>/dev/null &,
+filextype *.gif
+        \ imv -f -s %d -n %d/%c >/dev/null &,
+        \ feh -FZ %d --start-at %d/%c 2>/dev/null &,
         \ sxiv -a -f %f>/dev/null &,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 

@@ -7,7 +7,7 @@
 	gpgsign = true
 
 [core]
-	autocrlf = false
+	autocrlf = input
 	editor = vim
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -184,3 +184,8 @@
 	smtpserverport = 587
 	aliasfile = ~/.mail-aliases
 	aliasfiletype = mutt
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
