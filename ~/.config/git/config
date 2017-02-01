@@ -173,6 +173,7 @@
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
+	pushInsteadOf = "https://gist.github.com/"
 
 #[url "git://gist.github.com/"]
 #	insteadOf = "gist:"

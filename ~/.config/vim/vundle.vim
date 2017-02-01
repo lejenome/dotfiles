@@ -62,6 +62,8 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini']
 " Plugin 'justinmk/vim-syntax-extra'
 
+Plugin 'rust-lang/rust.vim'
+
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR SCHEME
@@ -224,6 +226,7 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python3'
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_rust_src_path = '/home/lejenome/git/rust/src'
 let g:ycm_confirm_extra_conf = 0
 
 

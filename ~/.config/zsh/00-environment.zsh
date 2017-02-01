@@ -14,6 +14,7 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d /usr/bin/core_perl ] && PATH="$PATH:/usr/bin/core_perl"
 
 [ -d /usr/share/perl6/vendor/bin ] && PATH="$PATH:/usr/share/perl6/vendor/bin"
+[ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
 
 # GEM PATH
 [ -d "$HOME/.local/lib/ruby/gems" ] && PATH="$(ls -rd ${HOME}/.local/lib/ruby/gems/ruby/*/bin | tr '\n' ':')${PATH}"

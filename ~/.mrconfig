@@ -52,6 +52,10 @@ checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementi
 [/mnt/Others/git/libcxx]
 checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
 
+[/mnt/Others/git/musl]
+checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
+
+
 [/mnt/Others/git/buildroot]
 checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
 
@@ -73,37 +77,11 @@ checkout = git clone 'https://github.com/ttygde/pokoy' 'pokoy'
 [DEFAULT]
 order = 10
 
-[/mnt/Others/git/angular]
-checkout = git clone 'https://github.com/angular/angular' 'angular'
-
-[/mnt/Others/git/angular-cli]
-checkout = git clone 'https://github.com/angular/angular-cli' 'angular-cli'
-
-[/mnt/Others/git/electron]
-checkout = git clone 'https://github.com/atom/electron' 'electron'
-
-[/mnt/Others/git/angular.js]
-checkout = git clone 'https://github.com/angular/angular.js' 'angular.js'
-
-[/mnt/Others/git/addons-validator]
-checkout = git clone 'https://github.com/mozilla/addons-validator' 'addons-validator'
-
-[/mnt/Others/git/emscripten-ports/SDL2]
-checkout = git clone 'https://github.com/emscripten-ports/SDL2' 'SDL2'
-
-[/mnt/Others/git/emscripten-ports/SDL2_ttf]
-checkout = git clone 'https://github.com/emscripten-ports/SDL2_ttf' 'SDL2_ttf'
-
 [/mnt/Others/git/emscripten-freetype]
 checkout = git clone 'https://github.com/juj/emscripten-freetype' 'emscripten-freetype'
 
 [/mnt/Others/git/SDL_ttf]
 checkout = hg clone 'https://hg.libsdl.org/SDL_ttf/' 'SDL_ttf'
-
-[/mnt/Others/git/Syte2]
-checkout = git clone 'https://github.com/rigoneri/Syte2' 'Syte2'
-
-
 
 [/mnt/Others/git/coreboot]
 checkout = git clone 'http://review.coreboot.org/p/coreboot.git' 'coreboot'
@@ -143,3 +121,30 @@ checkout = git clone 'https://github.com/jupyter/qtconsole.git' 'qtconsole'
 
 [/mnt/Others/git/firefox]
 checkout = hg clone 'https://hg.mozilla.org/mozilla-central' 'firefox'
+
+[git/rust]
+checkout = git clone 'https://github.com/rust-lang/rust' 'rust'
+
+[git/clang-tools-extra]
+checkout = git clone 'https://github.com/llvm-mirror/clang-tools-extra' 'clang-tools-extra'
+
+[git/compiler-rt]
+checkout = git clone 'https://github.com/llvm-mirror/compiler-rt' 'compiler-rt'
+
+[git/elfutils]
+checkout = git clone 'http://sourceware.org/git/elfutils.git' 'elfutils'
+
+[git/glibc]
+checkout = git clone 'http://sourceware.org/git/glibc.git' 'glibc'
+
+[git/lld]
+checkout = git clone 'https://github.com/llvm-mirror/lld' 'lld'
+
+[git/lldb]
+checkout = git clone 'https://github.com/llvm-mirror/lldb' 'lldb'
+
+[git/polly]
+checkout = git clone 'https://github.com/llvm-mirror/polly' 'polly'
+
+[git/cling]
+checkout = git clone 'https://github.com/lejenome/cling' 'cling'
