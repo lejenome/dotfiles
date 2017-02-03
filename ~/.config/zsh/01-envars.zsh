@@ -48,7 +48,7 @@ export PERL_MB_OPT="--install_base '$HOME/.local'"
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.local"
 
 # RUBY GEM & BUNDLE
-export GEM_HOME=$HOME/.local/lib/ruby/gems
+export GEM_HOME=$HOME/.local/lib/ruby
 export GEM_SPEC_CACHE=$GEM_HOME/specs
 
 # cscope DB file path

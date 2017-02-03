@@ -17,7 +17,7 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
 
 # GEM PATH
-[ -d "$HOME/.local/lib/ruby/gems" ] && PATH="$(ls -rd ${HOME}/.local/lib/ruby/gems/ruby/*/bin | tr '\n' ':')${PATH}"
+[ -d "$HOME/.local/lib/ruby/bin" ] && PATH="${HOME}/.local/lib/ruby/bin:${PATH}"
 export PATH
 
 # DEFAULT tools and directories
@@ -34,10 +34,11 @@ export PAGER='less'
 
 # node modules additional lookup dirs
 export NODE_PATH="$HOME/.node/lib/node_modules"
+
 # mesa & r600 options
-export R600_DEBUG=hyperz
-export R600_STREAMOUT=1
-export R600_HYPERZ=1
+# export R600_DEBUG=hyperz
+# export R600_STREAMOUT=1
+# export R600_HYPERZ=1
 # export LIBVA_DRIVER_NAME=vdpau
 # export VDPAU_DRIVER=r600
 

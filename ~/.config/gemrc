@@ -1,1 +1,2 @@
-gem: --user-install
+gem:
+  # --user-install # fixed by $GEM_HOME

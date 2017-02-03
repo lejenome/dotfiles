@@ -1,4 +1,4 @@
--std=c++1y
+-std=c++1z
 -I/usr/include/SDL2
 -x
 c

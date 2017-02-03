@@ -5,7 +5,20 @@ syntax: glob
 # Thumbnails
 ._*
 
+# python
+*.py[cod]
+__pycache__/
+
+# npm
+npm-debug.log
+
 # Vim
 .*.sw[a-z]
 *.un~
-Session.vim
+#Session.vim
+
+# ctags, global
+/tags
+/GPATH
+/GRTAGS
+/GTAGS
