@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# TODO: use this instead: $0 ${1+"$@"}
+firefox=~/more/firefox-dev/firefox
+
+if [[ "$SCHROOT_ALIAS_NAME" == "Arch32" ]]; then # running inside 32-bit schroot chroot
+	firefox="/usr/bin/firefox -profile $HOME/.mozilla/firefox/default-32"
+fi
+# if file
+#set -- "${@//\?/%3F}"
+#set -- "${@//:/%3A}"
+#set -- "${@//\#/%23}"
+$firefox "$@"
+exit 0

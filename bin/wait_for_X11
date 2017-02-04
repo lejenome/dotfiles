@@ -1,0 +1,4 @@
+#!/bin/bash
+while [ ! -e /tmp/.X0-lock ]; do
+	inotifywait -e create /tmp
+done

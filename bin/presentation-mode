@@ -1,0 +1,8 @@
+#!/bin/bash
+pokoy -k
+xautolock -exit
+# xset dpms 0 0 0
+xset s off -dpms
+# xset s off
+killall redshift || true
+sudo backlightctl 100

@@ -1,0 +1,33 @@
+#!/bin/bash
+# USAGE: ./reconfig-squid-db.sh [LEVEL]
+# LEVEL:
+#	<none>:	rebuild ssl_crtd db
+#	1:	+ rebuild cache
+#	2:	+ regen cert
+sudo systemctl stop squid
+if [ "$1" == "1" ]; then
+	echo "Reconstructiong squid cache..."
+	sudo rm -rf /home/cache/squid
+	sudo mkdir /home/cache/squid
+	sudo chown -R proxy:proxy /home/cache/squid
+	sudo squid -z -N
+fi
+# gen new cert
+if [ ! -e /etc/squid/squid.pem -o "$1" == "2" ]; then
+	# sudo openssl genpkey -algorithm RSA -out /etc/squid/squid.key -pkeyopt rsa_keygen_bits:4096
+	# sudo openssl req -key /etc/squid/squid.key -x509 -new -days 3650 -out /etc/squid/squid.pem
+	sudo openssl req -newkey rsa:4096 -x509 -keyout /etc/squid/squid.pem \
+		-out /etc/squid/squid.pem -days 3650 -nodes -batch -utf8
+	sudo openssl x509 -in /etc/squid/squid.pem -outform DER -out \
+		/etc/squid/squid.der
+	sudo chmod 400 /etc/squid/squid.pem
+	sudo chmod 444 /etc/squid/squid.der
+	sudo chown -R proxy:proxy /etc/squid/squid.{der,pem}
+	sudo cp /etc/squid/squid.pem /etc/ca-certificates/trust-source/anchors/squid.crt
+	sudo trust extract-compat
+fi
+
+sudo rm -rf /home/cache/squid-ssl
+sudo /usr/lib/squid/ssl_crtd -s /home/cache/squid-ssl -c
+sudo chown -R proxy:proxy /home/cache/squid-ssl
+sudo systemctl start squid

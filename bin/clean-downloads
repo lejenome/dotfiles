@@ -1,0 +1,7 @@
+#!/bin/bash
+ls ~/Downloads/*_files/ -d | while read p; do
+	[[ ! -e ${p%%_files*}.htm && ! -e ${p%%_files*}.html ]] \
+		&& rm -rf "$p" \
+		&& basename "$p"
+done
+exit 0

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+guest=ubuntu-server
+mac=fe:dc:ba:99:88:01
+tap=tap-${guest}
+netid=${guest}nic
+
+  sudo /etc/qemu-ifup $tap
+
+  qemu-system-x86_64 \
+	-drive file=/home/lejenome/qemu/${guest}.img,cache=none,if=virtio \
+	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on \
+	-device virtio-net,netdev=$netid,mac=$mac \
+	-pidfile /tmp/qemu-${guest}.pid \
+	-name $guest \
+	-enable-kvm \
+	-cpu host \
+	-m 1G \
+	-vga none \
+	-nographic \
+	"$@"
+
+  rm /tmp/qemu-${guest}.pid
+  sudo /etc/qemu-ifdown $tap
+#	-netdev user,id=ubuntunic,hostname=ubuntuhost,hostfwd=tcp::5550-:22,hostfwd=tcp::5551-:80,hostfwd=tcp::5552-:443 \
+#	-kernel /boot/vmlinuz-linux-lts \
+#	-initrd /boot/initramfs-linux-lts.img \
+#	-append "root=UUID=53e4018c-a712-4874-9e77-077f3ab73ef0 ro console=ttyAMA0 console=ttyS0" \

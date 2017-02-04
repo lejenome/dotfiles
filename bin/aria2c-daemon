@@ -1,0 +1,6 @@
+#!/bin/bash
+source ${HOME}/.config/zsh/02-proxy.zsh
+/usr/bin/aria2c --enable-rpc --rpc-listen-all --rpc-allow-origin-all \
+	--save-session $HOME/.config/aria2/session.lock \
+	--input-file $HOME/.config/aria2/session.lock \
+	--conf-path=$HOME/.config/aria2/aria2.conf

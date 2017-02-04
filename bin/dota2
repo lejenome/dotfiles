@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+rm ~/.steam/root
+ln -s ~/.local/share/Steam/ ~/.steam/root
+~/.local/share/Steam/steamapps/common/dota\ 2\ beta/game/bin/linuxsteamrt64/dota2

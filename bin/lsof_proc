@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo sysdig evt.type=open and proc.name=$1 -p "%evt.time %evt.res %9fd.type %fd.name" \
+	| sed 's/__pycache__\/\(.*\)\.cpython-35\.opt-.\.pyc/\1.py/'

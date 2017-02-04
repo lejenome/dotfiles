@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#SPICE_PORT=5925
+guest=android
+mac=fe:dc:ba:99:88:02
+tap=tap-${guest}
+netid=${guest}nic
+
+  sudo /etc/qemu-ifup $tap
+
+  export QEMU_AUDIO_DRV=alsa
+  export SDL_VIDEO_X11_DGAMOUSE=0
+  qemu-system-x86_64 \
+	-drive file=/home/lejenome/qemu/${guest}.img,cache=none,if=ide \
+	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on \
+	-net nic,netdev=$netid,macaddr=$mac \
+	-pidfile /tmp/qemu-${guest}.pid \
+	-name $guest \
+	-enable-kvm \
+	-cpu host \
+	-m 1G \
+	-k fr \
+	-vga qxl \
+	-soundhw ac97 \
+	"$@"
+
+  rm /tmp/qemu-${guest}.pid
+  sudo /etc/qemu-ifdown $tap
+#	-device virtio-net,netdev=$netid,mac=$ac \
+#        -device virtio-serial \
+#        -chardev spicevmc,id=vdagent,name=vdagent \
+#        -device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+#        -spice port=${SPICE_PORT},disable-ticketing \
+#exec spicec --title Android -h 127.0.0.1 -p ${SPICE_PORT}

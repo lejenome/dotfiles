@@ -1,0 +1,27 @@
+#!/bin/bash
+proto=${1%%://*}
+adr=${1#irc://}
+adr=${adr#ircs://}
+adr=${adr#*@}
+adr=${adr%%[,?]*}
+domain=${adr%%[/:]*} # e.g irc.freenode.net
+port=${adr#${domain}}
+port=${port%%/**}  # e.g :8000
+channel=${adr#${domain}${port}}
+channel="${channel##*/}"
+channel="#${channel#\#}" # e.g: #ubuntu-tn
+echo "=> $proto:// $domain $port $channel"
+
+cd ~/.weechat || exit 1
+for f in weechat_fifo_*; do
+	[ -p "$f" ] && fifo="$f"
+done
+if [ -z "$fifo" ]; then
+	$TERMINAL -e weechat "${proto}://${domain}${port}/${channel}"
+else
+	echo "*/connect ${proto}://${domain}${port}" > ~/.weechat/$fifo
+	for i in 0 2 6 9; do
+		sleep $i
+		echo "*/join -server ${domain} ${channel}" > ~/.weechat/$fifo
+	done
+fi

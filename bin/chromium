@@ -1,0 +1,3 @@
+#!/bin/bash
+source ${ZDOTDIR:-$XDG_CONFIG_HOME/zsh}/02-proxy.zsh
+/usr/bin/chromium "$@"

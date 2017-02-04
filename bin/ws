@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#SPICE_PORT=5924
+guest=windows
+mac=fe:dc:ba:99:88:03
+tap=tap-${guest}
+netid=${guest}nic
+
+  sudo /etc/qemu-ifup $tap
+
+  export QEMU_AUDIO_DRV=pa
+#  export QEMU_ALSA_DAC_DEV=pulse
+#  export QEMU_ALSA_ADC_DEV=pulse
+  export SDL_VIDEO_X11_DGAMOUSE=0
+  qemu-system-x86_64 \
+	-drive file=/home/lejenome/qemu/${guest}.img,cache=none,if=virtio \
+	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on \
+	-device virtio-net,netdev=$netid,mac=$mac \
+	-pidfile /tmp/qemu-${guest}.pid \
+	-name $guest \
+	-enable-kvm \
+	-cpu host \
+	-m 2G \
+	-k fr \
+	-vga qxl \
+	-usbdevice tablet \
+        -device virtio-serial \
+        -chardev spicevmc,id=vdagent,name=vdagent \
+        -device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+	-device intel-hda,id=sound0 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 \
+	-net nic -net user,smb=/mnt/Others \
+	"$@"
+
+  rm /tmp/qemu-${guest}.pid
+  sudo /etc/qemu-ifdown $tap
+#	-netdev user,id=windowsnic,hostname=windowshost -device virtio-net,netdev=windowsnic \
+#	-daemonize \
+#        -spice port=${SPICE_PORT},disable-ticketing \
+#exec spicec --title Windows -h 127.0.0.1 -p ${SPICE_PORT}

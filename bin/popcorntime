@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+# wrapper for popcorntime with squid caching proxy
+export all_proxy="http://127.0.0.1:3130"
+export http_proxy="http://127.0.0.1:3130"
+export https_proxy="http://127.0.0.1:3130"
+/usr/bin/popcorntime "$@"

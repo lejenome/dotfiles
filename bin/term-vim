@@ -1,0 +1,2 @@
+#!/bin/bash
+$TERMINAL -e vim "${@#file://}"

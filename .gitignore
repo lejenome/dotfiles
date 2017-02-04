@@ -9,3 +9,5 @@
 /~/.config/zsh/.zcompdump*
 /~/.zsh/zcompcache/
 /~/.config/vimperator/info/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+set -x
+nat="iptables -t nat -A PREROUTING -i docker0 -p"
+$nat tcp --dport 53 -j REDIRECT --to 53
+$nat udp --dport 53 -j REDIRECT --to 53
+$nat tcp --dport 80 -j REDIRECT --to 3129
+
+dnsmasq -C /etc/dnsmasq.d/docker0.conf # -d
+# enabled on the main squid instance
+#squid -f /etc/squid/squid-tproxy-docker0.conf -N -d 1
