@@ -17,6 +17,10 @@ set viminfo+=n$XDG_CACHE_HOME/viminfo
 set undodir  =$XDG_CACHE_HOME/vim-undo
 set directory=$XDG_CACHE_HOME/vim-swap
 
+
+set rtp+=$XDG_CONFIG_HOME/vim/
+set rtp+=$XDG_DATA_HOME/vim/
+
 " vundle
 source $XDG_CONFIG_HOME/vim/vundle.vim
 
