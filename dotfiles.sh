@@ -30,16 +30,16 @@ sync () {
 		diff {$SYNC_DIR,$TARGET_DIR}/$ITEM_TO_SYNC > /dev/null \
 			&& echo "DID: $ITEM_TO_SYNC" \
 			|| echo "WARN: different item '$TARGET_DIR/$ITEM_TO_SYNC' exists" >&2
-		continue
+		return
 	fi
 	if [[ "$1" == "l" && -e $TARGET_DIR/$ITEM_TO_SYNC ]];then
 		if [[ $(stat -L -c '%i' "$TARGET_DIR/$ITEM_TO_SYNC") == \
 			$(stat -L -c '%i' "$SYNC_DIR/$ITEM_TO_SYNC") ]]; then
 			echo "DID: $ITEM_TO_SYNC"
-			continue
+			return
 		fi
 		echo "WARN: different item '$TARGET_DIR/$ITEM_TO_SYNC' exists" >&2
-		continue
+		return
 	fi
 	mkdir -p $(dirname "$TARGET_DIR/$ITEM_TO_SYNC")
 	case $1 in
@@ -54,7 +54,7 @@ sync () {
 status () {
 	if [[ ! -e $TARGET_DIR/$ITEM_TO_SYNC ]]; then
 		echo "NOSYNC: $ITEM_TO_SYNC" >&2
-		continue
+		return
 	fi
 	case $1 in
 		l)
