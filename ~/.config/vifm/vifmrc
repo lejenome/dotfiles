@@ -178,10 +178,12 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.m
          \ ffprobe -pretty %c 2>&1
 
 " Web
-filextype *.html,*.htm,*.mhtml,*.svg
+filextype *.html,*.htm,*.svg
         \ $BROWSER %f 2>&1 >/dev/null &,
         \ qutebrowser %f 2>&1 >/dev/null &,
         \ firefox %f 2>&1 >/dev/null &,
+filextype *.mhtml
+        \ chromium %f 2>&1 >/dev/null &,
 filetype *.html,*.htm links, lynx
 
 " Object

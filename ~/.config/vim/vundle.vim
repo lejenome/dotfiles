@@ -14,6 +14,7 @@ Plug 'scrooloose/syntastic'
 let g:syntastic_html_validator_parser = 'html5'
 "let g:syntastic_html_checkers = ['w3', 'validator']
 let g:syntastic_html_checkers = ['tidy']
+let g:syntastic_markdown_checkers = ['mdl', 'proselint']
 let g:syntastic_python_checkers = ['pep8', 'python'] " 'pylint'
 let b:syntastic_c_cflags = '-I/usr/include/SDL2 -I/usr/include/glib-2.0 -I/usr/include/gtk-3.0'
 let g:syntastic_c_compiler = 'clang'

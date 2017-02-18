@@ -1,20 +1,43 @@
+# My website
 https://lejenome.github.io/rss.xml
+
+# Linux blogs
 http://www.linuxjournal.com/node/feed "systems"
 http://phoronix.com/rss.php "systems"
 http://linuxgizmos.com/feed/ "tech"
-http://www.fudzilla.com/?format=feed "tech"
+
+# General blogs
+# http://www.fudzilla.com/?format=feed "tech"
+http://jvns.ca/atom.xml
+
+# Ubuntu
 http://planet.ubuntu.com/rss20.xml "distros"
+
 http://feeds.feedburner.com/d0od?format=xml "distros"
 http://feeds.feedburner.com/webupd8?format=xml "distros"
 # http://www.developpez.com/index/rss
 http://www.linux-magazine.com/rss/feed/lmi_news
+
+# Gnome
 http://planet.gnome.org/atom.xml
+
+# Mozilla
 http://planet.mozilla.org/atom.xml
 https://hacks.mozilla.org/feed/
+
+# Qt
 http://planet.qt.io/rss20.xml
+
+# Python
+http://planetpython.org/rss20.xml
+https://www.djangoproject.com/rss/community/blogs/
+
+
+# Jobs and Internship
 http://www.authenticjobs.com/rss/custom.php?terms=&type=3,5,2,6,4&cats=&onlyremote=1&location=
 http://www.jeunesse.francophonie.org/flux/appels-et-concours/rss.xml
 
+# http://planet.haskell.org/rss20.xml
 # http://rss.gmane.org/topics/complete/gmane.linux.kernel.kernelnewbies
 http://www.ibm.com/developerworks/views/linux/rss/libraryview.jsp?site_id=1&contentarea_by=Linux&topic_by=&product_by=&search_by=&industry_by=&sort_by=Date&series_title_by=&type_by=All%20Types
 

@@ -32,4 +32,4 @@ set crypt_autosmime=no
 
 #encrypt postpone mails before saving
 set postpone_encrypt = yes
-send-hook "~f mtcfss@outlook.com" "set crypt_autosign=no"
+send-hook "~f fssotc@gmail.com" "set crypt_autosign=no"
