@@ -14,6 +14,7 @@ Plug 'scrooloose/syntastic'
 let g:syntastic_html_validator_parser = 'html5'
 "let g:syntastic_html_checkers = ['w3', 'validator']
 let g:syntastic_html_checkers = ['tidy']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_markdown_checkers = ['mdl', 'proselint']
 let g:syntastic_python_checkers = ['pep8', 'python'] " 'pylint'
 let b:syntastic_c_cflags = '-I/usr/include/SDL2 -I/usr/include/glib-2.0 -I/usr/include/gtk-3.0'
@@ -40,11 +41,13 @@ let g:syntastic_html_tidy_exec = '/usr/bin/tidy5'
 " VIM GITGUTTER (Git Status bar)
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'airblade/vim-gitgutter'
+" Plug 'mhinz/vim-signify'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " lang pack for vim (syntax, compiler, indent, ...)
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'sheerun/vim-polyglot'
+let g:polyglot_disabled = ['jsx']
 
 """" VIM POLYGLOT ALTERNATIVE SYNTAX HIGHLIGHTERS """"
 " Plug 'hail2u/vim-css3-syntax'

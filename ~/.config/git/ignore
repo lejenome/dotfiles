@@ -17,6 +17,20 @@ npm-debug.log
 *.un~
 #Session.vim
 
+*.o
+*.lo
+*.la
+*.al
+.libs
+*.so
+*.so.[0-9]*
+*.a
+*.py[cod]
+*.rej
+*~
+~$*
+.#*
+
 # ctags, global
 /tags
 /GPATH
