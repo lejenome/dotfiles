@@ -55,6 +55,8 @@ export GEM_SPEC_CACHE=$GEM_HOME/specs
 export CSCOPE_DB=$HOME/git/cscope.out
 
 # Android toolchains
-export ANDROID_NDK=$HOME/archive/android-sdk/ndk-bundle/
+export ANDROID_HOME=$HOME/archives/android-sdk/
+export ANDROID_NDK=$ANDROID_HOME/ndk-bundle/
+export PATH="${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"
 
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle

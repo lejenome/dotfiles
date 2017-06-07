@@ -5,6 +5,8 @@ guest=windows
 mac=fe:dc:ba:99:88:03
 tap=tap-${guest}
 netid=${guest}nic
+#dir="$(dirname $(realpath $0))/"
+dir=${HOME}/qemu/windows/
 
 # Check permissions
 if [[ "$UID" != "0" ]]; then
@@ -20,8 +22,8 @@ if [[ "$1" == "stop" ]]; then
 	exit 0
 else
 	# setup virtual RAID disk
-	losetup -f ~/qemu/windows/efi1
-	losetup -f ~/qemu/windows/efi2
+	losetup -f ${dir}/efi1
+	losetup -f ${dir}/efi2
 	mdadm --build --verbose /dev/md0 --chunk=512 --level=linear --raid-devices=3 /dev/loop0 /dev/sda6 /dev/loop1
 	sleep 1
 	chown lejenome:lejenome /dev/md0
@@ -35,14 +37,15 @@ fi
 # export QEMU_ALSA_ADC_DEV=pulse
 export SDL_VIDEO_X11_DGAMOUSE=0
 qemu-system-x86_64 \
-	-bios /usr/share/ovmf/ovmf_x64.bin \
+	-drive if=pflash,format=raw,readonly,file=/usr/share/ovmf/ovmf_code_x64.bin \
+	-drive if=pflash,format=raw,file=${dir}/ovmf_vars_x64.bin \
 	-drive file=/dev/md0,media=disk,format=raw,snapshot=off,cache=none \
 	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on -device virtio-net,netdev=$netid,mac=$mac \
 	-pidfile /tmp/qemu-${guest}.pid \
 	-name $guest \
 	-enable-kvm \
 	-cpu host \
-	-m 4G \
+	-m 3G \
 	-k fr \
 	-vga qxl \
 	-display sdl -no-frame -alt-grab \

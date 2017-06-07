@@ -25,6 +25,9 @@ else
 fi
 
 for r in $ZDOTDIR/*.zsh; do
-        source $r
+	[ -x "$r" ] && source $r
 done
+
 # umask 077
+
+true

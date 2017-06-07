@@ -58,7 +58,7 @@ zstyle ':completion:*:*:(mplayer|mpv):*'           file-patterns   \
        '*:all-files' '*(-/):directories'
 
 zstyle ':completion:*:*:(vim|rview|vimdiff|xxd|nvim):*:*files' \
-  ignored-patterns '*~|*.(old|bak|zwc|viminfo|rxvt-*|zcompdump*|zcompcache)|pm_to_blib|cover_db|blib' \
+  ignored-patterns '*~|*.(old|bak|aux|zwc|viminfo|rxvt-*|zcompdump*|zcompcache)|pm_to_blib|cover_db|blib' \
   file-sort modification
 zstyle ':completion:*:*:(vim|rview|vimdiff|xxd|nvim):*' \
   file-sort modification

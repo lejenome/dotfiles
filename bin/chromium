@@ -1,3 +1,11 @@
 #!/bin/bash
 source ${ZDOTDIR:-$XDG_CONFIG_HOME/zsh}/02-proxy.zsh
+if [ -z "$http_proxy" ]; then
+	export https_proxy=http://127.0.0.1:3128
+	export http_proxy=http://127.0.0.1:3128
+	export ftp_proxy=http://127.0.0.1:3128
+	export no_proxy="localhost,127.0.0.1/24,192.168.1.1/24,0.0.0.0"
+fi
+echo "[proxy] $http_proxy" >&2
+
 /usr/bin/chromium "$@"

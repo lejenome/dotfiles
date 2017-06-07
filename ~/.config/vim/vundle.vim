@@ -35,7 +35,8 @@ let g:syntastic_html_tidy_exec = '/usr/bin/tidy5'
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM FUGITIVE (Git Wrapper)
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM GITGUTTER (Git Status bar)
@@ -47,7 +48,7 @@ Plug 'airblade/vim-gitgutter'
 " lang pack for vim (syntax, compiler, indent, ...)
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'sheerun/vim-polyglot'
-let g:polyglot_disabled = ['jsx']
+let g:polyglot_disabled = ['jsx', 'latex']
 
 """" VIM POLYGLOT ALTERNATIVE SYNTAX HIGHLIGHTERS """"
 " Plug 'hail2u/vim-css3-syntax'
@@ -307,6 +308,10 @@ nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 let g:syntastic_java_javac_classpath = 'src/:src/*/java/:lib/'
 
+" PHP Completion
+Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
+" let g:phpcomplete_parse_docblock_comments = 1
+
 " Plug 'Ada-Bundle'
 
 Plug 'jpalardy/vim-slime'
@@ -314,5 +319,7 @@ let g:slime_target = 'tmux'
 let g:slime_python_ipython = 1
 let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 """ ctrl + double `c`, default pane name, select :.0 for pane 0 on current win
+
+Plug 'lervag/vimtex'
 
 call plug#end()            " required
