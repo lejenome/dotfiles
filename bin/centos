@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+#SPICE_PORT=5924
+guest=centos
+mac=fe:dc:ba:99:88:08
+tap=tap-${guest}
+netid=${guest}nic
+#dir="$(dirname $(realpath $0))/"
+dir=${HOME}/qemu/centos/
+
+# Check permissions
+if [[ "$UID" != "0" ]]; then
+	echo "Need Root Permissions" 2>/dev/null
+	exit 1
+fi
+
+# Disk config
+if [[ "$1" == "stop" ]]; then
+	# stop virtual RAID disk
+	mdadm --stop --scan
+	losetup --detach-all
+	exit 0
+else
+	# setup virtual RAID disk
+	losetup -f ${dir}/efi1
+	losetup -f ${dir}/efi2
+	mdadm --build --verbose /dev/md0 --chunk=512 --level=linear --raid-devices=3 /dev/loop0 /dev/sda8 /dev/loop1
+	sleep 1
+	chown lejenome:lejenome /dev/md0
+fi
+
+# create network tap device
+/etc/qemu-ifup $tap
+
+# export QEMU_AUDIO_DRV=alsa
+# export QEMU_ALSA_DAC_DEV=pulse
+# export QEMU_ALSA_ADC_DEV=pulse
+export SDL_VIDEO_X11_DGAMOUSE=0
+qemu-system-x86_64 \
+	-drive if=pflash,format=raw,readonly,file=/usr/share/ovmf/ovmf_code_x64.bin \
+	-drive if=pflash,format=raw,file=${dir}/ovmf_vars_x64.bin \
+	-drive file=/dev/md0,media=disk,format=raw,snapshot=off,cache=none \
+	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on -device virtio-net,netdev=$netid,mac=$mac \
+	-pidfile /tmp/qemu-${guest}.pid \
+	-name $guest \
+	-enable-kvm \
+	-cpu host \
+	-m 3G \
+	-k fr \
+	-vga qxl \
+	-display sdl -no-frame -alt-grab \
+	-device virtio-serial \
+	-chardev spicevmc,id=vdagent,name=vdagent \
+	-device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+	-net nic -net user,smb=/mnt/Others \
+	-usb \
+	-usbdevice tablet \
+	-chroot /mnt/Others -runas $SUDO_USER \
+	"$@"
+
+#	-drive file=/dev/md0,media=disk,format=raw,if=virtio,snapshot=off,cache=none \
+#	-device intel-hda,id=sound0 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 \
+#	-vga virtio \
+#	-chroot ~/qemu/centos -runas lejenome \
+#	-netdev user,id=$netid,hostname=windowshost -device virtio-net,netdev=$netid \
+#	-spice port=${SPICE_PORT},disable-ticketing \
+#	-daemonize \
+
+
+rm /tmp/qemu-${guest}.pid
+/etc/qemu-ifdown $tap
+
+# exec spicec --title Windows -h 127.0.0.1 -p ${SPICE_PORT}
