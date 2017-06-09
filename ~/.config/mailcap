@@ -1,7 +1,8 @@
 text/html; elinks -dump | strings | sed '/^[ \t]*$/d' ; copiousoutput;
 
-image/*; feh %s ;  test=test -n "$DISPLAY"
-video/*; mpv %s ;  test=test -n "$DISPLAY"
-audio/*; mpv %s ;  test=test -n "$DISPLAY"
-application/pdf; zathura %s ;  test=test -n "$DISPLAY"
-application/postscript; zathura %s  ;  test=test -n "$DISPLAY"
+*/*; xdg-open "%s"
+# image/*; feh %s ;  test=test -n "$DISPLAY"
+# video/*; mpv %s ;  test=test -n "$DISPLAY"
+# audio/*; mpv %s ;  test=test -n "$DISPLAY"
+# application/pdf; zathura %s ;  test=test -n "$DISPLAY"
+# application/postscript; zathura %s  ;  test=test -n "$DISPLAY"

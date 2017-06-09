@@ -45,18 +45,19 @@ qemu-system-x86_64 \
 	-name $guest \
 	-enable-kvm \
 	-cpu host \
-	-m 3G \
+	-m 1G \
 	-k fr \
-	-vga qxl \
-	-display sdl -no-frame -alt-grab \
-	-device virtio-serial \
-	-chardev spicevmc,id=vdagent,name=vdagent \
-	-device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
 	-net nic -net user,smb=/mnt/Others \
-	-usb \
-	-usbdevice tablet \
 	-chroot /mnt/Others -runas $SUDO_USER \
+	-vga none \
+	-display none \
 	"$@"
+#	-no-frame -alt-grab \
+#	-device virtio-serial \
+#	-chardev spicevmc,id=vdagent,name=vdagent \
+#	-device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+#	-usb \
+#	-usbdevice tablet \
 
 #	-drive file=/dev/md0,media=disk,format=raw,if=virtio,snapshot=off,cache=none \
 #	-device intel-hda,id=sound0 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 \

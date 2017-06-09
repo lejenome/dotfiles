@@ -26,6 +26,7 @@ l .config/weechat/perl
 l .bashrc
 l .config/X11/xinitrc
 l .mutt
+l .config/mimeapps.list
 l .config/mailcap
 l .config/gtk-2.0
 l .bash_profile
