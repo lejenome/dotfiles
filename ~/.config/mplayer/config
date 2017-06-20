@@ -15,7 +15,7 @@ slang = en,fr,ar #DVD: prefer english subtitles
 alang = en,fr,ar #DVD: prefer english audio tracks
 
 ao = alsa,openal,pulse,
-vo = vdpau,x11,gl,
+vo = gl_nosw,x11,gl,
 framedrop = yes # drop frames to preserve audio/video sync
 
 [vo.vdpau]

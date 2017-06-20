@@ -1,0 +1,24 @@
+{
+	"libs": [
+		"ecma5",
+		"ecma6",
+		"ecma7",
+		"browser",
+		"jquery"
+	],
+	"ecmaVersion": 7,
+	"loadEagerly": [],
+	"dontLoad": [
+		"node_modules/**"
+	],
+	"plugins": {
+		"modules": {},
+		"es_modules": {},
+		"node": {},
+		"doc_comment": {
+			"fullDocs": true,
+			"strong": true
+		},
+		"complete_strings": {}
+	}
+}

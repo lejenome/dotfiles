@@ -65,6 +65,7 @@ l .config/user-dirs.dirs
 l .config/user-dirs.locale
 #l .config/surfraw/conf
 l .config/chromium-flags.conf
+l .config/composer/composer.json
 l .config/transmission/settings.json
 l .config/transmission-daemon/settings.json
 l .config/transmission-remote-cli/settings.cfg
@@ -92,6 +93,7 @@ l .config/gnupg/gpg.conf
 l .config/gnupg/gpg-agent.conf
 l .ssh/config
 l .jshintrc
+l .tern-config
 l .config/gemrc
 l .config/pythonrc
 l .keynavrc

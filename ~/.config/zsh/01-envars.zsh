@@ -27,10 +27,10 @@ export SHELL='/bin/zsh'
 export SUDO_PROMPT="[30;43m%p[m@[30;41m%h[m [30;45m[sudo make me a sandwich][m : "
 
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
-export CFLAGS="-march=native -mtune=native -O2 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fdiagnostics-color=auto -flto=8"
+export CFLAGS="-march=native -mtune=native -O2 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fdiagnostics-color=auto" # -flto=8"
 export CXXFLAGS="${CFLAGS}"
 LDFLAGS="-B/usr/bin/ld.gold -fuse-ld=gold" #use gold linker with clang & use gold linker with gcc
-export LDFLAGS="${LDFLAGS} -Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu -Wl,-flto=8" # Bdirect # -zdynsort # -hashvals
+export LDFLAGS="${LDFLAGS} -Wl,-O1,--sort-common,--as-needed,-z,relro  -Wl,--enable-new-dtags  -Wl,--hash-style=gnu" # -Wl,-flto=8" # Bdirect # -zdynsort # -hashvals
 export MAKEFLAGS="-j$(nproc) -Otarget"
 export DEBUG_CFLAGS="-g -fvar-tracking-assignments"
 export DEBUG_CXXFLAGS="${DEBUG_CFLAGS}"
