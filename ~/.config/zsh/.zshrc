@@ -20,8 +20,10 @@ bindkey -v
 
 if [ -e "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
 	source "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-else
+elif [ -e "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [ -e "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 for r in $ZDOTDIR/*.zsh; do

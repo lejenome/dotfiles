@@ -6,10 +6,12 @@
 user=lejenome
 br=qemu0
 tap=$1
-ifname=wlp8s0
 gateway=192.168.2.1/24
 network=192.168.2.0/24
 broadcast=192.168.2.255
+
+ifname=$(ip route | sed -n '/^default/s/.* dev \(.*\) proto .*$/\1/p')
+ifname=${ifname:-wlp2s0}
 
 if [ -n "$1" ]; then
 	/usr/sbin/ip link show $br 2>/dev/null >/dev/null || {

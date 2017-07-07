@@ -29,7 +29,7 @@ export TZ="Africa/Tunis"
 
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='qutebrowser'
+export BROWSER='firefox'
 export PAGER='less'
 
 # node modules additional lookup dirs

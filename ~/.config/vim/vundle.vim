@@ -312,6 +312,8 @@ let g:syntastic_java_javac_classpath = 'src/:src/*/java/:lib/'
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 " let g:phpcomplete_parse_docblock_comments = 1
 
+Plug 'joonty/vdebug', {'for': 'php'}
+
 " Plug 'Ada-Bundle'
 
 Plug 'jpalardy/vim-slime'
@@ -320,6 +322,8 @@ let g:slime_python_ipython = 1
 let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 """ ctrl + double `c`, default pane name, select :.0 for pane 0 on current win
 
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': ['tex', 'latex', 'plaintex']}
+
+Plug 'blindFS/vim-taskwarrior'
 
 call plug#end()            " required

@@ -163,6 +163,9 @@ set wildmenu " Turn on WiLd menu
 set splitbelow
 set splitright
 
+" Change Max allowed opened tabs to 100
+set tabpagemax=100
+
 " Enable folding with the spacebar
 "nnoremap <space> za
 set foldmethod=indent
