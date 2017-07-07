@@ -26,7 +26,7 @@ elif [ -e "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; th
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-for r in $ZDOTDIR/*.zsh; do
+for r in ~/.config/zsh/*.zsh; do
 	[ -x "$r" ] && source $r
 done
 
