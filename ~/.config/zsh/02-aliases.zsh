@@ -66,7 +66,7 @@ alias p='ps -f'
 alias sortnr='sort -n -r'
 alias unexport='unset'
 
-alias t='todo.sh'
+alias t='task'
 
 # Ping
 alias pr='ping -c 1 192.168.1.1 | tail -3'

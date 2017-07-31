@@ -23,8 +23,8 @@ checkout = git clone 'https://github.com/trapd00r/LS_COLORS' 'LS_COLORS'
 [/mnt/Others/git/linux]
 checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
 
-[/mnt/Others/git/vimperator-labs]
-checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
+# [/mnt/Others/git/vimperator-labs]
+# checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
 
 [/mnt/Others/git/kernel_gcc_patch]
 checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_patch'
@@ -43,11 +43,11 @@ checkout = git clone 'https://github.com/llvm-mirror/clang' 'clang'
 [/mnt/Others/git/gcc]
 checkout = git clone 'https://github.com/gcc-mirror/gcc' 'gcc'
 
-[/mnt/Others/git/zeal]
-checkout = git clone 'https://github.com/zealdocs/zeal/' 'zeal'
+# [/mnt/Others/git/zeal]
+# checkout = git clone 'https://github.com/zealdocs/zeal/' 'zeal'
 
-[/mnt/Others/git/Clementine]
-checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementine'
+# [/mnt/Others/git/Clementine]
+# checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementine'
 
 [/mnt/Others/git/libcxx]
 checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
@@ -56,20 +56,20 @@ checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
 checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
 
 
-[/mnt/Others/git/buildroot]
-checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
+# [/mnt/Others/git/buildroot]
+# checkout = git clone 'https://git.buildroot.net/buildroot' 'buildroot'
 
-[/mnt/Others/git/frecon]
-checkout = git clone 'https://chromium.googlesource.com/chromiumos/platform/frecon' 'frecon'
+# [/mnt/Others/git/frecon]
+# checkout = git clone 'https://chromium.googlesource.com/chromiumos/platform/frecon' 'frecon'
 
 [/mnt/Others/git/stdman]
 checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
 
-[git/mdp]
-checkout = git clone 'https://github.com/visit1985/mdp' 'mdp'
+# [git/mdp]
+# checkout = git clone 'https://github.com/visit1985/mdp' 'mdp'
 
-[git/pokoy]
-checkout = git clone 'https://github.com/ttygde/pokoy' 'pokoy'
+# [git/pokoy]
+# checkout = git clone 'https://github.com/ttygde/pokoy' 'pokoy'
 
 
 
@@ -77,50 +77,50 @@ checkout = git clone 'https://github.com/ttygde/pokoy' 'pokoy'
 [DEFAULT]
 order = 10
 
-[/mnt/Others/git/emscripten-freetype]
-checkout = git clone 'https://github.com/juj/emscripten-freetype' 'emscripten-freetype'
+# [/mnt/Others/git/emscripten-freetype]
+# checkout = git clone 'https://github.com/juj/emscripten-freetype' 'emscripten-freetype'
 
-[/mnt/Others/git/SDL_ttf]
-checkout = hg clone 'https://hg.libsdl.org/SDL_ttf/' 'SDL_ttf'
+# [/mnt/Others/git/SDL_ttf]
+# checkout = hg clone 'https://hg.libsdl.org/SDL_ttf/' 'SDL_ttf'
 
-[/mnt/Others/git/coreboot]
-checkout = git clone 'http://review.coreboot.org/p/coreboot.git' 'coreboot'
+# [/mnt/Others/git/coreboot]
+# checkout = git clone 'http://review.coreboot.org/p/coreboot.git' 'coreboot'
 
-[/mnt/Others/git/devdocs]
-checkout = git clone 'https://github.com/Thibaut/devdocs.git' 'devdocs'
+# [/mnt/Others/git/devdocs]
+# checkout = git clone 'https://github.com/Thibaut/devdocs.git' 'devdocs'
 
-[/mnt/Others/git/libbus1]
-checkout = git clone 'https://github.com/bus1/libbus1.git' 'libbus1'
+# [/mnt/Others/git/libbus1]
+# checkout = git clone 'https://github.com/bus1/libbus1.git' 'libbus1'
 
-[/mnt/Others/git/mbed]
-checkout = git clone 'https://github.com/mbedmicro/mbed/' 'mbed'
+# [/mnt/Others/git/mbed]
+# checkout = git clone 'https://github.com/mbedmicro/mbed/' 'mbed'
 
-[/mnt/Others/git/sdl2]
-checkout = hg clone 'https://hg.libsdl.org/SDL' 'sdl2'
+# [/mnt/Others/git/sdl2]
+# checkout = hg clone 'https://hg.libsdl.org/SDL' 'sdl2'
 
 [/mnt/Others/git/urxvt-font-size]
 checkout = git clone 'https://github.com/majutsushi/urxvt-font-size.git' 'urxvt-font-size'
 
-[/mnt/Others/git/zephyr]
-checkout = git clone 'https://gerrit.zephyrproject.org/r/zephyr' 'zephyr'
+# [/mnt/Others/git/zephyr]
+# checkout = git clone 'https://gerrit.zephyrproject.org/r/zephyr' 'zephyr'
 
-[/mnt/Others/git/libarchive]
-checkout = git clone 'https://github.com/libarchive/libarchive/' 'libarchive'
+# [/mnt/Others/git/libarchive]
+# checkout = git clone 'https://github.com/libarchive/libarchive/' 'libarchive'
 
 [/mnt/Others/git/rappel]
 checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
 
-[/mnt/Others/git/zlib]
-checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
+# [/mnt/Others/git/zlib]
+# checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
 
-[/mnt/Others/git/ipython]
-checkout = git clone 'https://github.com/ipython/ipython.git' 'ipython'
+# [/mnt/Others/git/ipython]
+# checkout = git clone 'https://github.com/ipython/ipython.git' 'ipython'
 
-[/mnt/Others/git/qtconsole]
-checkout = git clone 'https://github.com/jupyter/qtconsole.git' 'qtconsole'
+# [/mnt/Others/git/qtconsole]
+# checkout = git clone 'https://github.com/jupyter/qtconsole.git' 'qtconsole'
 
-[/mnt/Others/git/firefox]
-checkout = hg clone 'https://hg.mozilla.org/mozilla-central' 'firefox'
+# [/mnt/Others/git/firefox]
+# checkout = hg clone 'https://hg.mozilla.org/mozilla-central' 'firefox'
 
 [git/rust]
 checkout = git clone 'https://github.com/rust-lang/rust' 'rust'

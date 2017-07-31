@@ -1,6 +1,15 @@
+# Mozilla User Preferences
+
 /* global user_pref */
 /* jshint maxlen: false, esnext:true */
-user_pref("browser.newtabpage.pinned",'[{"url":"https://twitter.com/","title":"Twitter"},{"url":"https://plus.google.com/","title":"Google+"},{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)"},{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)"},{"url":"https://www.coursera.org/","title":"Coursera"},{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)"},{"url":"https://www.hackerrank.com/contests","title":"HackerRank"}]');
+user_pref("browser.newtabpage.pinned", '['
+  + '{"url":"https://github.com/lejenome","title":"lejenome (Moez Bouhlel)","baseDomain":"github.com"},'
+  + '{"url":"https://www.youtube.com/feed/subscriptions","title":"Youtube (Subscriptions)","baseDomain":"youtube.com"},'
+  + '{"url":"https://twitter.com/","title":"Twitter"},'
+  + '{"url":"https://www.coursera.org/","title":"Coursera","baseDomain":"coursera.org"},'
+  + '{"url":"https://courses.edx.org/dashboard","title":"Edx (dashboard)","baseDomain":"courses.edx.org"},'
+  + '{"url":"https://www.hackerrank.com/contests","title":"HackerRank","baseDomain":"hackerrank.com"}'
+  + ']');
 user_pref("browser.search.defaultenginename", "Google");
 // updeter config
 user_pref("app.update.auto", true);
@@ -15,6 +24,7 @@ user_pref("browser.cache.use_new_backend", 1);
 // browser behaviours config
 user_pref("browser.panorama.animate_zoom", false);
 user_pref("browser.tabs.remote.autostart", true);
+user_pref("browser.link.open_newwindow", 3);
 //user_pref("browser.tabs.remote.autostart.1", false);
 //user_pref("browser.tabs.remote.autostart.2", false);
 user_pref("browser.tabs.warnOnClose", false);
@@ -33,7 +43,7 @@ user_pref("device.storage.enabled", true);
 // devtools config
 user_pref("devtools.theme", "dark");
 user_pref("devtools.webide.autoinstallADBHelper", false);
-user_pref("devtools.webide.enabled", true);
+// user_pref("devtools.webide.enabled", true);
 // enable some extra experimental DOM futures
 /*
 user_pref("dom.archivereader.enabled", true);
@@ -75,9 +85,9 @@ user_pref("extensions.checkCompatibility.aurora", false);
 user_pref("xpinstall.signatures.required", false);
 // font settings
 // user_pref("font.minimum-size.x-western", 8);
-user_pref("font.name.monospace.x-western", "Source Code Pro");
-user_pref("font.name.sans-serif.x-western", "Source Code Pro");
-user_pref("font.name.serif.x-western", "Source Code Pro");
+// user_pref("font.name.monospace.x-western", "Source Code Pro");
+// user_pref("font.name.sans-serif.x-western", "Source Code Pro");
+// user_pref("font.name.serif.x-western", "Source Code Pro");
 // user_pref("font.size.fixed.x-western", 11);
 /// user_pref("font.size.variable.x-western", 11);
 // gfx settings
@@ -99,11 +109,11 @@ user_pref("layers.offmainthreadcomposition.force-basic", true);
 user_pref("layers.offmainthreadcomposition.testing.enabled", true);
 user_pref("layers.use-deprecated-textures", false);
 // layout config
-user_pref("layout.css.dpi", 0);
-user_pref("layout.css.filters.enabled", true);
-user_pref("layout.css.grid.enabled", true);
-user_pref("layout.css.ruby.enabled", true);
-user_pref("layout.css.vertical-text.enabled", true);
+// user_pref("layout.css.dpi", 0);
+// user_pref("layout.css.filters.enabled", true);
+// user_pref("layout.css.grid.enabled", true);
+// user_pref("layout.css.ruby.enabled", true);
+// user_pref("layout.css.vertical-text.enabled", true);
 // enable spell checking for input/textarea
 user_pref("layout.spellcheckDefault", 2);
 // user_pref("layout.css.will-change.enabled", true);
@@ -111,7 +121,7 @@ user_pref("layout.spellcheckDefault", 2);
 user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 user_pref("media.mediasource.enabled", true);
 user_pref("media.webspeech.recognition.enable", true);
-user_pref("media.webspeech.synth.enabled", false); // true crash FF v.44
+user_pref("media.webspeech.synth.enabled", true); // true crash FF v.44
 user_pref("media.audio_data.enabled", true);
 user_pref("media.eme.enabled", true);
 user_pref("media.track.enabled", true);
@@ -153,5 +163,3 @@ user_pref("shumway.disabled", false);
 user_pref("spellchecker.dictionary", "en-US");
 // UTF-8 as default charset
 user_pref("intl.charset.default", "UTF-8");
-// incremental JS GC
-// user_pref("dom.cycle_collector.incremental", true);
