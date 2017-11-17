@@ -4,6 +4,7 @@ PATH="/usr/bin"
 [ -d "/sbin" -a ! -L "/sbin" ] && PATH="$PATH:/sbin"
 [ -d "/usr/sbin" -a ! -L "/usr/sbin" ] && PATH="$PATH:/usr/sbin"
 PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+[ -e ~/.config/yarn/global/node_modules/.bin ] && PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [ -e ~/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
 
 # PERL PATH
@@ -14,10 +15,14 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d /usr/bin/core_perl ] && PATH="$PATH:/usr/bin/core_perl"
 
 [ -d /usr/share/perl6/vendor/bin ] && PATH="$PATH:/usr/share/perl6/vendor/bin"
-[ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
+[ -d ~/.perl6/bin ] && PATH="$PATH:$HOME/.perl6/bin"
 
 # GEM PATH
 [ -d "$HOME/.local/lib/ruby/bin" ] && PATH="${HOME}/.local/lib/ruby/bin:${PATH}"
+
+[ -d "$HOME/.opam/system/bin" ] && PATH="$PATH:$HOME/.opam/system/bin"
+[ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
+
 export PATH
 
 # DEFAULT tools and directories
@@ -132,3 +137,11 @@ export TASKRC="$XDG_CONFIG_HOME/taskrc"
 export TASKDATA="$XDG_DATA_HOME/task"
 
 export MANPATH=:"$XDG_DATA_HOME"/man
+
+# Android toolchains
+export ANDROID_HOME=$HOME/archives/android-sdk/
+export ANDROID_NDK=$ANDROID_HOME/ndk-bundle/
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1  # Fix emulator not starting issue
+export ANDROID_EMULATOR_HOME="$HOME/.android"
+export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
+export PATH="${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"

@@ -4,8 +4,13 @@
         "bin-dir": "~/.local/bin"
     },
     "repositories": [{
+        "type": "composer",
+        "url": "https://packagist.org"
+    }, {
+        "packagist": false
+    }, {
         "type": "pear",
-        "url": "http://pear2.php.net"
+        "url": "https://pear2.php.net"
     }],
     "require": {
         "squizlabs/php_codesniffer": "*",

@@ -33,6 +33,8 @@ l .bash_profile
 l .config/zsh
 l .config/jupyter/profile_default/ipython_config.py
 l .config/jupyter/jupyter_qtconsole_config.py
+l .config/jupyter/jupyter_console_config.py
+l .config/jupyter/jupyter_notebook_config.py
 #l .polipo
 l .curlrc
 l .asoundrc
@@ -59,8 +61,8 @@ l .config/pokoy
 l .config/pep8
 l .config/pip
 l .config/modprobed-db.conf
-l .config/newsbeuter/config
-l .config/newsbeuter/urls
+l .config/newsboat/config
+l .config/newsboat/urls
 l .config/user-dirs.dirs
 l .config/user-dirs.locale
 #l .config/surfraw/conf

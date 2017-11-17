@@ -1,0 +1,53 @@
+# My website
+https://lejenome.github.io/rss.xml "~Moez Bouhlel (lejenome)"
+# My Pocket
+https://getpocket.com/users/lejenome/feed/all "~My Pocket"
+
+# Linux blogs
+https://www.linuxjournal.com/node/feed "~Linux Journal" "systems"
+https://phoronix.com/rss.php "~Phoronix" "systems"
+https://linuxgizmos.com/feed/ "~Linux Gizmos" "tech"
+
+# PHP
+# http://www.planet-php.net/rss "~Planet PHP"
+# https://feed.laravel-news.com/ "~Laravel News"
+
+# General blogs
+# http://www.fudzilla.com/?format=feed "tech"
+https://jvns.ca/atom.xml "~Julia Evans Blog"
+
+# Ubuntu
+# https://planet.ubuntu.com/rss20.xml "~Planet Ubuntu" "distros"
+
+# https://feeds.feedburner.com/d0od?format=xml "~OMG! Ubuntu!" "distros"
+# https://feeds.feedburner.com/webupd8?format=xml "~Web Upd8" "distros"
+# https://www.developpez.com/index/rss
+https://www.linux-magazine.com/rss/feed/lmi_news "~Linux Magazine"
+
+# Gnome
+https://planet.gnome.org/atom.xml "~Planet Gnome"
+
+# Mozilla
+https://planet.mozilla.org/atom.xml "~Planet Mozilla"
+https://hacks.mozilla.org/feed/ "~Mozilla Hacks"
+
+# Qt
+https://planet.qt.io/rss20.xml "~Planet Qt"
+
+# Python
+http://planetpython.org/rss20.xml "~Planet Python"
+https://www.djangoproject.com/rss/community/blogs/ "~Django Community Plog"
+
+
+# Jobs and Internship
+https://www.authenticjobs.com/rss/custom.php?terms=&type=3,5,2,6,4&cats=&onlyremote=1&location=
+https://www.jeunesse.francophonie.org/flux/appels-et-concours/rss.xml
+# https://ert.cern.ch/browse_www/wd_portal_rss.rss?p_hostname=ert.cern.ch
+
+# https://planet.haskell.org/rss20.xml
+# http://rss.gmane.org/topics/complete/gmane.linux.kernel.kernelnewbies
+https://www.ibm.com/developerworks/views/linux/rss/libraryview.jsp?site_id=1&contentarea_by=Linux&topic_by=&product_by=&search_by=&industry_by=&sort_by=Date&series_title_by=&type_by=All%20Types "~IBM DeveloperWorks"
+
+https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&classification=Components&component=HTML%3A%20Parser&component=JavaScript%20Engine&component=JavaScript%20Engine%3A%20JIT&component=JavaScript%3A%20GC&component=JavaScript%3A%20Standard%20Library&component=String&component=Widget%3A%20Gtk&f1=bug_mentor&f2=assigned_to&list_id=13372926&o1=isnotempty&o2=equals&product=Core&query_format=advanced&resolution=---&v2=nobody%40mozilla.org&title=Bug%20List&ctype=atom "~Mozilla BugZilla (Beginner)"
+
+https://rjlipton.wordpress.com/feed/ "~Blog P=NP"

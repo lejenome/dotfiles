@@ -142,7 +142,7 @@ set undoreload=10000
 
 " File Types special configs
 autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 expandtab autoindent
-autocmd FileType javascript,css,html,xml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
+autocmd FileType javascript,css,html,xml,htmldjango setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
 autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79 expandtab autoindent
 autocmd FileType c setlocal tabstop=8 shiftwidth=8 softtabstop=8 textwidth=79 autoindent
 

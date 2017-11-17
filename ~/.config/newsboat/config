@@ -9,7 +9,7 @@ reload-time 180
 # mark-as-read-on-hover yes
 # show-read-articles no
 max-items 100
-cache-file ~/.local/share/newsbeuter/cache.db
+cache-file ~/.local/share/newsboat/cache.db
 cleanup-on-quit yes
 
 # urls-source "newsblur"

@@ -108,6 +108,9 @@ alias ju="sudo journalctl -xea -u"
 #qemu
 alias qemu='qemu-system-x86_64 -enable-kvm -cpu host -m 1G'
 
+alias open="xdg-open"
+alias o="xdg-open"
+
 #IPTABLES
 alias ipt='sudo /sbin/iptables'
 alias iptlist='sudo /sbin/iptables -n -v --line-numbers -L'

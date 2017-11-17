@@ -143,127 +143,159 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, $BROWSER %f &, firefox %f &
-fileviewer *.pdf pdftotext -nopgbrk %c -
+filextype *.pdf
+	\ xdg-open %f %i &,
+	\ zathura %c %i &,
+	\ $BROWSER %f &,
+	\ firefox %f &
+fileviewer *.pdf
+	\ pdftotext -nopgbrk %c -
 filextype *.pdf.gz
-	\ gunzip -d -k -c %f |zathura -&,
+	\ gunzip -d -k -c %f |zathura -&
 filextype *.pdf.Z
-	\ uncompress -c %f |zathura -&,
-
+	\ uncompress -c %f |zathura -&
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
-        \ zathura %f &,
-        \ gv %c %i &,
+	\ xdg-open %f %i &,
+	\ zathura %f &,
+	\ gv %c %i &
 
 " Djvu
 filextype *.djvu
-        \ zathura %f &,
+	\ xdg-open %f %i &,
+	\ zathura %f &
 
 filextype *.epub,*.mobi,*.chm,*.fb2
-	\ FBReader %f &,
+	\ xdg-open %f %i &,
+	\ FBReader %f &
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3
-       \ mpv --no-video %f,
-       \ mplayer %f,
-fileviewer *.mp3 mp3info
-fileviewer *.flac soxi
+	\ mpv --no-video %f,
+	\ mplayer %f
+fileviewer *.mp3
+	\ mp3info
+fileviewer *.flac
+	\ soxi
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v,*.ogg
-        \ mpv --no-terminal --fullscreen %f 2>/dev/null &,
-        \ mplayer %f &,
+	\ xdg-open %f %i &,
+	\ mpv --no-terminal --fullscreen %f %i &,
+	\ mplayer %f &
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.m2v,*.mov,*.webm,*.ts,*.m4v
-         \ ffprobe -pretty %c 2>&1
+	\ ffprobe -pretty %c 2>&1
 
 " Web
 filextype *.html,*.htm,*.svg
-        \ $BROWSER %f 2>&1 >/dev/null &,
-        \ qutebrowser %f 2>&1 >/dev/null &,
-        \ firefox %f 2>&1 >/dev/null &,
+	\ xdg-open %f %i &,
+	\ $BROWSER %f %i &,
+	\ qutebrowser %f %i &,
+	\ firefox %f %i &
 filextype *.mhtml
-        \ chromium %f 2>&1 >/dev/null &,
-filetype *.html,*.htm links, lynx
+	\ xdg-open %f %i &,
+	\ chromium %f %i &
+filetype *.html,*.htm
+	\ links,
+	\ lynx
 
 " Object
-filetype *.o nm %f | less
+filetype *.o
+	\ nm %f | less
 
 " Man page
-filetype *.[1-8] gtbl %c | groff -Tascii -man | less
-fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
+filetype *.[1-8]
+	\ gtbl %c | groff -Tascii -man | less
+fileviewer *.[1-8]
+	\ gtbl %c | groff -Tascii -man | col -b
 
 " Image
 filextype *.bmp,*.jpg,*.jpe,*.jpeg,*.png,*.xpm
-        \ feh -FZ %d --start-at %d/%c 2>/dev/null &,
-        \ imv -f -s %d -n %d/%c >/dev/null &,
-        \ sxiv -a -f %f>/dev/null &,
+	\ xdg-open %f %i &,
+	\ feh -FZ %d --start-at %d/%c %i &,
+	\ imv -f -s %d -n %d/%c %i &,
+	\ sxiv -a -f %f %i &
 filextype *.gif
-        \ imv -f -s %d -n %d/%c >/dev/null &,
-        \ feh -FZ %d --start-at %d/%c 2>/dev/null &,
-        \ sxiv -a -f %f>/dev/null &,
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
+	\ xdg-open %f %i &,
+	\ imv -f -s %d -n %d/%c %i &,
+	\ feh -FZ %d --start-at %d/%c %i &,
+	\ sxiv -a -f %f %i &
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+	\ convert -identify %f -verbose /dev/null
 
 " MD5
 filetype *.md5
-       \ md5sum -c %f,
+	\ md5sum -c %f
 
 " GPG signature
 filetype *.asc
-       \ !!gpg --verify %c,
+	\ !!gpg --verify %c
 
 " Torrent
-filetype *.torrent ktorrent %f &
-fileviewer *.torrent dumptorrent -v %c
+filetype *.torrent
+	\ ktorrent %f &
+fileviewer *.torrent
+	\ dumptorrent -v %c
 
 filetype *.zip,*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
-       \ vim %c,
-fileviewer *.tgz,*.tar.gz tar -tzf %c
-fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
-fileviewer *.tar.txz,*.txz xz --list %c
+	\ vim %c
+fileviewer *.tgz,*.tar.gz
+	\ tar -tzf %c
+fileviewer *.tar.bz2,*.tbz2
+	\ tar -tjf %c
+fileviewer *.tar.txz,*.txz
+	\ xz --list %c
 
 " FuseZipMount
 filetype *.zip,*.jar,*.war,*.ear,*.oxt
-       \ zip -sf %c | less,
-       \ tar -xf %c,
-fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
-
+	\ zip -sf %c | less,
+	\ tar -xf %c
+fileviewer *.zip,*.jar,*.war,*.ear,*.oxt
+	\ zip -sf %c
 
 " Rar2FsMount and rar archives
 filetype *.rar
-       \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
+	\ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.rar unrar v %c
 
 " IsoMount
 filetype *.iso
-       \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
+	\ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR
 
 " SshMount
 filetype *.ssh
-       \ FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR,
+	\ FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
 
 " FtpMount
 filetype *.ftp
-       \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR,
+	\ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR
 
 " Fuse7z and 7z archives
 filetype *.7z
-       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
-fileviewer *.7z 7z l %c
+	\ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR
+fileviewer *.7z
+	\ 7z l %c
 
 " Office files
 filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx
-	\ libreoffice %f 2>&1 >/dev/null &
-fileviewer *.doc catdoc %c
-fileviewer *.docx, docx2txt.pl %f -
+	\ xdg-open %f %i &,
+	\ libreoffice %f %i &
+fileviewer *.doc
+	\ catdoc %c
+fileviewer *.docx
+	\ docx2txt.pl %f -
 
 " TuDu files
-filetype *.tudu tudu -f %c
+filetype *.tudu
+	\ tudu -f %c
 
 " Qt projects
-filextype *.pro qtcreator %f &
+filextype *.pro
+	\ qtcreator %f &
 
-fileviewer .*/,*/ tree %f
+fileviewer .*/,*/
+	\ tree %f
 
 " Syntax highlighting in preview
 "

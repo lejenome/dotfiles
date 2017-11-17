@@ -179,3 +179,6 @@ function nicemount() {
 }
 # from https://wiki.archlinux.org/index.php/environment_variables
 envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }
+
+# Socket proxy. default bind to localhost:8000
+socket_proxy() { ssh -D ${1:-8000} -q -C -N tik.tn; }

@@ -1,12 +1,15 @@
 #!/bin/bash
-if [ -n "$(iw dev wlp8s0 station dump)" ]; then
+if [ -n "$(iw dev wlp8s0 station dump 2>/dev/null)" ]; then
 	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
 	exit 0
-elif [ -n "$(iw dev wlp8s1 station dump)" ]; then
+elif [ -n "$(iw dev wlp8s1 station dump 2>/dev/null)" ]; then
 	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
 	exit 0
-elif [ -n "$(iw dev wlp2s0 station dump)" ]; then
+elif [ -n "$(iw dev wlp2s0 station dump 2>/dev/null)" ]; then
 	echo 100 - $(iw dev wlp2s0 station dump | grep signal: | sed 's/^.*-\(.\+\) .*$/\1/' ) | bc
+	exit 0
+elif [ -n "$(ip route show dev enp0s1u2 2>/dev/null)" ]; then
+	curl --silent http://192.168.1.1/api/monitoring/status | grep -z -o "<SignalStrength>.*</SignalStrength>"| sed -z 's/<SignalStrength>\(.*\)<\/SignalStrength>/\1/'
 	exit 0
 fi
 (networkctl status | head -1 | grep routable > /dev/null && echo 100) \

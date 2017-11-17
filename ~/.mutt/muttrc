@@ -69,7 +69,9 @@ source $alias_file
 # Multi mails
 #-------------------------------------------
 macro generic "<esc>1" ":set from=$EMAIL realname='$NAME'"
-macro generic "<esc>2" ":set from=fssotc@gmail.com realname='FSS Open Tech Club'"
-macro generic "<esc>3" ":set from=moez.bouhlel@djagora.factorycampus.net realname='$NAME'"
+macro generic "<esc>2" ":set from=lejenome@tik.tn realname='Moez Bouhlel'"
+macro generic "<esc>3" ":set from=contact@tik.tn realname='Tik.tn'"
+macro generic "<esc>4" ":set from=fssont@tik.tn realname='FSS Open Tech Club'"
+macro generic "<esc>5" ":set from=moez.bouhlel@djagora.factorycampus.net realname='$NAME'"
 # EXTRA
 source ~/.mutt/gpgrc

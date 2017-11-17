@@ -1,8 +1,8 @@
 [Unit]
-Description=3H clean and update newsbeuter feeds
+Description=3H clean and update newsboat feeds
 
 [Timer]
-OnBootSec=1min
+OnBootSec=4min
 OnUnitActiveSec=180min
 Persistent=true
 

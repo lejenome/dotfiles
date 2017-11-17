@@ -1,10 +1,10 @@
 [Unit]
-Description=Clean and update newsbeuter feeds
+Description=Clean and update newsboat feeds
 JobTimeoutSec=2min
 
 [Service]
-ExecStartPre=/usr/bin/newsbeuter -X
-ExecStart=/usr/bin/newsbeuter -x reload
+ExecStartPre=/usr/bin/newsboat -X
+ExecStart=/usr/bin/newsboat -x reload
 Nice=19
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
