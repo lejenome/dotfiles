@@ -209,6 +209,19 @@ workspace "$ws10" output LVDS-1
     bindcode $mod+Shift+83  exec "mpc seek -1"
     bindcode $mod+Shift+84 exec "mpc stop"
 
+# fix for having different symbol when NumLock is on
+# issue solution: https://github.com/i3/i3/issues/2929#issuecomment-329161522
+    bindcode Mod2+$mod+80     exec "amixer set Master 5%+"
+    bindcode Mod2+$mod+88     exec "amixer set Master 5%-"
+    bindcode Mod2+$mod+84     exec "mpc toggle"
+    bindcode Mod2+$mod+85     exec "mpc next"
+    bindcode Mod2+$mod+83     exec "mpc prev"
+    bindcode Mod2+$mod+Shift+80    exec "sudo backlightctl +10"
+    bindcode Mod2+$mod+Shift+88  exec "sudo backlightctl -10"
+    bindcode Mod2+$mod+Shift+85 exec "mpc seek +1"
+    bindcode Mod2+$mod+Shift+83  exec "mpc seek -1"
+    bindcode Mod2+$mod+Shift+84 exec "mpc stop"
+
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
     bindsym XF86AudioMute exec "amixer set Master toggle"
     bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
