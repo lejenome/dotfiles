@@ -8,8 +8,8 @@ order = 1
 [/mnt/Others/git/qutebrowser]
 checkout = git clone 'https://github.com/The-Compiler/qutebrowser' 'qutebrowser'
 
-[/mnt/Others/git/sway]
-checkout = git clone 'https://github.com/SirCmpwn/sway' 'sway'
+# [/mnt/Others/git/sway]
+# checkout = git clone 'https://github.com/SirCmpwn/sway' 'sway'
 
 [/mnt/Others/git/oh-my-zsh]
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
@@ -23,9 +23,6 @@ checkout = git clone 'https://github.com/trapd00r/LS_COLORS' 'LS_COLORS'
 [/mnt/Others/git/linux]
 checkout = git clone 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
 
-# [/mnt/Others/git/vimperator-labs]
-# checkout = git clone 'https://github.com/vimperator/vimperator-labs/' 'vimperator-labs'
-
 [/mnt/Others/git/kernel_gcc_patch]
 checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_patch'
 
@@ -34,14 +31,14 @@ checkout = git clone 'https://github.com/graysky2/kernel_gcc_patch' 'kernel_gcc_
 [DEFAULT]
 order = 2
 
-[/mnt/Others/git/llvm]
-checkout = git clone 'https://github.com/llvm-mirror/llvm' 'llvm'
+# [/mnt/Others/git/llvm]
+# checkout = git clone 'https://github.com/llvm-mirror/llvm' 'llvm'
 
-[/mnt/Others/git/clang]
-checkout = git clone 'https://github.com/llvm-mirror/clang' 'clang'
+# [/mnt/Others/git/clang]
+# checkout = git clone 'https://github.com/llvm-mirror/clang' 'clang'
 
-[/mnt/Others/git/gcc]
-checkout = git clone 'https://github.com/gcc-mirror/gcc' 'gcc'
+# [/mnt/Others/git/gcc]
+# checkout = git clone 'https://github.com/gcc-mirror/gcc' 'gcc'
 
 # [/mnt/Others/git/zeal]
 # checkout = git clone 'https://github.com/zealdocs/zeal/' 'zeal'
@@ -49,11 +46,11 @@ checkout = git clone 'https://github.com/gcc-mirror/gcc' 'gcc'
 # [/mnt/Others/git/Clementine]
 # checkout = git clone 'https://github.com/clementine-player/Clementine' 'Clementine'
 
-[/mnt/Others/git/libcxx]
-checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
+# [/mnt/Others/git/libcxx]
+# checkout = git clone 'https://github.com/llvm-mirror/libcxx' 'libcxx'
 
-[/mnt/Others/git/musl]
-checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
+# [/mnt/Others/git/musl]
+# checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
 
 
 # [/mnt/Others/git/buildroot]
@@ -62,8 +59,8 @@ checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
 # [/mnt/Others/git/frecon]
 # checkout = git clone 'https://chromium.googlesource.com/chromiumos/platform/frecon' 'frecon'
 
-[/mnt/Others/git/stdman]
-checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
+# [/mnt/Others/git/stdman]
+# checkout = git clone 'https://github.com/jeaye/stdman' 'stdman'
 
 # [git/mdp]
 # checkout = git clone 'https://github.com/visit1985/mdp' 'mdp'
@@ -107,8 +104,8 @@ checkout = git clone 'https://github.com/majutsushi/urxvt-font-size.git' 'urxvt-
 # [/mnt/Others/git/libarchive]
 # checkout = git clone 'https://github.com/libarchive/libarchive/' 'libarchive'
 
-[/mnt/Others/git/rappel]
-checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
+# [/mnt/Others/git/rappel]
+# checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
 
 # [/mnt/Others/git/zlib]
 # checkout = git clone 'https://github.com/madler/zlib.git' 'zlib'
@@ -125,26 +122,26 @@ checkout = git clone 'https://github.com/yrp604/rappel' 'rappel'
 [git/rust]
 checkout = git clone 'https://github.com/rust-lang/rust' 'rust'
 
-[git/clang-tools-extra]
-checkout = git clone 'https://github.com/llvm-mirror/clang-tools-extra' 'clang-tools-extra'
+# [git/clang-tools-extra]
+# checkout = git clone 'https://github.com/llvm-mirror/clang-tools-extra' 'clang-tools-extra'
 
-[git/compiler-rt]
-checkout = git clone 'https://github.com/llvm-mirror/compiler-rt' 'compiler-rt'
+# [git/compiler-rt]
+# checkout = git clone 'https://github.com/llvm-mirror/compiler-rt' 'compiler-rt'
 
-[git/elfutils]
-checkout = git clone 'http://sourceware.org/git/elfutils.git' 'elfutils'
+# [git/elfutils]
+# checkout = git clone 'http://sourceware.org/git/elfutils.git' 'elfutils'
 
-[git/glibc]
-checkout = git clone 'http://sourceware.org/git/glibc.git' 'glibc'
+# [git/glibc]
+# checkout = git clone 'http://sourceware.org/git/glibc.git' 'glibc'
 
-[git/lld]
-checkout = git clone 'https://github.com/llvm-mirror/lld' 'lld'
+# [git/lld]
+# checkout = git clone 'https://github.com/llvm-mirror/lld' 'lld'
 
-[git/lldb]
-checkout = git clone 'https://github.com/llvm-mirror/lldb' 'lldb'
+# [git/lldb]
+# checkout = git clone 'https://github.com/llvm-mirror/lldb' 'lldb'
 
-[git/polly]
-checkout = git clone 'https://github.com/llvm-mirror/polly' 'polly'
+# [git/polly]
+# checkout = git clone 'https://github.com/llvm-mirror/polly' 'polly'
 
-[git/cling]
-checkout = git clone 'https://github.com/lejenome/cling' 'cling'
+# [git/cling]
+# checkout = git clone 'https://github.com/lejenome/cling' 'cling'

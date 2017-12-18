@@ -269,3 +269,4 @@ for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
 for_window [class="Pinentry"] floating enable
 for_window [class="Glade-previewer"] floating enable
+for_window [class="Toplevel"] floating enable

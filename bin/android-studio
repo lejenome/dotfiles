@@ -1,0 +1,3 @@
+export _JAVA_OPTIONS="$_JAVA_OPTIONS -Djava.io.tmpdir=/var/tmp"
+export TMPDIR=/var/tmp
+/usr/bin/android-studio

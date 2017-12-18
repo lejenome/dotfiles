@@ -5,12 +5,13 @@ import math
 import os
 import sys
 
+
 def _init_():
     import atexit
     import readline
     import rlcompleter
 
-    readline.parse_and_bind("tab: complete")
+    # readline.parse_and_bind("tab: complete")
 
     hist_file = os.path.expanduser("~/.cache/python.history")
     if os.path.exists(hist_file):
@@ -26,4 +27,8 @@ def _init_():
     sys.ps1 = csi("") + csi(color) + name + csi("1") + ">>>" + csi("") + " "
     sys.ps2 = " " * len(name) + csi(";1;30") + "..." + csi("") + " "
 
+
 _init_()
+
+
+import jedi.api.replstartup
