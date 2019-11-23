@@ -18,7 +18,7 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d ~/.perl6/bin ] && PATH="$PATH:$HOME/.perl6/bin"
 
 # GEM PATH
-[ -d "$HOME/.local/lib/ruby/bin" ] && PATH="${HOME}/.local/lib/ruby/bin:${PATH}"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 [ -d "$HOME/.opam/system/bin" ] && PATH="$PATH:$HOME/.opam/system/bin"
 [ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
@@ -29,7 +29,7 @@ export PATH
 export NAME="Moez Bouhlel"
 export MAIL="$HOME/mail"
 export EMAIL='bmoez.j@gmail.com'
-export TERMINAL='/usr/bin/urxvtc'
+export TERMINAL='/usr/bin/alacritty'
 export TZ="Africa/Tunis"
 
 export EDITOR='/usr/bin/vim'
@@ -145,3 +145,6 @@ export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1  # Fix emulator not starting issue
 export ANDROID_EMULATOR_HOME="$HOME/.android"
 export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
 export PATH="${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"
+
+
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1

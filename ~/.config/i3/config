@@ -29,7 +29,7 @@ floating_modifier $mod
     bindsym $mod+Return exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/MAIN.sh
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
-    bindsym $mod+d exec dmenu_run
+    bindsym $mod+d exec rofi -show run
     bindsym $mod+shift+d exec i3-dmenu-desktop
 
 # change focus
@@ -207,7 +207,7 @@ workspace "$ws10" output LVDS-1
     bindcode $mod+Shift+88  exec "sudo backlightctl -10"
     bindcode $mod+Shift+85 exec "mpc seek +1"
     bindcode $mod+Shift+83  exec "mpc seek -1"
-    bindcode $mod+Shift+84 exec "mpc stop"
+    bindcode $mod+Shift+84 exec "rofi-mpc"
 
 # fix for having different symbol when NumLock is on
 # issue solution: https://github.com/i3/i3/issues/2929#issuecomment-329161522
@@ -220,7 +220,7 @@ workspace "$ws10" output LVDS-1
     bindcode Mod2+$mod+Shift+88  exec "sudo backlightctl -10"
     bindcode Mod2+$mod+Shift+85 exec "mpc seek +1"
     bindcode Mod2+$mod+Shift+83  exec "mpc seek -1"
-    bindcode Mod2+$mod+Shift+84 exec "mpc stop"
+    bindcode Mod2+$mod+Shift+84 exec "rofi-mpc"
 
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
     bindsym XF86AudioMute exec "amixer set Master toggle"
@@ -270,3 +270,4 @@ for_window [class="pinentry"] floating enable
 for_window [class="Pinentry"] floating enable
 for_window [class="Glade-previewer"] floating enable
 for_window [class="Toplevel"] floating enable
+for_window [class="florence"] floating enable

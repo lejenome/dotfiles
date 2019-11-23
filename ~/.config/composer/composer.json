@@ -26,6 +26,8 @@
         "mockery/mockery": "^0.9.9",
         "mikey179/vfsStream": "^1.6",
         "phpunit/dbunit": "^3.0",
-        "laravel/lumen-installer": "^1.0"
+        "laravel/lumen-installer": "^1.0",
+        "macfja/phar-builder": "^0.2.6",
+        "psy/psysh": "@stable"
     }
 }

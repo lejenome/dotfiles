@@ -1,0 +1,2 @@
+# for screen of 1366x768 resolution, scale x1.405 to get Full HD res
+xrandr --output LVDS1 --scale 1.405x1.405 --panning 1920x1080

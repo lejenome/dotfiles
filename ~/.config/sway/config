@@ -29,7 +29,8 @@ floating_modifier $mod
     bindsym $mod+Return exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/MAIN.sh
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
-    bindsym $mod+d exec dmenu_run
+    bindsym $mod+q :
+    bindsym $mod+d exec "rofi -show run"
     bindsym $mod+shift+d exec i3-dmenu-desktop
 
 # change focus
@@ -96,7 +97,16 @@ floating_modifier $mod
 # exit i3 (logs you out of your X session)
     bindsym $mod+Shift+e exit
 # lock screen
-    bindsym $mod+Control+l exec i3lock --dpms --color 000000 --inactivity-timeout 7 -f
+    bindsym $mod+Control+l exec "loginctl lock-session"
+
+
+# Scratchpad
+# Move the currently focused window to the scratchpad
+    bindsym $mod+shift+KP_Subtract move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+KP_Subtract scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -143,13 +153,13 @@ bar {
 }
 
 focus_follows_mouse no
-new_window pixel 1
-new_float pixel 1
+default_border pixel 1
+default_floating_border pixel 1
 # Move i3 independent X apps to xinitrc
-exec --no-startup-id /usr/bin/xrdb /home/lejenome/.Xresources
-#exec --no-startup-id /usr/bin/setxkbmap fr
-#exec --no-startup-id urxvtd -q -o
-#exec --no-startup-id xset dpms 300 360 420
+# exec /usr/bin/xrdb /home/lejenome/.Xresources
+#exec /usr/bin/setxkbmap fr
+#exec urxvtd -q -o
+#exec xset dpms 300 360 420
 
 # Workspace names
 set $ws1  1:  TERM
@@ -220,7 +230,7 @@ workspace "$ws10" output LVDS-1
     bindcode $mod+Shift+88  exec "sudo backlightctl -10"
     bindcode $mod+Shift+85 exec "mpc seek +1"
     bindcode $mod+Shift+83  exec "mpc seek -1"
-    bindcode $mod+Shift+84 exec "mpc stop"
+    bindcode $mod+Shift+84 exec "rofi-mpc"
 
 # /usr/include/X11/XF86keysym.h && xmodmap -pke
     bindsym XF86AudioMute exec amixer set Master toggle
@@ -233,7 +243,9 @@ workspace "$ws10" output LVDS-1
     bindsym XF86MonBrightnessUp    exec  sudo backlightctl +10
     bindsym XF86MonBrightnessDown  exec  sudo backlightctl -10
     bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')
-    bindsym Print         exec  swaygrab
+    bindsym Print         exec  "grim $(date +'screenshot-%Y-%m-%d-%H%M%S.png')"
+    bindsym $mod+Print         exec  "slurp | grim -g - $(date +'screenshot-%Y-%m-%d-%H%M%S.png')"
+    bindsym $mod+Shift+Print         exec  "slurp -p | grim -g - $(date +'screenshot-%Y-%m-%d-%H%M%S.png')"
 # used sudoers to remove the needs to enter password
     bindsym Pause         exec  sudo systemctl suspend
     bindsym Scroll_Lock   exec  sudo shutdown 0
@@ -260,14 +272,33 @@ workspace "$ws10" output LVDS-1
     bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
     bindsym $mod+g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
-exec --no-startup-id i3-msg "workspace $ws1"
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+	tap enabled
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+	xkb_numlock enabled
+}
+
+exec swaymsg "workspace $ws1"
+exec swayidle -w \
+	timeout 300 '~/.config/sway/lockscreen.sh' \
+	timeout 310 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep '~/.config/sway/lockscreen.sh' \
+	lock '~/.config/sway/lockscreen.sh'
+
 
 # for_window [window_role="pop-up"] floating enable
 # for_window [window_role="task_dialog"] floating enable
 # for_window [window_role="About"] floating enable
 for_window [class="mpv"] floating enable
 
-output * bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
+output "*" bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
 
 # smart_gaps on
 # gaps 15
+
+
+# xwayland disable

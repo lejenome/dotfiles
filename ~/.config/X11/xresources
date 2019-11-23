@@ -34,7 +34,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Xautolock.time: 5
 Xautolock.locker: i3lock --dpms --color 000000 --inactivity-timeout 7 -f
-!Xautolock.corners: 0+00
+Xautolock.corners: -00+
 !Xautolock.cornerdelay: 1
 !Xautolock.cornerredelay: 30
 Xautolock.notify: 5

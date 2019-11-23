@@ -76,15 +76,15 @@ alias pg='ping -c 1 google.com | tail -3'
 alias g='git'
 
 # Yaourt & Pacman
-alias yi='sudo yaourt -S --noconfirm'
-alias yic='sudo yaourt -S'
-alias yy='sudo yaourt -Syu --noconfirm'
+alias yi='yay -S --noconfirm'
+alias yic='yay -S'
+alias yy='yay -Syu --noconfirm'
 alias yu='sudo pacman -U'
-alias yq='yaourt -Q'
-alias yql='yaourt -Ql'
-alias yqi='yaourt -Q -ii'
-alias yr='sudo yaourt -R'
-alias yrs='sudo yaourt -R -s'
+alias yq='yay -Q'
+alias yql='yay -Ql'
+alias yqi='yay -Q -ii'
+alias yr='yay -R'
+alias yrs='yay -R -s'
 
 # Systemctl
 alias suspend='sudo systemctl suspend'
@@ -119,12 +119,12 @@ alias iptlist='sudo /sbin/iptables -n -v --line-numbers -L'
 alias schroot32="schroot -c arch32"
 alias arch32="schroot -c arch32"
 alias pacman32="sudo pacman --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
-alias yaourt32="yaourt --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
+alias yaourt32="yay --root /opt/arch32 --config /opt/arch32/etc/pacman.conf --dbpath /opt/arch32/var/lib/pacman/"
 
 alias schroot64="schroot -c arch64"
 alias arch64="schroot -c arch64"
 alias pacman64="sudo pacman --root /opt/arch64"
-alias yaourt64="yaourt --root /opt/arch64"
+alias yaourt64="yay --root /opt/arch64"
 
 alias apt-get64="sudo schroot -c ubuntu -u root -- apt-get"
 alias dpkg64="sudo schroot -c ubuntu -u root -- dpkg"

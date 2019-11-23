@@ -1,4 +1,5 @@
-text/html; elinks -dump | strings | sed '/^[ \t]*$/d' ; copiousoutput;
+text/html; w3m -dump -T text/html -o display_link_number=1 -o fold_textarea=1 -o display_ins_del=1 -o color=1 -s; copiousoutput;
+# text/html; elinks -dump | strings | sed '/^[ \t]*$/d' ; copiousoutput;
 
 */*; xdg-open "%s"
 # image/*; feh %s ;  test=test -n "$DISPLAY"

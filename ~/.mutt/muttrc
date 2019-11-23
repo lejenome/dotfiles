@@ -55,7 +55,7 @@ color status white color24 # status lines in the folder index sed for the mini-h
 set edit_headers=yes
 my_hdr X-Info: Keep It Simple, Stupid.
 my_hdr X-Operating-System: `uname -o`, kernel `uname -r`
-my_hdr X-Message-Flag: WARNING!! Outlook sucks
+# my_hdr X-Message-Flag: WARNING!! Outlook sucks
 my_hdr User-Agent: Every email client sucks, this one just sucks less.
 
 #-------------------------------------------
@@ -69,9 +69,9 @@ source $alias_file
 # Multi mails
 #-------------------------------------------
 macro generic "<esc>1" ":set from=$EMAIL realname='$NAME'"
-macro generic "<esc>2" ":set from=lejenome@tik.tn realname='Moez Bouhlel'"
+macro generic "<esc>2" ":set from=lejenome@tik.tn realname='$NAME'"
 macro generic "<esc>3" ":set from=contact@tik.tn realname='Tik.tn'"
-macro generic "<esc>4" ":set from=fssont@tik.tn realname='FSS Open Tech Club'"
+macro generic "<esc>4" ":set from=fssotc@tik.tn realname='FSS Open Tech Club'"
 macro generic "<esc>5" ":set from=moez.bouhlel@djagora.factorycampus.net realname='$NAME'"
 # EXTRA
 source ~/.mutt/gpgrc

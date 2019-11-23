@@ -194,7 +194,6 @@ filextype *.html,*.htm,*.svg
 	\ qutebrowser %f %i &,
 	\ firefox %f %i &
 filextype *.mhtml
-	\ xdg-open %f %i &,
 	\ chromium %f %i &
 filetype *.html,*.htm
 	\ links,

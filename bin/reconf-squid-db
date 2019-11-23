@@ -28,6 +28,6 @@ if [ ! -e /etc/squid/squid.pem -o "$1" == "2" ]; then
 fi
 
 sudo rm -rf /home/cache/squid-ssl
-sudo /usr/lib/squid/ssl_crtd -s /home/cache/squid-ssl -c
+sudo /usr/lib/squid/security_file_certgen -s /home/cache/squid-ssl -c -M 16MB
 sudo chown -R proxy:proxy /home/cache/squid-ssl
 sudo systemctl start squid

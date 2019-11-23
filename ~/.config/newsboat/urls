@@ -1,7 +1,5 @@
 # My website
 https://lejenome.github.io/rss.xml "~Moez Bouhlel (lejenome)"
-# My Pocket
-https://getpocket.com/users/lejenome/feed/all "~My Pocket"
 
 # Linux blogs
 https://lwn.net/headlines/rss "~LWN.net" "systems"
@@ -10,8 +8,8 @@ https://phoronix.com/rss.php "~Phoronix" "systems"
 https://linuxgizmos.com/feed/ "~Linux Gizmos" "tech"
 
 # PHP
-http://www.planet-php.net/rss "~Planet PHP"
-https://feed.laravel-news.com/ "~Laravel News"
+# http://www.planet-php.net/rss "~Planet PHP"
+# https://feed.laravel-news.com/ "~Laravel News"
 
 # General blogs
 # http://www.fudzilla.com/?format=feed "tech"
@@ -48,5 +46,9 @@ https://www.authenticjobs.com/rss/custom.php?terms=&type=3,5,2,6,4&cats=&onlyrem
 https://planet.haskell.org/rss20.xml
 # http://rss.gmane.org/topics/complete/gmane.linux.kernel.kernelnewbies
 https://www.ibm.com/developerworks/views/linux/rss/libraryview.jsp?site_id=1&contentarea_by=Linux&topic_by=&product_by=&search_by=&industry_by=&sort_by=Date&series_title_by=&type_by=All%20Types "~IBM DeveloperWorks"
+https://developer.ibm.com/opentech/feed/ "~IBM OpenTech Blog"
+
+https://queue.acm.org/rss/feeds/articles.xml
+http://rss.acm.org/technews/TechNews.xml
 
 https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&classification=Components&component=HTML%3A%20Parser&component=JavaScript%20Engine&component=JavaScript%20Engine%3A%20JIT&component=JavaScript%3A%20GC&component=JavaScript%3A%20Standard%20Library&component=String&component=Widget%3A%20Gtk&f1=bug_mentor&f2=assigned_to&list_id=13372926&o1=isnotempty&o2=equals&product=Core&query_format=advanced&resolution=---&v2=nobody%40mozilla.org&title=Bug%20List&ctype=atom "~Mozilla BugZilla (Beginner)"

@@ -13,6 +13,7 @@ call plug#begin('$XDG_DATA_HOME/vim/bundle')
 Plug 'scrooloose/syntastic'
 let g:syntastic_html_validator_parser = 'html5'
 "let g:syntastic_html_checkers = ['w3', 'validator']
+let g:syntastic_markdown_checkers = []
 let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_markdown_checkers = ['mdl', 'proselint']
@@ -112,18 +113,23 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#syntastic#enabled = 1
 
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" " Google Code Format
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plug 'google/vim-maktaba'
+" Plug 'google/vim-codefmt'
+" " Plug 'google/vim-glaive'
+" " Glaive codefmt plugin[mappings]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Google Code Fmt
+" ALE (Asynchronous Lint Engine) / Check / Lint / Format / Compete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-" Plug 'google/vim-glaive'
-" Glaive codefmt plugin[mappings]
+Plug 'w0rp/ale'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Matching Tag on HTML
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'gregsexton/MatchTag', {'for': ['html', 'xml']}
+Plug 'Valloric/MatchTagAlways', {'for': ['html', 'xml']}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
@@ -142,12 +148,10 @@ Plug 'fisadev/vim-ctrlp-cmdpalette', {'on': 'CtrlP'}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clang colored C/C++ code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-"if !has('nvim') && (v:version > 704 || has('patch330'))
-Plug 'jeaye/color_coded', {
-    \'for': ['c', 'cpp'],
-    \'do': 'cmake -GNinja -DDOWNLOAD_CLANG=0 . && ninja'
-    \}
-"endif
+"Plug 'jeaye/color_coded', {
+"    \'for': ['c', 'cpp'],
+"    \'do': 'cmake -GNinja -DDOWNLOAD_CLANG=0 . && ninja'
+"    \}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope_maps.vim Plug
@@ -325,5 +329,9 @@ let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 Plug 'lervag/vimtex', {'for': ['tex', 'latex', 'plaintex']}
 
 Plug 'blindFS/vim-taskwarrior'
+
+Plug 'jamessan/vim-gnupg'
+let g:GPGPreferArmor=1
+let g:GPGDefaultRecipients=["bmoez.j@gmail.com"]
 
 call plug#end()            " required

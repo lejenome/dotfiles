@@ -2,7 +2,7 @@
 export CLUTTER_BACKEND=wayland
 export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland-egl
-#export SDL_VIDEODRIVER=wayland
+export SDL_VIDEODRIVER=wayland
 
 export ECORE_EVAS_ENGINE=wayland_egl
 export ELM_ENGINE=wayland_egl
@@ -10,8 +10,12 @@ export E_WL_FORCE=drm
 export ELM_DISPLAY=wl
 export ELM_ACCEL=opengl
 
-#unset DISPLAY
+unset DISPLAY
 #export WLC_XWAYLAND=0
 export WLC_LIBINPUT=1
 
 #export TERMINAL=sakura
+
+export MOZ_ENABLE_WAYLAND=1
+
+export _JAVA_AWT_WM_NONREPARENTING=1

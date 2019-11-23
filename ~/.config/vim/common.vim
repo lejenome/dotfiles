@@ -143,7 +143,7 @@ set undoreload=10000
 " File Types special configs
 autocmd FileType php,python,java,cs setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 expandtab autoindent
 autocmd FileType javascript,css,html,xml,htmldjango setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
-autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79 expandtab autoindent
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 expandtab autoindent
 autocmd FileType c setlocal tabstop=8 shiftwidth=8 softtabstop=8 textwidth=79 autoindent
 
 autocmd FileType tex,plaintex,latex setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab autoindent
@@ -194,3 +194,12 @@ autocmd FileType ant compiler ant
 autocmd BufNewFile,BufRead *.gradle compiler gradle
 autocmd FileType csharp compiler xbuild
 autocmd FileType python setlocal makeprg=python\ %
+
+
+set clipboard=unnamedplus
+xnoremap "+y y:call system("wl-copy -n", @")<cr>
+xnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
+vnoremap "+y y:call system("wl-copy -n", @")<cr>
+vnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
