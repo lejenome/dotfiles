@@ -121,6 +121,7 @@ set ruler            " show line number, cursor position
 set showcmd          " show incomplete commands
 
 au BufRead,BufNewFile *.less set filetype=css
+au BufRead,BufNewFile *.http,*.post set filetype=http
 
 " fixes for status line
 "set timeoutlen=50

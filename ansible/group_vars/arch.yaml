@@ -1,0 +1,118 @@
+boot_packages:
+- preload
+- systemd-readahead
+- linux
+- linux-firmware
+- linux-lts
+- linux-lts-headers
+- sudo
+
+base_packages:
+- base
+- zsh
+- zsh-completions
+- zsh-syntax-highlighting
+- bash-completion
+- git
+# - github-cli
+- vim-runtime
+- vim-systemd
+- vim-spell-fr
+- tmux
+- wget
+- curl
+- gnupg
+
+utils_packages:
+- the_silver_searcher
+- htop
+- vifm
+- httpie
+- unrar
+- p7zip
+
+
+window_manager_packages:
+- sway
+- swaylock
+- swayidle
+- dmenu
+- wdisplays
+- alacritty
+- rofi
+- rofi-mpc
+- grim
+- thunar
+- thunar-archive-plugin
+- thunar-thumbnailers
+- numix-circle-icon-theme-git
+- numix-gtk-theme
+- numix-icon-theme-git
+- conky
+# - spacefm
+# - waybar
+
+net_packages:
+- iwd
+- dnsmasq
+- dhcpcd
+# - wpa_supplicant
+# - ddclient
+# - hostapd
+# - squid
+
+media_codecs:
+-  faac a52dec faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 x265 xvidcore gst-plugins-bad gst-plugins-good gst-plugins-ugly
+
+media_packages:
+- ffmpeg
+- mpd
+- ncmpcpp
+- mpc
+- mpv
+- feh
+- imv  # gif
+- imagemagick
+- alsa-utils
+- pipewire
+- pipewire-jack
+- wireplumber
+# - pipewire
+# - gst-*
+# - sxiv
+
+internet_packages:
+- firefox
+- chromium
+# - qutebrowser
+- mutt
+- msmtpd
+- fetchmail
+# - getmail
+# - weechat
+# - bitlbee
+# - newbeuter
+
+aur_packages:
+- yay
+- insync
+# - anydesk-bik
+# - teamviewer
+# - skypeforlinux-stable-bin
+
+print_packages:
+- cups
+- cups-pdf
+- simple-scan
+
+dev_packages:
+- base-devel
+- code
+- nodejs
+- yarn
+- npm
+
+misc_packages:
+- optipng
+# - gimp
+# - collectd

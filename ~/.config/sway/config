@@ -26,12 +26,12 @@ font xft:Cousine, Icons 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-    bindsym $mod+Return exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/MAIN.sh
+    bindsym $mod+Return exec $TERMINAL -e $XDG_CONFIG_HOME/i3/MAIN.sh
     bindsym $mod+b exec $BROWSER
     bindsym $mod+Shift+q kill
     bindsym $mod+q :
     bindsym $mod+d exec "rofi -show run"
-    bindsym $mod+shift+d exec i3-dmenu-desktop
+    bindsym $mod+shift+d exec "rofi -show file-browser"
 
 # change focus
     bindsym $mod+j focus left
@@ -97,7 +97,8 @@ floating_modifier $mod
 # exit i3 (logs you out of your X session)
     bindsym $mod+Shift+e exit
 # lock screen
-    bindsym $mod+Control+l exec "loginctl lock-session"
+    bindsym $mod+Control+l exec "~/.config/sway/lockscreen.sh"
+    # FIXME: bindsym $mod+Control+l exec "loginctl lock-session"
 
 
 # Scratchpad
@@ -155,11 +156,6 @@ bar {
 focus_follows_mouse no
 default_border pixel 1
 default_floating_border pixel 1
-# Move i3 independent X apps to xinitrc
-# exec /usr/bin/xrdb /home/lejenome/.Xresources
-#exec /usr/bin/setxkbmap fr
-#exec urxvtd -q -o
-#exec xset dpms 300 360 420
 
 # Workspace names
 set $ws1  1:  TERM
@@ -248,7 +244,7 @@ workspace "$ws10" output LVDS-1
     bindsym $mod+Shift+Print         exec  "slurp -p | grim -g - $(date +'screenshot-%Y-%m-%d-%H%M%S.png')"
 # used sudoers to remove the needs to enter password
     bindsym Pause         exec  sudo systemctl suspend
-    bindsym Scroll_Lock   exec  sudo shutdown 0
+    bindsym $mod+Scroll_Lock   exec  sudo shutdown 0
     bindsym XF86Search    exec  ~/.config/i3/keymouse.sh
 # FIXME: FN + F4
 # bindsym 0xffc1        exec  "~/.config/i3/toggle-display"
@@ -258,7 +254,7 @@ workspace "$ws10" output LVDS-1
 
 
     bindsym $mod+Shift+m exec sh $XDG_CONFIG_HOME/i3/keymouse.sh
-    bindsym $mod+Shift+t exec i3-sensible-terminal -e $XDG_CONFIG_HOME/i3/TERM.sh
+    bindsym $mod+Shift+t exec $TERMINAL -e $XDG_CONFIG_HOME/i3/TERM.sh
     bindsym $mod+Shift+w exec $XDG_CONFIG_HOME/i3/load_web_ws_layout.sh "$ws2"
 
 # Going Back and Forth
@@ -297,8 +293,20 @@ for_window [class="mpv"] floating enable
 
 output "*" bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
 
+output LVDS-1 scale 1.136
+output LVDS-1 pos 0 0
+output VGA-1 pos 1366 0
+
 # smart_gaps on
 # gaps 15
 
 
 # xwayland disable
+#
+# Move i3 independent X apps to xinitrc
+# exec /usr/bin/xrdb /home/lejenome/.Xresources
+#exec /usr/bin/setxkbmap fr
+#exec urxvtd -q -o
+#exec xset dpms 300 360 420
+
+exec mako

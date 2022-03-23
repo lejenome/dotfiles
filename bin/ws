@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
+set -x -e
+
 #SPICE_PORT=5924
 guest=windows
 mac=fe:dc:ba:99:88:03
 tap=tap-${guest}
 netid=${guest}nic
 #dir="$(dirname $(realpath $0))/"
-dir=${HOME}/qemu/windows/
+dir=${HOME}/qemu/$guest/
+partition=/dev/sda6
 
 # Check permissions
 if [[ "$UID" != "0" ]]; then
@@ -14,19 +17,50 @@ if [[ "$UID" != "0" ]]; then
 	exit 1
 fi
 
-# Disk config
+
 if [[ "$1" == "stop" ]]; then
 	# stop virtual RAID disk
 	mdadm --stop --scan
 	losetup --detach-all
 	exit 0
-else
-	# setup virtual RAID disk
-	losetup -f ${dir}/efi1
-	losetup -f ${dir}/efi2
-	mdadm --build --verbose /dev/md0 --chunk=512 --level=linear --raid-devices=3 /dev/loop0 /dev/sda6 /dev/loop1
-	sleep 1
-	chown lejenome:lejenome /dev/md0
+fi
+
+modprobe loop
+modprobe linear
+
+if [[ ! -e "$dir" ]]; then
+	FIRST_RUN=1
+	mkdir -p $dir
+	[ -f "${dir}/efi1" ] || dd if=/dev/zero of="${dir}/efi1" bs=1M count=100
+	[ -f "${dir}/efi2" ] || dd if=/dev/zero of="${dir}/efi2" bs=1M count=1
+	[ -f "${dir}/ovmf_vars_x64.bin" ] || cp /usr/share/edk2-ovmf/x64/OVMF_VARS.fd "${dir}/ovmf_vars_x64.bin"
+
+	chown $SUDO_USER:$SUDO_USER "${dir}/efi1"
+	chown $SUDO_USER:$SUDO_USER "${dir}/efi2"
+	chown $SUDO_USER:$SUDO_USER "${dir}/ovmf_vars_x64.bin"
+fi
+
+### Disk config ###
+# setup virtual RAID disk
+efi1lo=$(losetup -f ${dir}/efi1 --show)
+efi2lo=$(losetup -f ${dir}/efi2 --show)
+mdadm --build --verbose /dev/md0 --chunk=512 --level=linear --raid-devices=3 $efi1lo $partition $efi2lo
+sleep 1
+chown $SUDO_USER:$SUDO_USER /dev/md0
+
+if [[ -n "$FIRST_RUN" ]]; then
+	sudo parted --script /dev/md0 -- \
+		unit s \
+		mktable gpt \
+		mkpart primary fat32 2048s 204799s \
+		mkpart primary ntfs 204800s -2049s \
+		set 1 boot on \
+		set 1 esp on \
+		set 2 msftdata on \
+		name 1 EFI \
+		name 2 $guest
+	sudo mkfs.msdos -F 32 -n EFI /dev/md0p1
+	sudo mkfs.ntfs -f -Q -L $guest /dev/md0p2
 fi
 
 # create network tap device
@@ -37,31 +71,32 @@ fi
 # export QEMU_ALSA_ADC_DEV=pulse
 export SDL_VIDEO_X11_DGAMOUSE=0
 qemu-system-x86_64 \
-	-drive if=pflash,format=raw,readonly,file=/usr/share/ovmf/ovmf_code_x64.bin \
+	-drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2-ovmf/x64/OVMF_CODE.fd \
 	-drive if=pflash,format=raw,file=${dir}/ovmf_vars_x64.bin \
 	-drive file=/dev/md0,media=disk,format=raw,snapshot=off,cache=none \
-	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on -device virtio-net,netdev=$netid,mac=$mac \
 	-pidfile /tmp/qemu-${guest}.pid \
 	-name $guest \
 	-enable-kvm \
 	-cpu host \
-	-m 3G \
+	-m 2G \
 	-k fr \
-	-vga qxl \
-	-display sdl -no-frame -alt-grab \
+	-netdev tap,ifname=$tap,script=no,downscript=no,id=$netid,vhost=on -device virtio-net,netdev=$netid,mac=$mac \
+	-net nic \
 	-device virtio-serial \
-	-chardev spicevmc,id=vdagent,name=vdagent \
-	-device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
-	-net nic -net user,smb=/mnt/Others \
 	-usb \
 	-usbdevice tablet \
 	-chroot /mnt/Others -runas $SUDO_USER \
 	"$@"
+	# -display sdl -alt-grab \
+	# -vga qxl \
+	# -chardev spicevmc,id=vdagent,name=vdagent \
+	# -device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+	# -net user,smb=/mnt/Others \
 
 #	-drive file=/dev/md0,media=disk,format=raw,if=virtio,snapshot=off,cache=none \
 #	-device intel-hda,id=sound0 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 \
 #	-vga virtio \
-#	-chroot ~/qemu/windows -runas lejenome \
+#	-chroot ~/qemu/windows -runas $SUDO_USER \
 #	-netdev user,id=$netid,hostname=windowshost -device virtio-net,netdev=$netid \
 #	-spice port=${SPICE_PORT},disable-ticketing \
 #	-daemonize \

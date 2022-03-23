@@ -23,7 +23,7 @@ def FlagsForFile(filename, **kwargs):
     ext = os.path.splitext(filename)[1]
     if ext in ['.cpp', '.cxx', '.cc', '.mm', '.hpp']:
         flags += [
-            '-std=gnu++1z',
+            '-std=gnu++20',
             '-x',
             'c++',
         ]

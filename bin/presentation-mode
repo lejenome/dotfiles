@@ -5,4 +5,6 @@ xautolock -exit
 xset s off -dpms
 # xset s off
 killall redshift || true
+killall swayidle || true
+killall xautolock || true
 sudo backlightctl 100

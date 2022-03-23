@@ -34,3 +34,9 @@ set -o notify
 
 
 PS1='\e[1;33m\u\e[0m@\e[1;31m\h\e[0m:\e[1;34m\W\e[0m (\e[36m$?\e[0m) \$ '
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/lejenome//.sdkman"
+[[ -s "/home/lejenome//.sdkman/bin/sdkman-init.sh" ]] && source "/home/lejenome//.sdkman/bin/sdkman-init.sh"
+
+complete -C /usr/bin/terraform terraform

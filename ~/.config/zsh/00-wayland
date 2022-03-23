@@ -1,4 +1,10 @@
 #!/bin/zsh
+
+export XDG_SESSION_TYPE=wayland
+
+export GTK_USE_PORTAL=0
+# FIXME export GTK_USE_PORTAL=1
+
 export CLUTTER_BACKEND=wayland
 export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland-egl
@@ -11,10 +17,12 @@ export ELM_DISPLAY=wl
 export ELM_ACCEL=opengl
 
 unset DISPLAY
-#export WLC_XWAYLAND=0
+export WLC_XWAYLAND=0
 export WLC_LIBINPUT=1
 
-#export TERMINAL=sakura
+export RTC_USE_PIPEWIRE=true
+
+export TERMINAL=alacritty
 
 export MOZ_ENABLE_WAYLAND=1
 

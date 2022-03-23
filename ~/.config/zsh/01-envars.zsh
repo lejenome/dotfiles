@@ -61,3 +61,7 @@ export GEM_SPEC_CACHE=$GEM_HOME/specs
 export CSCOPE_DB=$HOME/git/cscope.out
 
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+# Google Cloud GCloud tool
+[ -d /opt/google-cloud-sdk/bin ] && export PATH="$PATH:/opt/google-cloud-sdk/bin"
+[ -f /opt/google-cloud-sdk/completion.zsh.inc ] && source /opt/google-cloud-sdk/completion.zsh.inc

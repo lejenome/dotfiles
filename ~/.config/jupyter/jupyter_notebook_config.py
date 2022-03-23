@@ -501,7 +501,7 @@ c.NotebookApp.password_required = True
 #c.ContentsManager.pre_save_hook = None
 
 ## 
-c.ContentsManager.root_dir = 'git/jupyter-notebooks'
+c.ContentsManager.root_dir = ''
 
 ## The base name used when creating untitled directories.
 #c.ContentsManager.untitled_directory = 'Untitled Folder'

@@ -122,11 +122,6 @@ let g:airline#extensions#syntastic#enabled = 1
 " " Glaive codefmt plugin[mappings]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" ALE (Asynchronous Lint Engine) / Check / Lint / Format / Compete
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'w0rp/ale'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Matching Tag on HTML
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'Valloric/MatchTagAlways', {'for': ['html', 'xml']}
@@ -161,7 +156,7 @@ set timeoutlen=4000
 set ttimeout
 
 " Focus on your work more
-Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
+Plug 'junegunn/goyo.vim', {'on': 'FocusMode'}
 let g:goyo_height='90%'
 let g:goyo_width=80
 
@@ -278,11 +273,11 @@ let g:tagbar_type_markdown = {
 Plug 'tpope/vim-dispatch'
 
 """ Run single file
-Plug 'xuhdev/SingleCompile'
+Plug 'xuhdev/SingleCompile', { 'on':  ['SCCompile', 'SCCompileRun', 'SCCompileRunAsync'] }
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 nmap <F11> :SCCompileRunAsync<cr>
-autocmd FileType markdown call SingleCompile#SetCompilerTemplate('html', 'qutebrowser', 'QuteBrowser', 'qutebrowser', '', '')
+autocmd FileType markdown call SingleCompile#SetCompilerTemplate('html', $BROWSER, 'google-chrome', 'chromium', 'firefox', '')
 autocmd FileType markdown call SingleCompile#ChooseCompiler('html', $BROWSER)
 
 """ comment bloks
@@ -292,9 +287,9 @@ Plug 'tpope/vim-surround'
 
 Plug 'terryma/vim-multiple-cursors'
 
-Plug 'Valloric/YouCompleteMe', {
-    \'do': 'python3 install.py --system-libclang --system-boost --all'
-    \}
+""""""""" Plug 'Valloric/YouCompleteMe', {
+"""""""""     \'do': 'python3 install.py --system-boost --clangd-completer --rust-completer --ts-completer --ninja'
+"""""""""     \}
 let g:ycm_path_to_python_interpreter = '/usr/bin/python3'
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
@@ -320,18 +315,50 @@ Plug 'joonty/vdebug', {'for': 'php'}
 
 " Plug 'Ada-Bundle'
 
+Plug 'vifm/vifm.vim'
+Plug 'strboul/urlview.vim'
+Plug 'vim-scripts/sudo.vim'
+
 Plug 'jpalardy/vim-slime'
 let g:slime_target = 'tmux'
 let g:slime_python_ipython = 1
 let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 """ ctrl + double `c`, default pane name, select :.0 for pane 0 on current win
 
-Plug 'lervag/vimtex', {'for': ['tex', 'latex', 'plaintex']}
+Plug 'vim-latex/vim-latex', {'for': ['tex', 'latex', 'plaintex']}
+Plug 'xuhdev/vim-latex-live-preview', {'for': ['tex', 'latex', 'plaintex']}
 
 Plug 'blindFS/vim-taskwarrior'
 
 Plug 'jamessan/vim-gnupg'
 let g:GPGPreferArmor=1
 let g:GPGDefaultRecipients=["bmoez.j@gmail.com"]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" COC LSP Language Server Protocol
+" """"""""""""""""""""""""""""""""""""""""""""""""
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+source $XDG_CONFIG_HOME/vim/coc.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim Go
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['go'] }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ALE (Asynchronous Lint Engine) / Check / Lint / Format / Compete
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'w0rp/ale'
+let g:ale_disable_lsp = 1
+let g:ale_fixers={
+  \'php': ['php-cs-fixer', 'phpcbf', 'prettier'],
+\}
+
+"""
+" Vim HTTP Client
+"""
+Plug 'nicwest/vim-http', {'for': 'http'}
+let g:vim_http_tempbuffer = 1
+let g:vim_http_clean_before_do = 0
 
 call plug#end()            " required

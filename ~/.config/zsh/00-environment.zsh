@@ -17,11 +17,15 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d /usr/share/perl6/vendor/bin ] && PATH="$PATH:/usr/share/perl6/vendor/bin"
 [ -d ~/.perl6/bin ] && PATH="$PATH:$HOME/.perl6/bin"
 
+[ -d ~/go/bin ] && PATH="$PATH:$HOME/go/bin"
+[ -d ~/.local/lib/go/bin ] && PATH="$PATH:$HOME/.local/lib/go/bin"
+
 # GEM PATH
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+[ -e /usr/bin/ruby ] &&PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 [ -d "$HOME/.opam/system/bin" ] && PATH="$PATH:$HOME/.opam/system/bin"
 [ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
+[ -d "/var/lib/snapd/snap/bin" ] && PATH="$PATH:/var/lib/snapd/snap/bin"
 
 export PATH
 
@@ -34,7 +38,7 @@ export TZ="Africa/Tunis"
 
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='firefox'
+export BROWSER='google-chrome-stable'
 export PAGER='less'
 
 # node modules additional lookup dirs

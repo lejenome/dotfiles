@@ -31,4 +31,7 @@ def _init_():
 _init_()
 
 
-import jedi.api.replstartup
+try:
+    import jedi.api.replstartup
+except ImportError:
+    pass

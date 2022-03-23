@@ -1,0 +1,21 @@
+# TODO include vars file
+# TODO follow https://wiki.archlinux.org/title/general_recommendations
+# TODO: https://wiki.archlinux.org/title/list_of_applications
+
+- name: Install boot packages
+  package: name={{ boot_packages }} state=latest
+
+- name: Install base packages
+  package: name={{ base_packages }} state=latest
+
+- name: Install window manager packages
+  package: name={{ window_manager_packages }} state=latest
+
+- name: Install net packages
+  package: name={{ net_packages }} state=latest
+
+- name: Install media packages
+  package: name={{ media_packages }} state=latest
+
+- name: Install internet packages
+  package: name={{ internet_packages }} state=latest
