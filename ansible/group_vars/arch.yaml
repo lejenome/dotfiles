@@ -2,10 +2,12 @@ boot_packages:
 - preload
 - systemd-readahead
 - linux
+- linux-headers
 - linux-firmware
 - linux-lts
 - linux-lts-headers
 - sudo
+- intel-ucode
 
 base_packages:
 - base
@@ -14,6 +16,8 @@ base_packages:
 - zsh-syntax-highlighting
 - bash-completion
 - git
+- git-lfs
+- git-crypt
 # - github-cli
 - vim-runtime
 - vim-systemd
@@ -22,6 +26,8 @@ base_packages:
 - wget
 - curl
 - gnupg
+- openssh
+- ansible-core
 
 utils_packages:
 - the_silver_searcher
@@ -30,6 +36,7 @@ utils_packages:
 - httpie
 - unrar
 - p7zip
+- powertop
 
 
 window_manager_packages:
@@ -40,7 +47,7 @@ window_manager_packages:
 - wdisplays
 - alacritty
 - rofi
-- rofi-mpc
+# - rofi-mpc
 - grim
 - thunar
 - thunar-archive-plugin
@@ -48,9 +55,17 @@ window_manager_packages:
 - numix-circle-icon-theme-git
 - numix-gtk-theme
 - numix-icon-theme-git
+- adobe-source-sans-fronts
+- adobe-source-serif-fronts
+- adobe-source-code-pro-fonts
 - conky
+- zathura
+- zathura-pdf-poppler
+- zathura-ps
 # - spacefm
 # - waybar
+- wl-clipboard
+- numlockx
 
 net_packages:
 - iwd
@@ -111,6 +126,14 @@ dev_packages:
 - nodejs
 - yarn
 - npm
+- jupyterlab
+
+db_packages:
+- mariadb
+- postgresql
+- redis
+- nsq
+- nats-server
 
 misc_packages:
 - optipng
