@@ -1,7 +1,3 @@
-" Better copy & paste
-set pastetoggle=<F2>
-set clipboard=unnamed
-
 " Mouse and backspace
 set mouse=a
 set bs=2     " make backspace behave like normal again
@@ -122,6 +118,7 @@ set showcmd          " show incomplete commands
 
 au BufRead,BufNewFile *.less set filetype=css
 au BufRead,BufNewFile *.http,*.post set filetype=http
+au BufRead,BufNewFile *.flux set filetype=flux
 
 " fixes for status line
 "set timeoutlen=50
@@ -197,10 +194,22 @@ autocmd FileType csharp compiler xbuild
 autocmd FileType python setlocal makeprg=python\ %
 
 
+" Better copy & paste
+set pastetoggle=<F2>
 set clipboard=unnamedplus
-xnoremap "+y y:call system("wl-copy -n", @")<cr>
-xnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
-vnoremap "+y y:call system("wl-copy -n", @")<cr>
-vnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
-nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
-nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
+
+if !has("clipboard")
+	" xnoremap "+y y:call system("wl-copy -n", @")<cr>
+	" xnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
+	" vnoremap "+y y:call system("wl-copy -n", @")<cr>
+	" vnoremap "*y y:call system("wl-copy -n --primary", @")<cr>
+	" nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+	" nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
+
+	xnoremap "+y y:call system("xsel -i -b", @")<cr>
+	xnoremap "*y y:call system("xsel -i -p", @")<cr>
+	vnoremap "+y y:call system("xsel -i -b", @")<cr>
+	vnoremap "*y y:call system("xsel -i -p", @")<cr>
+	nnoremap "+p :let @"=substitute(system("xsel -o -b"), '<C-v><C-m>', '', 'g')<cr>p
+	nnoremap "*p :let @"=substitute(system("xsel -o -p"), '<C-v><C-m>', '', 'g')<cr>p
+endif

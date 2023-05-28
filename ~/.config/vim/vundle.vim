@@ -163,6 +163,13 @@ let g:goyo_width=80
 " Plug 'ivalkeen/vim-simpledb'
 " let g:simpledb_show_timing = 0
 
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
+let g:dbs = {
+      \  'cache': 'postgres://cache:cache@localhost:5432/cache'
+      \ }
+
 " Plug 'NLKNguyen/papercolor-theme'
 
 "Plug 'nathanaelkane/vim-indent-guides'
@@ -328,7 +335,7 @@ let g:slime_paste_file = "$XDG_CACHE_HOME/slime_paste"
 Plug 'vim-latex/vim-latex', {'for': ['tex', 'latex', 'plaintex']}
 Plug 'xuhdev/vim-latex-live-preview', {'for': ['tex', 'latex', 'plaintex']}
 
-Plug 'blindFS/vim-taskwarrior'
+" Plug 'blindFS/vim-taskwarrior'
 
 Plug 'jamessan/vim-gnupg'
 let g:GPGPreferArmor=1
@@ -348,10 +355,14 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['go'] }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE (Asynchronous Lint Engine) / Check / Lint / Format / Compete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_disable_lsp = 1
 let g:ale_fixers={
   \'php': ['php-cs-fixer', 'phpcbf', 'prettier'],
+  \'c': [],
+\}
+let g:ale_linters = {
+  \   'c': [],
 \}
 
 """
@@ -360,5 +371,9 @@ let g:ale_fixers={
 Plug 'nicwest/vim-http', {'for': 'http'}
 let g:vim_http_tempbuffer = 1
 let g:vim_http_clean_before_do = 0
+
+Plug 'varnishcache-friends/vim-varnish'
+
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()            " required

@@ -1,10 +1,30 @@
 export ZDOTDIR="${ZDOTDIR:-$HOME}"
-export ZSH=$HOME/git/oh-my-zsh
-#ZSH_THEME=sunrise
-plugins=(command-not-found cp extract github pip django tmux vi-mode vundle branch lol man)
-DISABLE_UPDATE_PROMPT=true
-DISABLE_AUTO_UPDATE=true
-[ -e "$ZSH/oh-my-zsh.sh" ] && source $ZSH/oh-my-zsh.sh
+
+[[ ! -d "$HOME/.antigen" && -x git ]] && git clone https://github.com/zsh-users/antigen.git "$HOME/.antigen"
+if [[ -e "$HOME/.antigen/antigen.zsh" ]]; then
+	source "$HOME/.antigen/antigen.zsh"
+
+	DISABLE_UPDATE_PROMPT=true
+	DISABLE_AUTO_UPDATE=true
+
+	antigen use https://github.com/ohmyzsh/ohmyzsh
+
+	for plugin in command-not-found git cp extract github tmux vi-mode vundle branch lol kubectl ansible docker-compose history yarn poetry pipenv pip npm; do
+		antigen bundle $plugin
+	done
+
+	antigen bundle zsh-users/zsh-completions
+	antigen bundle zsh-users/zsh-syntax-highlighting
+	antigen bundle trapd00r/LS_COLORS
+
+	# antigen bundle marlonrichert/zsh-autocomplete
+
+	antigen apply
+fi
+
+# export ZSH="$HOME/.oh-my-zsh"
+# #ZSH_THEME=sunrise
+# [ -e "$ZSH/oh-my-zsh.sh" ] && source $ZSH/oh-my-zsh.sh
 
 autoload -U colors && colors
 #fpath=( $fpath ~/.zsh/completion )
@@ -17,14 +37,6 @@ zmodload zsh/complist
 zmodload zsh/terminfo
 
 bindkey -v
-
-if [ -e "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-	source "$HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-elif [ -e "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [ -e "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
 
 for r in ~/.config/zsh/*.zsh; do
 	[ -x "$r" ] && source $r

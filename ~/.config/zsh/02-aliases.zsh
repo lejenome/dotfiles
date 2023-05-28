@@ -75,6 +75,10 @@ alias pg='ping -c 1 google.com | tail -3'
 # Git ( more at ~/.gitconfig )
 alias g='git'
 
+alias k="kubectl"
+alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
+alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
+
 # Yaourt & Pacman
 alias yi='yay -S --noconfirm'
 alias yic='yay -S'
@@ -130,33 +134,35 @@ alias apt-get64="sudo schroot -c ubuntu -u root -- apt-get"
 alias dpkg64="sudo schroot -c ubuntu -u root -- dpkg"
 
 
-# open browser on urls
-_browser_fts=(htm html de org net com at cx nl se dk dk php)
-for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
+if [ -n "$ZSH_VERSION" ]; then
+	# open browser on urls
+	_browser_fts=(htm html de org net com at cx nl se dk dk php)
+	for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
 
-_editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
-for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
+	_editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
+	for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
 
-_image_fts=(jpg jpeg png gif mng tiff tif xpm)
-for ft in $_image_fts ; do alias -s $ft=imv; done
+	_image_fts=(jpg jpeg png gif mng tiff tif xpm)
+	for ft in $_image_fts ; do alias -s $ft=imv; done
 
-_media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
-for ft in $_media_fts ; do alias -s $ft=mpv ; done
+	_media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
+	for ft in $_media_fts ; do alias -s $ft=mpv ; done
 
-_compress_fts=(tar tar.gz tgz tar.bz2 tbz tar.xz txz tar.zma tlz)
-for ft in $_compress_fts ; do alias -s $ft='tar xvf' ; done
-alias -s zip="unzip -l"
-alias -s rar="unrar l"
-alias -s lzma=unlzma
-alias -s Z=uncompress
-alias -s 7z="7za x"
+	_compress_fts=(tar tar.gz tgz tar.bz2 tbz tar.xz txz tar.zma tlz)
+	for ft in $_compress_fts ; do alias -s $ft='tar xvf' ; done
+	alias -s zip="unzip -l"
+	alias -s rar="unrar l"
+	alias -s lzma=unlzma
+	alias -s Z=uncompress
+	alias -s 7z="7za x"
 
-#read documents
-alias -s pdf=zathura
-alias -s ps=zathura
-alias -s djvu=zathura
-alias -s dvi=xdvi
-alias -s chm=xchm
+	#read documents
+	alias -s pdf=zathura
+	alias -s ps=zathura
+	alias -s djvu=zathura
+	alias -s dvi=xdvi
+	alias -s chm=xchm
+fi
 
 # Parenting changing perms on / #
 alias chown='chown --preserve-root'

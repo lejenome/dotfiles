@@ -13,6 +13,7 @@
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 	ui = true
@@ -28,10 +29,13 @@
 	remote = green
 
 [color "diff"]
-	meta = yellow bold
+	meta = 11
 	frag = magenta bold
-	old = red
-	new = green
+	old = red bold
+	new = green bold
+	func = 146 bold
+	commit = yellow bold
+	whitespace = red reverse
 
 [color "status"]
 	added = yellow
@@ -51,6 +55,7 @@
 
 [merge]
 	log = true
+	autoStash = true
 
 [push]
 	default = tracking
@@ -178,6 +183,10 @@
 #[url "git://gist.github.com/"]
 #	insteadOf = "gist:"
 
+[url "git@gitlab.ateme.net:"]
+	insteadOf = https://gitlab.ateme.net/
+	insteadOf = "ateme:"
+
 [sendemail]
 	smtpencryption =  tls
 	smtpserver = smtp.googlemail.com
@@ -185,8 +194,18 @@
 	smtpserverport = 587
 	aliasfile = ~/.mail-aliases
 	aliasfiletype = mutt
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[rebase]
+	autoStash = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

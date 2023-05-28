@@ -5,6 +5,8 @@ set nocompatible
 set ttyfast
 set encoding=utf-8   " use UTF-8 encoding
 
+set shell=/bin/bash
+
 set backupdir=$XDG_CACHE_HOME/vim-backup
 set viminfo+=n$XDG_CACHE_HOME/viminfo
 
