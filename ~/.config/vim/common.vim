@@ -70,7 +70,7 @@ set showmatch
 
 " speed up vim cursor movement
 set synmaxcol=200 " Limit syntax highlighting
-set ttyscroll=3
+"set ttyscroll=3
 set ttyfast " u got a fast terminal
 set lazyredraw " to avoid scrolling problems
 set nocursorcolumn

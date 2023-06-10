@@ -124,8 +124,10 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 zstyle '*' single-ignored show
 
 if whence dircolors >/dev/null; then
-  eval $( dircolors -b ~/git/LS_COLORS/LS_COLORS )
-  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  if [ -d ~/git/LS_COLORS/LS_COLORS ]; then
+  	eval $( dircolors -b ~/git/LS_COLORS/LS_COLORS )
+	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  fi
   # alias ls='ls --color'
 else
   export CLICOLOR=1

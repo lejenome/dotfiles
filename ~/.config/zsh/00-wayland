@@ -16,9 +16,9 @@ export E_WL_FORCE=drm
 export ELM_DISPLAY=wl
 export ELM_ACCEL=opengl
 
-unset DISPLAY
-export WLC_XWAYLAND=0
-export WLC_LIBINPUT=1
+# unset DISPLAY
+# export WLC_XWAYLAND=0
+# export WLC_LIBINPUT=1
 
 export RTC_USE_PIPEWIRE=true
 

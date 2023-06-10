@@ -26,6 +26,7 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 [ -d "$HOME/.opam/system/bin" ] && PATH="$PATH:$HOME/.opam/system/bin"
 [ -d "$HOME/.cargo/bin" ] && PATH="$PATH:$HOME/.cargo/bin"
 [ -d "/var/lib/snapd/snap/bin" ] && PATH="$PATH:/var/lib/snapd/snap/bin"
+[ -d "/snap/bin" ] && PATH="$PATH:/snap/bin"
 
 export PATH
 
@@ -38,7 +39,7 @@ export TZ="Africa/Tunis"
 
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
-export BROWSER='google-chrome-stable'
+export BROWSER='google-chrome'
 export PAGER='less'
 
 # node modules additional lookup dirs
@@ -102,7 +103,7 @@ export STEAM_RUNTIME=0
 export XML_CATALOG_FILES="${XDG_CONFIG_HOME}/xml/catalog.xml /etc/xml/catalog"
 
 # SWAY
-export SWAYSOCK="$XDG_RUNTIME_DIR"/sway-ipc.sock
+# export SWAYSOCK="$XDG_RUNTIME_DIR"/sway-ipc.sock
 
 # XDG CONFIG for some apps
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME"/gimp
@@ -118,7 +119,7 @@ export PYTHON_EGG_CACHE="$XDG_CACHE_HOME"/python-eggs
 export RLWRAP_HOME="$XDG_DATA_HOME"/rlwrap
 # export TMUX_TMPDIR="$XDG_RUNTIME_DIR"/tmux
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
-export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
+#export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvt-"$(hostname)"
 export URXVT_PERL_LIB="$XDG_CONFIG_HOME"/urxvt/ext
 export XENVIRONMENT="$XDG_CONFIG_HOME"/X11/xresources
 export ICEAUTHORITY="$XDG_RUNTIME_DIR"/Xiceauthority

@@ -291,7 +291,7 @@ exec swayidle -w \
 # for_window [window_role="About"] floating enable
 for_window [class="mpv"] floating enable
 
-output "*" bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
+#output "*" bg /mnt/Others/Pictures/wallhaven-13156.jpg fill
 
 output LVDS-1 scale 1.136
 output LVDS-1 pos 0 0

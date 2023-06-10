@@ -19,10 +19,10 @@ l .mozilla/firefox/default/searchplugins/duckduckgo.xml
 l .config/vimpager
 l .config/vim
 #l .cmus/rc
-l .config/weechat/weechat.conf
-l .config/weechat/logger.conf
-l .config/weechat/alias.conf
-l .config/weechat/perl
+#l .config/weechat/weechat.conf
+#l .config/weechat/logger.conf
+#l .config/weechat/alias.conf
+#l .config/weechat/perl
 l .bashrc
 l .config/X11/xinitrc
 l .mutt
@@ -38,8 +38,8 @@ l .config/jupyter/jupyter_notebook_config.py
 #l .polipo
 l .curlrc
 l .asoundrc
-l .config/archey3.cfg
-l .config/ls++
+#l .config/archey3.cfg
+#l .config/ls++
 l .config/redshift.conf
 l .config/gtk-3.0
 l .config/fontconfig
@@ -61,8 +61,8 @@ l .config/pokoy
 l .config/pep8
 l .config/pip
 l .config/modprobed-db.conf
-l .config/newsboat/config
-l .config/newsboat/urls
+#l .config/newsboat/config
+#l .config/newsboat/urls
 l .config/user-dirs.dirs
 l .config/user-dirs.locale
 #l .config/surfraw/conf
@@ -77,7 +77,7 @@ l .config/dunst
 l .config/nvim
 l .config/sway
 l .config/xml
-l .config/qutebrowser
+#l .config/qutebrowser
 l .config/ncmpcpp
 l .config/mpd
 l .config/mpv
@@ -89,7 +89,7 @@ l .config/vimperator
 l .config/vifm/vifmrc
 l .config/vifm/colors
 l .hgignore
-l .todo.cfg
+#l .todo.cfg
 l .config/weston.ini
 l .config/gnupg/gpg.conf
 l .config/gnupg/gpg-agent.conf
@@ -103,16 +103,16 @@ l .clang-format
 l .color_coded
 l .ycm_extra_conf.py
 l .mrconfig
-l .config/urxvt
+#l .config/urxvt
 l .config/alacritty
 l .xmodmap
 l .config/color
 
-l .config/proxy.pac
+#l .config/proxy.pac
 
 #c .config/feednix/config.json
-c .config/aria2/session.lock
-c .cmus/autosave
-c .config/npm/npmrc
+#c .config/aria2/session.lock
+#c .cmus/autosave
+#c .config/npm/npmrc
 
 # .fehbg

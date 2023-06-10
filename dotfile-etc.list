@@ -37,21 +37,21 @@ c pam.d/system-login
 c modprobe.d
 c mkinitcpio-lts.conf
 c mkinitcpio.conf
-c fstab
-c yaourtrc
-c customizepkg.d
+#c fstab
+#c yaourtrc
+#c customizepkg.d
 #c davfs2/davfs2.conf
 # bitlbee
 #c polipo
 c pacman.conf
 c pacman.d/mirrorlist
-c powerpill/powerpill.json
+#c powerpill/powerpill.json
 c vconsole.conf
 c localtime
 c hostname
-c connman
+#c connman
 c systemd/network
-c samba/smb.conf
+#c samba/smb.conf
 c vimrc
 c X11/xorg.conf.d
 # c slim.conf
@@ -61,8 +61,8 @@ c dnsmasq.conf
 c dhcpcd.conf
 c resolv.conf
 c hosts
-c hostapd
-c hosts.ap0
+#c hostapd
+#c hosts.ap0
 c issue
 c qemu-ifup
 c qemu-ifdown
@@ -70,12 +70,13 @@ c hosts.qemu0
 # c nodogsplash
 c ssh/ssh_config
 c ssh/sshd_config
-c squid/squid.conf
+#c squid/squid.conf
 # c kmscon
 c mail.rc
-c schroot/schroot.conf
-c schroot/arch/
-c schroot/ubuntu/
+c zsh/zshenv
+#c schroot/schroot.conf
+#c schroot/arch/
+#c schroot/ubuntu/
 
 #c chromium
 

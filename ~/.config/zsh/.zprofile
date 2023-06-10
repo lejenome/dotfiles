@@ -7,8 +7,8 @@ if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 	# numlockx &
 	# dmenu_path >/dev/null & # cache exec path
 	# dispwin -d1 ~/.config/color/icc/ICC_Lenovo_G500s_1366x768_glossy_SAMSUNG__L_ATLTN156AT30L01.icm
-	redshift -m drm -PO 4500
-	mako &
+	#redshift -m drm -PO 4500
+	#mako &
 	export I3SOCK=$SWAYSOCK
 	export XDG_CURRENT_DESKTOP=sway
 	exec sway

@@ -65,3 +65,12 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 # Google Cloud GCloud tool
 [ -d /opt/google-cloud-sdk/bin ] && export PATH="$PATH:/opt/google-cloud-sdk/bin"
 [ -f /opt/google-cloud-sdk/completion.zsh.inc ] && source /opt/google-cloud-sdk/completion.zsh.inc
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+if [ -d "$HOME/.pyenv" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+  export PATH="$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH"
+fi
