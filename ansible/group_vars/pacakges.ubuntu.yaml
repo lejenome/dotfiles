@@ -1,0 +1,149 @@
+boot_packages:
+
+base_packages:
+- software-properties-common
+- ca-certificates
+- zsh
+- bash-completion
+- git
+- git-lfs
+- git-crypt
+- vim
+- vim-runtime
+- tmux
+- wget
+- curl
+- gnupg
+- openssh-client
+- ansible-core
+
+utils_packages:
+- silversearcher-ag
+- htop
+- vifm
+- httpie
+- unrar
+- p7zip-full
+- diff-so-fancy
+
+window_manager_packages:
+- ubuntusway-desktop
+- ubuntusway-standard
+
+#- sway
+#- sway-backgrounds
+#- swaylock
+#- swayimg
+#- swayidle
+#- swaybg
+#- sway-backgrounds
+#- dmenu
+- wdisplays
+- alacritty
+#- rofi-wayland
+# - rofi-mpc
+#- grim
+#- grimshot
+#- pcmanfm-gtk3
+#- thunar
+#- thunar-archive-plugin
+#- thunar-thumbnailers
+#- fonts-font-awesome
+#- conky
+- zathura
+- zathura-pdf-poppler
+- zathura-ps
+# - spacefm
+# - waybar
+#- wl-clipboard
+#- numlockx
+#- light
+#- mako-notifier
+- earlyoom
+
+net_packages:
+
+media_codecs:
+
+media_packages:
+- ffmpeg
+- mpd
+- ncmpcpp
+- mpc
+- mpv
+- imagemagick
+- alsa-utils
+
+internet_packages:
+- firefox
+- chromium
+# - qutebrowser
+#- mutt
+#- msmtpd
+#- fetchmail
+# - getmail
+# - weechat
+# - bitlbee
+# - newbeuter
+
+aur_packages:
+
+print_packages:
+- cups
+- simple-scan
+
+dev_packages:
+- code
+- nodejs (https://github.com/nvm-sh/nvm or https://github.com/nodesource/distributions)
+- yarn
+- npm
+- jupyterlab
+
+db_packages:
+- mariadb
+- postgresql
+- redis
+- nsq
+- nats-server
+
+misc_packages:
+- optipng
+# - gimp
+# - collectd
+
+dev:
+- docker (https://docs.docker.com/engine/install/ubuntu/)
+- python (https://github.com/pyenv/pyenv)
+
+
+scripts: |
+  # Docker
+  sudo install -m 0755 -d /etc/apt/keyrings
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt update
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+  # Nodejs
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+  nvm install node
+  npm install -g yarn pnpm
+
+  # Python
+  sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+  curl https://pyenv.run | bash
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+  echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+  echo 'eval "$(pyenv init -)"' >> ~/.profile
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+  echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+  echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  pyenv install 3
+  pyenv global 3
+  pip install --user poetry pipenv

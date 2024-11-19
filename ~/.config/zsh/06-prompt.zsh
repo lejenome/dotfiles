@@ -7,7 +7,11 @@ local FMT_PATH="%F{1}%R%F{2}/%S%f"
 
 setprompt() {
   local USER="%(#.%K{1}%F{0}.%F{3})%n%f%k"
-  local HOST="%F{1}%M%f"
+  if [ -n "$SSH_CLIENT" ]; then
+    local HOST="%K{1}%M%k"
+  else
+    local HOST="%F{1}%M%f"
+  fi
   local PWD="%F{7}$($ZDOTDIR/zsh_path.sh)%f"
   local TTY="%F{4}%y%f"
   local EXIT="%(?..%F{202}%?%f)"

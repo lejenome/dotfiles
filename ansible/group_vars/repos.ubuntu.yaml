@@ -1,0 +1,5 @@
+ppa:
+- ppa:ubuntusway-dev/stable
+- ppa:aos1/diff-so-fancy
+
+repos:

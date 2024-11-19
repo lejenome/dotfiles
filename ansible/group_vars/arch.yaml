@@ -30,7 +30,7 @@ base_packages:
 - ansible-core
 
 utils_packages:
-- the_silver_searcher
+- the_silver_searcher ( silversearcher-ag)
 - htop
 - vifm
 - httpie
@@ -123,7 +123,7 @@ print_packages:
 dev_packages:
 - base-devel
 - code
-- nodejs
+- nodejs (https://github.com/nvm-sh/nvm or https://github.com/nodesource/distributions)
 - yarn
 - npm
 - jupyterlab
@@ -139,3 +139,7 @@ misc_packages:
 - optipng
 # - gimp
 # - collectd
+
+dev:
+- docker (https://docs.docker.com/engine/install/ubuntu/)
+- python (https://github.com/pyenv/pyenv)
