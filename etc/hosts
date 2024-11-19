@@ -1,36 +1,7 @@
-#
-# /etc/hosts: static lookup table for host names
-#
-
-#<ip-address>	<hostname.domain.org>	<hostname>
-127.0.0.1	localhost.localdomain	localhost
-::1		localhost.localdomain	localhost
-
-192.168.2.1     www.qemu router.qemu
-192.168.2.2     ubuntu.qemu
-192.168.2.3     android.qemu
-
-192.168.1.1     www.lan router.lan
-192.168.1.2     wifi.lejenome.lan
-192.168.1.3     eth.lejenome.lan
-192.168.1.4     wifi.hanen.lan
-192.168.1.6     android.fatma.lan
-192.168.1.7     android.yassine.lan
-192.168.1.8     android.mourad.lan
-192.168.1.9     wifi.firas.lan
-192.168.1.10    mobile.firas.lan
-
-192.168.20.1    www.ap router.ap
-192.168.20.2    wifi.hanen.ap
-192.168.20.3    android.fatma.ap
-192.168.20.4    android.yassine.ap
-192.168.20.5    android.mourad.ap
-192.168.20.6    wifi.firas.ap
-192.168.20.7    mobile.firas.ap
-
-#196.203.59.42	connexion.ooredoo.tn
-#196.203.59.19	ooredoo.tn www.ooredoo.tn espaceclient.ooredoo.tn
-#196.203.59.12	eddenyalive.com
-#41.228.40.69	espaceclient.eddenyalive.com
-
-# End of file
+# Standard host addresses
+127.0.0.1  localhost localhost.localdomain
+::1        localhost ip6-localhost ip6-loopback localhost.localdomain
+ff02::1    ip6-allnodes
+ff02::2    ip6-allrouters
+# This host address
+127.0.1.1  lejenome-pc
